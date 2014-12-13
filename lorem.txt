@@ -1,0 +1,19 @@
+Nulla facilisi. Ut porttitor sollicitudin nisi, tempus pulvinar nisl volutpat aliquet. Phasellus posuere auctor accumsan. Ut in odio eget dui pulvinar sollicitudin. Sed vitae tortor nibh. Aenean nec sapien quam, sit amet dapibus lorem. Phasellus ac pharetra tellus. Curabitur pretium eros sit amet nisl pretium mollis.
+
+border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: darkgray;
+    border-right-color: darkgray;
+        background-color: lightgrey;
+
+setTimeout(function(){
+            $("#title_bar").toggleClass("intro");
+            $(".content").toggleClass("outro");
+         }, 500);
+         setTimeout(function(){
+            $("#title_bar").toggleClass("intro");
+            $(".content").toggleClass("outro");
+         }, 2000);

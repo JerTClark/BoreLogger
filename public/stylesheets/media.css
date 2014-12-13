@@ -1,0 +1,28 @@
+/*Tablet*/
+/*@media only screen and (max-device-width: 1280px) {*/
+    /*.title_bar {*/
+        /*font-family: "Lintsec", sans-serif;*/
+        /*font-size: xx-large;*/
+        /*text-align: center;*/
+    /*}*/
+/*}*/
+
+/*Galaxy Note 3 portrait*/
+@media only screen and (max-width: 1920px) and (orientation: portrait){
+    .title_bar .scrolled {
+        position: fixed;
+        -webkit-transform: translateX(82px) translateY(95px) rotate(45deg);
+        opacity: .30;
+        z-index: -1;
+    }
+}
+
+/*Galaxy Note 3 landscape*/
+/*@media only screen and (max-device-width: 640px) and (orientation: landscape){*/
+    /*.title_bar {*/
+        /*position: fixed;*/
+        /*-webkit-transform: translate(120%, 25px) rotate(45deg);*/
+        /*opacity: .30;*/
+        /*z-index: -1;*/
+    /*}*/
+/*}*/

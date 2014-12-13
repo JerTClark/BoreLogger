@@ -1,0 +1,128 @@
+@import "reset5.css";
+@import "my-fonts.css";
+@import "gen-info-prompt.css";
+/*@import "media.css";*/
+
+body {
+    -webkit-perspective: 50px;
+}
+
+section {
+    margin: 2%;
+    -webkit-transition-duration: 1.5s;
+}
+
+p {
+    margin: 2%;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: medium;
+    font-weight: normal;
+}
+
+article {
+    text-align: center;
+    margin: 1% auto;
+    -webkit-perspective: 50px;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1.5s;
+}
+
+button {
+    font-family: Rough, sans-serif;
+    font-size: larger;
+    width: 64%;
+    margin: 1% 18% 1% 18%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1.5s;
+}
+
+/*ID*/
+#title_bar{
+    margin: 2%;
+    /*text-shadow: 0 0 2px blue;*/
+    letter-spacing: 5px;
+    font-family: "Lintsec", sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    -webkit-transition-duration: 1.5s;
+    -webkit-transform: translateZ(0px);
+}
+
+#title_bar:hover {
+    color: #ffffff;
+    -webkit-transition-duration: 2.5s;
+    /*-webkit-transform: translateZ(2px);*/
+    text-shadow: 0 0 20px blue;
+}
+
+#title_bar.intro {
+    color: #ffffff;
+    -webkit-transition-duration: 1.5s;
+    -webkit-transform: translateY(40px);
+    text-shadow: 0 0 20px blue;
+}
+
+#main {
+    background: url("../images/bison_logo-web-cropped-alpha.png") no-repeat scroll center;
+    background-size: cover;
+    background-clip: content-box;
+}
+
+/*Class selected*/
+button.hovered{
+    color: #ffffff;
+    border-color: red;
+    background-color: red;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+.category {
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: x-large;
+    color: white;
+    border: red solid 2px;
+    border-radius: 8px;
+    background-color: firebrick;
+    padding: 10px;
+    -webkit-transition-duration: 1s;
+}
+
+.category:hover {
+    box-shadow: 0 0 15px red;
+    text-shadow: 0 0 10px white;
+    -webkit-transition-duration: 1s;
+}
+
+.hiddenDescription {
+    display: none;
+    font-family: Roboto-Light, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px;
+    color: #ffffff;
+    background: red;
+    border: 2px solid firebrick;
+    border-radius: 8px;
+}
+
+/*Positive Y value for downward movement means my perspective is off*/
+.outro {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -webkit-transition-duration: 1.5s;
+}
+
+.moveBack {
+    -webkit-transform: translateZ(-3px);
+    -webkit-transition-duration: 1.5s;
+    -webkit-transition-delay: 250ms;
+}

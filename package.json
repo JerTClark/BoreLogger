@@ -1,0 +1,20 @@
+{
+  "name": "JExpress",
+  "version": "0.0.1",
+  "description": "Learning Express and Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jeremy",
+  "license": "ISC",
+  "dependencies": {
+    "errorhandler": "^1.3.0",
+    "express": "^4.10.4",
+    "express-namespace": "^0.1.1",
+    "express-resource": "^1.0.0",
+    "iniparser": "^1.0.5",
+    "jade": "1.8.1",
+    "response-time": "^2.2.0"
+  }
+}
