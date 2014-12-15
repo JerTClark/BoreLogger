@@ -2,9 +2,6 @@
  * Created by Clark on 12/6/2014.
  */
 var nameCaps = require("./name-capitalizer.js");
-var iniParser = require("iniparser");
-var config = iniParser.parseSync("./config.ini");
-
 
 module.exports = function(app){
 
@@ -19,12 +16,6 @@ module.exports = function(app){
         header = "Welcome to Home!";
         customString = "I hope this all pays off!";
         res.render("standard", {title:title, headerOne: header, message: customString});
-    });
-
-    //-- Demonstrating using a config.ini file and iniParser
-    //-- Note the object passed after the jade file name
-    app.get("/ini", function(req, res){
-        res.render("from-ini", {title:config.title, headerOne:config.heading, message:config.message});
     });
 
     //-- Show whatever page number comes after "/page/" (ie /page/123)
@@ -60,6 +51,11 @@ module.exports = function(app){
 
     app.get("/inherit", function(req, res){
         res.render("content");
+    });
+
+    //-- Learning angular.js
+    app.get("/angular", function(req, res){
+        res.render("angular-test");
     });
 
     //-- Production routes in the Borelogger namespace

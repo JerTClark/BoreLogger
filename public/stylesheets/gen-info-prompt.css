@@ -6,8 +6,9 @@
     width: 100%;
     z-index: 10;
     opacity: 1;
-    -webkit-transition-duration: 1.5s;
-    -webkit-transform: translateZ(-1px);
+    -webkit-transition-duration: .5s;
+    /*Previously -1*/
+    -webkit-transform: translateZ(-8px);
 }
 
 /*The box*/
@@ -71,5 +72,6 @@
     opacity: 0;
     visibility: hidden;
     -webkit-transition-duration: 1.5s;
-    -webkit-transform: translateZ(-5px);
+    /*Previously -5*/
+    -webkit-transform: translateZ(-15px);
 }

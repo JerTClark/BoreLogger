@@ -1,7 +1,7 @@
 //
    Created by Clark on 12/8/2014.
 doctype
-html
+html(ng-app)
    head
       meta(charset="utf-8")
       meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
@@ -10,19 +10,18 @@ html
       title Options
       link(rel="shortcut icon", href="images/bison_logo-web.png")
       link(rel="stylesheet", href="stylesheets/bison.css")
+      link(rel="stylesheet", href="stylesheets/scratch-pad.css")
       script(src="javascripts/jquery-2.1.1.min.js")
+      script(src="javascripts/angular.js")
       script(src="javascripts/bison-controller.js")
       script(src="javascripts/custom-dialog-prompt.js")
+      script(src="javascripts/bore-log.js")
 
-   //div#dialog_overlay.gone
-   //
-   //div#dialog_box.gone
-   //   div
-   //      div#dialog_box_head
-   //      div#dialog_box_body
-   //      div#dialog_box_foot
-
-   body#myPage
+   body#myPage(ng-controller="BoreLogController")
+      div#scratchPad.hidden
+         div#scratchPaper
+            h1 Testing ScratchPad
+            h1(ng-bind="customerName")
       div#dialog_overlay.gone
          div#dialog_box
             div
@@ -37,8 +36,8 @@ html
                h1.category Bore Log
             article
                p.hiddenDescription Create a bore log for a completed bore
-               button#createBoreLogButton(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
-               button#continueBoreLogButton(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Continue
+               button#createBoreLogButton(ng-click="customerPrompt()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
+               button#continueBoreLogButton(ng-click="myLogger()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Continue
          section.content
             header(onclick="over(this)", onmouseout="unZoom(this)")
                h1.category Bore Journal
@@ -62,27 +61,27 @@ html
                button#boreJournalFiles(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Journals
                button#pdfFiles(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") PDFs
    script.
-      $(document).ready(function(){
-         controller.init($("#myPage"), function(){
-            console.log("Bison controller initialized from options.jade");
-         }, toggleContent);
-      });
+      jQuery.noConflict();
+
    script.
       function over(elem){
-         $(elem).siblings("article").children(".hiddenDescription").slideDown(400);
+         jQuery(elem).siblings("article").children(".hiddenDescription").slideDown(200);
       }
       function unZoom(elem){
-         $(elem).siblings("article").children(".hiddenDescription").slideUp(400);
+         jQuery(elem).siblings("article").children(".hiddenDescription").slideUp(200);
       }
       function moveBackward(elem) {
-         $(elem).toggleClass("hovered");
-         $(elem).siblings("button").toggleClass("moveBack");
+         jQuery(elem).toggleClass("hovered");
+         jQuery(elem).siblings("button").toggleClass("moveBack");
       }
       function moveForward(elem) {
-         $(elem).toggleClass("hovered");
-         $(elem).siblings("button").toggleClass("moveBack");
+         jQuery(elem).toggleClass("hovered");
+         jQuery(elem).siblings("button").toggleClass("moveBack");
       }
       function toggleContent(){
-         $(".content").toggleClass("outro");
+         jQuery(".content").toggleClass("outro");
+         jQuery("#scratchPad").toggleClass("hidden");
       }
-      //$(elem).css("color","firebrick");
+      function clicked(){
+         console.log("The second button was clicked");
+      }

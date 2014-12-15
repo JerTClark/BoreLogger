@@ -17,3 +17,133 @@ setTimeout(function(){
             $("#title_bar").toggleClass("intro");
             $(".content").toggleClass("outro");
          }, 2000);
+
+//$scope.boreLog = initBoreLog();
+    $scope.boreLog = {
+        customerName: "",
+        conduit: "",
+        location: "",
+        lengthOfBore: "",
+        date: "",
+        locates: []
+    };
+
+    //Singleton pattern
+    var Singleton = (function () {
+        var instance;
+        function BoreLog() {
+            this.customerName = "";
+            this.conduit = "";
+            this.location = "";
+            this.lengthOfBore = "";
+            this.date = "";
+            this.locates = [];
+        }
+        function init() {
+            return new BoreLog();
+        }
+        return {
+            getInstance : function(){
+                if (!instance) {
+                    instance = init();
+                }
+                return instance;
+            }
+        };
+    })();
+
+    function initBoreLog() {
+        return {
+            customerName: "",
+            conduit: "",
+            location: "",
+            lengthOfBore: "",
+            date: "",
+            locates: []
+        };//end return
+    }//end initBoreLog
+
+    //$scope.boreLog = Singleton.getInstance();
+
+    //-- Setters
+    $scope.setCustomerName = function(userInput){
+        $scope.boreLog.customerName = userInput;
+    };
+    $scope.setLocation = function(userInput){
+        $scope.boreLog.location = userInput;
+    };
+    $scope.setConduit = function(userInput){
+        $scope.boreLog.conduit = userInput;
+    };
+    $scope.setLengthOfBore = function(userInput){
+        $scope.boreLog.lengthOfBore = userInput;
+    };
+    $scope.setDateOfBore = function(userInput){
+        $scope.boreLog.date = userInput;
+    };
+
+    //-- Manipulating the list of locates
+    $scope.addBoreLogLocate = function (locate) {
+        $scope.boreLog.locates.push(locate);
+    };
+    $scope.removeBoreLogLocate = function(index) {
+        $scope.boreLog.locates.splice(index, 1);
+    };
+
+
+            this.logIt = function(){console.log("Controller created");};
+            $scope.logIt = logIt();
+
+            self = this;
+            this.customerName = "";
+            this.conduit = "";
+            this.location = "";
+            this.lengthOfBore = "";
+            this.date = "";
+            this.locates = [];
+
+            var toggleContent = function(){
+                jQuery(".content").toggleClass("outro");
+                jQuery("#scratchPad").toggleClass("hidden");
+            };
+
+            $scope.customerPrompt = function(){
+                console.log("customerPrompt called");
+                toggleContent();
+                Prompt.render("Customer", "Who&#32;is&#32;this&#32;job&#32;for?", customer, toggleContent);
+            };
+
+            var customer = function(userInput) {
+                self.customerName = "Customer: " + userInput;
+                setTimeout(function(){
+                    Prompt.render("Conduit", "(No.)&#32;Size&#32;Kind", description, toggleContent);
+                }, 100);
+            };
+            var description = function(userInput) {
+                self.conduit = "Description: " + userInput;
+                setTimeout(function(){
+                    Prompt.render("Location", "Location&#32;of&#32;the&#32;job", location, toggleContent);
+                }, 100);
+            };
+            var location = function(userInput) {
+                self.location = "Location: " + userInput;
+                setTimeout(function(){
+                    Prompt.render("Length&#32;of&#32;bore", "Total&#32;footage&#32;(length&#32;of&#32;rods)", lengthOfBore, toggleContent);
+                }, 100);
+            };
+            var lengthOfBore = function(userInput) {
+                self.length = "Length of Bore: " + userInput;
+                self.date = "Date: " + new Date(Date.now());
+                var message = self.customerName + "<br>" +
+                    self.date + "<br>" + self.location + "<br>" +
+                    self.conduit + "<br>" + self.length;
+                setTimeout(function(){
+                    MyAlert.render("Bore summary", message, otherCrap);
+                }, 100);
+            };
+            var otherCrap = function(){
+                setTimeout(function(){
+                    window.localStorage.setItem(self.date + "-" + self.location, JSON.stringify(self));
+                    MyAlert.render("The rest is yet to come", "Someday...", toggleContent);
+                }, 100);
+            }
