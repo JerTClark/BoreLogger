@@ -25,12 +25,12 @@ function CustomPrompt(model, title, hint, continueCallback, cancelCallback, $sco
     self = this;
     this.continueCB = continueCallback;
     this.cancelCB = cancelCallback;
+    this.promptValue = "prompt_value1";
     this.render = function(){
         var dialogOverlay = jQuery("#dialog_overlay");
         dialogOverlay.removeClass("gone");
 
-        //'<br><input id="prompt_value1" placeholder=' + hint +'>'
-        var hintHTML = "<br><input id=\"prompt_value1\" "+ model + " placeholder=\"" + hint +"\">";
+        var hintHTML = "<br><input id=\" " + self.promptValue + "\" " + model + " placeholder=\"" + hint +"\">";
         console.log(hintHTML);
 
         document.getElementById('dialog_box_head').innerHTML = title;
@@ -43,7 +43,7 @@ function CustomPrompt(model, title, hint, continueCallback, cancelCallback, $sco
         jQuery('#dialog_overlay').toggleClass("gone");
     };
     this.ok = function(){
-        var prompt_entry = document.getElementById('prompt_value1').value;
+        var prompt_entry = document.getElementById(self.promptValue).value;
         //console.log(prompt_entry);
         self.continueCB(prompt_entry);
         jQuery('#dialog_overlay').toggleClass("gone");
