@@ -30,11 +30,14 @@ function CustomPrompt(model, title, hint, continueCallback, cancelCallback, $sco
         var dialogOverlay = jQuery("#dialog_overlay");
         dialogOverlay.removeClass("gone");
 
-        var hintHTML = "<br><input id=\" " + self.promptValue + "\" " + model + " placeholder=\"" + hint +"\">";
+        var hintHTML = "<br><input id=\"" + self.promptValue + "\" "
+            + model + " placeholder=\"" + hint + "\"" + ">";
+        //var hintHTML = "<br><input id=\"" + self.promptValue + "\" "
+        //    + model + "class=\"ng-valid ng-dirty\"" + ">";
         console.log(hintHTML);
 
-        document.getElementById('dialog_box_head').innerHTML = title;
-        document.getElementById('dialog_box_body').innerHTML = hintHTML;
+        //document.getElementById('dialog_box_head').innerHTML = title;
+        //document.getElementById('dialog_box_body').innerHTML = hintHTML;
         document.getElementById('dialog_box_foot').innerHTML = '<button class="dialog_button" ng-click="lo" onclick="Prompt.ok()">OK</button> <button class="dialog_button" onclick="Prompt.cancel()">Cancel</button>';
         jQuery('#prompt_value1').andSelf().focus();
     };

@@ -4,16 +4,21 @@ boreLogModule.controller("BoreLogController", function ($scope) {
         console.log("click");
     };
 
-    //$scope.boreLog = [{
-    //    customerName: "Customer: ",
-    //    conduit: "Conduit: ",
-    //    location: "Location: ",
-    //    lengthOfBore: "Length of Bore: ",
-    //    date: "",
-    //    locates: []
-    //}];
+    $scope.boreLogModels = [
+        {title:"Customer", hint:"Who was the job for", model: $scope.customerName},
+        {title: "Conduit", hint:"(No.) Size Type", model: $scope.conduit}
+    ];
 
-    $scope.customerName = "Customer: ";
+    $scope.boreLog = [{
+        customerName: " ",
+        conduit: " ",
+        location: " ",
+        lengthOfBore: " ",
+        date: "",
+        locates: []
+    }];
+
+    $scope.customerName = " ";
     $scope.conduit = "";
     $scope.location = "";
     $scope.lengthOfBore = "";
@@ -28,14 +33,16 @@ boreLogModule.controller("BoreLogController", function ($scope) {
     $scope.customerPrompt = function () {
         console.log("customerPrompt called");
         toggleContent();
-        $scope.mod = "customerName";
-        var ngMod = "ng-model=\"customerName\"";
-        var prompt = new CustomPrompt(ngMod, "Customer", "Who&#32;is&#32;this&#32;job&#32;for?", customer, toggleContent);
+        var ngMod = "ng-model='customerName'";
+        //$scope.mod = "customerName";
+        //jQuery("#prompt_value1").attr("ng-model", "customerName");
+        var prompt = new CustomPrompt(ngMod, "Customer", "Who&#32;is&#32;this&#32;job&#32;for?", customer, toggleContent, $scope);
         prompt.render();
     };
 
     var customer = function (userInput) {
-        //$scope.customerName = "Customer: " + userInput;
+        $scope.customerName = "Customer: " + userInput;
+        console.log(userInput + " " + $scope.customerName);
         var ngMod = "ng-model=\"conduit\"";
         setTimeout(function () {
             var prompt = new CustomPrompt(ngMod, "Conduit", "(No.)&#32;Size&#32;Kind",

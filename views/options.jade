@@ -20,13 +20,15 @@ html(ng-app="BoreLogModule")
    body#myPage(ng-controller="BoreLogController")
       div#scratchPad.hidden
          div#scratchPaper
-            h1 Testing ScratchPad
             h1(ng-bind="customerName")
       div#dialog_overlay.gone
          div#dialog_box
             div
-               div#dialog_box_head
-               div#dialog_box_body
+               div(ng-repeat="category in boreLogModels")
+                  div.dialog_box_head
+                     h2 {{category.title}}
+                  div.dialog_box_body
+                     input.prompt_value1(name="{{category.title}}", placeholder="{{category.hint}}", ng-model="category.model")
                div#dialog_box_foot
       div#main
          header#title_bar
