@@ -1,0 +1,10 @@
+div#dialog_overlay.gone
+    div#dialog_box(onmouseover="noFade(this)", onmouseout="fade(this)")
+        div(ng-repeat="category in fields")
+            div#dialog_box_head
+                h2.category {{category.title}}
+            div#dialog_box_body
+                input.prompt_value1(type="{{category.type}}", name="{{category.title}}", placeholder="{{category.hint}}", ng-model="category.value")
+        div#dialog_box_footer
+            button.dialog_button(ng-click="newBoreLog()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Ok
+            button.dialog_button(onclick="toggleContent()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Cancel

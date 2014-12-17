@@ -1,5 +1,3 @@
-/*"General Info" prompt*/
-
 /*An overlay used to position and contain the dialog box*/
 #dialog_overlay {
     position: absolute;
@@ -22,42 +20,20 @@
     margin-right: auto;
     background: #000;
     border-radius: 5px;
-}
-
-/*Unsure about this*/
-#dialog_box > div {
-    background: #fff;
-    margin: 8px;
+    -webkit-transition-duration: 1.5s;
 }
 
 /*Contains the title*/
-#dialog_box > div > #dialog_box_head {
+#dialog_box_head {
     font-family: "Roboto-Bold", sans-serif;
     font-size: large;
     background: firebrick;
-    padding: 10px;
-    color: #ffffff;
-}
-
-/*Contains the title*/
-.dialog_box_head {
-    font-family: "Roboto-Bold", sans-serif;
-    font-size: large;
-    background: firebrick;
-    padding: 10px;
+    padding: 2px;
     color: #ffffff;
 }
 
 /*Contains the prompt*/
-.dialog_box_body {
-    background: #333;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-}
-
-/*Contains the prompt*/
-#dialog_box > div > #dialog_box_body {
+#dialog_box_body {
     background: #333;
     padding: 20px;
     color: #fff;
@@ -65,36 +41,36 @@
 }
 
 /*Contains the OK and Cancel buttons*/
-#dialog_box > div > #dialog_box_foot {
-    background: red;
+#dialog_box_footer {
+    /*background: red;*/
+    background: firebrick;
     padding: 5px;
     text-align: center;
 }
 
-/*Prompt comes from HTML added by the JavaScript is custom-dialog-prompt.js*/
-#prompt_value1 {
-    padding: 10px;
-    margin: 3px;
-    width: 80%;
-    font-family: "Roboto-Light", sans-serif;
-    font-size: medium;
-}
 .prompt_value1 {
     padding: 10px;
     margin: 3px;
     width: 80%;
     font-family: "Roboto-Light", sans-serif;
     font-size: medium;
+    border: 2px solid red;
 }
+
 /*Ok and Cancel buttons*/
 .dialog_button {
     width: 50%;
 }
 
-#dialog_overlay.gone {
+.gone {
     opacity: 0;
     visibility: hidden;
     -webkit-transition-duration: 1.5s;
     /*Previously -5*/
     -webkit-transform: translateZ(-15px);
+}
+
+.fade {
+    opacity: .1;
+    -webkit-transition-duration: 1.5s;
 }

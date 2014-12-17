@@ -1,0 +1,7 @@
+section.content
+   header(onclick="over(this)", onmouseout="unZoom(this)")
+      h1.category Bore Log
+   article
+      p.hiddenDescription Create a bore log for a completed bore
+      button#createBoreLogButton(ng-click="newBoreLog()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
+      button#continueBoreLogButton(ng-click="myLogger()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Continue

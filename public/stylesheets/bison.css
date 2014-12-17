@@ -1,6 +1,6 @@
 @import "reset5.css";
 @import "my-fonts.css";
-@import "gen-info-prompt.css";
+@import "dialog-overlay.css";
 /*@import "media.css";*/
 
 body {
@@ -42,9 +42,10 @@ button {
 }
 
 /*ID*/
-#title_bar{
+.title_bar{
     margin: 2%;
-    /*text-shadow: 0 0 2px blue;*/
+    color: saddlebrown;
+    text-shadow: 0 0 2px black;
     letter-spacing: 5px;
     font-family: "Lintsec", sans-serif;
     font-size: xx-large;
@@ -53,22 +54,26 @@ button {
     -webkit-transform: translateZ(0px);
 }
 
-#title_bar:hover {
+.title_bar:hover {
     color: #ffffff;
     -webkit-transition-duration: 2.5s;
     /*-webkit-transform: translateZ(2px);*/
-    text-shadow: 0 0 20px blue;
+    text-shadow: 0 0 20px red;
 }
 
-#title_bar.intro {
+.title_bar.intro {
     color: #ffffff;
     -webkit-transition-duration: 1.5s;
     -webkit-transform: translateY(40px);
     text-shadow: 0 0 20px blue;
 }
 
-#main {
-    background: url("../images/bison_logo-web-cropped-alpha.png") no-repeat scroll center;
+html {
+    background: -webkit-linear-gradient(tan, saddlebrown), no-repeat; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(tan, saddlebrown); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(tan, saddlebrown); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(tan, saddlebrown); /* Standard syntax */
+    /*background: url("../images/bison_logo-web-cropped-alpha.png") no-repeat scroll center;*/
     background-size: cover;
     background-clip: content-box;
 }
@@ -85,6 +90,8 @@ button.hovered{
 }
 
 .category {
+    margin-left: 2%;
+    margin-right: 2%;
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
     font-size: x-large;

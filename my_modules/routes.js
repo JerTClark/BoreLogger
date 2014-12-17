@@ -58,11 +58,30 @@ module.exports = function(app){
         res.render("angular-test");
     });
 
+    //-- Testing
+    app.get("/profile", function(req, res){
+        res.render("profile");
+    });
+
+    app.get("/login", function(req, res){
+        var firstName = req.query.firstName;
+        var lastName = req.query.lastName;
+        res.send("Greetings, " + firstName + " " + lastName + "!");
+    });
+
     //-- Production routes in the Borelogger namespace
     app.namespace("/borelogger", function(){
 
         app.get("/", function(req,res){
             res.render("options");
+        });
+
+        app.post("/log", function(req, res){
+
+        });
+
+        app.post("/journal", function(req, res){
+
         });
 
     });

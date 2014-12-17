@@ -12,78 +12,24 @@ html(ng-app="BoreLogModule")
       link(rel="stylesheet", href="stylesheets/bison.css")
       link(rel="stylesheet", href="stylesheets/scratch-pad.css")
       script(src="javascripts/jquery-2.1.1.min.js")
+      script(src="javascripts/jeremyQuery.js")
       script(src="javascripts/angular.js")
-      script(src="javascripts/bison-controller.js")
-      script(src="javascripts/custom-dialog-prompt.js")
       script(src="javascripts/bore-log.js")
 
    body#myPage(ng-controller="BoreLogController")
-      div#scratchPad.hidden
-         div#scratchPaper
-            h1(ng-bind="customerName")
-      div#dialog_overlay.gone
-         div#dialog_box
-            div
-               div(ng-repeat="category in boreLogModels")
-                  div.dialog_box_head
-                     h2 {{category.title}}
-                  div.dialog_box_body
-                     input.prompt_value1(name="{{category.title}}", placeholder="{{category.hint}}", ng-model="category.model")
-               div#dialog_box_foot
+      include ./logger/scratch-pad
+      include ./logger/dialog-overlay
+      //include ./logger/alert
       div#main
-         header#title_bar
+         header.title_bar
             h1 BoreLogger
-         section.content
+         div.content(ng-repeat="item in optionCatgories")
             header(onclick="over(this)", onmouseout="unZoom(this)")
-               h1.category Bore Log
+               h1.category {{item.title}}
             article
-               p.hiddenDescription Create a bore log for a completed bore
-               button#createBoreLogButton(ng-click="customerPrompt()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
-               button#continueBoreLogButton(ng-click="myLogger()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Continue
-         section.content
-            header(onclick="over(this)", onmouseout="unZoom(this)")
-               h1.category Bore Journal
-            article
-               p.hiddenDescription Create or continue a bore journal (ongoing bore) or convert an existing bore journal into a finalized
-               button#createBoreJournal(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
-               button#continueBoreJournal(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Continue
-               button#boreJournalToLog(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Convert
-         section.content
-            header(onclick="over(this)", onmouseout="unZoom(this)")
-               h1.category Create PDF
-            article
-               p.hiddenDescription Select a bore log file and create a PDF from that file
-               button#createPDF(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Create
-         section.content
-            header(onclick="over(this)", onmouseout="unZoom(this)")
-               h1.category Browse Files
-            article
-               p.hiddenDescription Choose from the file types below
-               button#boreLogFiles(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Logs
-               button#boreJournalFiles(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Journals
-               button#pdfFiles(onmouseover="moveBackward(this)", onmouseout="moveForward(this)") PDFs
-   script.
-      jQuery.noConflict();
+               p.hiddenDescription {{item.description}}
+               div(ng-repeat="button in item.buttons")
+                  button(ng-click="$parent.options(button.code)",onmouseover="moveBackward(this)", onmouseout="moveForward(this)") {{button.name}}
 
    script.
-      function over(elem){
-         jQuery(elem).siblings("article").children(".hiddenDescription").slideDown(200);
-      }
-      function unZoom(elem){
-         jQuery(elem).siblings("article").children(".hiddenDescription").slideUp(200);
-      }
-      function moveBackward(elem) {
-         jQuery(elem).toggleClass("hovered");
-         jQuery(elem).siblings("button").toggleClass("moveBack");
-      }
-      function moveForward(elem) {
-         jQuery(elem).toggleClass("hovered");
-         jQuery(elem).siblings("button").toggleClass("moveBack");
-      }
-      function toggleContent(){
-         jQuery(".content").toggleClass("outro");
-         jQuery("#scratchPad").toggleClass("hidden");
-      }
-      function clicked(){
-         console.log("The second button was clicked");
-      }
+      var jQ = jQuery.noConflict();
