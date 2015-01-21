@@ -22,7 +22,7 @@ html(ng-app="BoreLogModule")
       //include ./logger/alert
       div#main
          header.title_bar
-            h1 BoreLogger
+            h1(ng-bind="scratchpadTitle")
          div.content(ng-repeat="item in optionCatgories")
             header(onclick="over(this)", onmouseout="unZoom(this)")
                h1.category {{item.title}}
@@ -30,6 +30,5 @@ html(ng-app="BoreLogModule")
                p.hiddenDescription {{item.description}}
                div(ng-repeat="button in item.buttons")
                   button(ng-click="$parent.options(button.code)",onmouseover="moveBackward(this)", onmouseout="moveForward(this)") {{button.name}}
-
    script.
       var jQ = jQuery.noConflict();

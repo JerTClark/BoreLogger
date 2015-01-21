@@ -1,7 +1,6 @@
 @import "reset5.css";
 @import "my-fonts.css";
 @import "dialog-overlay.css";
-/*@import "media.css";*/
 
 body {
     -webkit-perspective: 50px;
@@ -43,8 +42,9 @@ button {
 
 /*ID*/
 .title_bar{
-    margin: 2%;
     color: saddlebrown;
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-shadow: 0 0 2px black;
     letter-spacing: 5px;
     font-family: "Lintsec", sans-serif;
@@ -69,13 +69,14 @@ button {
 }
 
 html {
-    background: -webkit-linear-gradient(tan, saddlebrown), no-repeat; /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(tan, saddlebrown); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(tan, saddlebrown); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(tan, saddlebrown); /* Standard syntax */
-    /*background: url("../images/bison_logo-web-cropped-alpha.png") no-repeat scroll center;*/
+    background: -webkit-linear-gradient(left top, tan, saddlebrown); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left top, tan, saddlebrown); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left top, tan, saddlebrown); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left top, tan, saddlebrown); /* Standard syntax */
+    -webkit-background-size: cover;
+    -moz-background-size: cover ;
+    -o-background-size: cover;
     background-size: cover;
-    background-clip: content-box;
 }
 
 /*Class selected*/
@@ -90,8 +91,6 @@ button.hovered{
 }
 
 .category {
-    margin-left: 2%;
-    margin-right: 2%;
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
     font-size: x-large;

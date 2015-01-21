@@ -9,7 +9,7 @@ boreLogModule.controller("BoreLogController", function ($scope) {
     $scope.locates = [];
 
     //-- Variable to hold title values
-    $scope.scratchpadTitle = "";
+    $scope.scratchpadTitle = "BoreLogger";
 
     $scope.myLogger = function () {
         console.log("click");
@@ -81,5 +81,9 @@ boreLogModule.controller("BoreLogController", function ($scope) {
         toggleContent();
     };
 
+    $scope.dismissDialog = function(){
+        $scope.scratchpadTitle = "BoreLogger";
+        toggleContent();
+    }
 
 });
