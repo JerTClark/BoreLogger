@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69de2d68-7893-4793-85f7-96f8ec4d3d85" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/future.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/fanatikaone.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/Starjhol.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/victoria.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/bootle.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/old_town.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/AFL.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/Lintsec Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/Roboto-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/RockSalt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/dirtydeco.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/Roboto-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/rough.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/css/my-fonts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/darkgard.TTF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/www/fonts/Godzilla.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/borelogger-ionic/hooks/after_prepare/030_resources_files.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Bison.iml" afterPath="$PROJECT_DIR$/.idea/Bison.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="express.iws" />
@@ -47,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.103626944" vertical-offset="565" max-vertical-offset="2425">
+            <state vertical-scroll-proportion="0.10380623" vertical-offset="565" max-vertical-offset="2425">
               <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding>
                 <element signature="e#370#527#0" expanded="false" />
@@ -415,13 +397,20 @@
       <option name="project" value="LOCAL" />
       <updated>1421882952176</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Incorporating some ionic">
+      <created>1422911552058</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1422911552058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -436,7 +425,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25727412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -802,6 +790,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="53575">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103626944" vertical-offset="565" max-vertical-offset="2425">
+        <state vertical-scroll-proportion="0.10380623" vertical-offset="565" max-vertical-offset="2425">
           <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="e#370#527#0" expanded="false" />
