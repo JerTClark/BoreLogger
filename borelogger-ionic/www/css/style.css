@@ -1,0 +1,113 @@
+@import "my-fonts.css";
+
+html {
+    background-color: #ffffff;
+}
+
+.hide {
+    display: none;
+}
+
+.bison-category {
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: x-large;
+    color: white;
+    border: red solid 2px;
+    border-radius: 2px;
+    background-color: firebrick;
+    padding: 10px;
+    -webkit-transition-duration: 1s;
+}
+
+.bison-category:hover, .bison-category.activated {
+    box-shadow: 0 0 15px red;
+    text-shadow: 0 0 10px white;
+    -webkit-transition-duration: 1s;
+}
+
+p.bison-description {
+    font-family: RockSalt, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+button.bison-rough-text {
+    font-family: Rough, sans-serif;
+    -webkit-transition-duration: 1s;
+}
+
+button.bison-rough-text:hover, button.bison-rough-text.emphasis {
+    color: #ffffff;
+    border-color: red;
+    background-color: red;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+
+.handwriting-xlarge {
+    font-family: "RockSalt", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    -webkit-transition-duration: 1s;
+}
+
+button.handwriting-xlarge {
+    -webkit-transition-duration: 1s;
+}
+
+button.handwriting-xlarge:hover {
+    color: #ffffff;
+    border-color: red;
+    background-color: red;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+.handwriting-normal {
+    font-family: "RockSalt", sans-serif;
+    font-weight: normal;
+    font-size: large;
+}
+
+.bison-body {
+    -webkit-perspective: 50px;
+}
+.bison-button {
+    font-family: Rough, sans-serif;
+    font-size: larger;
+    width: 64%;
+    margin: 1% 18% 1% 18%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1.5s;
+}
+.bison-button:hover {
+    color: #ffffff;
+    border-color: red;
+    background-color: red;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+.outro {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -webkit-transition-duration: 1.5s;
+}
+.moveBack {
+    -webkit-transform: translateZ(-3px);
+    -webkit-transition-duration: 1.5s;
+    -webkit-transition-delay: 250ms;
+}

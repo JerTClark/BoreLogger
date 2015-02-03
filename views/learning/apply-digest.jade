@@ -1,0 +1,15 @@
+doctype
+html(ng-app="myApp")
+   head
+      title $apply()
+   body(ng-controller="TimeoutController")
+      button(ng-click="scheduleTask()") Message fetched: {{message}}
+   script.
+      angular.module("myApp", []).controller("TimeoutController", function($scope){
+         $scope.scheduleTask = function(){
+            setTimeout(function(){
+               $scope.message = "Fetched after 3 seconds";
+               console.log("Message = " + $scope.message);
+            }, 3000);
+         }
+      });
