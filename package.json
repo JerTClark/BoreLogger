@@ -18,11 +18,13 @@
     "fs-extra": "^0.13.0",
     "iniparser": "^1.0.5",
     "jade": "1.8.1",
-    "jasmine": "^2.1.1",
-    "karma": "^0.12.28",
-    "karma-chrome-launcher": "^0.1.7",
-    "protractor": "^1.5.0",
     "response-time": "^2.2.0",
     "stylus": "^0.49.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "protractor": "^1.6.1"
   }
 }

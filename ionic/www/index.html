@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Bison, Inc.</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/foundation.css" rel="stylesheet">-->
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="bisonInc">
+<ion-nav-view></ion-nav-view>
+
+<!--Tabs-->
+<script id="borelogger.html" type="text/ng-template">
+    <!--<ion-tabs class="tabs-assertive">-->
+        <!--<ion-tab title="options" href="#/borelogger/options">-->
+            <!--<ion-nav-view name="options"></ion-nav-view>-->
+        <!--</ion-tab>-->
+        <!--<ion-tab title="log" href="#/borelogger/new-bore-log">-->
+            <!--<ion-nav-view name="new-bore-log"></ion-nav-view>-->
+        <!--</ion-tab>-->
+    <!--</ion-tabs>-->
+    <ion-nav-view name="options"></ion-nav-view>
+    <ion-nav-view name="new-bore-log"></ion-nav-view>
+
+</script>
+
+<script id="options.html" type="text/ng-template">
+    <ion-header-bar class="bar-assertive bar-header" align-title="left">
+        <div style="display: block">
+            <h1 class="title">{{title}}</h1>
+        </div>
+        <button class="button button-icon">
+            <i class="ion ion-navicon"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content has-bouncing="true" padding="true" style="margin-top: 20px">
+        <!--Repeated lists of option groups-->
+        <ion-list class="assertive-border" type="card" ng-repeat="category  in optionCategories"
+                  ng-class="category.class">
+            <ion-item class="dark-bg">
+                <h1 class="bison-category" on-tap="showDescription($event)">{{category.title}}
+                </h1>
+
+                <p class="bison-description popup-head hide">{{category.description}}</p>
+            </ion-item>
+            <div class="item" style="background-color: antiquewhite">
+                <button class="button button-full button-assertive bison-rough-text"
+                        ng-repeat="button in category.buttons"
+                        ng-click="activate($event, button)">{{button.name}}
+                </button>
+            </div>
+        </ion-list>
+    </ion-content>
+</script>
+
+<script id="new-bore-log.html" type="text/ng-template">
+    <ion-header-bar class="bar-assertive bar-header" align-title="left">
+        <div style="display: block">
+            <h1 class="title">{{title}}</h1>
+        </div>
+        <button class="button button-icon" ng-click="openModal()">
+            <i class="ion ion-navicon"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content has-bouncing="true" padding="true" style="margin-top: 20px">
+        <ion-list class="assertive-border" type="card" ng-repeat="field in boreLogModel">
+            <ion-item class="dark-bg">
+                <h1 class="bison-category" on-tap="showDescription($event)">{{field.title}}
+                </h1>
+                <p class="bison-description popup-head hide">{{field.hint}}</p>
+            </ion-item>
+            <div class="item" style="background-color: antiquewhite">
+                <input type={{field.type}} placeholder='{{field.hint}}' ng-model="field.value">
+            </div>
+        </ion-list>
+        <div class="item" style="background-color: antiquewhite">
+            <button class="button button-full button-assertive bison-rough-text" ng-click="openModal()">Double-check</button>
+            <button class="button button-full button-assertive bison-rough-text" type="submit">Submit</button>
+        </div>
+    </ion-content>
+</script>
+
+<script id="modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar-assertive bar-header" align-title="left">
+            <h1 class="title">{{modal.title}}</h1>
+            <button class="button" ng-click="closeModal()">
+                <i class="ion ion-android-arrow-back"></i>
+            </button>
+        </ion-header-bar>
+        <ion-content has-bouncing="true" padding="true" style="margin-top: 20px">
+            <ion-list class="assertive-border" type="card" ng-repeat="data in modal.values">
+                <ion-item class="dark-bg">
+                    <h1 class="handwriting-xlarge" style="color: white;text-align: center">{{data.title}}</h1>
+                </ion-item>
+                <div class="item" style="background-color: antiquewhite">
+                    <h1 class="handwriting-normal" ng-bind="data.value"></h1>
+                </div>
+            </ion-list>
+            <div class="item" style="background-color: antiquewhite">
+                <button class="button button-full button-assertive handwriting-xlarge"
+                        style="text-align: center" ng-click="closeModal()">Something's wrong</button>
+                <button class="button button-full button-assertive handwriting-xlarge">Looks ok!</button>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+</body>
+</html>

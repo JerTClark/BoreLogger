@@ -1,0 +1,57 @@
+//
+   Created by Clark on 12/6/2014.
+doctype
+html(ng-app="IndexModule")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
+        meta(name="author", content="Jeremy Clark")
+        meta(name="description", content="A rendering of a native Android app in HTML5")
+        meta(name="keywords", content="drilling, directional, bison, drilling virginia, horizontal directional drilling")
+        title Bison, Inc.
+        link(rel="shortcut icon", href="images/ic_launcher-web.png")
+        link(rel="stylesheet", href="css/index-large.css")
+        link(rel="stylesheet", href="css/index-med.css")
+        link(rel="stylesheet", href="css/index-small.css")
+        link(rel="stylesheet", href="css/index-xsmall.css")
+        link(rel="stylesheet", href="css/index-xxsmall.css")
+        script(src="scripts/jquery-2.1.1.min.js")
+        script(src="scripts/jQueryRotate.js")
+        script(src="scripts/jeremyQuery.js")
+        script(src="scripts/angular.js")
+        script(src="scripts/index.js")
+    body(ng-controller="IndexController")
+        section#title_bar
+            img#drillBit(src="images/tricone1.png", onmouseover="drillBitHover()", onmouseout="stopDrilling()")
+            div#title
+                h1(ng-bind="doc_title")
+                h2(ng-bind="subtitleOne")
+            aside
+                h4(ng-bind="address")
+                h4(ng-bind="phone")
+                h4: a#email(href="bisoninc@outlook.com", type="email", ng-bind="email")
+        section: h3#subtitle(ng-bind="subtitleTwo")
+        section#menu-bar
+            nav
+                img(src="images/bison_logo-web-cropped.png")
+                div(ng-repeat="item in navigation")
+                    a(ng-href="{{item.link}}", ng-bind="item.name")
+        section#content
+            article
+                div(ng-repeat="item in indexContents")
+                    h1(ng-bind="item.header")
+                    p(ng-bind="item.contents")
+            aside#extras
+                div(ng-repeat="group in indexAside")
+                    h3(ng-bind="group.category")
+                        h4(ng-repeat="subItem in group.list"): a(ng-bind="subItem.name", ng-href="{{subItem.link}}")
+                form(action="/user", method="get")
+                    label Login_..
+                    br
+                    input(type="text", name="username", placeholder="Email")
+                    br
+                    input(type="password", name="password", placeholder="Password")
+                    br
+                    input(type="submit")
+    script.
+        var jQ = jQuery.noConflict();

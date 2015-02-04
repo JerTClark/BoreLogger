@@ -2,6 +2,340 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69de2d68-7893-4793-85f7-96f8ec4d3d85" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/index.jade" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\BoreLogger" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\bison.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\dialog-overlay.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\reset5.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\scratch-pad.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\css\my-fonts.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\config.ini" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\name-capitalizer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\users.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\node_modules\jasmine\node_modules\jasmine-core\.bundle\config" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\includes\footer.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\includes\header.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\includes\header.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\includes\include-style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\includes\script.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-media.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index.styl" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\index.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\index.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\alert.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\dialog-overlay.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\options.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\options.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\options.jade" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\pdf\options.jade" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.bowerrc" afterPath="$PROJECT_DIR$/ionic/.bowerrc" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.gitignore" afterPath="$PROJECT_DIR$/ionic/.gitignore" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\.name" afterPath="$PROJECT_DIR$/ionic/.idea/.name" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\borelogger.iml" afterPath="$PROJECT_DIR$/ionic/.idea/borelogger.iml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\encodings.xml" afterPath="$PROJECT_DIR$/ionic/.idea/encodings.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\misc.xml" afterPath="$PROJECT_DIR$/ionic/.idea/misc.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\modules.xml" afterPath="$PROJECT_DIR$/ionic/.idea/modules.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/ionic/.idea/scopes/scope_settings.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\vcs.xml" afterPath="$PROJECT_DIR$/ionic/.idea/vcs.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\.idea\workspace.xml" afterPath="$PROJECT_DIR$/ionic/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\bower.json" afterPath="$PROJECT_DIR$/ionic/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\config.xml" afterPath="$PROJECT_DIR$/ionic/config.xml" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\gulpfile.js" afterPath="$PROJECT_DIR$/ionic/gulpfile.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\hooks\README.md" afterPath="$PROJECT_DIR$/ionic/hooks/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\hooks\after_prepare\010_add_platform_class.js" afterPath="$PROJECT_DIR$/ionic/hooks/after_prepare/010_add_platform_class.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\hooks\after_prepare\030_resources_files.js" afterPath="$PROJECT_DIR$/ionic/hooks/after_prepare/030_resources_files.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\ionic.project" afterPath="$PROJECT_DIR$/ionic/ionic.project" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\package.json" afterPath="$PROJECT_DIR$/ionic/package.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\scss\ionic.app.scss" afterPath="$PROJECT_DIR$/ionic/scss/ionic.app.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\css\foundation.css" afterPath="$PROJECT_DIR$/ionic/www/css/foundation.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\css\style.css" afterPath="$PROJECT_DIR$/ionic/www/css/style.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\AFL.ttf" afterPath="$PROJECT_DIR$/assets/fonts/AFL.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\Godzilla.ttf" afterPath="$PROJECT_DIR$/assets/fonts/Godzilla.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\Lintsec Regular.ttf" afterPath="$PROJECT_DIR$/assets/fonts/Lintsec Regular.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\Roboto-Light.ttf" afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\RockSalt.ttf" afterPath="$PROJECT_DIR$/assets/fonts/RockSalt.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\Starjhol.ttf" afterPath="$PROJECT_DIR$/assets/fonts/Starjhol.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\bootle.ttf" afterPath="$PROJECT_DIR$/assets/fonts/bootle.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\darkgard.TTF" afterPath="$PROJECT_DIR$/assets/fonts/darkgard.TTF" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\dirtydeco.ttf" afterPath="$PROJECT_DIR$/assets/fonts/dirtydeco.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\fanatikaone.ttf" afterPath="$PROJECT_DIR$/assets/fonts/fanatikaone.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\future.ttf" afterPath="$PROJECT_DIR$/assets/fonts/future.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\old_town.ttf" afterPath="$PROJECT_DIR$/assets/fonts/old_town.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\rough.ttf" afterPath="$PROJECT_DIR$/assets/fonts/rough.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\fonts\victoria.ttf" afterPath="$PROJECT_DIR$/assets/fonts/victoria.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\img\ionic.png" afterPath="$PROJECT_DIR$/ionic/www/img/ionic.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\img\tricone.png" afterPath="$PROJECT_DIR$/ionic/www/img/tricone.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\index.html" afterPath="$PROJECT_DIR$/ionic/www/index.html" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\js\app.js" afterPath="$PROJECT_DIR$/ionic/www/js/app.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\README.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\angular-animate.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/angular-animate.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\angular-animate.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/angular-animate.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\angular-animate.min.js.map" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/angular-animate.min.js.map" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-animate\package.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-animate/package.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\README.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\angular-sanitize.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/angular-sanitize.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\angular-sanitize.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/angular-sanitize.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\angular-sanitize.min.js.map" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/angular-sanitize.min.js.map" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-sanitize\package.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-sanitize/package.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\CHANGELOG.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/CHANGELOG.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\CONTRIBUTING.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/CONTRIBUTING.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\LICENSE" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/LICENSE" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\README.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\api\angular-ui-router.d.ts" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/api/angular-ui-router.d.ts" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\release\angular-ui-router.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/release/angular-ui-router.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\release\angular-ui-router.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/release/angular-ui-router.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\common.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/common.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\resolve.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/resolve.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\state.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/state.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\stateDirectives.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/stateDirectives.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\stateFilters.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/stateFilters.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\templateFactory.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/templateFactory.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\urlMatcherFactory.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/urlMatcherFactory.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\urlRouter.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/urlRouter.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\view.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/view.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\viewDirective.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/viewDirective.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular-ui-router\src\viewScroll.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular-ui-router/src/viewScroll.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\README.md" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\angular-csp.css" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/angular-csp.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\angular.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/angular.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\angular.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/angular.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\angular.min.js.gzip" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/angular.min.js.gzip" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\angular.min.js.map" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/angular.min.js.map" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\angular\package.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/package.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\README.md" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/README.md" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\css\ionic.css" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/css/ionic.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\css\ionic.min.css" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/css/ionic.min.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\fonts\ionicons.eot" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/fonts/ionicons.eot" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\fonts\ionicons.svg" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/fonts/ionicons.svg" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\fonts\ionicons.ttf" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/fonts/ionicons.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\fonts\ionicons.woff" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/fonts/ionicons.woff" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic-angular.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic-angular.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic-angular.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic-angular.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic.bundle.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic.bundle.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic.bundle.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic.bundle.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\js\ionic.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/js/ionic.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_action-sheet.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_action-sheet.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_animations.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_animations.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_backdrop.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_backdrop.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_badge.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_badge.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_bar.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_bar.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_button-bar.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_button-bar.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_button.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_button.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_checkbox.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_checkbox.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_form.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_form.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_grid.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_grid.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_items.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_items.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_list.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_list.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_loading.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_loading.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_menu.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_menu.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_mixins.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_mixins.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_modal.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_modal.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_platform.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_platform.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_popover.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_popover.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_popup.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_popup.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_progress.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_progress.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_radio.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_radio.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_range.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_range.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_reset.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_reset.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_scaffolding.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_scaffolding.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_select.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_select.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_slide-box.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_slide-box.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_split-pane.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_split-pane.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_tabs.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_tabs.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_toggle.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_toggle.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_transitions.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_transitions.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_type.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_type.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_util.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_util.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\_variables.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/_variables.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionic.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionic.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionicons\_ionicons-animation.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionicons\_ionicons-font.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionicons/_ionicons-font.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionicons\_ionicons-icons.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionicons\_ionicons-variables.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\ionic\scss\ionicons\ionicons.scss" afterPath="$PROJECT_DIR$/ionic/www/lib/ionic/scss/ionicons/ionicons.scss" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/.bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/MIT-LICENSE.txt" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/bower.json" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\dist\jquery.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/dist/jquery.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\dist\jquery.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/dist/jquery.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\dist\jquery.min.map" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/dist/jquery.min.map" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\jsonp.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/jsonp.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\load.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/load.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\parseJSON.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/parseJSON.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\parseXML.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/parseXML.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\script.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/script.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\var\nonce.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/var/nonce.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\var\rquery.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/var/rquery.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\ajax\xhr.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/ajax/xhr.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes\attr.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes/attr.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes\classes.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes/classes.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes\prop.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes/prop.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes\support.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes/support.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\attributes\val.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/attributes/val.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\callbacks.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/callbacks.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core\access.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core/access.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core\init.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core/init.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core\parseHTML.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core/parseHTML.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core\ready.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core/ready.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\core\var\rsingleTag.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/core/var/rsingleTag.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\addGetHookIf.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/addGetHookIf.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\curCSS.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/curCSS.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\defaultDisplay.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/defaultDisplay.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\support.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/support.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\swap.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/swap.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\var\cssExpand.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/var/cssExpand.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\var\getStyles.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/var/getStyles.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\var\isHidden.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/var/isHidden.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\var\rmargin.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/var/rmargin.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\css\var\rnumnonpx.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\data.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/data.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\data\Data.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/data/Data.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\data\accepts.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/data/accepts.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\data\var\data_priv.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/data/var/data_priv.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\data\var\data_user.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/data/var/data_user.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\deferred.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/deferred.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\deprecated.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/deprecated.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\dimensions.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/dimensions.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\effects.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/effects.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\effects\Tween.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/effects/Tween.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\effects\animatedSelector.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/effects/animatedSelector.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\event.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/event.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\event\ajax.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/event/ajax.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\event\alias.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/event/alias.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\event\support.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/event/support.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\exports\amd.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/exports/amd.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\exports\global.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/exports/global.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\intro.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/intro.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\jquery.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/jquery.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\manipulation.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/manipulation.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\manipulation\_evalUrl.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\manipulation\support.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/manipulation/support.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\manipulation\var\rcheckableType.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\offset.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/offset.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\outro.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/outro.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\queue.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/queue.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\queue\delay.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/queue/delay.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\selector-native.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/selector-native.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\selector-sizzle.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/selector-sizzle.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\selector.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/selector.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\serialize.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/serialize.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\sizzle\dist\sizzle.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/sizzle/dist/sizzle.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\sizzle\dist\sizzle.min.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/sizzle/dist/sizzle.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\sizzle\dist\sizzle.min.map" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/sizzle/dist/sizzle.min.map" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\traversing.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/traversing.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\traversing\findFilter.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/traversing/findFilter.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\traversing\var\rneedsContext.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\arr.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/arr.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\class2type.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/class2type.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\concat.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/concat.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\hasOwn.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/hasOwn.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\indexOf.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/indexOf.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\pnum.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/pnum.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\push.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/push.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\rnotwhite.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/rnotwhite.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\slice.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/slice.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\strundefined.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/strundefined.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\support.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/support.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\var\toString.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/var/toString.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\borelogger-ionic\www\lib\jquery\src\wrap.js" afterPath="$PROJECT_DIR$/ionic/www/lib/jquery/src/wrap.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\routes.js" afterPath="$PROJECT_DIR$/backend/routes/routes.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\AFL.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/AFL.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\Godzilla.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/Godzilla.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\Lintsec Regular.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/Lintsec Regular.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\Roboto-Light.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\RockSalt.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/RockSalt.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\Starjhol.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/Starjhol.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\bootle.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/bootle.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\darkgard.TTF" afterPath="$PROJECT_DIR$/ionic/www/fonts/darkgard.TTF" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\dirtydeco.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/dirtydeco.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\fanatikaone.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/fanatikaone.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\future.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/future.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\old_town.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/old_town.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\rough.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/rough.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\fonts\victoria.ttf" afterPath="$PROJECT_DIR$/ionic/www/fonts/victoria.ttf" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\add_server.png" afterPath="$PROJECT_DIR$/assets/images/add_server.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\android-platform-icon.png" afterPath="$PROJECT_DIR$/assets/images/android-platform-icon.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\bison_document-web.png" afterPath="$PROJECT_DIR$/assets/images/bison_document-web.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\bison_logo-web-cropped.png" afterPath="$PROJECT_DIR$/assets/images/bison_logo-web-cropped.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\bison_logo-web.png" afterPath="$PROJECT_DIR$/assets/images/bison_logo-web.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\ic_launcher-web.png" afterPath="$PROJECT_DIR$/assets/images/ic_launcher-web.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\list-web.png" afterPath="$PROJECT_DIR$/assets/images/list-web.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\share-web.png" afterPath="$PROJECT_DIR$/assets/images/share-web.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\share.png" afterPath="$PROJECT_DIR$/assets/images/share.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\tricone1.png" afterPath="$PROJECT_DIR$/assets/images/tricone1.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\images\troubleshoot.png" afterPath="$PROJECT_DIR$/assets/images/troubleshoot.png" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\angular.js" afterPath="$PROJECT_DIR$/lib/scripts/angular.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\bore-log.js" afterPath="$PROJECT_DIR$/backend/scripts/bore-log.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\date.js" afterPath="$PROJECT_DIR$/lib/scripts/date.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\index.js" afterPath="$PROJECT_DIR$/backend/scripts/index.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\jQueryRotate.js" afterPath="$PROJECT_DIR$/lib/scripts/jQueryRotate.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\jeremyQuery.js" afterPath="$PROJECT_DIR$/backend/scripts/jeremyQuery.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\javascripts\jquery-2.1.1.min.js" afterPath="$PROJECT_DIR$/lib/scripts/jquery-2.1.1.min.js" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-large.css" afterPath="$PROJECT_DIR$/backend/css/index-large.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-large.styl" afterPath="$PROJECT_DIR$/backend/css/index-large.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-med.css" afterPath="$PROJECT_DIR$/backend/css/index-med.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-med.styl" afterPath="$PROJECT_DIR$/backend/css/index-med.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-media.styl" afterPath="$PROJECT_DIR$/backend/css/index-media.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-small.css" afterPath="$PROJECT_DIR$/backend/css/index-small.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-small.styl" afterPath="$PROJECT_DIR$/backend/css/index-small.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-values.css" afterPath="$PROJECT_DIR$/backend/css/index-values.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-values.styl" afterPath="$PROJECT_DIR$/backend/css/index-values.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-xsmall.css" afterPath="$PROJECT_DIR$/backend/css/index-xsmall.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-xsmall.styl" afterPath="$PROJECT_DIR$/backend/css/index-xsmall.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-xxsmall.css" afterPath="$PROJECT_DIR$/backend/css/index-xxsmall.css" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\index-xxsmall.styl" afterPath="$PROJECT_DIR$/backend/css/index-xxsmall.styl" />
+      <change type="MOVED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\public\stylesheets\my-fonts.css" afterPath="$PROJECT_DIR$/ionic/www/css/my-fonts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="express.iws" />
@@ -26,41 +360,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10380623" vertical-offset="565" max-vertical-offset="2425">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-              <folding>
-                <element signature="e#370#527#0" expanded="false" />
-                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/js/app.js">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3925" max-vertical-offset="4975">
-              <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1325">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/css/style.css">
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2225">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-              <folding>
-                <element signature="e#1645#1679#0" expanded="false" />
-                <element signature="e#1694#1987#0" expanded="false" />
-                <element signature="e#2008#2220#0" expanded="false" />
-                <element signature="e#2228#2327#0" expanded="false" />
-                <element signature="e#2338#2458#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.39964476" vertical-offset="0" max-vertical-offset="1550">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,26 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/custom-dialog-prompt.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/scratch-pad.css" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/journal/scratch-pad.jade" />
-        <option value="$PROJECT_DIR$/views/logger/options.jade" />
-        <option value="$PROJECT_DIR$/views/pdf/options.jade" />
-        <option value="$PROJECT_DIR$/views/journal/options.jade" />
-        <option value="$PROJECT_DIR$/views/files/options.jade" />
-        <option value="$PROJECT_DIR$/public/stylesheets/gen-info-prompt.css" />
-        <option value="$PROJECT_DIR$/public/javascripts/bore-log.js" />
-        <option value="$PROJECT_DIR$/views/options.jade" />
-        <option value="$PROJECT_DIR$/views/logger/scratch-pad.jade" />
-        <option value="$PROJECT_DIR$/views/logger/dialog-overlay.jade" />
-        <option value="$PROJECT_DIR$/public/stylesheets/dialog-overlay.css" />
-        <option value="$PROJECT_DIR$/views/logger/alert.jade" />
-        <option value="$PROJECT_DIR$/views/profile.jade" />
-        <option value="$PROJECT_DIR$/views/learning/apply-digest.jade" />
-        <option value="$PROJECT_DIR$/my_modules/routes.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/index.css" />
-        <option value="$PROJECT_DIR$/views/learning/index.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/index-small.css" />
         <option value="$PROJECT_DIR$/index-med-backup.txt" />
         <option value="$PROJECT_DIR$/public/stylesheets/media.css" />
@@ -105,7 +400,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/lorem.txt" />
         <option value="$PROJECT_DIR$/public/javascripts/jeremyQuery.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/index-large.styl" />
         <option value="$PROJECT_DIR$/public/stylesheets/index-values.styl" />
         <option value="$PROJECT_DIR$/public/stylesheets/bison.css" />
@@ -123,9 +417,34 @@
         <option value="$PROJECT_DIR$/borelogger-ionic/www/js/options.js" />
         <option value="$PROJECT_DIR$/borelogger-ionic/www/js/app.js" />
         <option value="$PROJECT_DIR$/borelogger-ionic/www/css/style.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/borelogger-ionic/www/index.html" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/backend/views/options.jade" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/backend/views/scratch-pad.jade" />
+        <option value="$PROJECT_DIR$/backend/scripts/index.js" />
+        <option value="$PROJECT_DIR$/backend/css/index.css" />
+        <option value="$PROJECT_DIR$/backend/css/my-fonts.css" />
+        <option value="$PROJECT_DIR$/backend/css/fonts.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-large.css" />
+        <option value="$PROJECT_DIR$/backend/css/index-large.styl" />
+        <option value="$PROJECT_DIR$/backend/routes/routes.js" />
+        <option value="$PROJECT_DIR$/backend/css/index-med.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-small.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-media.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-values.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-xsmall.styl" />
+        <option value="$PROJECT_DIR$/backend/css/index-xxsmall.styl" />
+        <option value="$PROJECT_DIR$/backend/views/index.jade" />
+        <option value="$PROJECT_DIR$/backend/css/bison.css" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path>C:\Users\jerem_000\AppData\Roaming\npm\bower.cmd</exe-path>
+    <config-path>C:\Users\jerem_000\Desktop\BoreLogger\bower.json</config-path>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -133,8 +452,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1296" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -159,6 +478,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,7 +493,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BisonWeb" />
+              <option name="myItemId" value="BoreLogger" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,11 +503,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BisonWeb" />
+              <option name="myItemId" value="BoreLogger" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -197,22 +517,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BisonWeb" />
+              <option name="myItemId" value="BoreLogger" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="borelogger-ionic" />
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bison" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoreLogger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bison" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoreLogger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -223,22 +574,25 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesJade" value="false" />
-    <property name="last_opened_file_path" value="C:/Web Development/BisonInc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bower.json" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="js.phonegap.settings.workdir" value="$PROJECT_DIR$/borelogger-ionic" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\backend\views" />
       <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www\css" />
       <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www\js" />
       <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www" />
       <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www\logger" />
-      <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Clark\Desktop\BisonWeb\borelogger-ionic\www" />
-      <recent name="C:\Users\Clark\Desktop\express\views\learning" />
-      <recent name="C:\Users\Clark\Desktop\express\views" />
-      <recent name="C:\Users\Clark\Desktop\express\public" />
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\lib\scripts" />
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\assets" />
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\backend\views" />
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\backend\scripts" />
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\backend\css" />
     </key>
   </component>
   <component name="RunManager" selected="PhoneGap/Cordova.(b)ionic">
@@ -296,7 +650,7 @@
       <method />
     </configuration>
     <configuration default="false" name="(b)ionic" type="PhoneGap" factoryName="PhoneGap/Cordova">
-      <option name="myExecutable" value="C:\Users\Clark\AppData\Roaming\npm\ionic.cmd" />
+      <option name="myExecutable" value="C:\Users\jerem_000\AppData\Roaming\npm\ionic.cmd" />
       <option name="myWorkDir" value="$PROJECT_DIR$/borelogger-ionic" />
       <option name="myCommand" value="run" />
       <option name="myPlatform" value="android" />
@@ -305,7 +659,9 @@
       <option name="target" value="6ef74b46" />
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
-      <method />
+      <method>
+        <option name="PhonegapTask" enabled="false" />
+      </method>
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
@@ -351,16 +707,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="736" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19866072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19793323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25496688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -368,9 +725,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25727412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -380,20 +736,20 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19866072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3767228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19793323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25619835" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -434,383 +790,282 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2306" max-vertical-offset="2975">
-          <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1525">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#1645#1679#0" expanded="false" />
-            <element signature="e#1694#1987#0" expanded="false" />
-            <element signature="e#2008#2220#0" expanded="false" />
-            <element signature="e#2228#2327#0" expanded="false" />
-            <element signature="e#2338#2458#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/learning/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1643" max-vertical-offset="2575">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index-med-backup.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9396411" vertical-offset="2224" max-vertical-offset="2950">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-xxsmall.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1575">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-xsmall.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="875" max-vertical-offset="1600">
-          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-small.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="775" max-vertical-offset="1475">
-          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-med.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1450">
-          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79575163" vertical-offset="313" max-vertical-offset="975">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-large.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1562" max-vertical-offset="6525">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lorem.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6762" max-vertical-offset="7475">
-          <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="250">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/bison_document-web.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47225502" vertical-offset="0" max-vertical-offset="850">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.113507375" vertical-offset="0" max-vertical-offset="881">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-large.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2750">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_modules/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="925">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pdf/options.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-values.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/index-media.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.737798" vertical-offset="0" max-vertical-offset="881">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/bison.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3475">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="1225">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1225">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1225">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1225">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1225">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="881">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_modules/routes.js">
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="1025">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/ionic.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/hooks/after_prepare/010_add_platform_class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="2500">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/platforms/android/res/xml/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86376023" vertical-offset="283" max-vertical-offset="750">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/platforms/android/res/drawable/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59128064" vertical-offset="133" max-vertical-offset="600">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state vertical-scroll-proportion="-1.4705882" vertical-offset="575" max-vertical-offset="3225">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/platforms/android/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13157895" vertical-offset="0" max-vertical-offset="380">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        <state vertical-scroll-proportion="-8.088235" vertical-offset="150" max-vertical-offset="900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/platforms/android/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/backend/css/fonts.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27247956" vertical-offset="0" max-vertical-offset="500">
-          <caret line="4" column="83" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1049" max-vertical-offset="2000">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/hooks/after_prepare/030_resources_files.js">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-large.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7275">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/scripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46714032" vertical-offset="312" max-vertical-offset="975">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/css/index-large.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2750">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/css/index-small.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1475">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/bore-log.js">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-med.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2350">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="1450">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/options.html">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-media.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="367">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/options.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/logger/options.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28153154" vertical-offset="0" max-vertical-offset="444">
-          <caret line="5" column="92" selection-start-line="5" selection-start-column="92" selection-end-line="5" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67681897" vertical-offset="0" max-vertical-offset="591">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="625">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/lib/angular-ui-router/release/angular-ui-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105925">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/lib/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650125">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/lib/angular-animate/angular-animate.js">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-values.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="53575">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6875">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/lib/angular-sanitize/.bower.json">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-xsmall.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="625">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/lib/jquery/.bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1075">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42301184" vertical-offset="0" max-vertical-offset="591">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.054704595" vertical-offset="175" max-vertical-offset="1650">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/jeremyQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10940919" vertical-offset="25" max-vertical-offset="1150">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/css/my-fonts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2582057" vertical-offset="575" max-vertical-offset="2000">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1600">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/js/app.js">
+    <entry file="file://$PROJECT_DIR$/backend/css/index-xxsmall.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3925" max-vertical-offset="4975">
-          <caret line="172" column="14" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/css/style.css">
+    <entry file="file://$PROJECT_DIR$/backend/routes/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1418" max-vertical-offset="2225">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-          <folding>
-            <element signature="e#1645#1679#0" expanded="false" />
-            <element signature="e#1694#1987#0" expanded="false" />
-            <element signature="e#2008#2220#0" expanded="false" />
-            <element signature="e#2228#2327#0" expanded="false" />
-            <element signature="e#2338#2458#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="850">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/borelogger-ionic/www/index.html">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10380623" vertical-offset="565" max-vertical-offset="2425">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#370#527#0" expanded="false" />
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1325">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lorem.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91119003" vertical-offset="2212" max-vertical-offset="7475">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39964476" vertical-offset="0" max-vertical-offset="1550">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

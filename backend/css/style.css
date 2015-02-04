@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../../public/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../../public/fonts/Roboto-Light.ttf");
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 75%;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 4px #ccc;
+}
+
+h1 {
+    font-family: "Roboto-Bold", sans-serif;
+}
+
+p {
+    font-family: "Roboto-Light", sans-serif;
+}
+
+img {
+    text-align: center;
+}

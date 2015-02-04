@@ -1,0 +1,105 @@
+@import "fonts.css"
+@import "index-values"
+@keyframes drilling
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+@media only screen and (min-width:1020px)
+  body
+    globalBody()
+  #title_bar
+    globalTitleBar()
+    img
+      globalImage()
+    img:hover
+      globalImageHovered()
+    img.unHovered
+      globalImageUnHovered()
+    #title
+      globalTitle()
+    h1
+      globalTitleBarH1(xx-large, 5px)
+    h2
+      globalTitleBarH2(x-large, 1px)
+    aside
+      globalContactInfo(right, large, 1%)
+      /*contactBorderLeft()*/
+    h4
+      contactFormat(medium)
+      a#email
+        contactEmail()
+  #subtitle
+    globalSubtitle(x-large, 5px)
+  #menu-bar
+    text-align center
+    display block
+    nav
+        a
+          display inline
+          font-family "Roboto-Bold", sans-serif
+          float left
+          text-decoration none
+          background-color #460100
+          border-top 4px solid #000000
+          color #d3d3d3
+          width 23%
+          padding 1%
+        a:hover
+          border-top 4px solid #ff0000
+          color #ffffff
+          text-shadow 0 0 2px white
+          /*font-size large*/
+          box-shadow 0px -5px 15px -5px color-firebrick
+      img
+        display: none
+  #content
+    clear left
+    content()
+    /*nav*/
+      /*display block*/
+      /*width 100%*/
+      /*margin-left auto*/
+      /*margin-right auto*/
+      /*contentNav()*/
+      /*a*/
+        /*display inline*/
+        /*float left*/
+        /*text-decoration none*/
+        /*background-color #b22222*/
+        /*border-top 2px solid #b22222*/
+        /*color #ffffff*/
+        /*width 20%*/
+        /*padding 1%*/
+      /*a:hover*/
+          /*border-top 2px solid #ff0000*/
+      /*img*/
+        /*display: none*/
+        /*contentImage()*/
+      /*div*/
+        /*globalNav()*/
+        /*siteNav()*/
+    article
+      /*clear left*/
+      /*contentArticle()*/
+    aside#extras
+      display none
+      /*contentAside()*/
+      /*div > h3*/
+        /*contentAsideDivs()*/
+
+  label
+    label(large)
+
+  input
+    inputs()
+
+  input[type=submit]
+    inputSubmit()
+
+  /*a:link*/
+    /*aLink()*/
+
+  /*a:visited*/
+    /*aLink()*/

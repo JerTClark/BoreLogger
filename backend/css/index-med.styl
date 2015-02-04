@@ -1,0 +1,53 @@
+@import url("fonts.css");
+@import index-values
+
+@media only screen and (max-width:1019px)
+  body
+    globalBody()
+  #title_bar
+    globalTitleBar()
+    #title
+      globalTitle()
+    h1
+      globalTitleBarH1(xx-large, 5px)
+    h2
+      globalTitleBarH2(large, 1px)
+    aside
+      globalContactInfo(right, medium, 1%)
+      contactBorderLeft()
+    h4
+      contactFormat(medium)
+      a#email
+        contactEmail()
+  #subtitle
+    globalSubtitle(large, 10px)
+  #content
+    content()
+    nav
+      contentNav()
+      img
+        contentImage()
+      div
+        globalNav()
+        siteNav()
+    article
+      contentArticle()
+    aside
+      contentAside()
+      div > h3
+        contentAsideDivs()
+
+  label
+    label(large)
+
+  input
+    inputs()
+
+  input[type=submit]
+    inputSubmit()
+
+  a:link
+    aLink()
+
+  a:visited
+    aLink()
