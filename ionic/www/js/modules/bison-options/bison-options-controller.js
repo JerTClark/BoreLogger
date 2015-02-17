@@ -1,15 +1,11 @@
 angular.module("bisonInc")
-    .controller("OptionsController", function ($scope, $timeout, $state) {
+
+    .controller("OptionsController", ["$scope", "$timeout", "$state",
+        function ($scope, $timeout, $state) {
 
     $scope.myLogger = function (data) {
         console.log(data + " clicked");
     };
-
-    //-- Categories of information pertaining to a bore journal
-    $scope.boreJournalModel = [
-        {title: "Customer", hint: "Who the job was for", value: "", type: "text"},
-        {title: "Location", hint: "Location of the job", value: "", type: "text"}
-    ];
 
     $scope.optionCategories = [
         {
@@ -52,7 +48,7 @@ angular.module("bisonInc")
     $scope.options = function (button) {
         switch (button.code) {
             case 0:
-                $state.go('borelogger.new-bore-log');
+                $state.go('new-bore-log');
                 break;
             default :
                 $scope.myLogger(button.name);
@@ -75,4 +71,4 @@ angular.module("bisonInc")
         }, 2000)
     };
 
-});
+}]);

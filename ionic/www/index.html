@@ -12,8 +12,8 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -22,7 +22,9 @@
     <!-- your app.js -->
     <script src="js/app.js"></script>
     <script src="js/modules/bison-options/bison-options-controller.js"></script>
+    <script src="js/modules/bison-options/bison-options-directives.js"></script>
     <script src="js/modules/bison-new-bore-log/bison-new-bore-log-controller.js"></script>
+    <script src="js/modules/bison-new-bore-log/bison-new-bore-log-directives.js"></script>
 
 </head>
 
@@ -35,7 +37,7 @@
 
 <script id="options.html" type="text/ng-template">
     <ion-view view-title="Options">
-        <ion-content class="has-header" padding="true">
+        <ion-content class="content has-header" padding="true">
             <ion-list class="assertive-border" type="card" ng-repeat="category  in optionCategories"
                       ng-class="category.class">
                 <ion-item class="dark-bg">

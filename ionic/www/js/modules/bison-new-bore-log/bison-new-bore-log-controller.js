@@ -1,4 +1,7 @@
-angular.module("bisonInc").controller('NewBoreLogController', function ($scope, $timeout, $ionicModal) {
+angular.module("bisonInc")
+
+    .controller('NewBoreLogController', ["$scope", "$timeout", "$ionicModal",
+        function ($scope, $timeout, $ionicModal) {
 
     $scope.myLogger = function (data) {
         console.log(data + " clicked");
@@ -65,4 +68,4 @@ angular.module("bisonInc").controller('NewBoreLogController', function ($scope, 
     });
 
 
-});
+}]);
