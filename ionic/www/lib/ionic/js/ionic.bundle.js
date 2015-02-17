@@ -31318,7 +31318,7 @@ var ngIfDirective = ['$animate', function($animate) {
   <example module="includeExample" deps="angular-animate.js" animations="true">
     <file name="index.html">
      <div ng-controller="ExampleController">
-       <select ng-model="template" ng-options="t.name for t in templates">
+       <select ng-model="template" bison-options="t.name for t in templates">
         <option value="">(blank)</option>
        </select>
        url of the template: <tt>{{template.url}}</tt>
@@ -32781,7 +32781,7 @@ var ngStyleDirective = ngDirective(function(scope, element, attr) {
   <example module="switchExample" deps="angular-animate.js" animations="true">
     <file name="index.html">
       <div ng-controller="ExampleController">
-        <select ng-model="selection" ng-options="item for item in items">
+        <select ng-model="selection" bison-options="item for item in items">
         </select>
         <tt>selection={{selection}}</tt>
         <hr/>
@@ -33094,7 +33094,7 @@ var ngOptionsMinErr = minErr('ngOptions');
  *
  * Using `select as` together with `track by` is not recommended. Reasoning:
  *
- * - Example: &lt;select ng-options="item.subItem as item.label for item in values track by item.id" ng-model="selected"&gt;
+ * - Example: &lt;select bison-options="item.subItem as item.label for item in values track by item.id" ng-model="selected"&gt;
  *   values: [{id: 1, label: 'aLabel', subItem: {name: 'aSubItem'}}, {id: 2, label: 'bLabel', subItem: {name: 'bSubItem'}}],
  *   $scope.selected = {name: 'aSubItem'};
  * - track by is always applied to `value`, with the purpose of preserving the selection,
@@ -33173,17 +33173,17 @@ var ngOptionsMinErr = minErr('ngOptions');
           </ul>
           <hr/>
           Color (null not allowed):
-          <select ng-model="myColor" ng-options="color.name for color in colors"></select><br>
+          <select ng-model="myColor" bison-options="color.name for color in colors"></select><br>
 
           Color (null allowed):
           <span  class="nullable">
-            <select ng-model="myColor" ng-options="color.name for color in colors">
+            <select ng-model="myColor" bison-options="color.name for color in colors">
               <option value="">-- choose color --</option>
             </select>
           </span><br/>
 
           Color grouped by shade:
-          <select ng-model="myColor" ng-options="color.name group by color.shade for color in colors">
+          <select ng-model="myColor" bison-options="color.name group by color.shade for color in colors">
           </select><br/>
 
 
@@ -33196,7 +33196,7 @@ var ngOptionsMinErr = minErr('ngOptions');
         </div>
       </file>
       <file name="protractor.js" type="protractor">
-         it('should check ng-options', function() {
+         it('should check bison-options', function() {
            expect(element(by.binding('{selected_color:myColor}')).getText()).toMatch('red');
            element.all(by.model('myColor')).first().click();
            element.all(by.css('select[ng-model="myColor"] option')).first().click();

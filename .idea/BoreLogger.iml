@@ -6,7 +6,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Node.js v0.10.33 Core Modules" level="application" />
     <orderEntry type="library" name="express node_modules" level="project" />
     <orderEntry type="library" name="BoreLogger node_modules" level="project" />
     <orderEntry type="library" name="Node.js v0.10.36 Core Modules" level="application" />

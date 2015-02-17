@@ -1,0 +1,24 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-assertive bar-header" align-title="left">
+        <h1 class="title">{{modal.title}}</h1>
+        <button class="button" ng-click="closeModal()">
+            <i class="ion ion-android-arrow-back"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content has-bouncing="false" padding="true" style="margin-top: 20px">
+        <ion-list class="assertive-border" type="card" ng-repeat="data in modal.values">
+            <ion-item class="dark-bg">
+                <h1 class="handwriting-xlarge" style="color: white;text-align: center">{{data.title}}</h1>
+            </ion-item>
+            <div class="item" style="background-color: antiquewhite">
+                <h1 class="handwriting-normal" ng-bind="data.value"></h1>
+            </div>
+        </ion-list>
+        <div class="item" style="background-color: antiquewhite">
+            <button class="button button-full button-assertive handwriting-xlarge"
+                    style="text-align: center" ng-click="closeModal()">Something's wrong
+            </button>
+            <button class="button button-full button-assertive handwriting-xlarge">Looks ok!</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

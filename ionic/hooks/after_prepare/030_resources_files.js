@@ -15,21 +15,22 @@
 // we don't build for all platforms 
 // on each developer's box.
 
+//-- Nothing needs to change here, but be sure to edit AndroidManifest.xml android:icon
 var filestocopy = [
     {
-        "www/img/tricone.png": "platforms/android/res/drawable/tricone.png"
+        "www/img/tricone.png": "platforms/android/res/drawable/icon.png"
     },
     {
-        "www/img/tricone.png": "platforms/android/res/drawable-hdpi/tricone.png"
+        "www/img/tricone.png": "platforms/android/res/drawable-hdpi/icon.png"
     },
     {
-        "www/img/tricone.png": "platforms/android/res/drawable-ldpi/tricone.png"
+        "www/img/tricone.png": "platforms/android/res/drawable-ldpi/icon.png"
     },
     {
-        "www/img/tricone.png": "platforms/android/res/drawable-mdpi/tricone.png"
+        "www/img/tricone.png": "platforms/android/res/drawable-mdpi/icon.png"
     },
     {
-        "www/img/tricone.png": "platforms/android/res/drawable-xhdpi/tricone.png"
+        "www/img/tricone.png": "platforms/android/res/drawable-xhdpi/icon.png"
     }
 ];
 

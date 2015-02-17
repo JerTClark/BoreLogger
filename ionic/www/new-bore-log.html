@@ -1,0 +1,20 @@
+<ion-view view-title="New bore log">
+    <ion-content class="has-header" padding="true">
+        <ion-list class="assertive-border" type="card" ng-repeat="field in boreLogModel">
+            <ion-item class="dark-bg">
+                <h1 class="bison-category" on-tap="showDescription($event)">{{field.title}}
+                </h1>
+                <p class="bison-description popup-head hide">{{field.hint}}</p>
+            </ion-item>
+            <div class="item" style="background-color: antiquewhite">
+                <input type={{field.type}} placeholder='{{field.hint}}' ng-model="field.value">
+            </div>
+        </ion-list>
+        <div class="item" style="background-color: antiquewhite">
+            <button class="button button-full button-assertive bison-rough-text" ng-click="openModal()">
+                Double-check
+            </button>
+            <button class="button button-full button-assertive bison-rough-text" type="submit">Submit</button>
+        </div>
+    </ion-content>
+</ion-view>
