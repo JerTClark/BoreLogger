@@ -2,42 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347212b9-57a6-4b07-8f9f-71a6ec403c3c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\css\foundation.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\name-capitalizer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\users.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\node_modules\jasmine\node_modules\jasmine-core\.bundle\config" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\index.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\alert.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\dialog-overlay.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\pdf\options.jade" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modal.html" afterPath="$PROJECT_DIR$/www/modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/new-bore-log.html" afterPath="$PROJECT_DIR$/www/new-bore-log.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drafts/old.html" afterPath="$PROJECT_DIR$/drafts/old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="borelogger.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,9 +35,11 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="840">
-              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1428">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+              <folding>
+                <marker date="1424231717521" expanded="true" signature="1381:2099" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +47,8 @@
       <file leaf-file-name="new-bore-log.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/new-bore-log.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0333333" vertical-offset="620" max-vertical-offset="1029">
-              <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+            <state vertical-scroll-proportion="-13.3" vertical-offset="84" max-vertical-offset="1071">
+              <caret line="23" column="124" selection-start-line="23" selection-start-column="124" selection-end-line="23" selection-end-column="124" />
               <folding />
             </state>
           </provider>
@@ -84,8 +57,8 @@
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3333335" vertical-offset="95" max-vertical-offset="819">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state vertical-scroll-proportion="-4.9" vertical-offset="0" max-vertical-offset="819">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#ion-item#0;n#div#0;n#ion-list#1;n#ion-content#0;n#ion-modal-view#0;n#!!top" expanded="true" />
               </folding>
@@ -93,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24262296" vertical-offset="2215" max-vertical-offset="3402">
-              <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="3402">
+              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -106,8 +79,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.6" vertical-offset="105" max-vertical-offset="1449">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.5" vertical-offset="210" max-vertical-offset="1386">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -116,19 +89,21 @@
       <file leaf-file-name="bison-options-controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1659">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1785">
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bison-new-bore-log-controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bison-new-bore-log-controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="1827">
-              <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-              <folding />
+            <state vertical-scroll-proportion="0.78330374" vertical-offset="1218" max-vertical-offset="3255">
+              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+              <folding>
+                <element signature="e#4369#5549#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,20 +133,20 @@
         <option value="$PROJECT_DIR$/www/js/modules/ng-new-bore-log/ng-new-bore-log-controller.js" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/hooks/after_prepare/030_resources_files.js" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/drafts/draft-controllers.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-directives.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-directives.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-journal/bison-new-bore-journal-controller.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/protractor.config.js" />
         <option value="$PROJECT_DIR$/www/modal.html" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js" />
-        <option value="$PROJECT_DIR$/www/new-bore-log.html" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js" />
+        <option value="$PROJECT_DIR$/www/new-bore-log.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js" />
       </list>
     </option>
   </component>
@@ -267,6 +242,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="borelogger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -338,6 +331,9 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/jerem_000/Desktop/BoreLogger/ionic/www/js/delete-this.js" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\js" />
     </key>
@@ -426,7 +422,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2268212" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32615894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -436,8 +432,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2718601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44867548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2718601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44867548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -471,7 +467,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="4200">
           <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-          <folding />
+          <folding>
+            <marker date="1424231717521" expanded="true" signature="1381:2099" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -495,7 +493,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="4975">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
+          <folding>
+            <marker date="1424231717521" expanded="true" signature="1381:2099" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,22 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="840">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.6" vertical-offset="105" max-vertical-offset="1449">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/modules/bison-new-bore-journal/bison-new-bore-journal-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="336">
@@ -651,34 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1659">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="1827">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/new-bore-log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0333333" vertical-offset="620" max-vertical-offset="1029">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335" vertical-offset="95" max-vertical-offset="819">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state vertical-scroll-proportion="-4.9" vertical-offset="0" max-vertical-offset="819">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#button#0;n#ion-item#0;n#div#0;n#ion-list#1;n#ion-content#0;n#ion-modal-view#0;n#!!top" expanded="true" />
           </folding>
@@ -687,9 +647,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24262296" vertical-offset="2215" max-vertical-offset="3402">
-          <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="3402">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1428">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <marker date="1424231717521" expanded="true" signature="1381:2099" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1785">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/new-bore-log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.3" vertical-offset="84" max-vertical-offset="1071">
+          <caret line="23" column="124" selection-start-line="23" selection-start-column="124" selection-end-line="23" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5" vertical-offset="210" max-vertical-offset="1386">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78330374" vertical-offset="1218" max-vertical-offset="3255">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+          <folding>
+            <element signature="e#4369#5549#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

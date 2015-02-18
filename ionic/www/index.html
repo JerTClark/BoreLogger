@@ -13,6 +13,7 @@
     <!-- ionic/angularjs js -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/datejs/build/date.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
@@ -38,7 +39,7 @@
 <script id="options.html" type="text/ng-template">
     <ion-view view-title="Options">
         <ion-content class="content has-header" padding="true">
-            <ion-list class="assertive-border" type="card" ng-repeat="category  in optionCategories"
+            <ion-list class="assertive-border" type="card" ng-repeat="category in optionCategories"
                       ng-class="category.class">
                 <ion-item class="dark-bg">
                     <h1 class="bison-category" on-tap="showDescription($event)">{{category.title}}
@@ -50,10 +51,6 @@
                             ng-repeat="button in category.buttons"
                             ng-click="activate($event, button)">{{button.name}}
                     </button>
-                    <!--<a class="button button-full button-assertive bison-rough-text"-->
-                    <!--ng-repeat="button in category.buttons"-->
-                    <!--href="#/borelogger/new-bore-log">{{button.name}}-->
-                    <!--</a>-->
                 </div>
             </ion-list>
         </ion-content>

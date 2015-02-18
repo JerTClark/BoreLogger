@@ -32,4 +32,32 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 controller: "NewBoreLogController"
             });
         $urlRouterProvider.otherwise("/");
+    })
+
+    .service("bisonService", function () {
+        var self = this;
+        self.setType = function(type){
+            self.type = type;
+        };
+        self.getType = function () {
+            return self.type;
+        };
+        self.setActiveLog = function (activeLog) {
+            self.activeLog = activeLog;
+        };
+        self.getActiveLog = function () {
+            if(self.activeLog){
+                return self.activeLog;
+            } else {
+                return {
+                    type: "",
+                    customer: "",
+                    conduit: "",
+                    location: "",
+                    length: "",
+                    date: "",
+                    locates: []
+                }
+            }
+        }
     });

@@ -1,7 +1,8 @@
 angular.module("bisonInc")
 
-    .controller("OptionsController", ["$scope", "$timeout", "$state",
-        function ($scope, $timeout, $state) {
+    .controller("OptionsController",
+    ["$scope", "$timeout", "$state", "bisonService",
+        function ($scope, $timeout, $state, bisonService) {
 
     $scope.myLogger = function (data) {
         console.log(data + " clicked");
@@ -48,6 +49,11 @@ angular.module("bisonInc")
     $scope.options = function (button) {
         switch (button.code) {
             case 0:
+                bisonService.setType("log");
+                $state.go('new-bore-log');
+                break;
+            case 2:
+                bisonService.setType("journal");
                 $state.go('new-bore-log');
                 break;
             default :
