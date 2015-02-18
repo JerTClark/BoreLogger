@@ -5,20 +5,30 @@
             <i class="ion ion-android-arrow-back"></i>
         </button>
     </ion-header-bar>
-    <ion-content has-bouncing="false" padding="true" style="margin-top: 20px">
-        <ion-list class="assertive-border" type="card" ng-repeat="data in modal.values">
-            <ion-item class="dark-bg">
-                <h1 class="handwriting-xlarge" style="color: white;text-align: center">{{data.title}}</h1>
-            </ion-item>
-            <div class="item" style="background-color: antiquewhite">
-                <h1 class="handwriting-normal" ng-bind="data.value"></h1>
+    <ion-content class="content has-header" has-bouncing="false" padding="true">
+        <ion-list class="assertive-border" type="card">
+
+            <div class="bison-border-light" ng-repeat="data in modal.values">
+                <ion-item class="dark-bg">
+                    <h1 class="bison-handwriting-xlarge" style="color: white;text-align: center">{{data.title}}</h1>
+                </ion-item>
+                <div class="item bison-input-padding">
+                    <h1 class="bison-handwriting-normal" ng-bind="data.value"></h1>
+                </div>
+            </div>
+
+        </ion-list>
+
+        <ion-list type="card">
+            <div class="bison-border-light">
+                <ion-item class="bison-input-padding">
+                    <button class="button button-full button-assertive bison-handwriting-xlarge"
+                            style="text-align: center" ng-click="closeModal()">Something's wrong
+                    </button>
+                    <button class="button button-full button-assertive bison-handwriting-xlarge">Looks ok!</button>
+                </ion-item>
             </div>
         </ion-list>
-        <div class="item" style="background-color: antiquewhite">
-            <button class="button button-full button-assertive handwriting-xlarge"
-                    style="text-align: center" ng-click="closeModal()">Something's wrong
-            </button>
-            <button class="button button-full button-assertive handwriting-xlarge">Looks ok!</button>
-        </div>
+
     </ion-content>
 </ion-modal-view>

@@ -1,20 +1,44 @@
-<ion-view view-title="New bore log">
-    <ion-content class="has-header" padding="true">
-        <ion-list class="assertive-border" type="card" ng-repeat="field in boreLogModel">
-            <ion-item class="dark-bg">
-                <h1 class="bison-category" on-tap="showDescription($event)">{{field.title}}
-                </h1>
-                <p class="bison-description popup-head hide">{{field.hint}}</p>
-            </ion-item>
-            <div class="item" style="background-color: antiquewhite">
-                <input type={{field.type}} placeholder='{{field.hint}}' ng-model="field.value">
-            </div>
-        </ion-list>
-        <div class="item" style="background-color: antiquewhite">
-            <button class="button button-full button-assertive bison-rough-text" ng-click="openModal()">
-                Double-check
-            </button>
-            <button class="button button-full button-assertive bison-rough-text" type="submit">Submit</button>
-        </div>
+<ion-view view-title="General info">
+    <ion-content class="has-header">
+
+        <form name="bisonGenInfoForm" novalidate>
+
+            <ion-list class="assertive-border" type="card">
+                <div class="" ng-repeat="field in boreLogModel">
+                    <ion-item class="dark-bg">
+                        <h1 class="bison-category" on-tap="showDescription($event)">{{field.title}}
+                        </h1>
+
+                        <p class="bison-description popup-head hide">{{field.hint}}</p>
+                    </ion-item>
+                    <!-- TODO move into a single item -->
+                    <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">{{field.hint}}</span>
+
+                            <input name="{{field.inputName}}" class="bison-input-field" type={{field.type}}
+                                   placeholder='{{field.hint}}'
+                                   ng-model="field.value" ng-required="true" minlength="1">
+                            <span class="bison-error"
+                                  ng-show="bisonGenInfoForm.{{field.inputName}}.$dirty && bisonGenInfoForm.{{field.inputName}}.$invalid">^Required</span>
+                        </label>
+                    </div>
+                </div>
+            </ion-list>
+
+            <ion-list type="list-inset">
+                <div class="bison-border-light">
+                    <ion-item class="bison-input-padding">
+                        <button class="button button-full button-assertive bison-rough-text" ng-click="openModal()">
+                            Double-check
+                        </button>
+                        <button class="button button-full button-assertive bison-rough-text"
+                                ng-disabled="bisonGenInfoForm.$invalid"
+                                ng-click="submitGeneralInfo()">Continue
+                        </button>
+                    </ion-item>
+                </div>
+            </ion-list>
+        </form>
     </ion-content>
 </ion-view>

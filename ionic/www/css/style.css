@@ -7,7 +7,6 @@ html {
 .hide {
     display: none;
 }
-
 .bison-category {
     text-align: center;
     font-family: "Roboto-Bold", sans-serif;
@@ -19,13 +18,11 @@ html {
     padding: 10px;
     -webkit-transition-duration: 1s;
 }
-
 .bison-category:hover, .bison-category.activated {
     box-shadow: 0 0 15px red;
     text-shadow: 0 0 10px white;
     -webkit-transition-duration: 1s;
 }
-
 p.bison-description {
     font-family: RockSalt, sans-serif;
     font-size: medium;
@@ -33,12 +30,10 @@ p.bison-description {
     text-align: center;
     color: #ffffff;
 }
-
 button.bison-rough-text {
     font-family: Rough, sans-serif;
     -webkit-transition-duration: 1s;
 }
-
 button.bison-rough-text:hover, button.bison-rough-text.emphasis {
     color: #ffffff;
     border-color: red;
@@ -48,20 +43,17 @@ button.bison-rough-text:hover, button.bison-rough-text.emphasis {
     -webkit-transition-delay: 250ms;
     -webkit-transition-duration: 1s;
 }
-
-
-.handwriting-xlarge {
+.bison-handwriting-xlarge {
     font-family: "RockSalt", sans-serif;
     font-weight: bold;
     font-size: x-large;
     -webkit-transition-duration: 1s;
 }
 
-button.handwriting-xlarge {
+button.bison-handwriting-xlarge {
     -webkit-transition-duration: 1s;
 }
-
-button.handwriting-xlarge:hover {
+button.bison-handwriting-xlarge:hover {
     color: #ffffff;
     border-color: red;
     background-color: red;
@@ -70,13 +62,11 @@ button.handwriting-xlarge:hover {
     -webkit-transition-delay: 250ms;
     -webkit-transition-duration: 1s;
 }
-
-.handwriting-normal {
+.bison-handwriting-normal {
     font-family: "RockSalt", sans-serif;
     font-weight: normal;
     font-size: large;
 }
-
 .bison-body {
     -webkit-perspective: 50px;
 }
@@ -101,13 +91,67 @@ button.handwriting-xlarge:hover {
     -webkit-transition-delay: 250ms;
     -webkit-transition-duration: 1s;
 }
-.outro {
+.bison-outro {
     opacity: 0;
     -webkit-transform: translateY(15px);
     -webkit-transition-duration: 1.5s;
 }
-.moveBack {
+.bison-move-back {
     -webkit-transform: translateZ(-3px);
     -webkit-transition-duration: 1.5s;
     -webkit-transition-delay: 250ms;
+}
+.bison-input-padding {
+    background-color: antiquewhite;
+}
+.bison-border-light {
+    border: 4px solid lightgoldenrodyellow;
+}
+/*Don't apply the next border styles to an input elem, use a surrounding div*/
+.bison-border-gray {
+    border: 2px solid slategray;
+}
+.bison-border-tan {
+    border: 2px solid tan;
+}
+.bison-border-input {
+    border-radius: 4px;
+}
+.bison-top-and-bottom-margin {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.bison-input-field {
+    font-family: Rough, sans-serif;
+    font-size: larger;
+    background-color: white;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 0.75s;
+}
+.bison-input-field:hover {
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+.bison-input-field:focus, .bison-input-field.ng-dirty {
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+.bison-input-field:not(:focus).ng-dirty {
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    letter-spacing: 0px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+.bison-error {
+    background-color: transparent;
+    color: firebrick;
+    font-family: RockSalt;
+    text-shadow: 0px 0px 15px red;
 }
