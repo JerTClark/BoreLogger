@@ -153,5 +153,43 @@ button.bison-handwriting-xlarge:hover {
     background-color: transparent;
     color: firebrick;
     font-family: RockSalt;
-    text-shadow: 0px 0px 15px red;
+    text-shadow: 0 0 15px red;
+}
+
+/*MEDIA QUERIES*/
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+/*This is the Samsung Galaxy Note 3 landscape*/
+@media screen and (max-width: 767px){
+    ion-content {
+        /*background-color: #000000 !important;*/
+    }
+}
+/*This is the Samsung Galaxy Note 3 portrait*/
+@media only screen and (max-width: 360px) {
+    .bison-shrink-item {
+        padding: 1px;
+    }
+    .bison-input-background-dark {
+        /*background-color: ;*/
+    }
+    .bison-category.bison-small-list {
+        text-align: left;
+        /*font-family: "Roboto-Bold", sans-serif;*/
+        font-size: large;
+        /*color: white;*/
+        /*border: 0 solid transparent;*/
+        /*border-radius: 0;*/
+        /*background-color: transparent;*/
+        padding: 2px;
+        margin-bottom: 0;
+        -webkit-transition-duration: 1s;
+    }
+    .bison-category.bison-small-list:hover, .bison-category.bison-small-list.activated {
+        box-shadow: 0 0 10px red;
+        text-shadow: 0 0 10px white;
+        -webkit-transition-duration: 1s;
+    }
 }

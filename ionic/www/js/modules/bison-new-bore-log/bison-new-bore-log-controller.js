@@ -1,7 +1,6 @@
 angular.module("bisonInc").controller('NewBoreLogController',
     ["$scope", "$timeout", "$ionicModal", "bisonService",
     function ($scope, $timeout, $ionicModal, bisonService) {
-
         //-- Categories of information pertaining to a bore log
         $scope.boreLogModel = [
             {
@@ -42,7 +41,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
             },
             {
                 title: "Date",
-                hint: "Select a date",
+                hint: "Start or end of job",
                 value: "",
                 inputType: "date",
                 inputName: "date",
@@ -50,24 +49,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 required: bisonService.getType() === "log"
             }
         ];
-
-        $scope.showDescription = function ($event) {
-            angular.element($event.target).toggleClass('activated');
-            angular.element($event.target).siblings('p').slideToggle(200);
-        };
-
-        $scope.myLogger = function (data) {
-            console.log(data + " clicked");
-        };
-
-        $scope.activate = function ($event, button) {
-            var elem = angular.element($event.target);
-            elem.addClass('emphasis');
-            //TODO Remove this (below)
-            $timeout(function () {
-                elem.removeClass('emphasis');
-            }, 2000)
-        };
 
         //-- On submission of General Info
         $scope.submitGeneralInfo = function () {
@@ -81,7 +62,45 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 locates: []
             });
             console.log(JSON.stringify(bisonService.getActiveLog()));
-            bisonDate();
+        };
+
+        //Messing with the terrible JavaScript date accommodations
+        var bisonDate = function () {
+            var dateToParse =
+                bisonService.getType() === "journal" ?
+                    new Date().format("M d Y H m s") :
+                    new Date($scope.boreLogModel[4].value)
+                        .format("M d Y H m s");
+            var dateArray = dateToParse.toString().split(" ");
+            return {
+                originalDate: dateToParse,
+                month:dateArray[0],
+                date:dateArray[1],
+                year:dateArray[2],
+                hour:dateArray[3],
+                minute:dateArray[4],
+                second:dateArray[5],
+                bisonDateToString: function () {
+                    return this.month + ". " + this.date + ", " +
+                        this.year;
+                },
+                bisonTimeToString: function () {
+                    return this.hour + ":" + this.minute + ":" + this.second;
+                }
+            };
+        };
+
+        //-- TODO UI transitions (should move to a <script> tag)
+        $scope.showDescription = function ($event) {
+            angular.element($event.target).toggleClass('activated');
+            angular.element($event.target).siblings('p').slideToggle(200);
+        };
+        $scope.activate = function ($event, button) {
+            var elem = angular.element($event.target);
+            elem.addClass('emphasis');
+            $timeout(function () {
+                elem.removeClass('emphasis');
+            }, 2000)
         };
 
         //-- Ionic Modal
@@ -115,77 +134,4 @@ angular.module("bisonInc").controller('NewBoreLogController',
         $scope.$on('modal.removed', function () {
             console.log('Modal removed');
         });
-
-        var monthToString = function (integer) {
-            switch(integer){
-                case 0:
-                    return "January";
-                    break;
-                case 1:
-                    return "January";
-                    break;
-                case 2:
-                    return "January";
-                    break;
-                case 3:
-                    return "January";
-                    break;
-                case 4:
-                    return "January";
-                    break;
-                case 5:
-                    return "January";
-                    break;
-                case 6:
-                    return "January";
-                    break;
-                case 7:
-                    return "January";
-                    break;
-                case 8:
-                    return "January";
-                    break;
-                case 9:
-                    return "January";
-                    break;
-                case 10:
-                    return "January";
-                    break;
-                case 11:
-                    return "January";
-                    break;
-                default:
-                    return "";
-            }
-        };
-
-        //Messing with the terrible JavaScript date accommodations
-        var bisonDate = function () {
-
-            var dateToParse =
-                bisonService.getType() === "journal" ?
-                    new Date().format("M d Y H m s") :
-                    new Date($scope.boreLogModel[4].value)
-                        .format("M d Y H m s");
-
-            var dateArray = dateToParse.toString().split(" ");
-
-            return {
-                originalDate: dateToParse,
-                month:dateArray[0],
-                date:dateArray[1],
-                year:dateArray[2],
-                hour:dateArray[3],
-                minute:dateArray[4],
-                second:dateArray[5],
-                bisonDateToString: function () {
-                    return this.month + ". " + this.date + ", " +
-                            this.year;
-                },
-                bisonTimeToString: function () {
-                    return this.hour + ":" + this.minute + ":" + this.second;
-                }
-            };
-        }
-
     }]);
