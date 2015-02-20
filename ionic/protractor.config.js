@@ -16,7 +16,8 @@ exports.config = {
 
     // Spec patterns are relative to this configuration file
     specs: [
-        'test/e2e/**/*e2e.js'
+        'tests/e2e/*.js',
+        'tests/e2e/**/*.js'
     ],
 
     // Options to be passed to Jasmine-node.

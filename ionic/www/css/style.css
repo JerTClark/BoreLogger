@@ -102,10 +102,10 @@ button.bison-handwriting-xlarge:hover {
     -webkit-transition-delay: 250ms;
 }
 .bison-input-padding {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 .bison-border-light {
-    border: 4px solid lightgoldenrodyellow;
+    border: 4px solid whitesmoke;
 }
 /*Don't apply the next border styles to an input elem, use a surrounding div*/
 .bison-border-gray {
@@ -121,6 +121,16 @@ button.bison-handwriting-xlarge:hover {
     margin-top: 4px;
     margin-bottom: 4px;
 }
+
+.bison-modal-title {
+
+}
+
+.bison-modal-description {
+    text-align: center;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+}
+
 .bison-input-field {
     font-family: Rough, sans-serif;
     font-size: larger;
@@ -181,6 +191,7 @@ button.bison-handwriting-xlarge:hover {
         letter-spacing: normal;
     }
 }
+
 span.input-label.bison-floating-label {
     -webkit-animation: noInput 1s;
     position: fixed !important;

@@ -1,10 +1,12 @@
 <ion-view view-title="General info">
     <ion-content class="has-header">
 
-        <form name="bisonGenInfoForm" novalidate>
+        <form name="bisonGenInfoForm"
+              novalidate>
 
-            <ion-list class="assertive-border" type="card">
-                <div class="" ng-repeat="field in boreLogModel">
+            <ion-list class="assertive-border"
+                      type="card">
+                <div ng-repeat="field in boreLogModel">
                     <div ng-show="field.show">
                         <bison-category-with-description category-name="{{field.title}}"
                                                          category-description="{{field.hint}}"></bison-category-with-description>
@@ -20,8 +22,11 @@
             </ion-list>
             <bison-form-button-panel bison-disable-submit="bisonGenInfoForm.$invalid"
                                      bison-form-controller="bisonGenInfoForm"
-                                     bison-get-modal-values="getModalValues()"
-                                     bison-submit="submitGeneralInfo()">
+                                     bison-modal-values="getModalValues()"
+                                     bison-submit="submitGeneralInfo()"
+                                     bison-modal-title="Your current entries"
+                                     bison-modal-description="This list confirms your entries so far"
+                                     bison-modal-type="{{logOrJournal}}">
             </bison-form-button-panel>
         </form>
     </ion-content>

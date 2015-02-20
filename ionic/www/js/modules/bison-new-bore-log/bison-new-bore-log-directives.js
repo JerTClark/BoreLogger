@@ -21,13 +21,17 @@ angular.module("bisonInc")
             }
         }
     })
+    //Has one button used to display a modal and another that can be disabled via a form controller
     .directive("bisonFormButtonPanel", function () {
         return {
             restrict: "E",
             scope: {
-                bisonDisableSubmit: "=",
+                bisonModalTitle: "@",
+                bisonModalDescription: "@",
+                bisonModalType:"@",
+                bisonModalValues: "&",
                 bisonFormController: "=",
-                bisonGetModalValues: "&",
+                bisonDisableSubmit: "=",
                 bisonSubmit: "&"
             },
             template: '<ion-list type="list-inset">' +
@@ -48,9 +52,10 @@ angular.module("bisonInc")
                     $scope.modal = modal;
                 });
                 $scope.openModal = function () {
-                    $scope.modal.title = "Bore log";
-                    $scope.modal.description = "A summary of the new bore log so far...";
-                    $scope.modal.values = this.getModalValues();
+                    $scope.modal.title = $scope.bisonModalTitle;
+                    $scope.modal.description = $scope.bisonModalDescription;
+                    $scope.modal.logOrJournal = $scope.bisonModalType;
+                    $scope.modal.values = $scope.bisonModalValues();
                     $scope.modal.show();
                 };
                 $scope.closeModal = function () {
