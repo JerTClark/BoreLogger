@@ -6,59 +6,23 @@
             <ion-list class="assertive-border" type="card">
                 <div class="" ng-repeat="field in boreLogModel">
                     <div ng-show="field.show">
-                        <!--<ion-item class="dark-bg bison-shrink-item">-->
-                            <!--<h1 class="bison-category bison-small-list" on-tap="showDescription($event)">{{field.title}}-->
-                            <!--</h1>-->
-
-                            <!--<p class="bison-description popup-head hide">{{field.hint}}</p>-->
-                        <!--</ion-item>-->
-                        <bison-category-with-description category-name="{{field.title}}" category-description="{{field.hint}}"></bison-category-with-description>
-                        <!-- TODO move into a single item -->
-                        <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
-                            <label class="item item-input item-floating-label">
-                                <span class="input-label">{{field.hint}}</span>
-
-                                <input name="{{field.inputName}}" class="bison-input-field" type={{field.inputType}}
-                                       placeholder='{{field.hint}}'
-                                       ng-model="field.value" ng-required="field.required" minlength="1">
-                            <span class="bison-error"
-                                  ng-show="bisonGenInfoForm.{{field.inputName}}.$dirty && bisonGenInfoForm.{{field.inputName}}.$invalid">^Required</span>
-                            </label>
-                        </div>
+                        <bison-category-with-description category-name="{{field.title}}"
+                                                         category-description="{{field.hint}}"></bison-category-with-description>
+                        <bison-input-field bison-hint="{{field.hint}}"
+                                           bison-input-name="{{field.inputName}}"
+                                           bison-input-type="{{field.inputType}}"
+                                           bison-model="field.value"
+                                           bison-required="field.required"
+                                           bison-form-controller="bisonGenInfoForm">
+                        </bison-input-field>
                     </div>
                 </div>
             </ion-list>
-
-            <ion-list type="list-inset">
-                <div class="bison-border-light">
-                    <ion-item class="bison-input-padding">
-                        <button class="button button-full button-assertive bison-rough-text" ng-click="openModal()">
-                            Double-check
-                        </button>
-                        <button class="button button-full button-assertive bison-rough-text"
-                                ng-disabled="bisonGenInfoForm.$invalid"
-                                ng-click="submitGeneralInfo()">Continue
-                        </button>
-                    </ion-item>
-                </div>
-            </ion-list>
+            <bison-form-button-panel bison-disable-submit="bisonGenInfoForm.$invalid"
+                                     bison-form-controller="bisonGenInfoForm"
+                                     bison-get-modal-values="getModalValues()"
+                                     bison-submit="submitGeneralInfo()">
+            </bison-form-button-panel>
         </form>
     </ion-content>
-    <script>
-        window.onload = function() {
-            function showDescription($event) {
-                console.log("Called " + $event);
-                angular.element($event.target).toggleClass('activated');
-                angular.element($event.target).siblings('p').slideToggle(200);
-            };
-
-            var activate = function ($event, button) {
-                var elem = angular.element($event.target);
-                elem.addClass('emphasis');
-                $timeout(function () {
-                    elem.removeClass('emphasis');
-                }, 2000)
-            };
-        }
-    </script>
 </ion-view>

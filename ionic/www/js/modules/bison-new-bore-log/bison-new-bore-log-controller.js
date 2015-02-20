@@ -103,6 +103,16 @@ angular.module("bisonInc").controller('NewBoreLogController',
             }, 2000)
         };
 
+        $scope.getModalValues = function () {
+            return [
+                {title: $scope.boreLogModel[0].title, value: $scope.boreLogModel[0].value},
+                {title: $scope.boreLogModel[1].title, value: $scope.boreLogModel[1].value},
+                {title: $scope.boreLogModel[2].title, value: $scope.boreLogModel[2].value},
+                {title: $scope.boreLogModel[3].title, value: $scope.boreLogModel[3].value},
+                {title: $scope.boreLogModel[4].title, value: $scope.boreLogModel[4].value}
+            ];
+        };
+
         //-- Ionic Modal
         $ionicModal.fromTemplateUrl('modal.html', {
             scope: $scope,

@@ -21,8 +21,69 @@ angular.module("bisonInc")
             }
         }
     })
-    .directive("bisonSomething2", function () {
+    .directive("bisonFormButtonPanel", function () {
         return {
-
+            restrict: "E",
+            scope: {
+                bisonDisableSubmit: "=",
+                bisonFormController: "=",
+                bisonGetModalValues: "&",
+                bisonSubmit: "&"
+            },
+            template: '<ion-list type="list-inset">' +
+                '<div class="bison-border-light">' +
+                '<ion-item class="bison-input-padding">' +
+                '<button class="button button-full button-assertive bison-rough-text"' +
+                'ng-click="openModal()">Double-check</button>' +
+                '<button class="button button-full button-assertive bison-rough-text"' +
+                'ng-disabled="bisonFormController.$invalid"' +
+                'ng-click="bisonSubmit()">Continue</button>' +
+                '</ion-item></div></ion-list>',
+            controller: function($scope, $ionicModal){
+                //-- Ionic Modal
+                $ionicModal.fromTemplateUrl('modal.html', {
+                    scope: $scope,
+                    animation: 'slide-in-up'
+                }).then(function (modal) {
+                    $scope.modal = modal;
+                });
+                $scope.openModal = function () {
+                    $scope.modal.title = "Bore log";
+                    $scope.modal.description = "A summary of the new bore log so far...";
+                    $scope.modal.values = this.getModalValues();
+                    $scope.modal.show();
+                };
+                $scope.closeModal = function () {
+                    $scope.modal.hide();
+                };
+                $scope.$on('$destroy', function () {
+                    $scope.modal.remove();
+                });
+                $scope.$on('modal.hidden', function () {
+                    console.log('Modal hidden');
+                });
+                $scope.$on('modal.removed', function () {
+                    console.log('Modal removed');
+                });
+            }
+        }
+    })
+    .directive("bisonInputField", function () {
+        return {
+            restrict: "E",
+            scope: {
+                bisonHint: "@",
+                bisonInputName: "@",
+                bisonInputType: "@",
+                bisonModel: "=",
+                bisonRequired: "=",
+                bisonFormController: "="
+            },
+            template:'<div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">' +
+                '<label class="item item-input item-floating-label">' +
+                '<span class="input-label bison-floating-label">{{bisonHint}}</span>' +
+                '<input name="{{bisonInputName}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
+                '<span class="bison-error" ng-show="bisonFormController.{{bisonInputName}}.$dirty && bisonFormController.{{bisonInputName}}.$invalid">^Required</span></label></div>',
+            controller: function ($scope) {}
         }
     });
