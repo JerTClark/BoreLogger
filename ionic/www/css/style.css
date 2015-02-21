@@ -107,6 +107,9 @@ button.bison-handwriting-xlarge:hover {
 .bison-border-light {
     border: 4px solid whitesmoke;
 }
+.bison-options-panel {
+    background-color: antiquewhite;
+}
 /*Don't apply the next border styles to an input elem, use a surrounding div*/
 .bison-border-gray {
     border: 2px solid slategray;
