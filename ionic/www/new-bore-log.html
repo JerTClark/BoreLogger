@@ -10,7 +10,8 @@
                     <div ng-show="field.show">
                         <bison-category-with-description category-name="{{field.title}}"
                                                          category-description="{{field.hint}}"></bison-category-with-description>
-                        <bison-input-field bison-hint="{{field.hint}}"
+                        <bison-input-field bison-id="{{field.inputName}}"
+                                           bison-hint="{{field.hint}}"
                                            bison-input-name="{{field.inputName}}"
                                            bison-input-type="{{field.inputType}}"
                                            bison-model="field.value"
@@ -24,9 +25,10 @@
                                      bison-form-controller="bisonGenInfoForm"
                                      bison-modal-values="getModalValues()"
                                      bison-submit="submitGeneralInfo()"
-                                     bison-modal-title="Your current entries"
+                                     bison-modal-title="Locates"
                                      bison-modal-description="This list confirms your entries so far"
-                                     bison-modal-type="{{logOrJournal}}">
+                                     bison-modal-type="{{typeHeader}}"
+                                     bison-modal-template="locates-modal.html">
             </bison-form-button-panel>
         </form>
     </ion-content>

@@ -1,8 +1,17 @@
 angular.module("bisonInc").controller('NewBoreLogController',
     ["$scope", "$timeout", "bisonService",
         function ($scope, $timeout, bisonService) {
+
             //-- For accessing whether a log or journal
-            $scope.logOrJournal = bisonService.getType();
+            $scope.logOrJournal = function () {
+                return bisonService.getType();
+            };
+
+            $scope.typeHeader = bisonService.getType();
+
+            //var isABoreLog = function () {
+            //    return bisonService.getType==="log";
+            //};
 
             //-- Categories of information pertaining to a bore log
             $scope.boreLogModel = [

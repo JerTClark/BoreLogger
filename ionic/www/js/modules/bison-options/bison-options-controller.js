@@ -1,5 +1,4 @@
 angular.module("bisonInc")
-
     .controller("OptionsController",
     ["$scope", "$timeout", "$state", "bisonService",
         function ($scope, $timeout, $state, bisonService) {

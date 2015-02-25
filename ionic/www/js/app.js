@@ -27,7 +27,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 controller: "OptionsController"
             })
             .state("new-bore-log", {
-                url:"/new-bore-log",
+                url: "/new-bore-log",
                 templateUrl: "new-bore-log.html",
                 controller: "NewBoreLogController"
             });
@@ -36,7 +36,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
 
     .service("bisonService", function () {
         var self = this;
-        self.setType = function(type){
+        self.setType = function (type) {
             self.type = type;
         };
         self.getType = function () {
@@ -46,7 +46,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
             self.activeLog = activeLog;
         };
         self.getActiveLog = function () {
-            if(self.activeLog){
+            if (self.activeLog) {
                 return self.activeLog;
             } else {
                 return {
@@ -58,6 +58,35 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     date: "",
                     locates: []
                 }
+            }
+        }
+    })
+    .factory("bisonLocateFactory", function () {
+        return {
+            format: function (feet, inches, crossing) {
+                if (crossing) {
+                    return feet + "\' " + inches + "\" " + crossing;
+                }
+                return feet + "\' " + inches + "\"";
+            },
+            add: function (locate, locatesArray) {
+                locatesArray[locatesArray.length] = locate;
+            },
+            move: function (locatesArray, fromIndex, toIndex) {
+                if (toIndex >= locatesArray.length) {
+                    var i = toIndex - locatesArray.length;
+                    while((i--) + 1) {
+                        locatesArray.push(undefined);
+                    }
+                } else {
+                    locatesArray.splice(toIndex, 0, locatesArray.splice(fromIndex, 1)[0]);
+                }
+            },
+            remove: function (locatesArray, index) {
+                locatesArray.splice(index, 1);
+            },
+            change: function (locatesArray, oldValue, newValue) {
+                locatesArray[locatesArray.indexOf(oldValue)] = newValue;
             }
         }
     });

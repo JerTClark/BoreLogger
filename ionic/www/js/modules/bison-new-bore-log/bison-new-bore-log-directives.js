@@ -26,6 +26,7 @@ angular.module("bisonInc")
         return {
             restrict: "E",
             scope: {
+                bisonModalTemplate: "@",
                 bisonModalTitle: "@",
                 bisonModalDescription: "@",
                 bisonModalType:"@",
@@ -45,7 +46,7 @@ angular.module("bisonInc")
                 '</ion-item></div></ion-list>',
             controller: function($scope, $ionicModal){
                 //-- Ionic Modal
-                $ionicModal.fromTemplateUrl('modal.html', {
+                $ionicModal.fromTemplateUrl($scope.bisonModalTemplate, {
                     scope: $scope,
                     animation: 'slide-in-up'
                 }).then(function (modal) {
@@ -77,6 +78,7 @@ angular.module("bisonInc")
         return {
             restrict: "E",
             scope: {
+                bisonId: "@",
                 bisonHint: "@",
                 bisonInputName: "@",
                 bisonInputType: "@",
@@ -87,7 +89,7 @@ angular.module("bisonInc")
             template:'<div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">' +
                 '<label class="item item-input item-floating-label">' +
                 '<span class="input-label bison-floating-label">{{bisonHint}}</span>' +
-                '<input name="{{bisonInputName}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
+                '<input id={{bisonId}}-input name="{{bisonInputName}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
                 '<span class="bison-error" ng-show="bisonFormController.{{bisonInputName}}.$dirty && bisonFormController.{{bisonInputName}}.$invalid">^Required</span></label></div>',
             controller: function ($scope) {}
         }

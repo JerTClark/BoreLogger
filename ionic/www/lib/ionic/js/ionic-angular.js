@@ -2813,7 +2813,7 @@ function($ionicLoadingConfig, $ionicBody, $ionicTemplateLoader, $ionicBackdrop, 
  *
  * @usage
  * ```html
- * <script id="my-modal.html" type="text/ng-template">
+ * <script id="my-locates-modal.html" type="text/ng-template">
  *   <ion-modal-view>
  *     <ion-header-bar>
  *       <h1 class="title">My Modal title</h1>
@@ -2827,7 +2827,7 @@ function($ionicLoadingConfig, $ionicBody, $ionicTemplateLoader, $ionicBackdrop, 
  * ```js
  * angular.module('testApp', ['ionic'])
  * .controller('MyController', function($scope, $ionicModal) {
- *   $ionicModal.fromTemplateUrl('my-modal.html', {
+ *   $ionicModal.fromTemplateUrl('my-locates-modal.html', {
  *     scope: $scope,
  *     animation: 'slide-in-up'
  *   }).then(function(modal) {

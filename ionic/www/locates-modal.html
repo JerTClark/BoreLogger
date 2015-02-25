@@ -8,12 +8,12 @@
     <ion-content class="content has-header" has-bouncing="false" padding="true">
         <ion-list type="card">
             <ion-item>
-                <p class="bison-handwriting-xlarge">Bore {{modal.logOrJournal}}</p>
+                <p id="Type-modal-header" class="bison-handwriting-xlarge">Bore {{modal.logOrJournal}}</p>
             </ion-item>
         </ion-list>
         <ion-list type="list-inset">
             <ion-item ng-repeat="value in modal.values">
-                <p>{{value.title}}: <b>{{value.value}}</b></p>
+                <p id="{{value.title}}-modal-header">{{value.title}}: <b>{{value.value}}</b></p>
             </ion-item>
         </ion-list>
         <ion-list delegate-handle="locates" type="card">
