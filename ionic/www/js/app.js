@@ -19,7 +19,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
         $state.go("home");
     })
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, bisonIndexedDBProvider) {
         $stateProvider
             .state("home", {
                 url: "/",
@@ -32,6 +32,34 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 controller: "NewBoreLogController"
             });
         $urlRouterProvider.otherwise("/");
+
+        bisonIndexedDBProvider.setDatabaseName("bison");
+        bisonIndexedDBProvider.setDatabaseVersion(1);
+        bisonIndexedDBProvider.setObjectStoreName("bisonLogs");
+
+    })
+
+    .service("bisonDateService", function () {
+        var self = this;
+        self.parseDate = function (dateToParse) {
+            var dateArray = dateToParse.toString().split(" ");
+            return {
+                originalDate: dateToParse,
+                month: dateArray[0],
+                date: dateArray[1],
+                year: dateArray[2],
+                hour: dateArray[3],
+                minute: dateArray[4],
+                second: dateArray[5],
+                bisonDateToString: function () {
+                    return this.month + ". " + this.date + ", " +
+                        this.year;
+                },
+                bisonTimeToString: function () {
+                    return this.hour + ":" + this.minute + ":" + this.second;
+                }
+            }
+        }
     })
 
     .service("bisonService", function () {
@@ -50,17 +78,20 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 return self.activeLog;
             } else {
                 return {
+                    id: "",
                     type: "",
                     customer: "",
                     conduit: "",
                     location: "",
                     length: "",
+                    drillPipe:"",
                     date: "",
                     locates: []
                 }
             }
         }
     })
+
     .factory("bisonLocateFactory", function () {
         return {
             format: function (feet, inches, crossing) {
@@ -89,4 +120,154 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 locatesArray[locatesArray.indexOf(oldValue)] = newValue;
             }
         }
+    })
+
+    .provider("bisonIndexedDB", function () {
+
+        var self = this;
+        //-- Configurable properties
+        self.databaseName = "";
+        self.databaseVersion = 0;
+        self.objectStoreName = "";
+
+        //-- Return the service (mini-safe)
+        this.$get = ["$ionicPopup", function ($ionicPopup) {
+            return {
+                db: null,
+                databaseName: self.databaseName,
+                databaseVersion: self.databaseVersion,
+                objectStoreName: self.objectStoreName,
+                tempResults: [],
+                init: function () {
+                    var request = indexedDB.open(this.databaseName, this.databaseVersion);
+                    request.addEventListener("success", this.startDB);
+                    request.addEventListener("error", this.showError);
+                    request.addEventListener("onupgradeneeded", this.createDB);
+                },
+                startDB: function (event) {
+                    console.log("startDB() called");
+                    this.db = event.target.result;
+                    if(this.db) console.log("Database is ready");
+                },
+                createDB: function (event) {
+                    //-- Create the database
+                    console.log("createDB() called");
+                    var database = event.target.result;
+                    if(this.db) console.log("Created database");
+
+                    //-- Create the ObjectStore and Indexes
+                    var objectStore = database.createObjectStore(this.objectStoreName, {keyPath: "id"});
+                    if(objectStore) console.log("ObjectStore \""+ this.objectStoreName +"\" created");
+                    objectStore.createIndex("Type", "type", {unique: false});
+                    objectStore.createIndex("Customer", "customer", {unique: false});
+                    objectStore.createIndex("Conduit", "conduit", {unique: false});
+                    objectStore.createIndex("Location", "location", {unique: false});
+                    objectStore.createIndex("Length", "length", {unique: false});
+                    objectStore.createIndex("DrillPipe", "drillPipe", {unique: false});
+                    objectStore.createIndex("Date", "date", {unique: false});
+                },
+                showError: function (error) {
+                    var errorPopup = $ionicPopup.alert({
+                        title: "Database error",
+                        template: "<pre>"+error.code+"</br>"+error.message+"</pre>"
+                    }).then(function (res) {
+                        console.log("Popup dismissed");
+                    });
+                },
+                add: function (myObject) {
+                    if(myObject) console.log("Attempting to add " + myObject);
+                    var myTransaction = this.db.transaction([this.objectStoreName], "readwrite");
+                    if(myTransaction) console.log("Transacting");
+                    myTransaction.addEventListener("complete", function () {
+                        console.log("Transaction complete");
+                    });
+                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var request = objectStore.put(myObject);//Should update if id exists
+                    request.addEventListener("success", function (event) {
+                        console.log(event.target.result);
+                    });
+                    request.addEventListener("error", function (error) {
+                        this.showError(error);
+                    });
+                },
+                getOne: function(indexValue) {
+                    var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
+                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var request = objectStore.get(indexValue);
+                    request.addEventListener("success", function (e) {
+                        return e.target.result;
+                    });
+                    request.addEventListener("error", function (error) {
+                        this.showError(error);
+                    });
+                },
+                getAllOf: function (indexKey) {
+                    if(this.tempResults.length !== 0) {
+                        this.tempResults = [];
+                    }
+                    if(this.getIndexKeys().indexOf(indexKey) === -1) {
+                        this.showError({
+                            code:1313,
+                            message:"Only search by legitimate indices: " + this.getIndexKeys().toString()
+                        });
+                    } else {
+                        var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
+                        var objectStore = myTransaction.objectStore(this.objectStoreName);
+                        var myIndex = objectStore.index(indexKey);
+                        var myCursor = myIndex.openCursor(null, "prev");
+                        myCursor.addEventListener("success", this.showAll);
+                    }
+                },
+                getAll: function () {
+                    if(this.tempResults.length !== 0) {
+                        this.tempResults = [];
+                    }
+                    var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
+                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var myCursor = objectStore.openCursor();
+                    myCursor.addEventListener("success", this.showAll);
+                },
+                remove: function (index) {
+                    var confirmPopup = $ionicPopup.confirm({
+                        title:"Delete this record",
+                        template:"<pre>Are you sure you want to?</pre>"
+                    }).then(function (res) {
+                        if(res) {
+                            this.tempResults = [];//Reset the tempResults
+                            var myTransaction = this.db.transaction([this.objectStoreName], "readwrite");
+                            var objectStore = myTransaction.objectStore(this.objectStoreName);
+                            myTransaction.addEventListener("complete", this.getAll);//TODO case in which it's a getAllOf
+                        } else {
+                            //Do nothing
+                        }
+                    });
+                },
+                getIndexKeys: function () {
+                    return [
+                        "id","Type","Customer","Location","Conduit",
+                        "Length","DrillPipe","Date"
+                    ]
+                },
+                showAll: function (e) {
+                    var cursor = e.target.result;
+                    if(cursor) {
+                        this.tempResults.push(cursor.value);
+                        cursor.continue();
+                    } else {
+                        return this.tempResults;
+                    }
+                }
+            }
+        }];
+
+        this.setDatabaseName = function(name) {
+            self.databaseName = name;
+        };
+        this.setDatabaseVersion = function (version) {
+            self.databaseVersion = version;
+        };
+        this.setObjectStoreName = function (name) {
+            self.objectStoreName = name;
+        }
+
     });

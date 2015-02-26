@@ -1,7 +1,8 @@
 describe("bisonInc", function () {
 
     var $rootScope, $scope, $timeout, $state, bisonService,
-        OptionsController, NewBoreLogController, bisonLocateFactory;
+        OptionsController, NewBoreLogController, bisonLocateFactory,
+        bisonIndexedDB;
 
     beforeEach(module('bisonInc'));
     beforeEach(function () {
@@ -12,7 +13,8 @@ describe("bisonInc", function () {
             $state = $injector.get("$state");
             bisonService = $injector.get("bisonService");
             bisonLocateFactory = $injector.get("bisonLocateFactory");
-
+            bisonIndexedDB = $injector.get("bisonIndexedDB");
+            
             OptionsController =
                 $injector.get("$controller")("OptionsController", {
                     $scope: $scope,
@@ -29,6 +31,21 @@ describe("bisonInc", function () {
         });
     });
 
+    //-- bisonIndexedDB
+    describe("bisonIndexedDB", function () {
+        it("should be defined", function () {
+            expect(bisonIndexedDB).toBeDefined();
+        });
+        it("should initialize its properties via the config block", function () {
+            expect(bisonIndexedDB.databaseName).toEqual("bison");
+            expect(bisonIndexedDB.databaseVersion).toEqual(1);
+            expect(bisonIndexedDB.objectStoreName).toEqual("bisonLogs");
+        });
+        it("should not initialize \"db\" prior to init() being called", function () {
+            expect(bisonIndexedDB.db).toBeNull();
+        });
+    });
+    
     //-- bisonService
     describe("bisonService", function () {
         it("should be defined", function () {

@@ -1,6 +1,6 @@
 angular.module("bisonInc").controller('NewBoreLogController',
-    ["$scope", "$timeout", "bisonService",
-        function ($scope, $timeout, bisonService) {
+    ["$scope", "$timeout", "bisonService", "bisonIndexedDB", "bisonDateService",
+        function ($scope, $timeout, bisonService, bisonIndexedDB, bisonDateService) {
 
             //-- For accessing whether a log or journal
             $scope.logOrJournal = function () {
@@ -8,10 +8,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
             };
 
             $scope.typeHeader = bisonService.getType();
-
-            //var isABoreLog = function () {
-            //    return bisonService.getType==="log";
-            //};
 
             //-- Categories of information pertaining to a bore log
             $scope.boreLogModel = [
@@ -44,7 +40,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 },
                 {
                     title: "Length of bore",
-                    hint: "Linear feet (Drill pipe length)",
+                    hint: "Linear feet",
                     value: "",
                     inputType: "text",
                     inputName: "length",
@@ -65,41 +61,28 @@ angular.module("bisonInc").controller('NewBoreLogController',
             //-- On submission of General Info
             $scope.submitGeneralInfo = function () {
                 bisonService.setActiveLog({
+                    id: bisonID(),
                     type: bisonService.getType(),
                     customer: $scope.boreLogModel[0].value,
                     conduit: $scope.boreLogModel[1].value,
                     location: $scope.boreLogModel[2].value,
                     length: $scope.boreLogModel[3].value,
+                    drillPipe: $scope.drillPipeLength,
                     date: bisonDate(),
                     locates: []
                 });
+                //TODO add the log to indexDB for backend mocking
                 console.log(JSON.stringify(bisonService.getActiveLog()));
             };
 
-            //Messing with the terrible JavaScript date accommodations
+            //-- Record the date
             var bisonDate = function () {
                 var dateToParse =
                     bisonService.getType() === "journal" ?
                         new Date().format("M d Y H m s") :
                         new Date($scope.boreLogModel[4].value)
                             .format("M d Y H m s");
-                var dateArray = dateToParse.toString().split(" ");
-                return {
-                    originalDate: dateToParse,
-                    month: dateArray[0],
-                    date: dateArray[1],
-                    year: dateArray[2],
-                    hour: dateArray[3],
-                    minute: dateArray[4],
-                    second: dateArray[5],
-                    bisonDateToString: function () {
-                        return this.month + ". " + this.date + ", " +
-                            this.year;
-                    },
-                    bisonTimeToString: function () {
-                        return this.hour + ":" + this.minute + ":" + this.second;
-                    }
-                };
+                return bisonDateService.parseDate(dateToParse);
             };
 
             //UI effects
@@ -125,4 +108,25 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     {title: $scope.boreLogModel[4].title, value: $scope.boreLogModel[4].value}
                 ]
             };
+
+            $scope.recordLocate = function () {
+                console.log("recordLocate() called");
+            };
+
+            $scope.initializeDB = function () {
+                bisonIndexedDB.init();
+            };
+
+            //-- TODO TESTING
+            // TODO To allow editing entries in a list mode
+            $scope.showEditButton = bisonService.getActiveLog().locates.length > 0;
+            // TODO Bind to toggle
+            $scope.drillPipeLength = 0;
+            // TODO Return a formatted id for each log
+            var bisonID = function () {
+                var id = "";
+                //TODO create the id
+                return id;
+            };
+
         }]);

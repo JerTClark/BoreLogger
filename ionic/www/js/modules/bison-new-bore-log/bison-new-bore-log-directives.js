@@ -33,18 +33,25 @@ angular.module("bisonInc")
                 bisonModalValues: "&",
                 bisonFormController: "=",
                 bisonDisableSubmit: "=",
-                bisonSubmit: "&"
+                bisonSubmit: "&",
+                bisonTopButtonText: "@",
+                bisonBottomButtonText: "@",
+                bisonModalButtonText: "@",
+                bisonModalOnClick: "&"
             },
             template: '<ion-list type="list-inset">' +
                 '<div class="bison-border-light">' +
                 '<ion-item class="bison-input-padding">' +
                 '<button class="button button-full button-assertive bison-rough-text"' +
-                'ng-click="openModal()">Double-check</button>' +
-                '<button class="button button-full button-assertive bison-rough-text"' +
                 'ng-disabled="bisonFormController.$invalid"' +
-                'ng-click="bisonSubmit()">Continue</button>' +
+                'ng-click="openModal()">{{bisonTopButtonText}}</button>' +
+                '<button class="button button-full button-assertive bison-rough-text"' +
+                'ng-click="cancel()">{{bisonBottomButtonText}}</button>' +
                 '</ion-item></div></ion-list>',
             controller: function($scope, $ionicModal){
+                $scope.cancel = function () {
+                    history.back();
+                };
                 //-- Ionic Modal
                 $ionicModal.fromTemplateUrl($scope.bisonModalTemplate, {
                     scope: $scope,
@@ -53,10 +60,13 @@ angular.module("bisonInc")
                     $scope.modal = modal;
                 });
                 $scope.openModal = function () {
+                    $scope.bisonSubmit();
                     $scope.modal.title = $scope.bisonModalTitle;
                     $scope.modal.description = $scope.bisonModalDescription;
                     $scope.modal.logOrJournal = $scope.bisonModalType;
                     $scope.modal.values = $scope.bisonModalValues();
+                    $scope.modal.buttonText = $scope.bisonModalButtonText;
+                    $scope.modal.onclick = $scope.bisonModalOnClick;
                     $scope.modal.show();
                 };
                 $scope.closeModal = function () {

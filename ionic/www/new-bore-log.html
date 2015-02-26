@@ -21,14 +21,23 @@
                     </div>
                 </div>
             </ion-list>
+            <ion-list type="list-inset" ng-show="showEditButton">
+                <ion-item>
+                    <button class="button button-full button-assertive bison-rough-text">Edit locates</button>
+                </ion-item>
+            </ion-list>
             <bison-form-button-panel bison-disable-submit="bisonGenInfoForm.$invalid"
                                      bison-form-controller="bisonGenInfoForm"
                                      bison-modal-values="getModalValues()"
                                      bison-submit="submitGeneralInfo()"
                                      bison-modal-title="Locates"
+                                     bison-top-button-text="Locates"
+                                     bison-bottom-button-text="Cancel"
+                                     bison-modal-button-text="Record"
                                      bison-modal-description="This list confirms your entries so far"
                                      bison-modal-type="{{typeHeader}}"
-                                     bison-modal-template="locates-modal.html">
+                                     bison-modal-template="locates-modal.html"
+                                     bison-modal-on-click="recordLocate()">
             </bison-form-button-panel>
         </form>
     </ion-content>
