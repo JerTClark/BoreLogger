@@ -39,7 +39,9 @@ angular.module("bisonInc")
                 bisonModalButtonText: "@",
                 bisonBottomModalButtonText: "@",
                 bisonModalOnClick: "&",
-                bisonOnCancel: "&"
+                bisonOnCancel: "&",
+                bisonPopupTitle: "@",
+                bisonPopupSubtitle: "@"
             },
             template: '<ion-list type="list-inset">' +
                 '<div class="bison-border-light">' +
@@ -48,12 +50,9 @@ angular.module("bisonInc")
                 'ng-disabled="bisonFormController.$invalid"' +
                 'ng-click="openModal()">{{bisonTopButtonText}}</button>' +
                 '<button class="button button-full button-assertive bison-rough-text"' +
-                'ng-click="bisonOnCancel()">{{bisonBottomButtonText}}</button>' +
+                'ng-click="bisonOnCancel()" ng-if="bisonBottomButtonText">{{bisonBottomButtonText}}</button>' +
                 '</ion-item></div></ion-list>',
             controller: function($scope, $ionicModal, $ionicPopup, $timeout){
-                $scope.cancel = function () {
-                    history.back();
-                };
                 $scope.popupInputValue = "";
                 //-- Ionic Modal
                 $ionicModal.fromTemplateUrl($scope.bisonModalTemplate, {
@@ -108,8 +107,8 @@ angular.module("bisonInc")
                             '<input type="text" id="popupInput" class="bison-input-field"' +
                             'placeholder="crossing">' +
                             '</label>',
-                        title:"Crossing",
-                        subTitle:"Enter utility or natural crossing",
+                        title:$scope.bisonPopupTitle,
+                        subTitle:$scope.bisonPopupSubtitle,
                         buttons: [
                             {
                                 text: "Cancel",
