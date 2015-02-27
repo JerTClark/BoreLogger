@@ -20,9 +20,18 @@
                         </bison-input-field>
                     </div>
                 </div>
+                <div ng-show="isALog">
+                    <bison-category-with-description category-name="Drill pipe"
+                                                     category-description="Length of drill pipe used"></bison-category-with-description>
+                    <ion-toggle toggle-class="toggle-assertive"
+                                ng-model="drillPipeBoolean.value"
+                                class="bison-handwriting-normal"
+                                style="font-weight: bold"><span style="color: red">{{drillPipeLength}}'</span> drill pipes
+                    </ion-toggle>
+                </div>
             </ion-list>
-            <ion-list type="list-inset" ng-show="showEditButton">
-                <ion-item>
+            <ion-list type="list-inset">
+                <ion-item ng-show="showEditButton">
                     <button class="button button-full button-assertive bison-rough-text">Edit locates</button>
                 </ion-item>
             </ion-list>
@@ -34,10 +43,12 @@
                                      bison-top-button-text="Locates"
                                      bison-bottom-button-text="Cancel"
                                      bison-modal-button-text="Record"
+                                     bison-bottom-modal-button-text="Crossing"
                                      bison-modal-description="This list confirms your entries so far"
                                      bison-modal-type="{{typeHeader}}"
                                      bison-modal-template="locates-modal.html"
-                                     bison-modal-on-click="recordLocate()">
+                                     bison-modal-on-click="recordLocate(value)"
+                                     bison-on-cancel="onCancel()">
             </bison-form-button-panel>
         </form>
     </ion-content>

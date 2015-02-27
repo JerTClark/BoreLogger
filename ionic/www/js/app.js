@@ -57,6 +57,9 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 },
                 bisonTimeToString: function () {
                     return this.hour + ":" + this.minute + ":" + this.second;
+                },
+                bisonDateToFileFormat: function () {
+                    return this.month + this.date + this.year + "-" + this.hour + this.minute + this.second;
                 }
             }
         }
@@ -89,7 +92,16 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     locates: []
                 }
             }
-        }
+        };
+        self.setID = function (id) {
+            self.activeLog["id"] = id;
+        };
+        self.getActiveDateObject = function () {
+            return self.activeLog["date"];
+        };
+        self.getActiveLocates = function () {
+            return self.activeLog["locates"];
+        };
     })
 
     .factory("bisonLocateFactory", function () {
@@ -270,4 +282,55 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
             self.objectStoreName = name;
         }
 
-    });
+    })
+    .service("boreLogModelService", ["bisonService", function (bisonService) {
+        this.getModel = function () {
+            return [
+                {
+                    title: "Customer",
+                    hint: "Who the job was for",
+                    value: "",
+                    inputType: "text",
+                    inputName: "customer",
+                    show: true,
+                    required: true
+                },
+                {
+                    title: "Conduit",
+                    hint: "(No.) Size Type",
+                    value: "",
+                    inputType: "text",
+                    inputName: "conduit",
+                    show: bisonService.getType() === "log",
+                    required: bisonService.getType() === "log"
+                },
+                {
+                    title: "Location",
+                    hint: "Location of the job",
+                    value: "",
+                    inputType: "text",
+                    inputName: "location",
+                    show: true,
+                    required: true
+                },
+                {
+                    title: "Length of bore",
+                    hint: "Linear feet",
+                    value: "",
+                    inputType: "text",
+                    inputName: "length",
+                    show: bisonService.getType() === "log",
+                    required: bisonService.getType() === "log"
+                },
+                {
+                    title: "Date",
+                    hint: "Start or end of job",
+                    value: "",
+                    inputType: "date",
+                    inputName: "date",
+                    show: bisonService.getType() === "log",
+                    required: bisonService.getType() === "log"
+                }
+            ];
+        }
+    }]);

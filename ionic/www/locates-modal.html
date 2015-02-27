@@ -6,12 +6,12 @@
         </button>
     </ion-header-bar>
     <ion-content class="content has-header" has-bouncing="false" padding="true">
-        <ion-list type="card" class="hide-on-keyboard-open">
+        <ion-list type="card" ng-click="toggleContent()">
             <ion-item>
                 <p id="Type-modal-header" class="bison-handwriting-xlarge">Bore {{modal.logOrJournal}}</p>
             </ion-item>
         </ion-list>
-        <ion-list type="list-inset" class="hide-on-keyboard-open">
+        <ion-list type="list-inset" id="content">
             <ion-item ng-repeat="value in modal.values">
                 <p id="{{value.title}}-modal-header">{{value.title}}: <b>{{value.value}}</b></p>
             </ion-item>
@@ -23,6 +23,7 @@
                     <span class="input-label bison-floating-label">feet</span>
                     <input type="text"
                            name="feet"
+                           id="feet"
                            class="bison-input-field"
                            placeholder="feet">
                 </label>
@@ -32,11 +33,13 @@
                     <span class="input-label bison-floating-label">inches</span>
                     <input type="text"
                            name="inches"
+                           id="inches"
                            class="bison-input-field"
                            placeholder="inches">
                 </label>
                 </div>
                 <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onclick()">{{modal.buttonText}}</button>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">{{modal.bottomButtonText}}</button>
             </ion-item>
         </ion-list>
     </ion-content>

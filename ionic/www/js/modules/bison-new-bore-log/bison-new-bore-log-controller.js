@@ -1,101 +1,56 @@
 angular.module("bisonInc").controller('NewBoreLogController',
-    ["$scope", "$timeout", "bisonService", "bisonIndexedDB", "bisonDateService",
-        function ($scope, $timeout, bisonService, bisonIndexedDB, bisonDateService) {
+    ["$scope", "$timeout", "bisonService", "bisonIndexedDB",
+        "bisonDateService", "bisonLocateFactory", "boreLogModelService",
+        function ($scope, $timeout, bisonService, bisonIndexedDB,
+                  bisonDateService, bisonLocateFactory, boreLogModelService) {
+            var hasBeenCreated = false;
 
             //-- For accessing whether a log or journal
             $scope.logOrJournal = function () {
                 return bisonService.getType();
             };
-
             $scope.typeHeader = bisonService.getType();
+            $scope.isALog = bisonService.getType() === "log";
 
             //-- Categories of information pertaining to a bore log
-            $scope.boreLogModel = [
-                {
-                    title: "Customer",
-                    hint: "Who the job was for",
-                    value: "",
-                    inputType: "text",
-                    inputName: "customer",
-                    show: true,
-                    required: true
-                },
-                {
-                    title: "Conduit",
-                    hint: "(No.) Size Type",
-                    value: "",
-                    inputType: "text",
-                    inputName: "conduit",
-                    show: bisonService.getType() === "log",
-                    required: bisonService.getType() === "log"
-                },
-                {
-                    title: "Location",
-                    hint: "Location of the job",
-                    value: "",
-                    inputType: "text",
-                    inputName: "location",
-                    show: true,
-                    required: true
-                },
-                {
-                    title: "Length of bore",
-                    hint: "Linear feet",
-                    value: "",
-                    inputType: "text",
-                    inputName: "length",
-                    show: bisonService.getType() === "log",
-                    required: bisonService.getType() === "log"
-                },
-                {
-                    title: "Date",
-                    hint: "Start or end of job",
-                    value: "",
-                    inputType: "date",
-                    inputName: "date",
-                    show: bisonService.getType() === "log",
-                    required: bisonService.getType() === "log"
-                }
-            ];
+            $scope.boreLogModel = boreLogModelService.getModel();
 
             //-- On submission of General Info
             $scope.submitGeneralInfo = function () {
-                bisonService.setActiveLog({
-                    id: bisonID(),
-                    type: bisonService.getType(),
-                    customer: $scope.boreLogModel[0].value,
-                    conduit: $scope.boreLogModel[1].value,
-                    location: $scope.boreLogModel[2].value,
-                    length: $scope.boreLogModel[3].value,
-                    drillPipe: $scope.drillPipeLength,
-                    date: bisonDate(),
-                    locates: []
-                });
-                //TODO add the log to indexDB for backend mocking
-                console.log(JSON.stringify(bisonService.getActiveLog()));
+                if(!hasBeenCreated) {
+                    bisonService.setActiveLog({
+                        id: "unset",
+                        type: bisonService.getType(),
+                        customer: $scope.boreLogModel[0].value,
+                        conduit: $scope.boreLogModel[1].value,
+                        location: $scope.boreLogModel[2].value,
+                        length: $scope.boreLogModel[3].value,
+                        drillPipe: $scope.drillPipeLength,
+                        date: bisonDate(),
+                        locates: []
+                    });
+                    bisonService.setID(bisonID());
+                    hasBeenCreated = true;
+                    //TODO add the log to indexDB for backend mocking
+                    console.log(JSON.stringify(bisonService.getActiveLog()));
+                } else {
+                    // Do nothing
+                }
             };
 
             //-- Record the date
             var bisonDate = function () {
-                var dateToParse =
-                    bisonService.getType() === "journal" ?
+                var dateToParse = bisonService.getType() === "journal" ?
                         new Date().format("M d Y H m s") :
                         new Date($scope.boreLogModel[4].value)
                             .format("M d Y H m s");
                 return bisonDateService.parseDate(dateToParse);
             };
 
-            //UI effects
-            $scope.showDescription = function ($event) {
-                angular.element($event.target).toggleClass('activated');
-                angular.element($event.target).siblings('p').slideToggle(200);
-            };
-            $scope.activate = function ($event, button) {
-                var elem = angular.element($event.target);
-                elem.addClass('emphasis');
-                $timeout(function () {
-                    elem.removeClass('emphasis');
-                }, 2000)
+            //-- Create a unique id for each record
+            var bisonID = function () {
+                var id = $scope.boreLogModel[0].value + $scope.boreLogModel[2].value + bisonService.getActiveDateObject().bisonDateToFileFormat();
+                return id.replace(/\s/g, "");
             };
 
             //For the button panel directive
@@ -109,24 +64,61 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 ]
             };
 
-            $scope.recordLocate = function () {
-                console.log("recordLocate() called");
+            $scope.recordLocate = function (crossingParam) {
+                var feet = angular.element("#feet").val();
+                var inches = angular.element("#inches").val();
+                var crossing = crossingParam
+                angular.element("#feet").val("");
+                angular.element("#inches").val("");
+                var locate = bisonLocateFactory.format(feet, inches, crossing);
+                bisonLocateFactory.add(locate, bisonService.getActiveLog()["locates"]);
+                $scope.numberOfLocates = bisonService.getActiveLog()["locates"].length;
+
+                //TODO delete console log
+                console.log(bisonService.getActiveLog()["locates"]);
             };
 
+            //-- Database operations
             $scope.initializeDB = function () {
                 bisonIndexedDB.init();
             };
 
-            //-- TODO TESTING
-            // TODO To allow editing entries in a list mode
-            $scope.showEditButton = bisonService.getActiveLog().locates.length > 0;
-            // TODO Bind to toggle
-            $scope.drillPipeLength = 0;
-            // TODO Return a formatted id for each log
-            var bisonID = function () {
-                var id = "";
-                //TODO create the id
-                return id;
+            // UI effects
+            $scope.showDescription = function ($event) {
+                angular.element($event.target).toggleClass('activated');
+                angular.element($event.target).siblings('p').slideToggle(200);
             };
 
+            $scope.activate = function ($event, button) {
+                var elem = angular.element($event.target);
+                elem.addClass('emphasis');
+                $timeout(function () {
+                    elem.removeClass('emphasis');
+                }, 2000)
+            };
+
+            // To allow editing entries in a list mode once enough entries are entered
+            $scope.showEditButton = false;
+            $scope.$watchCollection("numberOfLocates", function (newValue, oldValue) {
+                //console.log("Now: " + newValue + " Was: " + oldValue);
+                if(newValue >= 1) $scope.showEditButton = true;
+            });
+
+            // Bind to toggle
+            $scope.drillPipeBoolean = {value: false};
+            $scope.drillPipeLength = "10";
+            $scope.$watchCollection("drillPipeBoolean", function (newValue, oldValue) {
+                if($scope.drillPipeBoolean["value"] === true) {
+                    $scope.drillPipeLength = "15";
+                } else {
+                    $scope.drillPipeLength = "10";
+                }
+            });
+
+            // Cancel log entry
+            $scope.onCancel = function () {
+                hasBeenCreated = false;
+                console.log("Has been created: " + hasBeenCreated);
+                history.back();
+            }
         }]);
