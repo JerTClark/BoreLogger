@@ -41,7 +41,8 @@ angular.module("bisonInc")
                 bisonModalOnClick: "&",
                 bisonOnCancel: "&",
                 bisonPopupTitle: "@",
-                bisonPopupSubtitle: "@"
+                bisonPopupSubtitle: "@",
+                bisonPopupPlaceholder: "@"
             },
             template: '<ion-list type="list-inset">' +
                 '<div class="bison-border-light">' +
@@ -65,15 +66,15 @@ angular.module("bisonInc")
                     $scope.bisonSubmit();
                     $scope.modal.title = $scope.bisonModalTitle;
                     $scope.modal.description = $scope.bisonModalDescription;
-                    $scope.modal.logOrJournal = $scope.bisonModalType;
+                    $scope.modal.type = $scope.bisonModalType;
                     $scope.modal.values = $scope.bisonModalValues();
                     $scope.modal.buttonText = $scope.bisonModalButtonText;
                     $scope.modal.bottomButtonText = $scope.bisonBottomModalButtonText;
-                    $scope.modal.onclick = $scope.bisonModalOnClick;
+                    $scope.modal.onClick = $scope.bisonModalOnClick;
                     $scope.modal.show();
-                    $timeout(function () {
-                        $scope.fadeContent();
-                    }, 1500);
+                    //$timeout(function () {
+                    //    $scope.fadeContent();
+                    //}, 1500);
                 };
                 $scope.closeModal = function () {
                     $scope.modal.hide();
@@ -89,10 +90,12 @@ angular.module("bisonInc")
                 });
                 $scope.toggleContent = function () {
                     console.log("toggle called");
-                    angular.element("#content").fadeToggle();
+                    var elem = angular.element("#content");
+                    if(elem) elem.fadeToggle();
                 };
                 $scope.fadeContent = function () {
-                    angular.element("#content").fadeOut();
+                    var elem = angular.element("#content");
+                    if(elem) elem.fadeOut();
                 };
                 $scope.respond = function (value) {
                     console.log(value + " in respond()");
@@ -103,9 +106,9 @@ angular.module("bisonInc")
                     var crossingPopup = $ionicPopup.show({
                         scope: $scope,
                         template:'<label class="item-input item-floating-label" focus-me>' +
-                            '<span class="input-label bison-floating-label">Crossing</span>' +
+                            '<span class="input-label bison-floating-label">{{bisonPopupPlaceholder}}</span>' +
                             '<input type="text" id="popupInput" class="bison-input-field"' +
-                            'placeholder="crossing">' +
+                            'placeholder="{{bisonPopupPlaceholder}}">' +
                             '</label>',
                         title:$scope.bisonPopupTitle,
                         subTitle:$scope.bisonPopupSubtitle,

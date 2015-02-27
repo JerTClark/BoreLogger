@@ -30,13 +30,17 @@
                     </ion-toggle>
                 </div>
             </ion-list>
-            <ion-list type="list-inset">
-                <ion-item ng-show="showEditButton">
-                    <button class="button button-full button-assertive bison-rough-text">Edit locates</button>
-                </ion-item>
-            </ion-list>
-            <bison-form-button-panel bison-disable-submit="bisonGenInfoForm.$invalid"
-                                     bison-form-controller="bisonGenInfoForm"
+
+            <bison-form-button-panel ng-show="showEditButton"
+                                     bison-disable-submit="false"
+                                     bison-top-button-text="Edit locates"
+                                     bison-modal-title="Edit locates"
+                                     bison-modal-values="getLocates()"
+                                     bison-modal-button-text="Done"
+                                     bison-bottom-modal-button-text="Cancel"
+                                     bison-modal-template="edit-locates-modal.html"></bison-form-button-panel>
+
+            <bison-form-button-panel bison-form-controller="bisonGenInfoForm"
                                      bison-modal-values="getModalValues()"
                                      bison-submit="submitGeneralInfo()"
                                      bison-modal-title="Locates"
@@ -50,8 +54,8 @@
                                      bison-modal-on-click="recordLocate(value)"
                                      bison-on-cancel="onCancel()"
                                      bison-popup-title="Crossing"
-                                     bison-popup-subtitle="Enter utility or natural crossing">
-            </bison-form-button-panel>
+                                     bison-popup-subtitle="Enter utility or natural crossing"
+                                     bison-popup-placeholder="Crossing"></bison-form-button-panel>
         </form>
     </ion-content>
 </ion-view>

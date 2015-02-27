@@ -8,7 +8,7 @@
     <ion-content class="content has-header" has-bouncing="false" padding="true">
         <ion-list type="card" ng-click="toggleContent()">
             <ion-item>
-                <p id="Type-modal-header" class="bison-handwriting-xlarge">Bore {{modal.logOrJournal}}</p>
+                <p id="Type-modal-header" class="bison-handwriting-xlarge">Bore {{modal.type}}</p>
             </ion-item>
         </ion-list>
         <ion-list type="list-inset" id="content">
@@ -38,7 +38,7 @@
                            placeholder="inches">
                 </label>
                 </div>
-                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onclick()">{{modal.buttonText}}</button>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">{{modal.buttonText}}</button>
                 <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">{{modal.bottomButtonText}}</button>
             </ion-item>
         </ion-list>

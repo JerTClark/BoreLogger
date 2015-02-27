@@ -82,6 +82,9 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     {title: $scope.boreLogModel[4].title, value: $scope.boreLogModel[4].value}
                 ]
             };
+            $scope.getLocates = function () {
+                return bisonService.getActiveLog()["locates"];
+            };
 
             // UI effects
             $scope.showDescription = function ($event) {
