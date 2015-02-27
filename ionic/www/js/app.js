@@ -41,9 +41,10 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
 
     .service("bisonDateService", function () {
         var self = this;
+        self.dateRecord = {};
         self.parseDate = function (dateToParse) {
             var dateArray = dateToParse.toString().split(" ");
-            return {
+            self.dateRecord = {
                 originalDate: dateToParse,
                 month: dateArray[0],
                 date: dateArray[1],
@@ -61,6 +62,15 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 bisonDateToFileFormat: function () {
                     return this.month + this.date + this.year + "-" + this.hour + this.minute + this.second;
                 }
+            };
+            return {
+                originalDate: dateToParse,
+                month: dateArray[0],
+                date: dateArray[1],
+                year: dateArray[2],
+                hour: dateArray[3],
+                minute: dateArray[4],
+                second: dateArray[5]
             }
         }
     })
@@ -141,35 +151,31 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
         self.databaseName = "";
         self.databaseVersion = 0;
         self.objectStoreName = "";
+        self.db = null;
 
         //-- Return the service (mini-safe)
         this.$get = ["$ionicPopup", function ($ionicPopup) {
             return {
-                db: null,
-                databaseName: self.databaseName,
-                databaseVersion: self.databaseVersion,
-                objectStoreName: self.objectStoreName,
                 tempResults: [],
                 init: function () {
-                    var request = indexedDB.open(this.databaseName, this.databaseVersion);
+                    console.log("init() called");
+                    var request = indexedDB.open(self.databaseName, self.databaseVersion);
                     request.addEventListener("success", this.startDB);
                     request.addEventListener("error", this.showError);
-                    request.addEventListener("onupgradeneeded", this.createDB);
+                    request.addEventListener("upgradeneeded", this.createDB);
                 },
                 startDB: function (event) {
                     console.log("startDB() called");
-                    this.db = event.target.result;
-                    if(this.db) console.log("Database is ready");
+                    self.db = event.target.result;
+                    if(self.db) console.log("Database is ready");
                 },
                 createDB: function (event) {
-                    //-- Create the database
-                    console.log("createDB() called");
                     var database = event.target.result;
-                    if(this.db) console.log("Created database");
-
+                    if(database) console.log("Created database");
                     //-- Create the ObjectStore and Indexes
-                    var objectStore = database.createObjectStore(this.objectStoreName, {keyPath: "id"});
-                    if(objectStore) console.log("ObjectStore \""+ this.objectStoreName +"\" created");
+                    var objectStore = database.createObjectStore("bisonLogs", {keyPath: "id"});
+                    if(objectStore) console.log("ObjectStore \""+ "bisonLogs" +"\" created");
+                    if(!objectStore) console.log("Couldn't create object store");
                     objectStore.createIndex("Type", "type", {unique: false});
                     objectStore.createIndex("Customer", "customer", {unique: false});
                     objectStore.createIndex("Conduit", "conduit", {unique: false});
@@ -188,12 +194,12 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 },
                 add: function (myObject) {
                     if(myObject) console.log("Attempting to add " + myObject);
-                    var myTransaction = this.db.transaction([this.objectStoreName], "readwrite");
+                    var myTransaction = self.db.transaction(["bisonLogs"], "readwrite");
                     if(myTransaction) console.log("Transacting");
-                    myTransaction.addEventListener("complete", function () {
+                    myTransaction.addEventListener("complete", function (e) {
                         console.log("Transaction complete");
                     });
-                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var objectStore = myTransaction.objectStore(self.objectStoreName);
                     var request = objectStore.put(myObject);//Should update if id exists
                     request.addEventListener("success", function (event) {
                         console.log(event.target.result);
@@ -203,8 +209,8 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     });
                 },
                 getOne: function(indexValue) {
-                    var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
-                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
+                    var objectStore = myTransaction.objectStore(self.objectStoreName);
                     var request = objectStore.get(indexValue);
                     request.addEventListener("success", function (e) {
                         return e.target.result;
@@ -223,8 +229,8 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                             message:"Only search by legitimate indices: " + this.getIndexKeys().toString()
                         });
                     } else {
-                        var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
-                        var objectStore = myTransaction.objectStore(this.objectStoreName);
+                        var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
+                        var objectStore = myTransaction.objectStore(self.objectStoreName);
                         var myIndex = objectStore.index(indexKey);
                         var myCursor = myIndex.openCursor(null, "prev");
                         myCursor.addEventListener("success", this.showAll);
@@ -234,8 +240,8 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     if(this.tempResults.length !== 0) {
                         this.tempResults = [];
                     }
-                    var myTransaction = this.db.transaction([this.objectStoreName], "readonly");
-                    var objectStore = myTransaction.objectStore(this.objectStoreName);
+                    var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
+                    var objectStore = myTransaction.objectStore(self.objectStoreName);
                     var myCursor = objectStore.openCursor();
                     myCursor.addEventListener("success", this.showAll);
                 },
@@ -246,8 +252,8 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     }).then(function (res) {
                         if(res) {
                             this.tempResults = [];//Reset the tempResults
-                            var myTransaction = this.db.transaction([this.objectStoreName], "readwrite");
-                            var objectStore = myTransaction.objectStore(this.objectStoreName);
+                            var myTransaction = self.db.transaction([""], "readwrite");
+                            var objectStore = myTransaction.objectStore(self.objectStoreName);
                             myTransaction.addEventListener("complete", this.getAll);//TODO case in which it's a getAllOf
                         } else {
                             //Do nothing
@@ -261,6 +267,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     ]
                 },
                 showAll: function (e) {
+                    console.log("showAll() called");
                     var cursor = e.target.result;
                     if(cursor) {
                         this.tempResults.push(cursor.value);

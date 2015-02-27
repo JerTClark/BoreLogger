@@ -5,6 +5,11 @@ angular.module("bisonInc").controller('NewBoreLogController',
                   bisonDateService, bisonLocateFactory, boreLogModelService) {
             var hasBeenCreated = false;
 
+            //-- Initialize the IndexedDB (called via ngInit)
+            $scope.initializeDB = function () {
+                bisonIndexedDB.init();
+            };
+
             //-- For accessing whether a log or journal
             $scope.logOrJournal = function () {
                 return bisonService.getType();
@@ -29,13 +34,27 @@ angular.module("bisonInc").controller('NewBoreLogController',
                         date: bisonDate(),
                         locates: []
                     });
-                    bisonService.setID(bisonID());
+                    bisonService.setID(bisonID());//Depends on other properties being set first
                     hasBeenCreated = true;
-                    //TODO add the log to indexDB for backend mocking
-                    console.log(JSON.stringify(bisonService.getActiveLog()));
-                } else {
-                    // Do nothing
+                    bisonIndexedDB.add(bisonService.getActiveLog());// Add to database
+                    console.log(JSON.stringify(bisonService.getActiveLog()));//TODO Remove testing logs
                 }
+            };
+
+            //-- Format and record user input of locates
+            $scope.recordLocate = function (crossingParam) {
+                var feet = angular.element("#feet").val();
+                var inches = angular.element("#inches").val();
+                var crossing = crossingParam;
+                angular.element("#feet").val("");
+                angular.element("#inches").val("");
+                var locate = bisonLocateFactory.format(feet, inches, crossing);
+                bisonLocateFactory.add(locate, bisonService.getActiveLog()["locates"]);
+                $scope.numberOfLocates = bisonService.getActiveLog()["locates"].length;
+
+                //TODO delete console log
+                console.log(bisonService.getActiveLog()["locates"]);
+                bisonIndexedDB.add(bisonService.getActiveLog());
             };
 
             //-- Record the date
@@ -49,7 +68,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
 
             //-- Create a unique id for each record
             var bisonID = function () {
-                var id = $scope.boreLogModel[0].value + $scope.boreLogModel[2].value + bisonService.getActiveDateObject().bisonDateToFileFormat();
+                var id = $scope.boreLogModel[0].value + $scope.boreLogModel[2].value + bisonDateService.dateRecord.bisonDateToFileFormat();
                 return id.replace(/\s/g, "");
             };
 
@@ -62,25 +81,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     {title: $scope.boreLogModel[3].title, value: $scope.boreLogModel[3].value},
                     {title: $scope.boreLogModel[4].title, value: $scope.boreLogModel[4].value}
                 ]
-            };
-
-            $scope.recordLocate = function (crossingParam) {
-                var feet = angular.element("#feet").val();
-                var inches = angular.element("#inches").val();
-                var crossing = crossingParam
-                angular.element("#feet").val("");
-                angular.element("#inches").val("");
-                var locate = bisonLocateFactory.format(feet, inches, crossing);
-                bisonLocateFactory.add(locate, bisonService.getActiveLog()["locates"]);
-                $scope.numberOfLocates = bisonService.getActiveLog()["locates"].length;
-
-                //TODO delete console log
-                console.log(bisonService.getActiveLog()["locates"]);
-            };
-
-            //-- Database operations
-            $scope.initializeDB = function () {
-                bisonIndexedDB.init();
             };
 
             // UI effects

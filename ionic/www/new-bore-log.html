@@ -1,5 +1,5 @@
 <ion-view view-title="General info">
-    <ion-content class="has-header">
+    <ion-content class="has-header" ng-init="initializeDB()">
 
         <form name="bisonGenInfoForm"
               novalidate>
@@ -51,5 +51,6 @@
                                      bison-on-cancel="onCancel()">
             </bison-form-button-panel>
         </form>
+        <!--<button class="button button-positive button-outline button-block" ng-click="initializeDB()">TestDB</button>-->
     </ion-content>
 </ion-view>
