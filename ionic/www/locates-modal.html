@@ -25,7 +25,7 @@
                            name="feet"
                            id="feet"
                            class="bison-input-field"
-                           placeholder="feet">
+                           placeholder="feet" first-input>
                 </label>
                 </div>
                 <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
@@ -43,4 +43,9 @@
             </ion-item>
         </ion-list>
     </ion-content>
+    <script>
+        function focusFirstInput() {
+            angular.element("#feet").focus();
+        }
+    </script>
 </ion-modal-view>

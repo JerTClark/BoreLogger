@@ -81,7 +81,18 @@ angular.module("bisonInc")
                     $scope.modal.bottomButtonText = $scope.bisonBottomModalButtonText;
                     $scope.modal.onClick = $scope.bisonModalOnClick;
                     $scope.modal.show();
+                    focusFirstInput();
                 };
+                /**
+                 * If the @bisonModalTemplate has one or more input elements,
+                 * add an attribute of "first-input" to have it receive focus
+                 * when the $ionicModal loads
+                 */
+                function focusFirstInput() {
+                    $timeout(function () {
+                        angular.element("input[first-input]").focus();
+                    }, 500);
+                }
                 $scope.closeModal = function () {
                     $scope.modal.hide();
                 };
@@ -195,10 +206,10 @@ angular.module("bisonInc")
             template:'<div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">' +
                 '<label class="item item-input item-floating-label">' +
                 '<span class="input-label bison-floating-label">{{bisonHint}}</span>' +
-                '<input id={{bisonId}}-input name="{{bisonInputName}}" ng-class="input-{{bisonIndex}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
+                '<input id={{bisonIndex}}-input name="{{bisonInputName}}" ng-class="input-{{bisonIndex}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
                 '<span class="bison-error" ng-show="bisonFormController.{{bisonInputName}}.$dirty && bisonFormController.{{bisonInputName}}.$invalid">^Required</span></label></div>',
             controller: function ($scope) {
-
+                
             }
         }
     }])

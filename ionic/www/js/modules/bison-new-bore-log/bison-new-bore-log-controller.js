@@ -24,8 +24,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
              */
             $scope.focusFirstInput = function () {
                 $timeout(function () {
-                    //attr("focus-me", "")
-                    angular.element("#customer-input").focus();
+                    angular.element("#0-input").focus();
                 }, 500);
             };
 
