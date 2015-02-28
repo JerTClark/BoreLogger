@@ -8,7 +8,8 @@
                       type="card">
                 <div ng-repeat="field in boreLogModel">
                     <div ng-show="field.show">
-                        <bison-category-with-description category-name="{{field.title}}"
+                        <bison-category-with-description ng-show="bisonGenInfoForm.{{field.inputName}}.$pristine || bisonGenInfoForm.{{field.inputName}}.$invalid"
+                                                         category-name="{{field.title}}"
                                                          category-description="{{field.hint}}"></bison-category-with-description>
                         <bison-input-field bison-id="{{field.inputName}}"
                                            bison-hint="{{field.hint}}"
@@ -21,7 +22,8 @@
                     </div>
                 </div>
                 <div ng-show="isALog">
-                    <bison-category-with-description category-name="Drill pipe"
+                    <bison-category-with-description id="drillPipeCategoryHeader"
+                                                     category-name="Drill pipe"
                                                      category-description="Length of drill pipe used"></bison-category-with-description>
                     <ion-toggle toggle-class="toggle-assertive"
                                 ng-model="drillPipeBoolean.value"
@@ -31,14 +33,17 @@
                 </div>
             </ion-list>
 
-            <bison-form-button-panel ng-show="showEditButton"
-                                     bison-disable-submit="false"
-                                     bison-top-button-text="Edit locates"
+            <!--ng-show="showEditButton"-->
+            <bison-form-button-panel bison-top-button-text="Edit locates"
                                      bison-modal-title="Edit locates"
                                      bison-modal-values="getLocates()"
                                      bison-modal-button-text="Done"
                                      bison-bottom-modal-button-text="Cancel"
-                                     bison-modal-template="edit-locates-modal.html"></bison-form-button-panel>
+                                     bison-modal-template="edit-locates-modal.html"
+                                     bison-on-cancel="toggleLeft()"
+                                     bison-popup-title="Edit"
+                                     bison-popup-placeholder="Locate"
+                                     bison-modal-on-click="updateLocate(value, fromIndex, toIndex)"></bison-form-button-panel>
 
             <bison-form-button-panel bison-form-controller="bisonGenInfoForm"
                                      bison-modal-values="getModalValues()"

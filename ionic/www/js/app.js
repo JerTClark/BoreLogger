@@ -99,12 +99,26 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     length: "",
                     drillPipe:"",
                     date: "",
+                    monthDate: "",
+                    year: "",
+                    dateObj: "",
                     locates: []
                 }
             }
         };
         self.setID = function (id) {
             self.activeLog["id"] = id;
+        };
+        self.setMonthDate = function (monthDate) {
+            self.activeLog["monthDate"] = monthDate;
+        };
+        self.setYear = function (year) {
+            self.activeLog["year"] = year;
+        };
+        self.finalize = function(id, monthDate, year) {
+            self.setID(id);
+            self.setMonthDate(monthDate);
+            self.setYear(year);
         };
         self.getActiveDateObject = function () {
             return self.activeLog["date"];
@@ -123,23 +137,25 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 return feet + "\' " + inches + "\"";
             },
             add: function (locate, locatesArray) {
-                locatesArray[locatesArray.length] = locate;
+                locatesArray.push(locate);
+                return locatesArray;
             },
-            move: function (locatesArray, fromIndex, toIndex) {
-                if (toIndex >= locatesArray.length) {
-                    var i = toIndex - locatesArray.length;
-                    while((i--) + 1) {
-                        locatesArray.push(undefined);
-                    }
-                } else {
-                    locatesArray.splice(toIndex, 0, locatesArray.splice(fromIndex, 1)[0]);
-                }
+            move: function (locatesArray, value, fromIndex, toIndex) {
+                //if (toIndex >= locatesArray.length) {
+                //    var i = toIndex - locatesArray.length;
+                //    while((i--) + 1) {
+                //        locatesArray.push(undefined);
+                //    }
+                //} else {
+                //    locatesArray.splice(toIndex, 0, locatesArray.splice(fromIndex, 1)[0]);
+                //}
+                locatesArray.splice(fromIndex, 1).splice(toIndex, 0, value);
             },
             remove: function (locatesArray, index) {
                 locatesArray.splice(index, 1);
             },
-            change: function (locatesArray, oldValue, newValue) {
-                locatesArray[locatesArray.indexOf(oldValue)] = newValue;
+            change: function (locatesArray, index, newValue) {
+                locatesArray[index] = newValue;
             }
         }
     })
@@ -183,6 +199,8 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                     objectStore.createIndex("Length", "length", {unique: false});
                     objectStore.createIndex("DrillPipe", "drillPipe", {unique: false});
                     objectStore.createIndex("Date", "date", {unique: false});
+                    objectStore.createIndex("Month", "monthDate", {unique: false});
+                    objectStore.createIndex("Year", "year", {unique: false});
                 },
                 showError: function (error) {
                     var errorPopup = $ionicPopup.alert({

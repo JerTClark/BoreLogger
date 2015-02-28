@@ -101,21 +101,38 @@ button.bison-handwriting-xlarge:hover {
     -webkit-transition-duration: 1.5s;
     -webkit-transition-delay: 250ms;
 }
-.bison-input-padding {
-    background-color: whitesmoke;
-}
 .bison-border-light {
-    border: 4px solid whitesmoke;
+    border: 2px solid whitesmoke;
 }
 .bison-options-panel {
     background-color: antiquewhite;
+    /*-webkit-transform: translateX(0);*/
+    /*transform: translateX(0);*/
+}
+/*Per the ionList ionItem problem with showing the reorder button*/
+.bison-list-item {}
+.bison-reorder-list-item {
+    display: inline-block;
+    -webkit-transition-duration: 0ms;
+    transition-duration: 0ms;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    /*-webkit-transform: translateX(0);*/
+    /*transform: translateX(0);*/
+}
+.bison-add-pad-left {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
 }
 /*Don't apply the next border styles to an input elem, use a surrounding div*/
 .bison-border-gray {
-    border: 2px solid slategray;
+    border: 1px solid lightgray;
 }
 .bison-border-tan {
-    border: 2px solid tan;
+    border: 1px solid tan;
 }
 .bison-border-input {
     border-radius: 4px;
@@ -124,11 +141,7 @@ button.bison-handwriting-xlarge:hover {
     margin-top: 4px;
     margin-bottom: 4px;
 }
-
-.bison-modal-title {
-
-}
-
+.bison-modal-title {}
 .bison-modal-description {
     text-align: center;
     font-family: "Bookman", Georgia, "Times New Roman", serif;
@@ -227,14 +240,14 @@ span.input-label.bison-floating-label.has-input {
         /*background-color: ;*/
     }
     .bison-category.bison-small-list {
-        text-align: left;
+        text-align: center;
         /*font-family: "Roboto-Bold", sans-serif;*/
         font-size: x-large;
         /*color: white;*/
         /*border: 0 solid transparent;*/
         /*border-radius: 2px;*/
         /*background-color: transparent;*/
-        padding: 3px;
+        padding: 4px;
         margin-bottom: 0;
         -webkit-transition-duration: 1s;
     }

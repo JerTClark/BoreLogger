@@ -32,7 +32,6 @@ angular.module("bisonInc")
                 bisonModalType:"@",
                 bisonModalValues: "&",
                 bisonFormController: "=",
-                bisonDisableSubmit: "=",
                 bisonSubmit: "&",
                 bisonTopButtonText: "@",
                 bisonBottomButtonText: "@",
@@ -45,8 +44,8 @@ angular.module("bisonInc")
                 bisonPopupPlaceholder: "@"
             },
             template: '<ion-list type="list-inset">' +
-                '<div class="bison-border-light">' +
-                '<ion-item class="bison-input-padding">' +
+                '<div>' +
+                '<ion-item class="bison-options-panel">' +
                 '<button class="button button-full button-assertive bison-rough-text"' +
                 'ng-disabled="bisonFormController.$invalid"' +
                 'ng-click="openModal()">{{bisonTopButtonText}}</button>' +
@@ -72,9 +71,6 @@ angular.module("bisonInc")
                     $scope.modal.bottomButtonText = $scope.bisonBottomModalButtonText;
                     $scope.modal.onClick = $scope.bisonModalOnClick;
                     $scope.modal.show();
-                    //$timeout(function () {
-                    //    $scope.fadeContent();
-                    //}, 1500);
                 };
                 $scope.closeModal = function () {
                     $scope.modal.hide();
@@ -83,26 +79,36 @@ angular.module("bisonInc")
                     $scope.modal.remove();
                 });
                 $scope.$on('modal.hidden', function () {
-                    console.log('Modal hidden');
+                    //console.log('Modal hidden');
                 });
                 $scope.$on('modal.removed', function () {
-                    console.log('Modal removed');
+                    //console.log('Modal removed');
                 });
                 $scope.toggleContent = function () {
-                    console.log("toggle called");
-                    var elem = angular.element("#content");
+                    //console.log("toggle called");
+                    var elem = angular.element(".bisonHide");
                     if(elem) elem.fadeToggle();
                 };
                 $scope.fadeContent = function () {
-                    var elem = angular.element("#content");
+                    var elem = angular.element(".bisonHide");
                     if(elem) elem.fadeOut();
                 };
-                $scope.respond = function (value) {
-                    console.log(value + " in respond()");
+                $scope.slowFadeOut = function () {
+                    $timeout(function () {
+                        $scope.fadeContent();
+                    }, 1500);
+                };
+                $scope.respond = function (val, from, to) {
+                    var value = {
+                            value: val,
+                            fromIndex: from,
+                            toIndex: to
+                        };
                     $scope.bisonModalOnClick(value);
                 };
 
-                $scope.popup = function () {
+                $scope.popup = function (value, fromIndex, toIndex) {
+                    var toEdit = value;
                     var crossingPopup = $ionicPopup.show({
                         scope: $scope,
                         template:'<label class="item-input item-floating-label" focus-me>' +
@@ -121,15 +127,18 @@ angular.module("bisonInc")
                                 text: "Record",
                                 type: "button-assertive",
                                 onTap: function () {
-                                    var value = {
-                                        value: angular.element("#popupInput").val()
-                                    };
-                                    console.log(value);
-                                    $scope.respond(value);
+                                    var value = angular.element("#popupInput").val();
+                                    console.log(value, fromIndex, toIndex);
+                                    $scope.respond(value, fromIndex, toIndex);
                                 }
                             }
                         ]
                     });
+                    if(toEdit) {
+                        $timeout(function () {
+                            angular.element("#popupInput").val(toEdit);
+                        },500);
+                    }
                 }
             }
         }

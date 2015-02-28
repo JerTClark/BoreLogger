@@ -22,7 +22,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
 
             //-- On submission of General Info
             $scope.submitGeneralInfo = function () {
-                if(!hasBeenCreated) {
+                if (!hasBeenCreated) {
                     bisonService.setActiveLog({
                         id: "unset",
                         type: bisonService.getType(),
@@ -31,10 +31,16 @@ angular.module("bisonInc").controller('NewBoreLogController',
                         location: $scope.boreLogModel[2].value,
                         length: $scope.boreLogModel[3].value,
                         drillPipe: $scope.drillPipeLength,
-                        date: bisonDate(),
+                        date: searchableDate(),
+                        monthDate: "unset",
+                        year: "unset",
+                        dateObj: bisonDate(),
                         locates: []
                     });
                     bisonService.setID(bisonID());//Depends on other properties being set first
+                    bisonService.setMonthDate(bisonDateService.dateRecord.month + bisonDateService.dateRecord.date);
+                    bisonService.setYear(bisonDateService.dateRecord.year);
+
                     hasBeenCreated = true;
                     bisonIndexedDB.add(bisonService.getActiveLog());// Add to database
                     console.log(JSON.stringify(bisonService.getActiveLog()));//TODO Remove testing logs
@@ -60,10 +66,17 @@ angular.module("bisonInc").controller('NewBoreLogController',
             //-- Record the date
             var bisonDate = function () {
                 var dateToParse = bisonService.getType() === "journal" ?
-                        new Date().format("M d Y H m s") :
-                        new Date($scope.boreLogModel[4].value)
-                            .format("M d Y H m s");
+                    new Date().format("M d Y H m s") :
+                    new Date($scope.boreLogModel[4].value)
+                        .format("M d Y H m s");
                 return bisonDateService.parseDate(dateToParse);
+            };
+
+            var searchableDate = function () {
+                return bisonService.getType() === "journal" ?
+                    new Date().format("M d Y") :
+                    new Date($scope.boreLogModel[4].value)
+                        .format("M d Y");
             };
 
             //-- Create a unique id for each record
@@ -82,16 +95,50 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     {title: $scope.boreLogModel[4].title, value: $scope.boreLogModel[4].value}
                 ]
             };
+            var testArray = [
+                "1\' 1\"",
+                "2\' 2\"",
+                "3\' 3\" Water @ 3\' Top",
+                "4\' 4\"",
+                "5\' 5\""
+            ];
             $scope.getLocates = function () {
-                return bisonService.getActiveLog()["locates"];
+                // Using mock data for development
+                return testArray;
+                //return bisonService.getActiveLog()["locates"];
+            };
+            $scope.updateLocate = function (value, fromIndex, toIndex) {
+                console.log("updateLocate() called: " + value + " " + fromIndex + " " + toIndex);
+                if (value && (fromIndex || fromIndex === 0) && (toIndex || toIndex === 0)) {
+                    console.log("Moving the locate " + value + " at " + fromIndex + " to " + toIndex);
+                    //bisonLocateFactory.move(bisonService.getActiveLog["locates"], fromIndex, toIndex);
+                    //bisonLocateFactory.move(testArray, fromIndex, toIndex);
+                    testArray.splice(toIndex, 0, testArray.splice(fromIndex, 1)[0]);
+                }
+                if (value && (fromIndex || fromIndex === 0) && (!toIndex && toIndex !== 0)) {
+                    console.log("Changing locate at index " + fromIndex + " to " + value);
+                    //bisonLocateFactory.change(bisonService.getActiveLog()["locates"],fromIndex, value);
+                    //bisonLocateFactory.change(testArray,fromIndex, value);
+                    testArray[fromIndex] = value;
+                }
+                if (!value && (fromIndex || fromIndex === 0) && (!toIndex && toIndex !== 0)) {
+                    console.log("Deleting value at " + fromIndex + " from locates");
+                    //bisonLocateFactory.remove(bisonService.getActiveLog()["locates"], fromIndex);
+                    //bisonLocateFactory.remove(testArray, fromIndex);
+                    testArray.splice(fromIndex, 1);
+                }
+                console.log(testArray.toString());
             };
 
             // UI effects
+            $scope.toggleLeft = function () {
+                //console.log("toggleLeftMargin() called");
+                angular.element(".bison-list-item").toggleClass("bison-reorder-list-item").toggleClass("bison-add-pad-left");
+            };
             $scope.showDescription = function ($event) {
                 angular.element($event.target).toggleClass('activated');
                 angular.element($event.target).siblings('p').slideToggle(200);
             };
-
             $scope.activate = function ($event, button) {
                 var elem = angular.element($event.target);
                 elem.addClass('emphasis');
@@ -104,15 +151,16 @@ angular.module("bisonInc").controller('NewBoreLogController',
             $scope.showEditButton = false;
             $scope.$watchCollection("numberOfLocates", function (newValue, oldValue) {
                 //console.log("Now: " + newValue + " Was: " + oldValue);
-                if(newValue >= 1) $scope.showEditButton = true;
+                if (newValue >= 1) $scope.showEditButton = true;
             });
 
             // Bind to toggle
             $scope.drillPipeBoolean = {value: false};
             $scope.drillPipeLength = "10";
             $scope.$watchCollection("drillPipeBoolean", function (newValue, oldValue) {
-                if($scope.drillPipeBoolean["value"] === true) {
+                if ($scope.drillPipeBoolean["value"] === true) {
                     $scope.drillPipeLength = "15";
+                    angular.element("#drillPipeCategoryHeader").addClass("hide");
                 } else {
                     $scope.drillPipeLength = "10";
                 }
@@ -121,7 +169,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
             // Cancel log entry
             $scope.onCancel = function () {
                 hasBeenCreated = false;
-                console.log("Has been created: " + hasBeenCreated);
+                //console.log("Has been created: " + hasBeenCreated);
                 history.back();
             }
         }]);

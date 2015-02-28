@@ -1,20 +1,34 @@
-<ion-modal-view>
+<ion-modal-view ng-init="showDelete = false; showReorder = false">
     <ion-header-bar class="bar-assertive bar-header" align-title="left">
         <h1 class="title bison-modal-title">{{modal.title}}</h1>
         <button class="button" ng-click="closeModal()">
             <i class="ion ion-android-arrow-back"></i>
         </button>
     </ion-header-bar>
-    <ion-content class="content has-header" has-bouncing="false" padding="true">
-        <ion-list type="list-inset" id="content">
-            <ion-item ng-repeat="value in modal.values">
-                <pre>{{value}}</pre>
-            </ion-item>
-        </ion-list>
-        <ion-list delegate-handle="locates" type="card">
-            <ion-item>
-                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onclick()">{{modal.buttonText}}</button>
-                <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">{{modal.bottomButtonText}}</button>
+    <ion-header-bar class="bar-stable bar-subheader">
+        <div class="buttons">
+            <button class="button button-icon icon ion-minus-circled"
+                    ng-click="showDelete = !showDelete; showReorder = false"></button>
+        </div>
+        <h2 class="title">Locates so far</h2>
+        <div class="buttons">
+            <button class="button button-icon icon ion-navicon-round"
+                    ng-click="showDelete = false; showReorder = !showReorder; bisonOnCancel()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="content has-subheader" has-bouncing="false" padding="true">
+        <ion-list type="list-inset"
+                  show-delete="showDelete"
+                  show-reorder="showReorder">
+            <ion-item ng-repeat="value in modal.values track by $index"
+                      class="item-remove-animate">
+                <span class="bison-list-item">Locate {{$index + 1}}: {{value}}</span>
+                <ion-delete-button class="ion-minus-circled" ng-click="respond(undefined, $index)">
+                </ion-delete-button>
+                <ion-option-button class="button button-assertive"
+                                   ng-click="popup(modal.values[$index], $index)">Edit {{value}}</ion-option-button>
+                <ion-reorder-button class="ion-navicon"
+                                    on-reorder="respond(value, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>
         </ion-list>
     </ion-content>
