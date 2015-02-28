@@ -1,5 +1,9 @@
 angular.module("bisonInc")
     .directive("bisonCategoryWithDescription", function (){
+        /**
+         * Used to display an interactive category header that has
+         * a hidden description the user can see by tapping the header
+         */
         return {
             restrict:"E",
             scope:{
@@ -21,7 +25,12 @@ angular.module("bisonInc")
             }
         }
     })
-    //Has one button used to display a modal and another that can be disabled via a form controller
+    /**
+     * Has one button used to display a modal and another
+     * that can be disabled via a form controller.
+     * The latter is only shown if text for it is provided
+     * via @bisonBottomButtonText
+     */
     .directive("bisonFormButtonPanel", function () {
         return {
             restrict: "E",
@@ -53,8 +62,9 @@ angular.module("bisonInc")
                 'ng-click="bisonOnCancel()" ng-if="bisonBottomButtonText">{{bisonBottomButtonText}}</button>' +
                 '</ion-item></div></ion-list>',
             controller: function($scope, $ionicModal, $ionicPopup, $timeout){
-                $scope.popupInputValue = "";
-                //-- Ionic Modal
+                /**
+                 * The $ionicModal
+                 */
                 $ionicModal.fromTemplateUrl($scope.bisonModalTemplate, {
                     scope: $scope,
                     animation: 'slide-in-up'
@@ -78,14 +88,13 @@ angular.module("bisonInc")
                 $scope.$on('$destroy', function () {
                     $scope.modal.remove();
                 });
-                $scope.$on('modal.hidden', function () {
-                    //console.log('Modal hidden');
-                });
-                $scope.$on('modal.removed', function () {
-                    //console.log('Modal removed');
-                });
+                $scope.$on('modal.hidden', function () {});
+                $scope.$on('modal.removed', function () {});
+
+                /**
+                 * Various UI effects
+                 */
                 $scope.toggleContent = function () {
-                    //console.log("toggle called");
                     var elem = angular.element(".bisonHide");
                     if(elem) elem.fadeToggle();
                 };
@@ -98,6 +107,15 @@ angular.module("bisonInc")
                         $scope.fadeContent();
                     }, 1500);
                 };
+
+                /**
+                 * Formats its parameters to an acceptable object
+                 * for passing parameters to the bisonModalOnClick
+                 * parent scope function
+                 * @param val {String} [Optional]
+                 * @param from {Number} [Optional]
+                 * @param to {Number} [Optional]
+                 */
                 $scope.respond = function (val, from, to) {
                     var value = {
                             value: val,
@@ -107,6 +125,17 @@ angular.module("bisonInc")
                     $scope.bisonModalOnClick(value);
                 };
 
+                /**
+                 * The $ionicPopup
+                 * Also has access to the &bisonModalOnClick parent
+                 * scope function via $scope.respond()
+                 * Has an input and two buttons ("Cancel" and "Enter")
+                 * The "Enter" button fires $scope.respond() after gettting
+                 * the value from the input element
+                 * @param value {String} [Optional]
+                 * @param fromIndex {Number} [Optional]
+                 * @param toIndex {Number} [Optional]
+                 */
                 $scope.popup = function (value, fromIndex, toIndex) {
                     var toEdit = value;
                     var crossingPopup = $ionicPopup.show({
@@ -114,7 +143,7 @@ angular.module("bisonInc")
                         template:'<label class="item-input item-floating-label" focus-me>' +
                             '<span class="input-label bison-floating-label">{{bisonPopupPlaceholder}}</span>' +
                             '<input type="text" id="popupInput" class="bison-input-field"' +
-                            'placeholder="{{bisonPopupPlaceholder}}">' +
+                            'placeholder="{{bisonPopupPlaceholder}}" focus-me>' +
                             '</label>',
                         title:$scope.bisonPopupTitle,
                         subTitle:$scope.bisonPopupSubtitle,
@@ -124,16 +153,19 @@ angular.module("bisonInc")
                                 type: "button-assertive"
                             },
                             {
-                                text: "Record",
+                                text: "Enter",
                                 type: "button-assertive",
                                 onTap: function () {
                                     var value = angular.element("#popupInput").val();
-                                    console.log(value, fromIndex, toIndex);
                                     $scope.respond(value, fromIndex, toIndex);
                                 }
                             }
                         ]
                     });
+                    /**
+                     * Set input value if applicable
+                     * via a call to $timeout service
+                     */
                     if(toEdit) {
                         $timeout(function () {
                             angular.element("#popupInput").val(toEdit);
@@ -143,7 +175,11 @@ angular.module("bisonInc")
             }
         }
     })
-    .directive("bisonInputField", function () {
+    /**
+     * An input field with special CSS validation styles associated with it
+     * and Ionic's floating label effect
+     */
+    .directive("bisonInputField", [function () {
         return {
             restrict: "E",
             scope: {
@@ -151,6 +187,7 @@ angular.module("bisonInc")
                 bisonHint: "@",
                 bisonInputName: "@",
                 bisonInputType: "@",
+                bisonIndex: "@",
                 bisonModel: "=",
                 bisonRequired: "=",
                 bisonFormController: "="
@@ -158,18 +195,25 @@ angular.module("bisonInc")
             template:'<div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">' +
                 '<label class="item item-input item-floating-label">' +
                 '<span class="input-label bison-floating-label">{{bisonHint}}</span>' +
-                '<input id={{bisonId}}-input name="{{bisonInputName}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
+                '<input id={{bisonId}}-input name="{{bisonInputName}}" ng-class="input-{{bisonIndex}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
                 '<span class="bison-error" ng-show="bisonFormController.{{bisonInputName}}.$dirty && bisonFormController.{{bisonInputName}}.$invalid">^Required</span></label></div>',
-            controller: function ($scope) {}
+            controller: function ($scope) {
+
+            }
         }
-    })
+    }])
+    /**
+     * This is recommended by Ionic dev in order to focus an element
+     * 500ms is the first value for which I've seen it work successfully
+     */
     .directive("focusMe", ["$timeout", function ($timeout) {
-        //-- This is per Ionic Framework Team's advice (doesn't work)
+        //-- This is per Ionic Framework Team's advice
         return {
+            restrict: "A",
             link: function (scope, element, attrs) {
                 $timeout(function () {
-                    element[0].focus();
-                }, 150);
+                    element.focus();
+                }, 500);
             }
         }
     }]);

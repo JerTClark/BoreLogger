@@ -1,0 +1,14 @@
+<ion-view view-title="Continue {{type}}">
+    <ion-header-bar class="bar bar-stable bar-subheader">
+        <selector ng-options="bisonIndexes"></selector>
+        <label class="item item-input">
+            <input type="text" class="ion-search" ng-model="mySearchBy">
+        </label>
+    </ion-header-bar>
+    <ion-content class="has-subheader">
+        This is the continue page
+        <ion-list type="list inset">
+            <ion-item ng-repeat="record in bisonRecords track by $index"></ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

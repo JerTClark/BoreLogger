@@ -30,6 +30,11 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 url: "/new-bore-log",
                 templateUrl: "new-bore-log.html",
                 controller: "NewBoreLogController"
+            })
+            .state("continue", {
+                url: "/continue",
+                templateUrl: "continue-state.html",
+                controller: "ContinueController"
             });
         $urlRouterProvider.otherwise("/");
 
@@ -39,7 +44,7 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
 
     })
 
-    .service("bisonDateService", function () {
+    .service("bisonDateService", [function () {
         var self = this;
         self.dateRecord = {};
         self.parseDate = function (dateToParse) {
@@ -73,9 +78,9 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 second: dateArray[5]
             }
         }
-    })
+    }])
 
-    .service("bisonService", function () {
+    .service("bisonService", [function () {
         var self = this;
         self.setType = function (type) {
             self.type = type;
@@ -126,9 +131,9 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
         self.getActiveLocates = function () {
             return self.activeLog["locates"];
         };
-    })
+    }])
 
-    .factory("bisonLocateFactory", function () {
+    .factory("bisonLocateFactory", [function () {
         return {
             format: function (feet, inches, crossing) {
                 if (crossing) {
@@ -140,25 +145,34 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 locatesArray.push(locate);
                 return locatesArray;
             },
-            move: function (locatesArray, value, fromIndex, toIndex) {
-                //if (toIndex >= locatesArray.length) {
-                //    var i = toIndex - locatesArray.length;
-                //    while((i--) + 1) {
-                //        locatesArray.push(undefined);
-                //    }
-                //} else {
-                //    locatesArray.splice(toIndex, 0, locatesArray.splice(fromIndex, 1)[0]);
-                //}
-                locatesArray.splice(fromIndex, 1).splice(toIndex, 0, value);
+            move: function (locatesArray, fromIndex, toIndex) {
+                console.log("move() called");
+                locatesArray.splice(toIndex, 0, locatesArray.splice(fromIndex, 1)[0]);
             },
             remove: function (locatesArray, index) {
+                console.log("remove() called");
                 locatesArray.splice(index, 1);
             },
             change: function (locatesArray, index, newValue) {
+                console.log("change() called");
                 locatesArray[index] = newValue;
+            },
+            update: function (locatesArray, value, fromIndex, toIndex) {
+                if (value && (fromIndex || fromIndex === 0) && (toIndex || toIndex === 0)) {
+                    console.log("Moving the locate " + value + " at " + fromIndex + " to " + toIndex);
+                    this.move(locatesArray, fromIndex, toIndex);
+                }
+                if (value && (fromIndex || fromIndex === 0) && (!toIndex && toIndex !== 0)) {
+                    console.log("Changing locate at index " + fromIndex + " to " + value);
+                    this.change(locatesArray, fromIndex, value);
+                }
+                if (!value && (fromIndex || fromIndex === 0) && (!toIndex && toIndex !== 0)) {
+                    console.log("Deleting value at " + fromIndex + " from locates");
+                    this.remove(locatesArray, fromIndex);
+                }
             }
         }
-    })
+    }])
 
     .provider("bisonIndexedDB", function () {
 
