@@ -35,6 +35,11 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 url: "/continue",
                 templateUrl: "continue-state.html",
                 controller: "ContinueController"
+            })
+            .state("resume", {
+                url: "/resume/:id/:type/:customer/:conduit/:location/:length/:drillPipe/:date/:monthDate/:year/:dateObj/:locates",
+                templateUrl: "new-bore-log.html",
+                controller: "NewBoreLogController"
             });
         $urlRouterProvider.otherwise("/");
 
@@ -277,10 +282,12 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 },
                 getAllOfWhere: function (arrayParam, indexKey, prop, where) {
                     //TODO delete debug console.Log()'s
-                    console.log("indexKey: " + indexKey + " prop: " + prop);
+                    console.log("indexKey: " + indexKey + " prop: " + prop + " where: " + where);
+                    //Reset the arrayParam to an empty array
                     if(arrayParam.length !== 0) {
                         arrayParam = [];
                     }
+                    //Ensure the indexKey is legitimate
                     if(this.getIndexKeys().indexOf(indexKey) === -1) {
                         this.showError({
                             code:1313,
@@ -290,12 +297,12 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                         var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
                         var objectStore = myTransaction.objectStore(self.objectStoreName);
                         var myIndex = objectStore.index(indexKey);
-                        var myCursor = myIndex.openCursor(null, "prev");
+                        var myCursor = myIndex.openCursor(null, "next");
                         myCursor.addEventListener("success", function (e) {
+                            console.log("myCursor success");
                             var cursor = e.target.result;
                             if(cursor) {
-                                var temp = cursor.value;
-                                if(temp[prop] === where) {
+                                if(cursor.value[prop] === where) {
                                     arrayParam.push(cursor.value);
                                 }
                                 cursor.continue();

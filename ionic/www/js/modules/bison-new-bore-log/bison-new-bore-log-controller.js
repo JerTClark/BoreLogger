@@ -1,8 +1,9 @@
 angular.module("bisonInc").controller('NewBoreLogController',
     ["$scope", "$timeout", "bisonService", "bisonIndexedDB",
         "bisonDateService", "bisonLocateFactory", "boreLogModelService",
+        "$stateParams",
         function ($scope, $timeout, bisonService, bisonIndexedDB,
-                  bisonDateService, bisonLocateFactory, boreLogModelService) {
+                  bisonDateService, bisonLocateFactory, boreLogModelService, $stateParams) {
 
             /**
              * Track if the log has been added to IndexedDB once
@@ -10,11 +11,26 @@ angular.module("bisonInc").controller('NewBoreLogController',
              */
             var hasBeenCreated = false;
 
+            //-- Categories of information pertaining to a bore log and bore journal
+            $scope.boreLogModel = boreLogModelService.getModel();
+
             /**
-             * Initialize the IndexedDB through bisonIndexedDB service
+             * Checks for $stateParams
              */
-            $scope.initializeDB = function () {
-                bisonIndexedDB.init();
+            $scope.init = function () {
+                //TODO Move this and the $stateParams dependency to a new controller
+                if($stateParams) {
+                    console.log($stateParams);
+                    bisonService.setActiveLog($stateParams);
+                    bisonService.getActiveLog()["dateObj"] = bisonDateService.parseDate(new Date().format("M d Y H m s"));
+                    console.log(bisonService.getActiveLog());
+                    hasBeenCreated = true;
+                    $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
+                    $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
+                    $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
+                    $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
+                    $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
+                }
             };
 
             /**
@@ -81,9 +97,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
             $scope.typeHeader = bisonService.getType();
             //-- A boolean used by ngShow
             $scope.isALog = bisonService.getType() === "log";
-
-            //-- Categories of information pertaining to a bore log and bore journal
-            $scope.boreLogModel = boreLogModelService.getModel();
 
             //TODO Delete mock data
             //Mock data

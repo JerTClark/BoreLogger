@@ -1,7 +1,7 @@
 angular.module("bisonInc")
     .controller("ContinueController", ["$scope", "bisonIndexedDB",
-        "bisonService",
-        function ($scope, bisonIndexedDB, bisonService) {
+        "bisonService", "$timeout", "$state",
+        function ($scope, bisonIndexedDB, bisonService, $timeout, $state) {
 
             /**
              * Display the type of documentation that is to be resumed
@@ -44,18 +44,27 @@ angular.module("bisonInc")
                  * is lowercase
                  */
                 if($scope.mySelection["value"] && $scope.mySelection["value"]["name"]) {
-                    console.log($scope.mySelection["value"]["name"]);
                     var prop = $scope.mySelection["value"]["name"];
                     var newProp = prop.split("");
                     newProp[0] = newProp[0].toLowerCase();
                     prop = newProp.join("");
                     $scope.showProperty = prop;
-                    //TODO delete debug console.Log()'s
-                    console.log($scope.bisonRecords);
-                    bisonIndexedDB.getAllOfWhere($scope.bisonRecords, $scope.mySelection["value"]["name"], "type", $scope.type);
-
+                    console.log(prop);
+                    $scope.bisonRecords = bisonIndexedDB.getAllOfWhere($scope.bisonRecords, $scope.mySelection["value"]["name"], "type", $scope.type);
                 }
             });
+
+            $scope.test = function (object) {
+                bisonService.setActiveLog(object);
+                $timeout(function () {
+                    console.log("Continue: " + bisonService.getActiveLog()["id"]);
+                }, 0);
+                $state.go("resume", object);
+            };
+
+            //$scope.$watchCollection("bisonRecords", function () {
+            //    console.log("Changed Records");
+            //});
 
             /**
              * @Proposed for taking the current "sort by" key of
