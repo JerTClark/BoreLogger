@@ -41,7 +41,6 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
         bisonIndexedDBProvider.setDatabaseName("bison");
         bisonIndexedDBProvider.setDatabaseVersion(1);
         bisonIndexedDBProvider.setObjectStoreName("bisonLogs");
-
     })
 
     .service("bisonDateService", [function () {
@@ -182,11 +181,11 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
         self.databaseVersion = 0;
         self.objectStoreName = "";
         self.db = null;
+        self.tempResults = [];
 
         //-- Return the service (mini-safe)
         this.$get = ["$ionicPopup", function ($ionicPopup) {
             return {
-                tempResults: [],
                 init: function () {
                     console.log("init() called");
                     var request = indexedDB.open(self.databaseName, self.databaseVersion);
@@ -251,9 +250,9 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                         this.showError(error);
                     });
                 },
-                getAllOf: function (indexKey) {
-                    if(this.tempResults.length !== 0) {
-                        this.tempResults = [];
+                getAllOf: function (arrayParam, indexKey) {
+                    if(arrayParam.length !== 0) {
+                        arrayParam = [];
                     }
                     if(this.getIndexKeys().indexOf(indexKey) === -1) {
                         this.showError({
@@ -265,28 +264,77 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                         var objectStore = myTransaction.objectStore(self.objectStoreName);
                         var myIndex = objectStore.index(indexKey);
                         var myCursor = myIndex.openCursor(null, "prev");
-                        myCursor.addEventListener("success", this.showAll);
+                        myCursor.addEventListener("success", function (e) {
+                            var cursor = e.target.result;
+                            if(cursor) {
+                                arrayParam.push(cursor.value);
+                                cursor.continue();
+                            } else {
+                                return arrayParam;
+                            }
+                        });
                     }
                 },
-                getAll: function () {
-                    if(this.tempResults.length !== 0) {
-                        this.tempResults = [];
+                getAllOfWhere: function (arrayParam, indexKey, prop, where) {
+                    //TODO delete debug console.Log()'s
+                    console.log("indexKey: " + indexKey + " prop: " + prop);
+                    if(arrayParam.length !== 0) {
+                        arrayParam = [];
+                    }
+                    if(this.getIndexKeys().indexOf(indexKey) === -1) {
+                        this.showError({
+                            code:1313,
+                            message:"Only search by legitimate indices: " + this.getIndexKeys().toString()
+                        });
+                    } else {
+                        var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
+                        var objectStore = myTransaction.objectStore(self.objectStoreName);
+                        var myIndex = objectStore.index(indexKey);
+                        var myCursor = myIndex.openCursor(null, "prev");
+                        myCursor.addEventListener("success", function (e) {
+                            var cursor = e.target.result;
+                            if(cursor) {
+                                var temp = cursor.value;
+                                if(temp[prop] === where) {
+                                    arrayParam.push(cursor.value);
+                                }
+                                cursor.continue();
+                            } else {
+                                //Do nothing
+                            }
+                        });
+                    }
+                },
+                getAll: function (arrayParam) {
+                    if(arrayParam.length !== 0) {
+                        arrayParam = [];
                     }
                     var myTransaction = self.db.transaction(["bisonLogs"], "readonly");
                     var objectStore = myTransaction.objectStore(self.objectStoreName);
                     var myCursor = objectStore.openCursor();
-                    myCursor.addEventListener("success", this.showAll);
+                    myCursor.addEventListener("success", function (e) {
+                        var cursor = e.target.result;
+                        if(cursor) {
+                            arrayParam.push(cursor.value);
+                            cursor.continue();
+                        } else {
+                            //Do nothing
+                            //console.log(arrayParam);
+                        }
+                    });
                 },
-                remove: function (index) {
+                remove: function (arrayParam, index) {
                     var confirmPopup = $ionicPopup.confirm({
                         title:"Delete this record",
                         template:"<pre>Are you sure you want to?</pre>"
                     }).then(function (res) {
                         if(res) {
-                            this.tempResults = [];//Reset the tempResults
+                            arrayParam = [];//Reset the tempResults
                             var myTransaction = self.db.transaction([""], "readwrite");
                             var objectStore = myTransaction.objectStore(self.objectStoreName);
-                            myTransaction.addEventListener("complete", this.getAll);//TODO case in which it's a getAllOf
+                            myTransaction.addEventListener("complete", function() {
+                                this.getAll(arrayParam);
+                            });
                         } else {
                             //Do nothing
                         }
@@ -298,14 +346,14 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                         "Length","DrillPipe","Date"
                     ]
                 },
-                showAll: function (e) {
+                showAll: function (e, arrayParam) {
                     console.log("showAll() called");
                     var cursor = e.target.result;
                     if(cursor) {
-                        this.tempResults.push(cursor.value);
+                        arrayParam.push(cursor.value);
                         cursor.continue();
                     } else {
-                        return this.tempResults;
+                        return arrayParam;
                     }
                 }
             }

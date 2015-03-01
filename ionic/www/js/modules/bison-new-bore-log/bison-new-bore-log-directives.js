@@ -209,7 +209,7 @@ angular.module("bisonInc")
                 '<input id={{bisonIndex}}-input name="{{bisonInputName}}" ng-class="input-{{bisonIndex}}" class="bison-input-field" type="{{bisonInputType}}" placeholder="{{bisonHint}}" ng-model="bisonModel" ng-required="bisonRequired" minlength="1">' +
                 '<span class="bison-error" ng-show="bisonFormController.{{bisonInputName}}.$dirty && bisonFormController.{{bisonInputName}}.$invalid">^Required</span></label></div>',
             controller: function ($scope) {
-                
+
             }
         }
     }])
@@ -220,7 +220,6 @@ angular.module("bisonInc")
     .directive("focusMe", ["$timeout", function ($timeout) {
         //-- This is per Ionic Framework Team's advice
         return {
-            restrict: "A",
             link: function (scope, element, attrs) {
                 $timeout(function () {
                     element.focus();
