@@ -1,19 +1,19 @@
 <ion-modal-view ng-init="showContent = false; showDelete = false; showReorder = false">
     <ion-header-bar class="bar-assertive bar-header" align-title="left">
-        <h1 id="locate-modal-title" class="title bison-modal-title">Bore {{modal.type}} {{modal.title}}</h1>
-        <button class="button" ng-click="closeModal()">
+        <h1 id="locates-modal-title" class="title bison-modal-title">Bore {{modal.type}} {{modal.title}}</h1>
+        <button id="close-locates-modal" class="button" ng-click="closeModal()">
             <i class="ion ion-android-arrow-back"></i>
         </button>
     </ion-header-bar>
     <ion-header-bar class="bar bar-subheader">
         <div class="buttons">
-            <button class="button button-icon icon ion-minus-circled"
+            <button id="locates-modal-show-delete-button" class="button button-icon icon ion-minus-circled"
                     ng-click="showDelete = !showDelete; showReorder = false"></button>
         </div>
         <h2 class="title">Delete / Reorder</h2>
 
         <div class="buttons">
-            <button class="button button-icon icon ion-navicon-round"
+            <button id="locates-modal-show-reorder-button" class="button button-icon icon ion-navicon-round"
                     ng-click="showDelete = false; showReorder = !showReorder; toggleLeft()"></button>
         </div>
     </ion-header-bar>
@@ -41,17 +41,17 @@
                                placeholder="inches">
                     </label>
                 </div>
-                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">
+                <button id="locates-modal-top-button" class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">
                     {{modal.buttonText}}
                 </button>
-                <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">
+                <button id="locates-modal-bottom-button" class="button button-full button-assertive bison-rough-text" ng-click="popup()">
                     {{modal.bottomButtonText}}
                 </button>
             </ion-item>
         </ion-list>
 
         <ion-list type="card">
-            <label class="item" ng-click="showContent = !showContent">
+            <label class="item" id="locates-modal-show-content" ng-click="showContent = !showContent">
                 <button class="button button-block button-stable" ng-show="!showContent">
                     <span id="modal-show-header"
                           class="bison-handwriting-normal">Show {{modal.title}}</span>

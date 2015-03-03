@@ -112,18 +112,35 @@ describe("BoreLoggerByState", function () {
     var LocatesModal = function () {
         return {
             test: 1 + 2,
-            locateModalTitle: element(by.id("locate-modal-title")),
-            showHideHeader: element(by.id("modal-show-hide-header")),
-            customerHeader: element(by.id("Customer-modal-header")),
-            conduitHeader: element(by.id("Conduit-modal-header")),
-            locationHeader: element(by.id("Location-modal-header")),
-            lengthOfBoreHeader: element(by.id("Length of bore-modal-header")),
-            dateHeader: element(by.id("Date-modal-header")),
-            customerPre: "Customer: ",
-            conduitPre: "Conduit: ",
-            locationPre: "Location: ",
-            lengthOfBorePre: "Length of bore: ",
-            datePre: "Date: "
+            locatesModalTitle: element(by.id("locates-modal-title")),
+            locatesModalCloseButton: element(by.id("close-locates-modal")),
+            locatesModalShowDeleteButton: element(by.id("locates-modal-show-delete-button")),
+            locatesModalShowReorderButton: element(by.id("locates-modal-show-reorder-button")),
+            locatesModalFeetInput: element(by.id("feet")),
+            locatesModalInchesInput: element(by.id("inches")),
+            locatesModalTopButton: element(by.id("locates-modal-top-button")),
+            locatesModalBottomButton: element(by.id("locates-modal-bottom-button")),
+            locatesModalShowContentItem: element(by.id("locates-modal-show-content")),
+            locatesModalShowHeaderSpan: element(by.id("modal-show-header")),
+            locatesModalHideHeaderSpan: element(by.id("modal-hide-header"))
+            /**
+             * Each locate is shown as text in a span with
+             * an id "locate-modal-value-$index" where $index
+             * is its position in the array of
+             * $scope.modal.values (<-- in the directive)
+             * or $scope.getModalValues() (<-- in the controller)
+             */
+        }
+    };
+
+    //Edit-locates-modal
+    var EditLocatesModal = function () {
+        return {
+            test: 1 + 2,
+            editLocatesModalTitle: element(by.id("edit-locates-modal-title")),
+            editLocatesModalCloseButton: element(by.id("close-edit-locates-modal")),
+            editLocatesShowDeleteButton: element(by.id("edit-locates-show-delete-button")),
+            editLocatesShowReorderButton: element(by.id("edit-locates-show-reorder-button")),
         }
     };
 

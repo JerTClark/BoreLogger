@@ -1,7 +1,7 @@
 angular.module("bisonInc")
     .controller("OptionsController",
-    ["$scope", "$timeout", "$state", "bisonService", "bisonIndexedDB",
-        function ($scope, $timeout, $state, bisonService, bisonIndexedDB) {
+    ["$scope", "$timeout", "$state", "bisonService", "bisonIndexedDB", "bisonPDFService",
+        function ($scope, $timeout, $state, bisonService, bisonIndexedDB, bisonPDFService) {
 
             $scope.initDB = function() {
                 bisonIndexedDB.init()
