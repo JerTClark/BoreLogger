@@ -1,0 +1,86 @@
+<ion-modal-view ng-init="showContent = false; showDelete = false; showReorder = false">
+    <ion-header-bar class="bar-assertive bar-header" align-title="left">
+        <h1 id="locate-modal-title" class="title bison-modal-title">Bore {{modal.type}} {{modal.title}}</h1>
+        <button class="button" ng-click="closeModal()">
+            <i class="ion ion-android-arrow-back"></i>
+        </button>
+    </ion-header-bar>
+    <ion-header-bar class="bar bar-subheader">
+        <div class="buttons">
+            <button class="button button-icon icon ion-minus-circled"
+                    ng-click="showDelete = !showDelete; showReorder = false"></button>
+        </div>
+        <h2 class="title">Delete / Reorder</h2>
+
+        <div class="buttons">
+            <button class="button button-icon icon ion-navicon-round"
+                    ng-click="showDelete = false; showReorder = !showReorder; toggleLeft()"></button>
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="content has-subheader" has-bouncing="false" padding="true">
+        <ion-list delegate-handle="locates" type="card">
+            <ion-item>
+                <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
+                    <label class="item-input item-floating-label">
+                        <span class="input-label bison-floating-label">feet</span>
+                        <input type="text"
+                               name="feet"
+                               id="feet"
+                               class="bison-input-field"
+                               placeholder="feet" first-input>
+                    </label>
+                </div>
+                <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
+                    <label class="item-input item-floating-label">
+                        <span class="input-label bison-floating-label">inches</span>
+                        <input type="text"
+                               name="inches"
+                               id="inches"
+                               class="bison-input-field"
+                               placeholder="inches">
+                    </label>
+                </div>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">
+                    {{modal.buttonText}}
+                </button>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">
+                    {{modal.bottomButtonText}}
+                </button>
+            </ion-item>
+        </ion-list>
+
+        <ion-list type="card">
+            <label class="item" ng-click="showContent = !showContent">
+                <button class="button button-block button-stable" ng-show="!showContent">
+                    <span id="modal-show-header"
+                          class="bison-handwriting-normal">Show {{modal.title}}</span>
+                    <i class="ion icon ion-ios7-arrow-forward"></i>
+                </button>
+                <button class="button button-block button-stable" ng-show="showContent">
+                    <span id="modal-hide-header"
+                          class="bison-handwriting-normal">Hide {{modal.title}}</span>
+                    <i class="ion icon ion-ios7-arrow-down"></i>
+                </button>
+            </label>
+        </ion-list>
+
+        <ion-list type="list-inset bisonHide"
+                  show-delete="showDelete"
+                  show-reorder="showReorder"
+                  ng-if="showContent">
+
+            <ion-item class="item-remove-animate"
+                      ng-repeat="value in modal.values track by $index">
+                <span class="bison-list-item"
+                      id="locate-modal-value-$index">Locate {{$index + 1}}: <b>{{value}}</b></span>
+                <ion-delete-button class="ion-minus-circled" ng-click="reorder(undefined, $index)">
+                </ion-delete-button>
+                <ion-reorder-button class="ion-navicon"
+                                    on-reorder="reorder(value, $fromIndex, $toIndex)"></ion-reorder-button>
+                <ion-option-button class="button button-positive" ng-click="popup(modal.values[$index], $index)">Edit</ion-option-button>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

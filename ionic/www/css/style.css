@@ -24,7 +24,7 @@ html {
     -webkit-transition-duration: 1s;
 }
 p.bison-description {
-    font-family: RockSalt, sans-serif;
+    font-family: "Book Antiqua", sans-serif;
     font-size: medium;
     font-weight: bold;
     text-align: center;
@@ -234,26 +234,30 @@ span.input-label.bison-floating-label.has-input {
 /*This is the Samsung Galaxy Note 3 portrait*/
 @media only screen and (max-width: 360px) {
     .bison-shrink-item {
-        border-radius: 2px;
+        border-radius: 0;
     }
     .bison-input-background-dark {
         /*background-color: ;*/
     }
     .bison-category.bison-small-list {
-        text-align: center;
-        /*font-family: "Roboto-Bold", sans-serif;*/
-        font-size: x-large;
-        /*color: white;*/
-        /*border: 0 solid transparent;*/
-        /*border-radius: 2px;*/
-        /*background-color: transparent;*/
+        text-align: left;
+        font-family: "Roboto-Bold", sans-serif;
+        font-size: medium;
+        color: black;
+        border: none;
+        border-radius: 0;
+        background-color: #ffffff;
         padding: 4px;
         margin-bottom: 0;
         -webkit-transition-duration: 1s;
     }
     .bison-category.bison-small-list:hover, .bison-category.bison-small-list.activated {
-        box-shadow: 0 0 10px red;
-        text-shadow: 0 0 10px white;
+        box-shadow: none;
+        text-shadow: none;
         -webkit-transition-duration: 1s;
+    }
+    .bison-description {
+        background-color: #ffffff !important;
+        color: black !important;
     }
 }

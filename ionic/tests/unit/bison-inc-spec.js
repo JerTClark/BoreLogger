@@ -239,7 +239,7 @@ describe("bisonInc", function () {
         });
         it("should have access to the current log type", function () {
             bisonService.setType("test");
-            expect($scope.logOrJournal()).toEqual("test");
+            expect($scope.typeHeader).toEqual("test");
             bisonService.setType();
         });
         describe("$scope property boreLogModel", function () {

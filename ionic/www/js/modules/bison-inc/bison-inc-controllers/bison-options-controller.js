@@ -7,6 +7,10 @@ angular.module("bisonInc")
                 bisonIndexedDB.init()
             };
 
+            $scope.settings = function () {
+                $state.go("settings");
+            };
+
             $scope.myLogger = function (data) {
                 console.log(data + " clicked");
             };
@@ -65,6 +69,16 @@ angular.module("bisonInc")
                         break;
                     case 3:
                         bisonService.setType("journal");
+                        $state.go("continue");
+                        break;
+                    case 4:
+                        //TODO experimental
+                        bisonService.setType("convertToLog");
+                        $state.go("continue");
+                        break;
+                    case 5:
+                        //TODO experimental
+                        bisonService.setType("convertToPDF");
                         $state.go("continue");
                         break;
                     default :

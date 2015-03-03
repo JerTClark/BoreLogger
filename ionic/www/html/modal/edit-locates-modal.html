@@ -13,7 +13,7 @@
         <h2 class="title">Locates so far</h2>
         <div class="buttons">
             <button class="button button-icon icon ion-navicon-round"
-                    ng-click="showDelete = false; showReorder = !showReorder; bisonOnCancel()"></button>
+                    ng-click="showDelete = false; showReorder = !showReorder; toggleLeft()"></button>
         </div>
     </ion-header-bar>
     <ion-content class="content has-subheader" has-bouncing="false" padding="true">
@@ -23,12 +23,12 @@
             <ion-item ng-repeat="value in modal.values track by $index"
                       class="item-remove-animate">
                 <span class="bison-list-item">Locate {{$index + 1}}: {{value}}</span>
-                <ion-delete-button class="ion-minus-circled" ng-click="respond(undefined, $index)">
+                <ion-delete-button class="ion-minus-circled" ng-click="reorder(undefined, $index)">
                 </ion-delete-button>
-                <ion-option-button class="button button-assertive"
+                <ion-option-button class="button button-positive"
                                    ng-click="popup(modal.values[$index], $index)">Edit {{value}}</ion-option-button>
                 <ion-reorder-button class="ion-navicon"
-                                    on-reorder="respond(value, $fromIndex, $toIndex)"></ion-reorder-button>
+                                    on-reorder="reorder(value, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>
         </ion-list>
     </ion-content>
