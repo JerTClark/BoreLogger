@@ -3,7 +3,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
         "bisonLocateFactory", "boreLogModelService", "$stateParams", "$ionicPopup",
         function ($scope, $timeout, bisonService, bisonIndexedDB, bisonDateService,
                   bisonLocateFactory, boreLogModelService, $stateParams, $ionicPopup) {
-            $scope.bisonGenInfoForm;
+
             /**
              * Track if the log has been added to IndexedDB once
              * @type {boolean}
@@ -111,7 +111,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 if(bisonService.getActiveLog()["id"]) {
                     var popup = $ionicPopup.show({
                         scope: $scope,
-                        template: 'Feature is not yet enabled',
+                        template: 'Your progress will be saved in a private database on this device',
                         title: "Save changes?",
                         subTitle: "Would you like to save your changes?",
                         buttons: [
@@ -123,23 +123,47 @@ angular.module("bisonInc").controller('NewBoreLogController',
                                 text: "Save",
                                 type: "button-positive",
                                 onTap: function () {
-                                    bisonService.getActiveLog()["customer"] = $scope.boreLogModel[0].value;
-                                    bisonService.getActiveLog()["conduit"] = $scope.boreLogModel[1].value;
-                                    bisonService.getActiveLog()["location"] = $scope.boreLogModel[2].value;
-                                    bisonService.getActiveLog()["length"] = $scope.boreLogModel[3].value;
-                                    bisonService.getActiveLog()["drillPipe"] = $scope.drillPipeLength;
+                                    /*In case it's a bore journal*/
+                                    if(bisonService.getActiveLog()["customer"] !== $scope.boreLogModel[0].value) {
+                                        bisonService.getActiveLog()["customer"] = $scope.boreLogModel[0].value;
+                                    }
+                                    if(bisonService.getActiveLog()["location"] !== $scope.boreLogModel[2].value) {
+                                        bisonService.getActiveLog()["location"] = $scope.boreLogModel[2].value;
+                                    }
+                                    /*In case it's a bore log*/
+                                    if(bisonService.getType() === "log") {
+                                        if(bisonService.getActiveLog()["conduit"] = $scope.boreLogModel[1].value) {
+                                            bisonService.getActiveLog()["conduit"] = $scope.boreLogModel[1].value;
+                                        }
+                                        if(bisonService.getActiveLog()["length"] !== $scope.boreLogModel[3].value) {
+                                            bisonService.getActiveLog()["length"] = $scope.boreLogModel[3].value;
+                                        }
+                                        if(bisonService.getActiveLog()["drillPipe"] !== $scope.drillPipeLength) {
+                                            bisonService.getActiveLog()["drillPipe"] = $scope.drillPipeLength;
+                                        }
+                                    }/*end if*/
                                     //TODO delete debug console.Log()'s
-                                    console.log("Saving: ...");
                                     console.log(bisonService.getActiveLog());
                                     bisonIndexedDB.add(bisonService.getActiveLog());
+                                    $timeout(function () {
+                                        history.back();
+                                    }, 1000);
                                 }
                             }
                         ]
                     });
-                    popup.then(function () {
-                        history.back();
+                } else {
+                    var noDataPopup = $ionicPopup.confirm({
+                        title: "Confirm you want to quit",
+                        template: "<p>Seems that you haven't actually <b>saved</b> any data yet." +
+                        " This means there is no data to <b>Save</b> prior to quiting.</p>"
                     });
-                } else history.back();
+                    noDataPopup.then(function (res) {
+                        if(res) {
+                            history.back();
+                        }
+                    });
+                }
             };
 
             /**
@@ -152,8 +176,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
 
             //-- On submission of General Info
             $scope.submitGeneralInfo = function (overwrite) {
-                //TODO delete debug console.Log()'s
-                console.log(overwrite);
                 /**
                  * If (in the lifecycle of the current state view)
                  * an "active log" has not been created,
@@ -162,9 +184,8 @@ angular.module("bisonInc").controller('NewBoreLogController',
                  * 3) Set its initial values (ONLY IF BRAND NEW), and
                  * 4) Add it to IndexedDB via bisonIndexedDB service
                  */
-                console.log(bisonService.getActiveLog() + " has been created = " + hasBeenCreated);
                 if (!bisonService.getActiveLog().hasOwnProperty("id")) {
-                    console.log("Creating new log");
+                    console.log(bisonService.getType());
                     /**
                      * Set bisonService.activeLog
                      * @type {Object} Represents the current log with which
@@ -208,6 +229,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                         bisonService.getActiveLog()["locates"] = [];
                     }
                     if(!bisonService.getActiveLog().hasOwnProperty("id")) {
+                        console.log("Setting id");
                         bisonService.setID(bisonDateService.generateBisonID(bisonService.getActiveLog()["customer"], bisonService.getActiveLog()["location"]));//Depends on other properties being set first
                     }
 
@@ -241,9 +263,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     inches = angular.element("#inches").val();
                 var crossing = crossingParam;
                 if(!bisonService.getActiveLog().hasOwnProperty("locates")) {
-                    console.log("Adding locates property to active log");
                     bisonService.getActiveLog()["locates"] = [];
-                    console.log("Has own property locates = " + bisonService.getActiveLog().hasOwnProperty["locates"]);
                 }
                 //Reset the input elements
                 angular.element("#feet").val("");
@@ -252,7 +272,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 bisonLocateFactory.add(locate, bisonService.getActiveLog()["locates"]);//Add the locate to the active log
                 $scope.numberOfLocates = bisonService.getActiveLog()["locates"].length;//Update the numberOfLocates
                 bisonIndexedDB.add(bisonService.getActiveLog());//-- Update the database object
-
                 //TODO delete debug console.Log()'s
                 console.log("Current status of locates:\n" + bisonService.getActiveLog()["locates"]);
             };

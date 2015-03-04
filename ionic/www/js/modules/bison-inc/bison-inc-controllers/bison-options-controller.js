@@ -72,12 +72,10 @@ angular.module("bisonInc")
                         $state.go("continue");
                         break;
                     case 4:
-                        //TODO experimental
                         bisonService.setType("convertToLog");
                         $state.go("continue");
                         break;
                     case 5:
-                        //TODO experimental
                         bisonService.setType("convertToPDF");
                         $state.go("continue");
                         break;

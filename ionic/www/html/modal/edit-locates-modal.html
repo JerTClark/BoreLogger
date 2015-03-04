@@ -26,7 +26,7 @@
                 <ion-delete-button class="ion-minus-circled" ng-click="reorder(undefined, $index)">
                 </ion-delete-button>
                 <ion-option-button class="button button-positive"
-                                   ng-click="popup(modal.values[$index], $index)">Edit {{value}}</ion-option-button>
+                                   ng-click="editPopup(modal.values[$index], $index)">Edit {{value}}</ion-option-button>
                 <ion-reorder-button class="ion-navicon"
                                     on-reorder="reorder(value, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>

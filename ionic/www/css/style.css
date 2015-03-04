@@ -256,8 +256,9 @@ span.input-label.bison-floating-label.has-input {
         text-shadow: none;
         -webkit-transition-duration: 1s;
     }
+    /*Removing this for now*/
     .bison-description {
-        background-color: #ffffff !important;
-        color: black !important;
+        /*background-color: #ffffff !important;*/
+        /*color: black !important;*/
     }
 }

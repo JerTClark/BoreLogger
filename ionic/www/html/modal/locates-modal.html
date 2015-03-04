@@ -44,7 +44,7 @@
                 <button id="locates-modal-top-button" class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">
                     {{modal.buttonText}}
                 </button>
-                <button id="locates-modal-bottom-button" class="button button-full button-assertive bison-rough-text" ng-click="popup()">
+                <button id="locates-modal-bottom-button" class="button button-full button-assertive bison-rough-text" ng-click="addPopup()">
                     {{modal.bottomButtonText}}
                 </button>
             </ion-item>
@@ -78,7 +78,7 @@
                 </ion-delete-button>
                 <ion-reorder-button class="ion-navicon"
                                     on-reorder="reorder(value, $fromIndex, $toIndex)"></ion-reorder-button>
-                <ion-option-button class="button button-positive" ng-click="popup(modal.values[$index], $index)">Edit</ion-option-button>
+                <ion-option-button class="button button-positive" ng-click="editPopup(modal.values[$index], $index)">Edit</ion-option-button>
             </ion-item>
 
         </ion-list>

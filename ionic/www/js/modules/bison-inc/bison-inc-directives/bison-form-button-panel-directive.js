@@ -12,7 +12,7 @@ angular.module("bisonInc")
                 bisonModalTemplate: "@",
                 bisonModalTitle: "@",
                 bisonModalDescription: "@",
-                bisonModalType:"@",
+                bisonModalType: "@",
                 bisonModalValues: "&",
                 bisonFormController: "=",
                 bisonSubmit: "&",
@@ -25,7 +25,8 @@ angular.module("bisonInc")
                 bisonOnReorder: "&",
                 bisonPopupTitle: "@",
                 bisonPopupSubtitle: "@",
-                bisonPopupPlaceholder: "@"
+                bisonPopupPlaceholder: "@",
+                bisonOnEdit: "&"
             },
             //Removed bison-options-panel class from ionItem
             template: '<ion-list type="list-inset">' +
@@ -37,7 +38,7 @@ angular.module("bisonInc")
             '<button class="button button-full button-assertive bison-rough-text"' +
             'ng-click="bisonOnCancel()" ng-if="bisonBottomButtonText">{{bisonBottomButtonText}}</button>' +
             '</ion-item></div></ion-list>',
-            controller: function($scope, $ionicModal, $ionicPopup, $timeout){
+            controller: function ($scope, $ionicModal, $ionicPopup, $timeout) {
                 /**
                  * The $ionicModal
                  */
@@ -69,25 +70,28 @@ angular.module("bisonInc")
                         angular.element("input[first-input]").focus();
                     }, 500);
                 }
+
                 $scope.closeModal = function () {
                     $scope.modal.hide();
                 };
                 $scope.$on('$destroy', function () {
                     $scope.modal.remove();
                 });
-                $scope.$on('modal.hidden', function () {});
-                $scope.$on('modal.removed', function () {});
+                $scope.$on('modal.hidden', function () {
+                });
+                $scope.$on('modal.removed', function () {
+                });
 
                 /**
                  * Various UI effects
                  */
                 $scope.toggleContent = function () {
                     var elem = angular.element(".bisonHide");
-                    if(elem) elem.fadeToggle();
+                    if (elem) elem.fadeToggle();
                 };
                 $scope.fadeContent = function () {
                     var elem = angular.element(".bisonHide");
-                    if(elem) elem.fadeOut();
+                    if (elem) elem.fadeOut();
                 };
                 $scope.slowFadeOut = function () {
                     $timeout(function () {
@@ -122,6 +126,14 @@ angular.module("bisonInc")
                 };
 
                 /**
+                 * A hack-y quick fix. Try to do right.
+                 * @param crossing
+                 */
+                $scope.recordLocateWithCrossing = function (crossing) {
+                    $scope.bisonModalOnClick(crossing);
+                };
+
+                /**
                  * Formats its parameters to an acceptable object
                  * for passing parameters to the &bisonOnReorder
                  * parent scope function
@@ -148,18 +160,20 @@ angular.module("bisonInc")
                  * @param value {String} [Optional]
                  * @param fromIndex {Number} [Optional]
                  * @param toIndex {Number} [Optional]
+                 * @param code [*] Mandatory if only a crossing is being added
                  */
-                $scope.popup = function (value, fromIndex, toIndex) {
-                    var toEdit = value;
-                    var crossingPopup = $ionicPopup.show({
+                    //TODO Refactor to editPopup
+                $scope.editPopup = function (value, fromIndex, toIndex, code) {
+                    $scope.toEdit = value;
+                    var editorPopup = $ionicPopup.show({
                         scope: $scope,
-                        template:'<label class="item-input item-floating-label" focus-me>' +
-                        '<span class="input-label bison-floating-label">{{bisonPopupPlaceholder}}</span>' +
+                        template: '<label class="item-input item-floating-label" focus-me>' +
+                        '<span class="input-label bison-floating-label">Orig {{toEdit}}</span>' +
                         '<input type="text" id="popupInput" class="bison-input-field"' +
-                        'placeholder="{{bisonPopupPlaceholder}}" focus-me>' +
+                        'placeholder="{{toEdit}}" focus-me>' +
                         '</label>',
-                        title:$scope.bisonPopupTitle,
-                        subTitle:$scope.bisonPopupSubtitle,
+                        title: "Edit " + $scope.toEdit,
+                        subTitle: "Enter to save",
                         buttons: [
                             {
                                 text: "Cancel",
@@ -171,6 +185,7 @@ angular.module("bisonInc")
                                 onTap: function () {
                                     var value = angular.element("#popupInput").val();
                                     $scope.reorder(value, fromIndex, toIndex);
+                                    //previously respond
                                 }
                             }
                         ]
@@ -179,11 +194,39 @@ angular.module("bisonInc")
                      * Set input value if applicable
                      * via a call to $timeout service
                      */
-                    if(toEdit) {
+                    if ($scope.toEdit) {
                         $timeout(function () {
-                            angular.element("#popupInput").val(toEdit);
-                        },500);
+                            angular.element("#popupInput").val($scope.toEdit);
+                        }, 500);
                     }
+                };
+
+                /*Attempting new popup for ADDING so the above can serve for editing*/
+                $scope.addPopup = function () {
+                    var addLocatePopup = $ionicPopup.show({
+                        scope: $scope,
+                        template: '<label class="item-input item-floating-label" focus-me>' +
+                        '<span class="input-label bison-floating-label">{{bisonPopupPlaceholder}}</span>' +
+                        '<input type="text" id="popupInput" class="bison-input-field"' +
+                        'placeholder="{{bisonPopupPlaceholder}}" focus-me>' +
+                        '</label>',
+                        title: $scope.bisonPopupTitle,
+                        subTitle: $scope.bisonPopupSubtitle,
+                        buttons: [
+                            {
+                                text: "Cancel",
+                                type: "button-positive"
+                            },
+                            {
+                                text: "Enter",
+                                type: "button-positive",
+                                onTap: function () {
+                                    var value = angular.element("#popupInput").val();
+                                    $scope.bisonModalOnClick({value: value});
+                                }
+                            }
+                        ]
+                    });
                 }
             }
         }

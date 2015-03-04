@@ -14,5 +14,8 @@
     "datejs": "~1.0.0-rc3",
     "angular-native-picker": "~1.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "jquery": "~2.1.3"
+  }
 }

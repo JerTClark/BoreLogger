@@ -27,19 +27,32 @@
 
 describe("BoreLoggerByState", function () {
 
-    //Helps to quickly scroll to elements
-    var MyHelper = function () {
+    /**Utility to quickly scroll to elements*/
+    var BrowserHelper = function () {
         return {
             scroll: function () {
                 var webElement = arguments[0].getWebElement();
                 browser.executeScript(function () {
                     arguments[0].scrollIntoView();
                 }, webElement);
+            },
+            /**/
+            swipeLeft: function(angElemId) {
+                /*Requires jQuery loaded before Angular*/
+                /**
+                 * May not need to use browser.executeScript()
+                 */
+                browser.executeScript(function () {
+                    angular.element(angElemId).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
+                    angular.element(".item-options").removeClass("invisible");
+                });
             }
         }
     };
 
-    //Home
+    /**
+     * Home state (aka Options screen)
+     */
     var StateHome = function () {
         return {
             test: 1 + 2,
@@ -49,18 +62,21 @@ describe("BoreLoggerByState", function () {
             refreshAllOptions: function () {
                 return element.all(by.repeater("category in optionCategories"));
             },
-            //The ionNavBar
+            /**
+             * ionNavBar is universally accessible from any state.
+             * Use home.ionNavBar to test the view-title values of each state.
+             */
             ionNavBar: element(by.id("bison-nav-bar")),
             allOptions: element.all(by.repeater("category in optionCategories")),
-            //Categories
+            /*Categories*/
             boreLogCategory: element(by.cssContainingText(".bison-category", "Bore Log")),
             boreJournalCategory: element(by.cssContainingText(".bison-category", "Bore Journal")),
             pdfCategory: element(by.cssContainingText(".bison-category", "Create PDF")),
-            //Category descriptions
+            /*Category descriptions*/
             boreLogCategoryDescription: element(by.cssContainingText(".bison-description", "Record a completed bore")),
             boreJournalCategoryDescription: element(by.cssContainingText(".bison-description", "Record an ongoing bore")),
             pdfCategoryDescription: element(by.cssContainingText(".bison-description", "A billable report")),
-            //Buttons
+            /*Buttons*/
             createBoreLogButton: element(by.id("button0")),
             continueBoreLogButton: element(by.id("button1")),
             createBoreJournalButton: element(by.id("button2")),
@@ -70,7 +86,12 @@ describe("BoreLoggerByState", function () {
         }
     };
 
-    //New-bore-log
+    /**
+     * New bore log state
+     * NOTE: New bore log state is recycled
+     * Using $stateParams, it detects that a user selection was made
+     * via Continue state.
+     */
     var StateNewBoreLog = function () {
         return {
             test: 1 + 2,
@@ -86,29 +107,32 @@ describe("BoreLoggerByState", function () {
             lengthOfBoreCategory: element(by.cssContainingText(".bison-category", "Length of bore")),
             dateCategory: element(by.cssContainingText(".bison-category", "Date")),
             drillPipeCategory: element(by.cssContainingText(".bison-category", "Drill pipe")),
-            //Category descriptions
+            /*Category descriptions*/
             customerCategoryDescription: element(by.cssContainingText(".bison-description", "the company for whom the work is performed")),
             conduitCategoryDescription: element(by.cssContainingText(".bison-description", "product (for ex., (1) 12\" Plastic)")),
             locationCategoryDescription: element(by.cssContainingText(".bison-description", "place most readily associated with the job site")),
             lengthOfBoreCategoryDescription: element(by.cssContainingText(".bison-description", "footage drilled (no comma, just the number)")),
             dateCategoryDescription: element(by.cssContainingText(".bison-description", "start or end of the job")),
             drillPipeCategoryDescription: element(by.cssContainingText(".bison-description", "length of drill pipe used")),
-            //Buttons
+            /*Buttons*/
             topButton: element(by.buttonText("Double-check")),
             bottomButton: element(by.buttonText("Continue")),
             editLocatesButton: element(by.buttonText("Edit locates")),
-            //Inputs
+            /*Inputs*/
             customerInput: element(by.id("0-input")),
             conduitInput: element(by.id("1-input")),
             locationInput: element(by.id("2-input")),
             lengthOfBoreInput: element(by.id("3-input")),
             dateInput: element(by.id("4-input")),
-            //Toggle
+            /*Toggle*/
             drillPipeToggle: element(by.id("drillPipeToggle"))
         }
     };
 
-    //Locates-modal
+    /**
+     * The locates modal
+     * A template passed to bisonFormButtonPanel directive
+     */
     var LocatesModal = function () {
         return {
             test: 1 + 2,
@@ -122,8 +146,12 @@ describe("BoreLoggerByState", function () {
             locatesModalBottomButton: element(by.id("locates-modal-bottom-button")),
             locatesModalShowContentItem: element(by.id("locates-modal-show-content")),
             locatesModalShowHeaderSpan: element(by.id("modal-show-header")),
-            locatesModalHideHeaderSpan: element(by.id("modal-hide-header"))
+            locatesModalHideHeaderSpan: element(by.id("modal-hide-header")),
+            locatesModalPopupInput: element(by.id("popupInput")),
+            locatesModalPopupCancelButton: element(by.cssContainingText("button-positive","Cancel")),
+            locatesModalPopupEnterButton: element(by.cssContainingText("button-positive","Enter"))
             /**
+             * The Locates list
              * Each locate is shown as text in a span with
              * an id "locate-modal-value-$index" where $index
              * is its position in the array of
@@ -133,200 +161,225 @@ describe("BoreLoggerByState", function () {
         }
     };
 
-    //Edit-locates-modal
+    /**
+     * Edit locates modal
+     * Template passed to bisonFormButtonPanel
+     */
     var EditLocatesModal = function () {
         return {
             test: 1 + 2,
             editLocatesModalTitle: element(by.id("edit-locates-modal-title")),
             editLocatesModalCloseButton: element(by.id("close-edit-locates-modal")),
-            editLocatesShowDeleteButton: element(by.id("edit-locates-show-delete-button")),
-            editLocatesShowReorderButton: element(by.id("edit-locates-show-reorder-button")),
+            editLocatesModalShowDeleteButton: element(by.id("edit-locates-show-delete-button")),
+            editLocatesModalShowReorderButton: element(by.id("edit-locates-show-reorder-button")),
+            editLocatesModalPopupInput: element(by.id("popupInput")),
+            editLocatesModalPopupCancelButton: element(by.cssContainingText("button-positive","Cancel")),
+            editLocatesModalPopupEnterButton: element(by.cssContainingText("button-positive","Enter"))
         }
     };
 
-    //Continue-state
+    /**
+     * Continue state
+     * Presents the user with a list of logs with which they can resume
+     * interaction (or convert, depending on Home state selection)
+     */
     var StateContinue = function () {
         return {
-            test: 1 + 2
-        }
-    };
-
-    //New-bore-log
-    var StateResume = function () {
-        return {
             test: 1 + 2,
-            ionNavBar: element(by.id("bison-nav-bar")),
-            backButton: element(by.cssContainingText(".back-button", "")),
-            allElements: element.all(by.repeater("field in boreLogModel")),
-            customerCategory: element(by.cssContainingText(".bison-category", "Customer")),
-            conduitCategory: element(by.cssContainingText(".bison-category", "Conduit")),
-            locationCategory: element(by.cssContainingText(".bison-category", "Location")),
-            lengthOfBoreCategory: element(by.cssContainingText(".bison-category", "Length of bore")),
-            dateCategory: element(by.cssContainingText(".bison-category", "Date")),
-            drillPipeCategory: element(by.cssContainingText(".bison-category", "Drill pipe")),
-            //-- Buttons
-            topButton: element(by.buttonText("Double-check")),
-            bottomButton: element(by.buttonText("Continue")),
-            editLocatesButton: element(by.buttonText("Edit locates")),
-            //-- Inputs
-            customerInput: element(by.id("0-input")),
-            conduitInput: element(by.id("1-input")),
-            locationInput: element(by.id("2-input")),
-            lengthOfBoreInput: element(by.id("3-input")),
-            dateInput: element(by.id("4-input")),
-            //-- Toggle
-            drillPipeToggle: element(by.id("drillPipeToggle"))
+            continueSelectElem: element(by.id("continue-select")),
+            continueSearchInput: element(by.id("continue-search-input")),
+            /*Use BrowserHelper swipeleft([continue-item-N]) to uncover the buttons*/
+            continueSampleDeleteButton: element(by.id("continue-delete-button-0")),
+            continueSampleSelectButton: element(by.id("continue-select-button-0")),
+            continuePDFDownloadButton: element(by.id("pdfDownload"))
         }
     };
 
-    var helper = new MyHelper();
-    var home = new StateHome();
-    var newLog = new StateNewBoreLog();
+    /*Same as New bore log state*/
+    var StateResume = function () {
+        return new StateNewBoreLog();
+    };
+
+    var browserHelper = new BrowserHelper();
+    var homeState = new StateHome();
+    var newBoreLogState = new StateNewBoreLog();
     var locatesModal = new LocatesModal();
+    var editLocatesModal = new EditLocatesModal();
     var continueState = new StateContinue();
     var resumeState = new StateResume();
 
-    xdescribe("Basic Options state navigation test", function () {
-
-        beforeEach(function () {
-            home.get();
-        });
-
+    /**
+     * Be sure that each Page Object is obtained
+     */
+    describe("Passing basic test", function () {
         it("should pass the basic test", function () {
-            expect(home.test).toEqual(3);
-            expect(newLog.test).toEqual(3);
+            expect(homeState.test).toEqual(3);
+            expect(newBoreLogState.test).toEqual(3);
             expect(locatesModal.test).toEqual(3);
+            expect(editLocatesModal.test).toEqual(3);
             expect(continueState.test).toEqual(3);
             expect(resumeState.test).toEqual(3);
         });
+    });
+
+    /**
+     * Testing the functionality of the Home state
+     */
+    xdescribe("Home State", function () {
+        beforeEach(function () {
+            homeState.get();
+        });
         it("should begin having the title \"Options\"", function () {
-            expect(home.ionNavBar.getText()).toEqual("Options");
+            expect(homeState.ionNavBar.getText()).toEqual("Options");
         });
         it("should help me understand how \"by.repeater\" works", function () {
-            expect(home.allOptions.getText()).toEqual(["Bore Log\nCreate\nContinue",
-                "Bore Journal\nCreate\nContinue\nConvert", "", ""]);//Some not in view
-            helper.scroll(home.createPdfButton);
-            expect(home.refreshAllOptions().getText()).toEqual(["",
+            expect(homeState.allOptions.getText()).toEqual(["Bore Log\nCreate\nContinue",
+                "Bore Journal\nCreate\nContinue", "", ""]);//Some not in view
+            browserHelper.scroll(homeState.createPdfButton);
+            expect(homeState.refreshAllOptions().getText()).toEqual(["",
                 "Bore Journal\nCreate\nContinue\nConvert",
                 "Create PDF\nCreate", ""]);//Will change if file options are shown
         });
+        it("should expose the count() function", function () {
+            expect(homeState.allOptions.count()).toEqual(4);
+        });
         it("should take you to General info and back to Options", function () {
-            home.createBoreLogButton.click();
-            expect(newLog.ionNavBar.getText()).toEqual("Options\nGeneral info");
-            newLog.backButton.click();//Matches more than one element
-            expect(home.ionNavBar.getText()).toEqual("Options");
-            home.createBoreJournalButton.click();
-            expect(newLog.ionNavBar.getText()).toEqual("Options\nGeneral info");
-            newLog.backButton.click();//Matches more than one element
-            expect(home.ionNavBar.getText()).toEqual("Options");
+            homeState.createBoreLogButton.click();
+            expect(newBoreLogState.ionNavBar.getText()).toEqual("Options\nGeneral info");
+            newBoreLogState.backButton.click();//Matches more than one element
+            expect(homeState.ionNavBar.getText()).toEqual("Options");
+            homeState.createBoreJournalButton.click();
+            expect(newBoreLogState.ionNavBar.getText()).toEqual("Options\nGeneral info");
+            newBoreLogState.backButton.click();//Matches more than one element
+            expect(homeState.ionNavBar.getText()).toEqual("Options");
         });
-        it("should take you to the appropriate \"Continue\" state", function () {
-            home.continueBoreLogButton.click();
-            expect(home.ionNavBar.getText()).toEqual("Options\nContinue log");
-            newLog.backButton.click();//Matches more than one element
-            home.continueBoreJournalButton.click();
-            expect(home.ionNavBar.getText()).toEqual("Options\nContinue journal");
-        });
-        it("should have click-able category headers", function () {
-            home.boreLogCategory.click();
-            home.boreJournalCategory.click();
-            helper.scroll(home.pdfCategory);
-            home.pdfCategory.click();
+        it("should take you to \"Continue\" state showing \"Continue\" or \"Convert\" in the view-title", function () {
+            homeState.continueBoreLogButton.click();
+            expect(homeState.ionNavBar.getText()).toEqual("Options\nContinue log");
+            newBoreLogState.backButton.click();//Matches more than one element
+            homeState.continueBoreJournalButton.click();
+            expect(homeState.ionNavBar.getText()).toEqual("Options\nContinue journal");
+            newBoreLogState.backButton.click();//Matches more than one element
+            browserHelper.scroll(homeState.convertBoreLogButton);
+            homeState.convertBoreLogButton.click();
+            expect(homeState.ionNavBar.getText()).toEqual("Options\nConvert journal");
+            newBoreLogState.backButton.click();//Matches more than one element
+            browserHelper.scroll(homeState.createPdfButton);
+            homeState.createPdfButton.click();
+            expect(homeState.ionNavBar.getText()).toEqual("Options\nConvert log");
         });
         it("should have descriptions for each category", function () {
-            home.boreLogCategory.click();
-            home.boreJournalCategory.click();
+            homeState.boreLogCategory.click();
+            homeState.boreJournalCategory.click();
             var desc1 = element(by.cssContainingText(".bison-description", "Record a completed bore"));
             var desc2 = element(by.cssContainingText(".bison-description", "Record an ongoing bore"));
             expect(desc1.getText()).toEqual("Record a completed bore");
             expect(desc2.getText()).toEqual("Record an ongoing bore");
-            helper.scroll(home.pdfCategory);
+            browserHelper.scroll(homeState.pdfCategory);
             var desc3 = element(by.cssContainingText(".bison-description", "A billable report"));
-            home.pdfCategory.click();
+            homeState.pdfCategory.click();
             expect(desc3.getText()).toEqual("A billable report");
         });
-        it("should not change state (yet) when these buttons are clicked", function () {
-            home.convertBoreLogButton.click();
-            expect(home.ionNavBar.getText()).toEqual("Options");
-            helper.scroll(home.createPdfButton);
-            home.createPdfButton.click();
-            expect(home.ionNavBar.getText()).toEqual("Options");
-        });
     });
 
-    xdescribe("New bore log state", function () {
+    /**
+     * Testing New bore log state for a Bore Log
+     */
+    describe("New bore log state (Bore Log)", function () {
         beforeEach(function () {
-            home.get();
+            homeState.get();
+            homeState.createBoreLogButton.click();
         });
-        it("should have certain categories, each with descriptions", function () {
+        it("should have 6 categories and 6 descriptions", function () {
+            /**
+             * Note: the +1 is representative of the drillPipeLength
+             * Category (which is not included in the ngRepeat
+             */
+            var theDrillPipeCategory = 1;
+            expect(newBoreLogState.allElements.count() + theDrillPipeCategory).toEqual(6);
+        });
+    });
+
+    /**
+     * Testing New bore log state for a Bore Journal
+     */
+    xdescribe("New bore log state (Bore Journal)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.createBoreJournalButton.click();
+        });
+        it("should have certain categories with descriptions", function () {
 
         });
     });
 
-    xdescribe("Testing the Locates modal from New bore log", function () {
-
+    /**
+     * Testing Locates modal for a Bore Log
+     */
+    xdescribe("Locates modal (Bore Log)", function () {
         /**
          * Note: you can't access the locates-modal unless
          * the bisonGenInfoForm is $valid. This means all the input
          * fields must be entered
          */
         beforeEach(function () {
-            home.get();
-            home.createBoreLogButton.click();
-            newLog.customerInput.sendKeys("Washington Gas");
-            newLog.conduitInput.sendKeys("(1) 12\" Plastic");
-            newLog.locationInput.sendKeys("123 Some Street");
-            newLog.lengthOfBoreInput.sendKeys("1,234 LF (15\' Rods)");
-            newLog.dateInput.sendKeys("12312016");
-            helper.scroll(newLog.topButton);
-            newLog.topButton.click();
-            expect(locatesModal.typeHeader.getText()).toEqual("Bore log");
+            homeState.get();
+            homeState.createBoreLogButton.click();
+            newBoreLogState.customerInput.sendKeys("Washington Gas");
+            newBoreLogState.conduitInput.sendKeys("(1) 12\" Plastic");
+            newBoreLogState.locationInput.sendKeys("123 Some Street");
+            newBoreLogState.lengthOfBoreInput.sendKeys("1,234 LF (15\' Rods)");
+            newBoreLogState.dateInput.sendKeys("12312016");
+            browserHelper.scroll(newBoreLogState.topButton);
+            newBoreLogState.topButton.click();
         });
 
-        it("should take you \"home\" when \"Cancel\" is clicked", function () {
-            home.createBoreJournalButton.click();
-            helper.scroll(newLog.bottomButton);
-            newLog.bottomButton.click();
-            expect(home.ionNavBar.getText()).toEqual("Options");
+        it("should have the right title", function () {
+            expect(locatesModal.typeHeader.getText()).toEqual("Bore log locates");
         });
 
-        //TODO This is obsolete due to layout change
-        xit("should display \"Bore log\" when accessed from \"Create\" (Bore Log) button", function () {
-            home.createBoreLogButton.click();
-            newLog.customerInput.sendKeys("Washington Gas");
-            newLog.conduitInput.sendKeys("(1) 12\" Plastic");
-            newLog.locationInput.sendKeys("123 Some Street");
-            newLog.lengthOfBoreInput.sendKeys("1,234 LF (15\' Rods)");
-            newLog.dateInput.sendKeys("12312016");
-            helper.scroll(newLog.topButton);
-            newLog.topButton.click();
-            expect(locatesModal.typeHeader.getText()).toEqual("Bore log");
+    });
+
+    /**
+     * Testing Locate modal for a Bore Journal
+     */
+    xdescribe("Locates modal (Bore Journal)", function () {
+        /**
+         * Note: you can't access the locates-modal unless
+         * the bisonGenInfoForm is $valid. Required input
+         * fields must be entered
+         */
+        beforeEach(function () {
+            homeState.get();
+            homeState.createBoreJournalButton.click();
+            newBoreLogState.customerInput.sendKeys("Washington Gas");
+            newBoreLogState.locationInput.sendKeys("123 Some Street");
+            browserHelper.scroll(newBoreLogState.topButton);
+            newBoreLogState.topButton.click();
         });
 
-        it("should display \"Bore journal\" when accessed from \"Create\" (Bore Journal) button", function () {
-            home.createBoreJournalButton.click();
-            newLog.customerInput.sendKeys("Washington Gas");
-            newLog.locationInput.sendKeys("123 Some Street");
-            helper.scroll(newLog.topButton);
-            newLog.topButton.click();
-            expect(locatesModal.typeHeader.getText()).toEqual("Bore journal");
+        it("should have the right title", function () {
+            expect(locatesModal.typeHeader.getText()).toEqual("Bore journal locates");
         });
+    });
 
-        //TODO this will be changed to reflect the current locates
-        it("should reflect the entries of the user on the previous screen", function () {
-            home.createBoreLogButton.click();
-            newLog.customerInput.sendKeys("Washington Gas");
-            newLog.conduitInput.sendKeys("(1) 12\" Plastic");
-            newLog.locationInput.sendKeys("123 Some Street");
-            newLog.lengthOfBoreInput.sendKeys("1,234 LF (15\' Rods)");
-            newLog.dateInput.sendKeys("12312016");
-            helper.scroll(newLog.topButton);
-            newLog.topButton.click();
-            expect(locatesModal.customerHeader.getText()).toEqual(locatesModal.customerPre + "Washington Gas");
-            expect(locatesModal.conduitHeader.getText()).toEqual(locatesModal.conduitPre + "(1) 12\" Plastic");
-            expect(locatesModal.locationHeader.getText()).toEqual(locatesModal.locationPre + "123 Some Street");
-            //expect(locatesModal.lengthOfBoreHeader.getText()).toEqual(locatesModal.lengthOfBorePre + "1,234 LF (15\' Rods)");
+    /**
+     * Testing Continue state when continuing a Bore Log
+     */
+    xdescribe("Continue state (Bore Log)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.continueBoreLogButton.click();
         });
+    });
 
+    /**
+     * Testing Continue state when continuing a Bore Journal
+     */
+    xdescribe("Continue state (Bore Journal)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.continueBoreJournalButton.click();
+        });
     });
 });

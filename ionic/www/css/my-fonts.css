@@ -1,7 +1,7 @@
 /* Font families */
 @font-face {
     font-family: "AFL";
-    src: url("/ionic/www/fonts/AFL.ttf");
+    src: url("../fonts/AFL.ttf");
 }
 
 @font-face {

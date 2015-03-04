@@ -11,8 +11,11 @@ angular.module("bisonInc")
                             text: "Clear local cache",
                             onClick: function () {
                                 confirm({
-                                    title: "Clearing cache",
-                                    subtitle: "This will delete all local database records on this device. Are you sure?",
+                                    title: "Clear local cache",
+                                    template:'<div style="text-align: center">' +
+                                    '<p>This will delete all local database records on this device.</p></br>' +
+                                    '<img src="../img/database.png"></br><p style="color: #0000FF"><b>Are you sure?</b></p></div>',
+                                    subtitle: "",
                                     fn: function () {
                                         bisonIndexedDB.deleteDatabase();                                    }
                                 });
@@ -25,11 +28,14 @@ angular.module("bisonInc")
                     description: "whose fault is this, really?",
                     buttons: [
                         {
-                            text: "About",
+                            text: "About this app",
                             onClick: function () {
                                 confirm({
                                     title: "BoreLogger",
-                                    subtitle: "This whole thing was a learning experience. That's why.",
+                                    template: "<div  style='text-align: center'><p style='text-align: center'>This whole thing was a learning experience.</p>" +
+                                    "<p style='text-align: center'><b>That's why.</b></p></br>" +
+                                    "<a style='text-decoration: none' href='http://ionicframework.com/'><img src='../img/ionic.png'></a>" +
+                                    "<p style='text-align: center'>Built using <a style='text-decoration: none; color: #0000FF' href='http://ionicframework.com/'>Ionic</a></p></div>",
                                     fn: function () {
                                         //Nothing
                                     }
@@ -47,7 +53,7 @@ angular.module("bisonInc")
             var confirm = function (configObj) {
                 var crossingPopup = $ionicPopup.show({
                     scope: $scope,
-                    template:'',
+                    template: configObj.template,
                     title:configObj.title,
                     subTitle:configObj.subtitle,
                     buttons: [

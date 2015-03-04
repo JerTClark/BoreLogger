@@ -1,21 +1,22 @@
-<ion-view view-title="Continue {{type}}" ng-init="init()">
+<ion-view view-title="{{title}}" ng-init="init()">
     <ion-content class="has-header">
-        <label class="item item-select ion icon ion-social-buffer">
-            <span class="">Show property</span>
-            <select class="bison-handwriting-xlarge" ng-options="item as item.name for item in items"
+        <label class="item item-select ion icon ion-filing">
+            <span class="">Sort by</span>
+            <select id="continue-select" class="bison-handwriting-xlarge" ng-options="item as item.name for item in items"
                     ng-model="mySelection.value">
-                <option value="">No filter</option>
+                <option value="">Name</option>
             </select>
         </label>
 
         <div ng-show="mySelection.value.name">
-            <h4 style="text-align: center">Results showing <span style="font-family:Lintsec; color: darkgrey">{{mySelection.value.name}}</span>
+            <h4 style="text-align: center">sorted by <span style="font-family:Lintsec; color: darkgrey">{{mySelection.value.name}}</span>
             </h4>
         </div>
         <div class="bison-border-gray bison-border-input">
             <label class="item item-input">
                 <i class="ion icon ion-search"></i>
-                <input type="text"
+                <input id="continue-search-input"
+                       type="text"
                        class="bison-input-field"
                        ng-model="search.$"
                        placeholder="Search">
@@ -23,23 +24,24 @@
         </div>
 
         <ion-list type="list inset">
-            <ion-item ng-repeat="record in bisonRecords | filter:search">
+            <ion-item ng-repeat="record in bisonRecords | filter:search track by $index">
+                <div id="continue-item-{{$index}}">
                 <p style="font-weight: bold; font-family: 'Roboto-Bold', sans-serif">{{record.id}}</p>
 
                 <p style="font-family: 'Roboto-Light', sans-serif"
                    ng-show="mySelection.value.name"
                    ng-bind="record[showProperty]"></p>
-                <ion-option-button class="button button-assertive" ng-click="deleteDatabaseRecord(record.id, $index)">
+                <ion-option-button id="continue-delete-button-{{$index}}" class="button button-assertive" ng-click="deleteDatabaseRecord(record.id, $index)">
                     Delete
                 </ion-option-button>
-                <ion-option-button class="button button-positive" ng-click="select(record)">Select</ion-option-button>
+                <ion-option-button id="continue-select-button-{{$index}}" class="button button-positive" ng-click="select(record)">Select</ion-option-button>
+                </div>
             </ion-item>
         </ion-list>
         <ion-list type="card" ng-show="fileName">
             <ion-item>
                 <a class="button button-block button-positive ion icon ion-android-download"
-                   id="pdfDownload"
-                   download="{{fileName}}">{{fileName}}</a>
+                   id="pdfDownload">{{fileName}}</a>
             </ion-item>
         </ion-list>
     </ion-content>

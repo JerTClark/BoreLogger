@@ -1,12 +1,15 @@
 angular.module("bisonInc")
     .controller("ContinueController", ["$scope", "bisonIndexedDB",
-        "bisonService", "$timeout", "$state", "$rootScope", "$ionicActionSheet",
-        function ($scope, bisonIndexedDB, bisonService, $timeout, $state, $rootScope) {
+        "bisonService", "$timeout", "$state", "bisonPDFService",
+        function ($scope, bisonIndexedDB, bisonService, $timeout, $state, bisonPDFService) {
 
             /**
              * Display the type of documentation that is to be resumed
              */
-            $scope.type = "";//Initialized in $scope.init()
+            $scope.type = "";
+            /*Initialized in $scope.init()*/
+            $scope.title = "";
+            /*Initialized in $scope.init()*/
 
             /**
              * Holds the loaded records from IndexedDB
@@ -18,19 +21,21 @@ angular.module("bisonInc")
              * Loads either all "logs" or all "journals" via ngInit
              */
             $scope.init = function () {
-                //TODO experimenting with convert* feature
                 if (bisonService.getType() === "convertToLog") {
                     $scope.type = "journal";//In order to show only journals
+                    $scope.title = "Convert journal";
                     /**
                      * In order to "load" the selected journal as a log
                      * and supply the missing fields
                      */
-                    bisonService.setType("log");
+                    //bisonService.setType("log");
                 } else if (bisonService.getType() === "convertToPDF") {
                     $scope.type = "log";
+                    $scope.title = "Convert log";
                     //Leave bisonService.getType() as "convertToPDF"
                 } else {
                     $scope.type = bisonService.getType();
+                    $scope.title = "Continue " + $scope.type;
                 }
                 //Get either all "log" or all "journal" records, or "convert"
                 bisonIndexedDB.getAllOfWhere($scope.bisonRecords, "Type", "type", $scope.type, callback);
@@ -97,10 +102,17 @@ angular.module("bisonInc")
              */
             $scope.select = function (logToResume) {
                 if (bisonService.getType() === "convertToPDF") {
-                    console.log("Will start the conversion here");
-                    var fileName = logToResume["id"] + ".json";
-                    $scope.saveData(logToResume, fileName);
-                } else {
+                    bisonService.setActiveLog(logToResume);
+                    var fileName = bisonService.getActiveLog()["id"] + ".pdf";
+                    $scope.saveData(fileName);
+                }
+                else if (bisonService.getType() === "convertToLog") {
+                    bisonService.setActiveLog(logToResume);
+                    bisonService.setType("log");
+                    bisonService.getActiveLog()["type"] = "log";
+                    $state.go("resume", {id: logToResume["id"]});
+                }
+                else {
                     bisonService.setActiveLog(logToResume);
                     $state.go("resume", {id: logToResume["id"]});
                 }
@@ -143,28 +155,10 @@ angular.module("bisonInc")
                 {name: $scope.bisonIndices[7]}
             ];
 
-            $scope.myURL = "Something";
-
-            $scope.saveData = function (data, fileName) {
-                console.log(data, fileName);
-
-                //JSON.stringify(data)
-                var URL = (window.URL||window.webkitURL),
-                    json = JSON.stringify(data, null, 2),
-                    blob = new Blob([json], {type: "octet/stream"}),
-                    url = URL.createObjectURL(blob),
-                    anchor = angular.element("#pdfDownload");
-
-                $scope.myURL = url;
+            $scope.saveData = function (fileName) {
                 $scope.fileName = fileName;
-
-                anchor.attr("href", url);
-
-                anchor.on("click", function () {
-                    console.log("#pdfDownload clicked");
-                    $timeout(function () {
-                        URL.revokeObjectURL(url);
-                    }, 10);
+                angular.element("#pdfDownload").on("click", function () {
+                    bisonPDFService.getPDF();
                 })
             };
         }]);
