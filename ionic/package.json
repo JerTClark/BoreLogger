@@ -44,5 +44,8 @@
     "protractor": "^1.7.0",
     "shelljs": "^0.3.0"
   },
-  "private": true
+  "private": true,
+  "cordovaPlugins": [
+    "org.apache.cordova.inappbrowser"
+  ]
 }

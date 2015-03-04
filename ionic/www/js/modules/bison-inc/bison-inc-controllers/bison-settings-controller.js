@@ -1,7 +1,6 @@
 angular.module("bisonInc")
 .controller("SettingsController",["$scope", "$ionicPopup", "bisonIndexedDB",
         function ($scope, $ionicPopup, bisonIndexedDB) {
-
             $scope.settingsCategories = [
                 {
                     name: "Local records",
@@ -12,10 +11,7 @@ angular.module("bisonInc")
                             onClick: function () {
                                 confirm({
                                     title: "Clear local cache",
-                                    template:'<div style="text-align: center">' +
-                                    '<p>This will delete all local database records on this device.</p></br>' +
-                                    '<img src="../img/database.png"></br><p style="color: #0000FF"><b>Are you sure?</b></p></div>',
-                                    subtitle: "",
+                                    templateUrl: "html/templates/confirm-clear-local-cache.html",
                                     fn: function () {
                                         bisonIndexedDB.deleteDatabase();                                    }
                                 });
@@ -30,12 +26,9 @@ angular.module("bisonInc")
                         {
                             text: "About this app",
                             onClick: function () {
-                                confirm({
+                                alertPopup({
                                     title: "BoreLogger",
-                                    template: "<div  style='text-align: center'><p style='text-align: center'>This whole thing was a learning experience.</p>" +
-                                    "<p style='text-align: center'><b>That's why.</b></p></br>" +
-                                    "<a style='text-decoration: none' href='http://ionicframework.com/'><img src='../img/ionic.png'></a>" +
-                                    "<p style='text-align: center'>Built using <a style='text-decoration: none; color: #0000FF' href='http://ionicframework.com/'>Ionic</a></p></div>",
+                                    templateUrl: "html/templates/about-this-app.html",
                                     fn: function () {
                                         //Nothing
                                     }
@@ -49,13 +42,13 @@ angular.module("bisonInc")
 
             /**
              * A confirm popup
+             * @param configObj passed with values like title, templateUrl...
              */
             var confirm = function (configObj) {
-                var crossingPopup = $ionicPopup.show({
+                var confirmPopup = $ionicPopup.show({
                     scope: $scope,
-                    template: configObj.template,
+                    templateUrl: configObj.templateUrl,
                     title:configObj.title,
-                    subTitle:configObj.subtitle,
                     buttons: [
                         {
                             text: "Cancel",
@@ -69,4 +62,24 @@ angular.module("bisonInc")
                     ]
                 });
             };
+
+            /**
+             * An alert w Ok button
+             * @param configObj passed with values like title, templateUrl...
+             */
+            var alertPopup = function (configObj) {
+                var myAlertPopup = $ionicPopup.alert({
+                    scope: $scope,
+                    templateUrl: configObj.templateUrl,
+                    title:configObj.title,
+                    okText:"Oh",
+                    okType:"button-positive"
+                });
+            };
+
         }]);
+
+//template:'<div style="text-align: center">' +
+//'<p>This will delete all local database records on this device.</p></br>' +
+//'<img src="img/database.png"></br>' +
+//'<p style="color: #0000FF"><b>Are you sure?</b></p></div>',

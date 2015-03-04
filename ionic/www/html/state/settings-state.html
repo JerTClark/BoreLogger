@@ -1,18 +1,14 @@
 <ion-view view-title="Settings">
-    <ion-content class="has-header">
-
-        <form name="bisonSettingsForm" novalidate>
-
-            <ion-list type="card">
-                <ion-item ng-repeat="category in settingsCategories track by $index">
+    <ion-content class="has-header padding">
+            <ion-list type="card" ng-repeat="category in settingsCategories track by $index">
+                <ion-item>
                     <bison-category-with-description category-name="{{category.name}}"
                                                      category-description="{{category.description}}"></bison-category-with-description>
                     <button ng-repeat="button in category.buttons"
                             ng-click="button.onClick()"
-                            class="button button-positive button-block bison-rough-text">{{button.text}}
+                            class="button button-stable button-block bison-rough-text">{{button.text}}
                     </button>
                 </ion-item>
             </ion-list>
-        </form>
     </ion-content>
 </ion-view>
