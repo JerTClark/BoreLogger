@@ -1,0 +1,51 @@
+<ion-modal-view ng-init="slowFadeOut()">
+    <ion-header-bar class="bar-assertive bar-header" align-title="left">
+        <h1 id="locate-modal-title" class="title bison-modal-title">Bore {{modal.type}} {{modal.title}}</h1>
+        <button class="button" ng-click="closeModal()">
+            <i class="ion ion-android-arrow-back"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content class="content has-header" has-bouncing="false" padding="true">
+        <ion-list type="card" ng-click="toggleContent()">
+            <ion-item>
+                <p id="Type-modal-header" class="bison-handwriting-xlarge">Bore {{modal.type}}</p>
+            </ion-item>
+        </ion-list>
+        <ion-list type="list-inset bisonHide">
+            <ion-item ng-repeat="value in modal.values">
+                <p id="{{value.title}}-modal-header">{{value.title}}: <b>{{value.value}}</b></p>
+            </ion-item>
+        </ion-list>
+        <ion-list delegate-handle="locates" type="card">
+            <ion-item>
+                <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
+                    <label class="item-input item-floating-label">
+                        <span class="input-label bison-floating-label">feet</span>
+                        <input type="text"
+                               name="feet"
+                               id="feet"
+                               class="bison-input-field"
+                               placeholder="feet" first-input>
+                    </label>
+                </div>
+                <div class="bison-border-gray bison-border-input bison-top-and-bottom-margin">
+                    <label class="item-input item-floating-label">
+                        <span class="input-label bison-floating-label">inches</span>
+                        <input type="text"
+                               name="inches"
+                               id="inches"
+                               class="bison-input-field"
+                               placeholder="inches">
+                    </label>
+                </div>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="modal.onClick()">{{modal.buttonText}}</button>
+                <button class="button button-full button-assertive bison-rough-text" ng-click="popup()">{{modal.bottomButtonText}}</button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <script>
+        function focusFirstInput() {
+            angular.element("#feet").focus();
+        }
+    </script>
+</ion-modal-view>

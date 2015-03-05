@@ -1,0 +1,49 @@
+
+@keyframes bisonFloatLabelHide {
+    0% {
+        opacity: 1;
+        height: 100%;
+    }
+    50% {
+        transform: translateY(-100%);
+        opacity: 0;
+        height: 0;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+@keyframes bisonFloatLabelShow {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        opacity: 0;
+        height: 100%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.bison-floating-label:not(.has-input) {
+    display: none;
+    -webkit-animation: bisonFloatLabelHide 2s 1;
+    /*-webkit-transition-delay: 500ms;*/
+    /*-webkit-transition-duration: 1s;*/
+
+}
+.bison-floating-label.has-input {
+    -webkit-animation: bisonFloatLabelShow 2s 1;
+    /*display: block;*/
+    /*overflow-y: scroll;*/
+    /*height: 100%;*/
+    /*opacity: 1;*/
+    /*-webkit-transition-delay: 500ms;*/
+    /*-webkit-transition-duration: 1s;*/
+}
+input.bison-input-field:not(:focus).ng-dirty~span.input-label.bison-floating-label.has-input {
+    display: none !important;
+    opacity: 0;
+    -webkit-transition-delay: 500ms;
+    -webkit-transition-duration: 2s;
+}

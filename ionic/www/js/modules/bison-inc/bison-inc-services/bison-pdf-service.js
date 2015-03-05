@@ -5,6 +5,7 @@ angular.module("bisonInc")
             var output;
             var bisonPDF = {};
             var boreLogToConvert = {};
+            var bisonPDFPromise = null;
 
             /*Page layout properties*/
             /**
@@ -52,14 +53,17 @@ angular.module("bisonInc")
             /**
              * Handles order of code execution
              */
-            var createPDF = function () {
+            var createPDF = function (promise) {
                 init();
+                if(promise) promise.notify("Writing header");
                 writePDFHeader();
+                if(promise) promise.notify("Adding logo");
                 addImage();
                 drawSecondLine();
+                if(promise) promise.notify("Writing locates");
                 writeLocates();
-                save();
-                resetXY();
+                if(promise) promise.notify("Saving");
+                save(promise);
             };
 
             /**
@@ -206,19 +210,26 @@ angular.module("bisonInc")
              * LAST The save() function is called LAST
              * The variable output is the item returned from getPDF()
              */
-            var save = function () {
-                bisonPDF.save(output);
+            var save = function (promise) {
+                if(promise) {
+                    promise.resolve(bisonPDF.output())
+                } else {
+                    /*Saves the doc using data-uri*/
+                    bisonPDF.save(output);
+                }
             };
 
             /**
              * This should be the ONLY method necessary to "get"
              * a PDF into the controller/download button
              */
-            self.getPDF = function() {
-                //TODO delete debug console.Log()'s
-                console.log(bisonService.getActiveLog());
-                createPDF();
-                return output;
+            self.getPDF = function(promise) {
+                if(promise) {
+                    createPDF(promise);
+                } else {
+                    createPDF();
+                }
+                cleanup();
             };
 
             /**
@@ -226,12 +237,13 @@ angular.module("bisonInc")
              * @type {Promise}
              */
             /*Clean-up*/
-            self.cancelPDFConversion = function () {
+            var cleanup = function () {
+                resetXY();
                 bisonPDF = {};
                 boreLogToConvert = {};
             };
 
-            /*Run after writeHeaders()*/
+            /*Run after writeHeaders() to test some output*/
             var locatesTest = function () {
                 bisonPDF.text(X, Y, "Locates begin where Y = " + Y);
                 bisonPDF.text(110, Y, "At x = 100; Locates begin where Y = " + Y);
