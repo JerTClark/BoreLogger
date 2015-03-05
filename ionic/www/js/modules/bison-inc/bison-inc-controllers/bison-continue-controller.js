@@ -1,9 +1,9 @@
 angular.module("bisonInc")
     .controller("ContinueController", ["$scope", "bisonIndexedDB",
         "bisonService", "$timeout", "$state", "bisonPDFService",
-        "$cordovaFile", "$q", "$cordovaDevice",
+        "$cordovaFile", "$q", "$cordovaToast",
         function ($scope, bisonIndexedDB, bisonService, $timeout, $state,
-                  bisonPDFService, $cordovaFile, $q, $cordovaDevice) {
+                  bisonPDFService, $cordovaFile, $q, $cordovaToast) {
 
             /**
              * Display the type of documentation that is to be resumed
@@ -172,46 +172,69 @@ angular.module("bisonInc")
                     data;
 
                 var obtainPDF = function () {
-                    $scope.progressUpdate = "Creating your PDF";
+                    //$scope.progressUpdate = "Creating your PDF";
 
                     /*Handle errors*/
-                    function pdfError(message) {alert(message);}
+                    function pdfError(message) {
+                        $cordovaToast.show(message, "long", "bottom");
+                    }
+
                     /*Show updates*/
-                    function pdfUpdate(update) {$scope.progressUpdate = update;}
+                    function pdfUpdate(update) {
+                        $scope.progressUpdate = update;
+                        $cordovaToast.show(update, "short", "bottom");
+                    }
 
                     /*Generic promise factory*/
                     function getPromise(asyncTask) {
-                        var deferred = $q.defer();
-                        asyncTask(deferred);
-                        return deferred.promise;
+                        var q = $q.defer();
+                        asyncTask(q);
+                        return q.promise;
                     }
 
+                    //makeFolderPromise = $cordovaFile.createDir("BisonIonic", false)
+                    //    .then(function (result) {
+                    //
+                    //    }).then(function () {
+                    //
+                    //    }).then(function () {
+                    //
+                    //    })
+                    //
+                    //    .catch(function (error) {
+                    //        pdfError("Failed to create PDF: " + error);
+                    //    });
+                    
                     /*Create the BisonIonic folder*/
-                    makeFolderPromise = $cordovaFile.createDir("BisonIonic", "sdcard", false);
-                    makeFolderPromise.then(function (success) {
+                    makeFolderPromise = $cordovaFile.createDir("BisonIonic", false)
+                        .then(function (success) {
                             nativeUrl = success["nativeURL"];
+                            $cordovaToast.show("This app uses " + nativeUrl, "long", "bottom");
                             /*Obtain the data for creating a Blob*/
-                            pdfPromise = getPromise(bisonPDFService.getPDF);
-                        }, pdfError("Error making required folder. Replace me with a nice popup."));
-
-                    pdfPromise.then(
-                        function (result) {
-                            data = result;
-                            /*Write the file from a Blob*/
-                            writeFilePromise = $cordovaFile.writeFile("BisonIonic/" + $scope.fileName, new Blob([data], {type: "octet/stream"}), {"append": false});
-                            alert("PDF successful. Replace me with a nice popup.");
-                        }, pdfError("Failed to create PDF. Replace me with a nice popup."),
-                        pdfUpdate(update));
-
-                    writeFilePromise.then(function (success) {
-                            alert("Success creating file. Replace me with a nice popup.");
-                        }, pdfError("Fail writing file. Replace me with a nice popup."));
+                            pdfPromise = getPromise(bisonPDFService.getPDF)
+                                .then(function (result) {
+                                    data = result;
+                                    //$cordovaToast.show("PDF created", "short", "bottom");
+                                    /*Write the file from a Blob*/
+                                    writeFilePromise = $cordovaFile.writeFile("BisonIonic/" + $scope.fileName, new Blob([data], {type: "application/pdf"}), {"append": false})
+                                        .then(function (success) {
+                                            $cordovaToast.show("Successfully created your file", "short", "bottom");
+                                        }, function (error) {
+                                            pdfError("Failure writing file " + error)
+                                        });
+                                }, function (error) {
+                                    pdfError("Failed to create PDF: " + error);
+                                }, function (update) {
+                                    pdfUpdate(update);
+                                });
+                        }, function (error) {
+                            pdfError("Error making required folder: " + error)
+                        });
                 };
 
                 angular.element("#pdfDownload").on("click", function () {
-                    if(window.chrome) {
+                    if (window.chrome) {
                         bisonPDFService.getPDF();
-                        alert("is chrome");
                     } else {
                         /*Android*/
                         obtainPDF();

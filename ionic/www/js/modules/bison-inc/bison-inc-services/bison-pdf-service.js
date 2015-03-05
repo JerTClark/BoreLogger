@@ -1,11 +1,12 @@
 angular.module("bisonInc")
-    .service("bisonPDFService", ["bisonService","BisonPDFValues", "BisonPDFLogoData",
-        function (bisonService, BisonPDFValues, BisonPDFLogoData) {
+    .service("bisonPDFService", ["bisonService", "BisonPDFValues",
+        "BisonPDFLogoData", "$q", "$cordovaToast",
+        function (bisonService, BisonPDFValues, BisonPDFLogoData, $q,
+                  $cordovaToast) {
             var self = this;
             var output;
             var bisonPDF = {};
             var boreLogToConvert = {};
-            var bisonPDFPromise = null;
 
             /*Page layout properties*/
             /**
@@ -30,40 +31,9 @@ angular.module("bisonInc")
                 X = 15;
             };
 
-            /*TODO Solely for exposing experimental features to testing*/
-            self.test = function () {
-                console.log(BisonPDFValues.TEXT.BEGIN_BORE + " " + BisonPDFValues.TEXT.END_BORE);
-            };
-
-            /*Called first from self.getPDF()*/
-            var init = function () {
-                bisonPDF = new jsPDF();
-                setBoreLogToConvert();
-                output = getBoreLogToConvert()["id"] + ".pdf";
-            };
-
-            /*Getter and setter*/
-            var setBoreLogToConvert = function () {
-                boreLogToConvert = bisonService.getActiveLog();
-            };
+            /*Getter*/
             var getBoreLogToConvert = function () {
                 return boreLogToConvert;
-            };
-
-            /**
-             * Handles order of code execution
-             */
-            var createPDF = function (promise) {
-                init();
-                if(promise) promise.notify("Writing header");
-                writePDFHeader();
-                if(promise) promise.notify("Adding logo");
-                addImage();
-                drawSecondLine();
-                if(promise) promise.notify("Writing locates");
-                writeLocates();
-                if(promise) promise.notify("Saving");
-                save(promise);
             };
 
             /**
@@ -72,13 +42,13 @@ angular.module("bisonInc")
              * or Begin a new page
              */
             var nextLine = function () {
-                if(Y === 285 && X === 15) {
+                if (Y === 285 && X === 15) {
                     nextColumn();
-                } else if ( Y=== 285 && X > 15 ) {
+                } else if (Y === 285 && X > 15) {
                     bisonPDF.addPage();
                     resetXY();
                 } else {
-                    Y+=NEXT_Y;
+                    Y += NEXT_Y;
                 }
             };
 
@@ -90,20 +60,82 @@ angular.module("bisonInc")
                 X = 110;
             };
 
+
+            /*Generic promise factory*/
+            function getPromise(asyncTask, param) {
+                var q = $q.defer();
+                asyncTask(q, param);
+                return q.promise;
+            }
+
+            /*Show a toast*/
+            function toast(message) {
+                if (!window.chrome) {
+                    $cordovaToast.show(message, "short", "bottom");
+                }
+            }
+
+            /**
+             * Handles order of code execution
+             */
+            var createPDF = function (promise) {
+                /*Show a toast*/
+                function toast(message) {
+                    if (!window.chrome) {
+                        $cordovaToast.show(message, "short", "bottom");
+                    }
+                }
+
+                getPromise(init)
+                    .then(function (result) {
+                        toast(result);
+                        getPromise(writePDFHeader, result);
+                    }).then(function (result) {
+                        //toast(result);
+                        getPromise(addImage);
+                    }).then(function (result) {
+                        //toast(result);
+                        drawSecondLine();
+                        getPromise(writeLocates);
+                    }).then(function (result) {
+                        //toast(result);
+                        toast("Saving your PDF");
+                        savePDF(promise);
+                    }).catch(function (error) {
+                        console.log("Error: " + error);
+                        toast("An error occurred creating the PDF: " + error);
+                    });
+
+            };
+
+            /*Setter*/
+            var setBoreLogToConvert = function () {
+                boreLogToConvert = bisonService.getActiveLog();
+            };
+
+            /*Called first from self.getPDF()*/
+            var init = function (q) {
+                bisonPDF = new jsPDF();
+                setBoreLogToConvert();
+                output = getBoreLogToConvert()["id"] + ".pdf";
+                q.resolve("Creating your document");
+            };
+
             /**
              * Writing the Header text
              */
-            var writePDFHeader = function () {
+            var writePDFHeader = function (q) {
+                console.log(bisonPDF);
                 /*Write the Header*/
-                bisonPDF.setTextColor(255,0,0);
+                bisonPDF.setTextColor(255, 0, 0);
                 bisonPDF.setFont(BisonPDFValues.FONT.TIMES);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.TITLE);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.TITLE);
 
                 /*Write the subtitle*/
                 nextLine();
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X,Y+1,BisonPDFValues.TEXT.SUBTITLE);
+                bisonPDF.text(X, Y + 1, BisonPDFValues.TEXT.SUBTITLE);
                 bisonPDF.setTextColor(0);
 
                 /*Draw a blue line to separate header*/
@@ -117,59 +149,62 @@ angular.module("bisonInc")
                 /*Customer*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.CUSTOMER);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.CUSTOMER);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["customer"]);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["customer"]);
                 bisonPDF.setTextColor(0);
 
                 /*Conduit*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.CONDUIT);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.CONDUIT);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["conduit"]);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["conduit"]);
                 bisonPDF.setTextColor(0);
 
                 /*Location*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.LOCATION);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATION);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["location"]);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["location"]);
                 bisonPDF.setTextColor(0);
 
                 /*Length of bore*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.LENGTH_OF_BORE);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.LENGTH_OF_BORE);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["length"]
-                    + BisonPDFValues.PUNC.SPACE + BisonPDFValues.TEXT.LINEAR_FEET);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["length"]
+                + BisonPDFValues.PUNC.SPACE + BisonPDFValues.TEXT.LINEAR_FEET);
                 bisonPDF.setTextColor(0);
 
                 /*Drill pipe length*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.DRILL_PIPE_LENGTH);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.DRILL_PIPE_LENGTH);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["drillPipe"]
-                    + BisonPDFValues.PUNC.SPACE + BisonPDFValues.TEXT.FEET);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["drillPipe"]
+                + BisonPDFValues.PUNC.SPACE + BisonPDFValues.TEXT.FEET);
                 bisonPDF.setTextColor(0);
 
                 /*Date*/
                 nextLine();
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.BOLD);
-                bisonPDF.text(X,Y,BisonPDFValues.TEXT.DATE);
+                bisonPDF.text(X, Y, BisonPDFValues.TEXT.DATE);
                 bisonPDF.setFontType(BisonPDFValues.FONT_TYPE.NORMAL);
                 bisonPDF.setTextColor(100);
-                bisonPDF.text(X+45,Y,BisonPDFValues.PUNC.SPACE + boreLogToConvert["date"]);
+                bisonPDF.text(X + 45, Y, BisonPDFValues.PUNC.SPACE + boreLogToConvert["date"]);
                 bisonPDF.setTextColor(0);
-                nextLine();/*Header ends by adding a new line buffer*/
+                nextLine();
+                /*Header ends by adding a new line buffer*/
+                q.resolve("Header done");
+                //return "Header done";
             };
 
             /**
@@ -177,24 +212,28 @@ angular.module("bisonInc")
              * for outgrowing the current page, but nextLine()
              * handles checking for that
              */
-            var writeLocates = function() {
+            var writeLocates = function (q) {
                 var counter = 1;
                 boreLogToConvert["locates"].forEach(function (locate) {
-                    bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE + BisonPDFValues.PUNC.SPACE
-                        + counter + BisonPDFValues.PUNC.COLON + BisonPDFValues.PUNC.SPACE
-                        + BisonPDFValues.PUNC.SPACE + locate);
+                    bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
+                    + BisonPDFValues.PUNC.SPACE
+                    + counter + BisonPDFValues.PUNC.COLON
+                    + BisonPDFValues.PUNC.SPACE
+                    + BisonPDFValues.PUNC.SPACE + locate);
                     counter++;
                     nextLine();
                 });
-
-
+                q.resolve("Locates written");
+                //return "Locates written";
             };
 
             /**
              * Add the Bison Logo to the PDF
              */
-            var addImage = function () {
+            var addImage = function (q) {
                 bisonPDF.addImage(BisonPDFLogoData, "PNG", 160, 5, 40, 50);
+                q.resolve("Image added");
+                //return "Image added";
             };
 
             /**
@@ -210,12 +249,16 @@ angular.module("bisonInc")
              * LAST The save() function is called LAST
              * The variable output is the item returned from getPDF()
              */
-            var save = function (promise) {
-                if(promise) {
-                    promise.resolve(bisonPDF.output())
+            var savePDF = function (promise) {
+                if (promise) {
+                    /*Save using the PDF buffer*/
+                    promise.resolve(bisonPDF.output());
+                    //promise.resolve(bisonPDF.save(output));
+                    cleanup();
                 } else {
                     /*Saves the doc using data-uri*/
                     bisonPDF.save(output);
+                    cleanup();
                 }
             };
 
@@ -223,13 +266,12 @@ angular.module("bisonInc")
              * This should be the ONLY method necessary to "get"
              * a PDF into the controller/download button
              */
-            self.getPDF = function(promise) {
-                if(promise) {
+            self.getPDF = function (promise) {
+                if (promise) {
                     createPDF(promise);
                 } else {
                     createPDF();
                 }
-                cleanup();
             };
 
             /**
@@ -242,15 +284,4 @@ angular.module("bisonInc")
                 bisonPDF = {};
                 boreLogToConvert = {};
             };
-
-            /*Run after writeHeaders() to test some output*/
-            var locatesTest = function () {
-                bisonPDF.text(X, Y, "Locates begin where Y = " + Y);
-                bisonPDF.text(110, Y, "At x = 100; Locates begin where Y = " + Y);
-                /*Testing for the point at which a new column should be made*/
-                for(var i = 0; i <= 100; i++) {
-                    bisonPDF.text(X, Y, i + ". Y is " + Y);
-                    nextLine();
-                }
-            }
         }]);

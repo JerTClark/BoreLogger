@@ -333,3 +333,39 @@ $scope.saveData = function (data, fileName) {
         }, 10);
     })
 };
+
+//Old attempt at a promise chain
+writePDFHeader();
+var writePDFQ = getPromise(writePDFHeader)
+    .then(function (result) {
+        toast(result);
+    }, function (error) {
+        toast("Error writing header");
+    });
+addImage();
+var addImageQ = getPromise(addImage)
+    .then(function (result) {
+        toast(result);
+        drawSecondLine();
+    }, function (error) {
+        toast("An error occurred writing image");
+    });
+writeLocates();
+var writeLocatesQ = getPromise(writeLocates)
+    .then(function (result) {
+        toast(result);
+        savePDF(promise);
+    }, function (error) {
+        toast("An error occurred writing locates");
+    });
+
+/*Run after writeHeaders() to test some output*/
+var locatesTest = function () {
+    bisonPDF.text(X, Y, "Locates begin where Y = " + Y);
+    bisonPDF.text(110, Y, "At x = 100; Locates begin where Y = " + Y);
+    /*Testing for the point at which a new column should be made*/
+    for(var i = 0; i <= 100; i++) {
+        bisonPDF.text(X, Y, i + ". Y is " + Y);
+        nextLine();
+    }
+}
