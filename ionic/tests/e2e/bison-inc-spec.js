@@ -36,7 +36,9 @@ describe("BoreLoggerByState", function () {
                     arguments[0].scrollIntoView();
                 }, webElement);
             },
-            /**/
+            /**
+             * @param angElemId The id of the element ("#continue-item-0")
+             */
             swipeLeft: function(angElemId) {
                 /*Requires jQuery loaded before Angular*/
                 /**
@@ -82,7 +84,8 @@ describe("BoreLoggerByState", function () {
             createBoreJournalButton: element(by.id("button2")),
             continueBoreJournalButton: element(by.id("button3")),
             convertBoreLogButton: element(by.id("button4")),
-            createPdfButton: element(by.id("button5"))
+            createPdfButton: element(by.id("button5")),
+            settingsButton: element(by.id("options-settings-button"))
         }
     };
 
@@ -195,6 +198,15 @@ describe("BoreLoggerByState", function () {
         }
     };
 
+    var StateSettings = function () {
+        return {
+            test: 1+2,
+            allElements: element.all(by.repeater("category in settingsCategories")),
+            settingsClearLocalCacheButton: element(by.buttonText("Clear local cache")),
+            settingsAboutThisAppButton: element(by.buttonText("About this app"))
+        }
+    };
+
     /*Same as New bore log state*/
     var StateResume = function () {
         return new StateNewBoreLog();
@@ -207,6 +219,7 @@ describe("BoreLoggerByState", function () {
     var editLocatesModal = new EditLocatesModal();
     var continueState = new StateContinue();
     var resumeState = new StateResume();
+    var settingsState = new StateSettings();
 
     /**
      * Be sure that each Page Object is obtained
@@ -219,6 +232,7 @@ describe("BoreLoggerByState", function () {
             expect(editLocatesModal.test).toEqual(3);
             expect(continueState.test).toEqual(3);
             expect(resumeState.test).toEqual(3);
+            expect(settingsState.test).toEqual(3);
         });
     });
 
@@ -380,6 +394,14 @@ describe("BoreLoggerByState", function () {
         beforeEach(function () {
             homeState.get();
             homeState.continueBoreJournalButton.click();
+        });
+    });
+
+    describe("Resume state (resuming a Bore Log)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.continueBoreLogButton.click();
+            browserHelper.swipeLeft("#continue-item-0")
         });
     });
 });

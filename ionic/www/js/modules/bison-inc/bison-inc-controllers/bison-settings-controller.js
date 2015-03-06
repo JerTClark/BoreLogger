@@ -72,7 +72,7 @@ angular.module("bisonInc")
                     scope: $scope,
                     templateUrl: configObj.templateUrl,
                     title:configObj.title,
-                    okText:"Oh",
+                    okText:"Got it",
                     okType:"button-positive"
                 });
             };

@@ -369,3 +369,36 @@ var locatesTest = function () {
         nextLine();
     }
 }
+
+/*Try to draw a background*/
+//bisonPDF.setDrawColor(255,255,255);
+//bisonPDF.setFillColor(255,255,255);
+//bisonPDF.rect(160,5,40,50,"FD");
+//bisonPDF.setDrawColor(0,0,0);
+
+
+/*Create the BisonIonic folder*/
+//makeFolderPromise = $cordovaFile.createDir("BisonIonic", false)
+//    .then(function (success) {
+//        nativeUrl = success["nativeURL"];
+//        $cordovaToast.show("This app uses " + nativeUrl, "long", "bottom");
+//        /*Obtain the data for creating a Blob*/
+//        pdfPromise = getPromise(bisonPDFService.getPDF)
+//            .then(function (result) {
+//                data = result;
+//                //$cordovaToast.show("PDF created", "short", "bottom");
+//                /*Write the file from a Blob*/
+//                writeFilePromise = $cordovaFile.writeFile("BisonIonic/" + $scope.fileName, new Blob([data], {type: "application/pdf"}), {"append": false})
+//                    .then(function (success) {
+//                        $cordovaToast.show("Successfully created your file", "short", "bottom");
+//                    }, function (error) {
+//                        pdfError("Failure writing file " + error)
+//                    });
+//            }, function (error) {
+//                pdfError("Failed to create PDF: " + error);
+//            }, function (update) {
+//                pdfUpdate(update);
+//            });
+//    }, function (error) {
+//        pdfError("Error making required folder: " + error)
+//    });
