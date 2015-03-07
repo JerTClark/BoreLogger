@@ -99,12 +99,14 @@ xdescribe("Creating a New Bore Log", function () {
 
     it("should let you open the locates modal once the form is valid", function () {
         /*Fill out the form*/
-        newBoreLogState.goToLocatesModal();
+        newBoreLogState.fillOutNewBoreLogForm();
+        newBoreLogState.goToLocatesModalBoreLog();
         expect(locatesModal.locatesModalTitle.getText()).toEqual("Bore log locates");
     });
 
     it("should let you enter locates, recording them accurately", function () {
-        newBoreLogState.goToLocatesModal();
+        newBoreLogState.fillOutNewBoreLogForm();
+        newBoreLogState.goToLocatesModalBoreLog();
         newBoreLogState.enterMockLocates();
         newBoreLogState.showLocatesList();
         mockLocatesVerifier.verify();

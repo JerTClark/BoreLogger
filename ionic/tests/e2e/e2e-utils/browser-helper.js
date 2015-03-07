@@ -13,17 +13,21 @@ module.exports = function () {
             }, webElement);
         },
         /**
-         * @param elemId The id of the element ("#continue-item-0")
+         * @param elementID The id of the element ("#continue-item-0")
          */
-        swipeLeft: function(elemId) {
-            /**
-             * Requires jQuery loaded before Angular
-             * May not need to use browser.executeScript()
-             */
-            browser.executeScript(function () {
-                angular.element(elemId).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
+        swipeLeft: function (elementID) {
+            var parent = this;
+            parent.id = elementID;
+            browser.executeScript(function (id) {
+                angular.element(id).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
                 angular.element(".item-options").removeClass("invisible");
             });
+        },
+        setWindowSize: function () {
+            browser.manage().window().setSize(1600,1000);
+        },
+        pause: function () {
+            browser.pause();
         }
     }
 };

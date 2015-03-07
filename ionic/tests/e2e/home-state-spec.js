@@ -13,9 +13,11 @@ xdescribe("Home (Options) State", function () {
     beforeEach(function () {
         homeState.get();
     });
+
     it("should begin having the title \"Options\"", function () {
         expect(homeState.ionNavBar.getText()).toEqual("Options");
     });
+
     it("should help me understand how \"by.repeater\" works", function () {
         expect(homeState.allOptions.getText()).toEqual(["Bore Log\nCreate\nContinue",
             "Bore Journal\nCreate\nContinue", "", ""]);//Some not in view
@@ -24,9 +26,11 @@ xdescribe("Home (Options) State", function () {
             "Bore Journal\nCreate\nContinue\nConvert",
             "Create PDF\nCreate", ""]);//Will change if file options are shown
     });
+
     it("should expose the count() function", function () {
         expect(homeState.allOptions.count()).toEqual(4);
     });
+
     it("should take you to General info and back to Options", function () {
         homeState.createBoreLogButton.click();
         expect(newBoreLogState.ionNavBar.getText()).toEqual("Options\nGeneral info");
@@ -37,6 +41,7 @@ xdescribe("Home (Options) State", function () {
         newBoreLogState.backButton.click();//Matches more than one element
         expect(homeState.ionNavBar.getText()).toEqual("Options");
     });
+
     it("should take you to \"Continue\" state showing \"Continue\" or \"Convert\" in the view-title", function () {
         homeState.continueBoreLogButton.click();
         expect(homeState.ionNavBar.getText()).toEqual("Options\nContinue log");
@@ -52,6 +57,7 @@ xdescribe("Home (Options) State", function () {
         homeState.createPdfButton.click();
         expect(homeState.ionNavBar.getText()).toEqual("Options\nConvert log");
     });
+
     it("should have descriptions for each category", function () {
         homeState.boreLogCategory.click();
         homeState.boreJournalCategory.click();
@@ -64,4 +70,5 @@ xdescribe("Home (Options) State", function () {
         homeState.pdfCategory.click();
         expect(desc3.getText()).toEqual("A billable report");
     });
+
 });

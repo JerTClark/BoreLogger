@@ -6,7 +6,6 @@ angular.module("bisonInc").provider("bisonIndexedDB", function () {
     self.databaseVersion = 0;
     self.objectStoreName = "";
     self.db = null;
-    self.tempResults = [];
 
     //-- Return the service (mini-safe)
     this.$get = ["$ionicPopup", function ($ionicPopup) {

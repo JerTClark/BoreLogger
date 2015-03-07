@@ -14,7 +14,8 @@ var BrowserHelper = require("../e2e-utils/browser-helper.js"),
 var browserHelper = new BrowserHelper(),
     locatesModal = new LocatesModal(),
     mock = require("../e2e-mock-data/mock-gen-info-bore-log"),
-    locates = require("../e2e-mock-data/mock-locates.js");
+    locates = require("../e2e-mock-data/mock-locates.js"),
+    mockBoreLogs = require("../e2e-mock-data/mock-multi-bore-log.js");
 
 module.exports = function () {
     return {
@@ -62,26 +63,36 @@ module.exports = function () {
             this.lengthOfBoreInput.sendKeys(mock.lengthOfBore);
             this.dateInput.sendKeys(mock.date);
         },
-        goToLocatesModal: function () {
-            this.fillOutNewBoreLogForm();
+        fillOutNewBoreJournalForm: function () {
+            /*Fill out the form*/
+            browserHelper.scroll(this.customerInput);
+            this.customerInput.sendKeys(mock.customer);
+            this.locationInput.sendKeys(mock.location);
+        },
+        goToLocatesModalBoreLog: function () {
+            browserHelper.scroll(this.topButton);
+            this.topButton.click();
+        },
+        goToLocatesModalBoreJournal: function () {
             browserHelper.scroll(this.topButton);
             this.topButton.click();
         },
         saveAndQuitPopup: {
             cancelButton: element(by.buttonText("Cancel")),
-            okButton: element(by.buttonText("Save"))
+            okButton: element(by.buttonText("OK")),
+            saveButton: element(by.buttonText("Save"))
         },
         saveAndQuit: function () {
             locatesModal.closeButton.click();
             this.bottomButton.click();
-            this.saveAndQuitPopup.okButton.click();
+            this.saveAndQuitPopup.saveButton.click();
         },
         enterMockLocates: function () {
-            for(var locate in locates) {
-                if(locates.hasOwnProperty(locate)) {
+            for (var locate in locates) {
+                if (locates.hasOwnProperty(locate)) {
                     locatesModal.feetInput.sendKeys(locates[locate]["feet"]);
                     locatesModal.inchesInput.sendKeys(locates[locate]["inches"]);
-                    if(locates[locate]["crossing"]) {
+                    if (locates[locate]["crossing"]) {
                         locatesModal.bottomButton.click();
                         locatesModal.popupInput.sendKeys(locates[locate]["crossing"]);
                         locatesModal.popupEnterButton.click();
@@ -94,6 +105,27 @@ module.exports = function () {
         showLocatesList: function () {
             browserHelper.scroll(locatesModal.showLocatesButton);
             locatesModal.showLocatesButton.click();
+        },
+        verifyMockBoreLogGenInfo: function () {
+            expect(this.customerInput.getAttribute("value")).toEqual(mock.customer);
+            expect(this.conduitInput.getAttribute("value")).toEqual(mock.conduit);
+            expect(this.locationInput.getAttribute("value")).toEqual(mock.location);
+            expect(this.lengthOfBoreInput.getAttribute("value")).toEqual(mock.lengthOfBore);
+            expect(this.dateInput.getAttribute("value")).toEqual("2004-04-27");
+        },
+        enterMultipleBoreLogs: function () {
+            /*Be sure to go to New Bore Log state prior to executing*/
+            mockBoreLogs.forEach(function (boreLogObject) {
+                browserHelper.scroll(this.customerInput);
+                this.customerInput.sendKeys(boreLogObject["customer"]);
+                this.conduitInput.sendKeys(boreLogObject["conduit"]);
+                this.locationInput.sendKeys(boreLogObject["location"]);
+                this.lengthOfBoreInput.sendKeys(boreLogObject["lengthOfBore"]);
+                this.dateInput.sendKeys(boreLogObject["date"]);
+                this.goToLocatesModalBoreLog();
+                this.enterMockLocates();
+                this.saveAndQuit();
+            })
         }
     }
 };

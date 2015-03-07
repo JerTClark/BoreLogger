@@ -404,7 +404,7 @@ var locatesTest = function () {
 //    });
 
 xit("should let you enter locates", function () {
-    newBoreLogState.goToLocatesModal();
+    newBoreLogState.goToLocatesModalBoreLog();
     for(var locate in locates) {
         if(locates.hasOwnProperty(locate)) {
             locatesModal.feetInput.sendKeys(locates[locate]["feet"]);

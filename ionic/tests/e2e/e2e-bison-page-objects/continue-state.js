@@ -6,11 +6,18 @@
 module.exports = function () {
     return {
         test: 1 + 2,
-        continueSelectElem: element(by.id("continue-select")),
-        continueSearchInput: element(by.id("continue-search-input")),
+        ionNavBar: element(by.id("bison-nav-bar")),
+        select: element(by.id("continue-select")),
+        searchInput: element(by.id("continue-search-input")),
         /*Use BrowserHelper swipeleft([continue-item-N]) to uncover the buttons*/
-        continueSampleDeleteButton: element(by.id("continue-delete-button-0")),
-        continueSampleSelectButton: element(by.id("continue-select-button-0")),
-        continuePDFDownloadButton: element(by.id("pdfDownload"))
+        deleteButton0: element(by.id("continue-delete-button-0")),
+        selectButton0: element(by.id("continue-select-button-0")),
+        pdfDownloadButton: element(by.id("pdfDownload")),
+        swipeLeftItem0: function () {
+            browser.executeScript(function () {
+                angular.element("#continue-item-0").parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
+                angular.element(".item-options").removeClass("invisible");
+            });
+        }
     }
 };
