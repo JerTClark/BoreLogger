@@ -2,21 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="347212b9-57a6-4b07-8f9f-71a6ec403c3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-constants/bison-inc-constants.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-continue-controller.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-continue-controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drafts/bison-inc-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-utils/browser-helper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/continue-bore-journal-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/continue-bore-log-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/continue-state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/convert-bore-journal-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/create-pdf-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/edit-locates-modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/home-state-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/home-state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/locates-modal-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/locates-modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-journal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-log.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/mock-locates-list-items.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/new-bore-journal-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/new-bore-log-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/new-bore-log-state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/resume-state-spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/settings-state.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/e2e/bison-inc-spec.js" afterPath="$PROJECT_DIR$/tests/e2e/bison-inc-spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-values/bison-inc-values.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-values/bison-inc-values.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-pdf-service.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-pdf-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-settings-controller.js" afterPath="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-settings-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/html/templates/confirm-clear-local-cache.html" afterPath="$PROJECT_DIR$/www/html/templates/confirm-clear-local-cache.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/html/state/continue-state.html" afterPath="$PROJECT_DIR$/www/html/state/continue-state.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic.project" afterPath="$PROJECT_DIR$/ionic.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drafts/old.js" afterPath="$PROJECT_DIR$/drafts/old.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="borelogger.iws" />
@@ -40,50 +50,7 @@
     <favorites_list name="borelogger" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="bison-inc-spec.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/e2e/bison-inc-spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39175257" vertical-offset="6992" max-vertical-offset="7353">
-              <caret line="399" column="4" selection-start-line="399" selection-start-column="4" selection-end-line="399" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#695#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings-state.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/html/state/settings-state.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.392857" vertical-offset="0" max-vertical-offset="361">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.035714" vertical-offset="1447" max-vertical-offset="1900">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bison-inc-spec.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/unit/bison-inc-spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="5624">
-              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -91,31 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/edit-locates-modal.html" />
-        <option value="$PROJECT_DIR$/www/new-bore-log.html" />
-        <option value="$PROJECT_DIR$/www/settings.html" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-settings/bison-settings-controller.js" />
-        <option value="$PROJECT_DIR$/www/continue-state.html" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-options/bison-options-controller.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-continue/bison-continue-controller.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-controller.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-service.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-date-service.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-locate-factory.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-bore-log-model-service.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-category-with-description.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-new-bore-log/bison-new-bore-log-directives.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-input-field-directive.js" />
-        <option value="$PROJECT_DIR$/tests/unit/bison-inc-spec.js" />
-        <option value="$PROJECT_DIR$/drafts/form-controller-draft.js" />
-        <option value="$PROJECT_DIR$/drafts/indexedDB-removed.js" />
-        <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-indexed-db-provider.js" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/lib/bison-pdf-creator/bison-pdf-creator.js" />
-        <option value="$PROJECT_DIR$/www/css/my-fonts.css" />
-        <option value="$PROJECT_DIR$/www/lib/jsPDF/jspdf.js" />
-        <option value="$PROJECT_DIR$/www/html/state/new-bore-log-state.html" />
-        <option value="$PROJECT_DIR$/www/html/modal/locates-modal.html" />
         <option value="$PROJECT_DIR$/www/html/modal/edit-locates-modal.html" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-form-button-panel-directive.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-options-controller.js" />
@@ -132,7 +74,6 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-values/bison-inc-values.js" />
         <option value="$PROJECT_DIR$/www/html/state/continue-state.html" />
-        <option value="$PROJECT_DIR$/drafts/old.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-constants/bison-inc-constants.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-pdf-service.js" />
         <option value="$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-continue-controller.js" />
@@ -141,7 +82,33 @@
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/tests/e2e/resume-state-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/locates-modal-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/new-bore-log-state-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/new-bore-journal-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/continue-state-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/continue-bore-journal-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/convert-bore-journal-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/create-pdf-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/brower-helper.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/home-state.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/continue-bore-log-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/locate-modal.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/home-state-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/edit-locates-modal.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/continue-state.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/settings-state.js" />
         <option value="$PROJECT_DIR$/tests/e2e/bison-inc-spec.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-log.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-journal.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verify.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/mock-locates-list-items.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/locates-modal.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verifier.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/new-bore-log-state.js" />
+        <option value="$PROJECT_DIR$/drafts/old.js" />
+        <option value="$PROJECT_DIR$/tests/e2e/new-bore-log-spec.js" />
       </list>
     </option>
   </component>
@@ -209,6 +176,35 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ionic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,80 +251,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="borelogger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bison-inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="borelogger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bison-inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bison-inc-controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="borelogger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -351,37 +273,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="state" />
+              <option name="myItemId" value="modal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Default">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="borelogger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="borelogger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ionic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e2e" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -407,23 +332,28 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\drafts" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\img" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\lib" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\lib\pdfkit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\tests\e2e\e2e-utils" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\html" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\lib\bison-pdf-creator" />
       <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\node_modules" />
-      <recent name="C:\Users\jerem_000\Desktop\BoreLogger\ionic\www\html\modal" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.karma.conf.js">
+  <component name="RunManager" selected="Node.js.protractor.config.js">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -431,13 +361,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
@@ -448,6 +371,9 @@
       <option name="myExtraArgs" />
       <option name="hasTarget" value="false" />
       <option name="target" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
@@ -514,26 +440,26 @@
     <frame x="-8" y="-8" width="1294" height="734" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2358804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2358804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26035032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44850498" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26035032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44684386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -559,192 +485,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/img/rock-veins-001.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/img/rock-veins-002.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/img/rock-background-001.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/img/rocks-002.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drafts/orig-locates-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.945591" vertical-offset="546" max-vertical-offset="1176">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-locate-factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9251337" vertical-offset="300" max-vertical-offset="945">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-bore-log-model-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/ionic-focus-me-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037433155" vertical-offset="0" max-vertical-offset="561">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drafts/form-controller-draft.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drafts/indexedDB-removed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21390374" vertical-offset="846" max-vertical-offset="1512">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-indexed-db-provider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14973262" vertical-offset="1533" max-vertical-offset="3234">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-date-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1533">
-          <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/jsPDF/doc/symbols/src/jspdf.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32613">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/jsPDF/examples/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6478149" vertical-offset="0" max-vertical-offset="11004">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/jsPDF/dist/jspdf.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="647" max-vertical-offset="3696">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/my-fonts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1680">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/jsPDF/jspdf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="31941" max-vertical-offset="40761">
-          <caret line="1524" column="21" selection-start-line="1524" selection-start-column="21" selection-end-line="1524" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-services/bison-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.048611112" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-input-field-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-controllers/bison-new-bore-log-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4101" max-vertical-offset="6720">
-          <caret line="231" column="50" selection-start-line="231" selection-start-column="50" selection-end-line="231" selection-end-column="50" />
-          <folding>
-            <element signature="e#9828#10210#0" expanded="false" />
-            <element signature="e#10669#10991#0" expanded="false" />
-            <element signature="e#12705#12799#0" expanded="false" />
-            <element signature="e#12890#13032#0" expanded="false" />
-            <element signature="e#13521#13712#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/html/state/new-bore-log-state.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5517242" vertical-offset="918" max-vertical-offset="1533">
-          <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-form-button-panel-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2061856" vertical-offset="3492" max-vertical-offset="4998">
-          <caret line="183" column="56" selection-start-line="183" selection-start-column="56" selection-end-line="183" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/html/modal/locates-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4827586" vertical-offset="861" max-vertical-offset="1911">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/html/modal/edit-locates-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08045977" vertical-offset="252" max-vertical-offset="840">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/modules/bison-inc/bison-inc-directives/bison-category-with-description-directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13815789" vertical-offset="0" max-vertical-offset="304">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.072164945" vertical-offset="0" max-vertical-offset="693">
@@ -791,15 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5824176" vertical-offset="24" max-vertical-offset="570">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drafts/old.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8694158" vertical-offset="7404" max-vertical-offset="7771">
-          <caret line="403" column="9" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1305842" vertical-offset="0" max-vertical-offset="1083">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84879726" vertical-offset="475" max-vertical-offset="1349">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,10 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.035714" vertical-offset="554" max-vertical-offset="1007">
           <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#h4#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190">
           <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,9 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06884058" vertical-offset="0" max-vertical-offset="276">
           <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6082474" vertical-offset="393" max-vertical-offset="1710">
           <caret line="30" column="79" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1843" max-vertical-offset="4978">
           <caret line="98" column="15" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4554" max-vertical-offset="5206">
           <caret line="249" column="24" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8623188" vertical-offset="161" max-vertical-offset="513">
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,7 +637,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.035714" vertical-offset="1447" max-vertical-offset="1900">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="1900">
           <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
           <folding />
         </state>
@@ -930,19 +645,239 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/html/state/settings-state.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857" vertical-offset="0" max-vertical-offset="361">
+        <state vertical-scroll-proportion="-0.17857143" vertical-offset="90" max-vertical-offset="361">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/html/state/new-bore-log-state.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.642857" vertical-offset="724" max-vertical-offset="1387">
+          <caret line="42" column="64" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#ion-toggle#0;n#div#1;n#ion-list#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protractor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65068495" vertical-offset="418" max-vertical-offset="969">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/resume-state-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/locates-modal-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/convert-bore-journal-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/create-pdf-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/continue-bore-journal-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-utils/browser-helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/continue-bore-log-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062295083" vertical-offset="0" max-vertical-offset="305">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/new-bore-journal-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062295083" vertical-offset="0" max-vertical-offset="305">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/edit-locates-modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26027396" vertical-offset="0" max-vertical-offset="399">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/continue-state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87540984" vertical-offset="18" max-vertical-offset="399">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/settings-state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5205479" vertical-offset="0" max-vertical-offset="304">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/home-state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39041096" vertical-offset="0" max-vertical-offset="779">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drafts/bison-inc-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10792">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-gen-info-bore-journal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43606558" vertical-offset="0" max-vertical-offset="305">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/html/modal/locates-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.392857" vertical-offset="1218" max-vertical-offset="1729">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/home-state-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/e2e/bison-inc-spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39175257" vertical-offset="6992" max-vertical-offset="7353">
-          <caret line="399" column="4" selection-start-line="399" selection-start-column="4" selection-end-line="399" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2197" max-vertical-offset="2983">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
           <folding>
             <element signature="e#0#695#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drafts/old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86986303" vertical-offset="7973" max-vertical-offset="8341">
+          <caret line="433" column="3" selection-start-line="433" selection-start-column="3" selection-end-line="433" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/new-bore-log-spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06506849" vertical-offset="0" max-vertical-offset="2242">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verifier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19520548" vertical-offset="0" max-vertical-offset="627">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/new-bore-log-state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86986303" vertical-offset="1437" max-vertical-offset="1976">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates-verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49836066" vertical-offset="0" max-vertical-offset="305">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-mock-data/mock-locates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.739726" vertical-offset="316" max-vertical-offset="703">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/locates-modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06506849" vertical-offset="133" max-vertical-offset="551">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/e2e/e2e-bison-page-objects/mock-locates-list-items.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6746575" vertical-offset="12" max-vertical-offset="380">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

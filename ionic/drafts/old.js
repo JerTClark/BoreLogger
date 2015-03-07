@@ -402,3 +402,33 @@ var locatesTest = function () {
 //    }, function (error) {
 //        pdfError("Error making required folder: " + error)
 //    });
+
+xit("should let you enter locates", function () {
+    newBoreLogState.goToLocatesModal();
+    for(var locate in locates) {
+        if(locates.hasOwnProperty(locate)) {
+            locatesModal.feetInput.sendKeys(locates[locate]["feet"]);
+            locatesModal.inchesInput.sendKeys(locates[locate]["inches"]);
+            if(locates[locate]["crossing"]) {
+                locatesModal.bottomButton.click();
+                locatesModal.popupInput.sendKeys(locates[locate]["crossing"]);
+                locatesModal.popupEnterButton.click();
+            } else {
+                locatesModal.topButton.click();
+            }
+        }
+    }
+    browserHelper.scroll(locatesModal.showLocatesButton);
+    locatesModal.showLocatesButton.click();
+    browserHelper.scroll(mockLocatesListItems.locateListItem0);
+    expect(mockLocatesListItems.locateListItem0.getText()).toEqual(verifyLocates[0]);
+    browserHelper.scroll(mockLocatesListItems.locateListItem1);
+    expect(mockLocatesListItems.locateListItem1.getText()).toEqual(verifyLocates[1]);
+    browserHelper.scroll(mockLocatesListItems.locateListItem2);
+    expect(mockLocatesListItems.locateListItem2.getText()).toEqual(verifyLocates[2]);
+    browserHelper.scroll(mockLocatesListItems.locateListItem3);
+    expect(mockLocatesListItems.locateListItem3.getText()).toEqual(verifyLocates[3]);
+    browserHelper.scroll(mockLocatesListItems.locateListItem4);
+    expect(mockLocatesListItems.locateListItem4.getText()).toEqual(verifyLocates[4]);
+    newBoreLogState.saveAndQuit();
+});
