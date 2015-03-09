@@ -23,7 +23,12 @@ exports.config = {
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true // Use colors in the command line report.
+    },
+
+    onPrepare: function () {
+        //browser.manage().window().setSize(1000, 1000);
     }
+
 };
 
 //Installing and Starting the Server

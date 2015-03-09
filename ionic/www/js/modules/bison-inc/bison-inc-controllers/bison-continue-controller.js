@@ -1,9 +1,9 @@
 angular.module("bisonInc")
     .controller("ContinueController", ["$scope", "bisonIndexedDB",
         "bisonService", "$timeout", "$state", "bisonPDFService",
-        "$cordovaFile", "$q", "$cordovaToast",
+        "$cordovaFile", "$q", "$cordovaToast", "$ionicPopup",
         function ($scope, bisonIndexedDB, bisonService, $timeout, $state,
-                  bisonPDFService, $cordovaFile, $q, $cordovaToast) {
+                  bisonPDFService, $cordovaFile, $q, $cordovaToast, $ionicPopup) {
 
             /**
              * Display the type of documentation that is to be resumed
@@ -48,9 +48,17 @@ angular.module("bisonInc")
              * @param id
              */
             $scope.deleteDatabaseRecord = function (id) {
-                //$scope.bisonRecords.splice(index, 1);
-                $scope.bisonRecords = [];
-                bisonIndexedDB.remove($scope.bisonRecords, $scope.mySelection["value"]["name"] || "Type", "type", $scope.type, id, callback);
+                var confirmPopup = $ionicPopup.confirm({
+                    title: "Delete this record",
+                    template: "<pre>Are you sure you want to?</pre>"
+                }).then(function (res) {
+                    if (res) {
+                        $scope.bisonRecords = [];
+                        bisonIndexedDB.remove($scope.bisonRecords, $scope.mySelection["value"]["name"] || "Type", "type", $scope.type, id, callback);
+                    } else {
+
+                    }
+                });
             };
 
             //Callback for every database operation to be done from within $apply()
@@ -163,76 +171,26 @@ angular.module("bisonInc")
              */
             $scope.saveData = function (fileName) {
                 $scope.fileName = fileName;
-                //$scope.targetPath = "";
-                //$scope.fileName = fileName;
-                //var nativeUrl,
-                //    data;
-
-                //var obtainPDF = function () {
-                //    /*Handle errors*/
-                //    function pdfError(message) {
-                //        $cordovaToast.show(message, "long", "bottom");
-                //    }
-                //
-                //    /*Generic promise factory*/
-                //    function getPromise(asyncTask) {
-                //        var q = $q.defer();
-                //        asyncTask(q);
-                //        return q.promise;
-                //    }
-                //
-                //    /*Android*/
-                //    $cordovaFile.createDir("BisonIonic", false)
-                //        .then(function (result) {
-                //            nativeUrl = result["nativeURL"];
-                //            $cordovaToast.show("Saving to " + nativeUrl, "long", "bottom");
-                //            /*Obtain the data for creating a Blob*/
-                //            getPromise(bisonPDFService.getPDF)
-                //                .then(function (result) {
-                //                data = result;
-                //                /*Write the file from a Blob*/
-                //                $cordovaFile.writeFile("BisonIonic/" + $scope.fileName, new Blob([data],
-                //                    {type: "application/pdf"}), {"append": false});
-                //                    $cordovaToast.show("A", "long", "bottom");
-                //                }).then(function () {
-                //                    $cordovaToast.show("B", "long", "bottom");
-                //                });
-                //        }).catch(function (error) {
-                //            pdfError("Failed to create PDF: " + error);
-                //        }).finally(function () {
-                //            $cordovaToast.show("C", "long", "bottom");
-                //            //$ionicLoading.hide();
-                //        });
-                //};
-
                 angular.element("#pdfDownload").on("click", function () {
                     if (window.chrome) {
                         bisonPDFService.getPDF();
                     } else {
-                        /*Android*/
+                        /*Create a PDF on Android device*/
                         androidPDF();
                     }
                 });
             };
-
             function androidPDF() {
                 $scope.targetPath = "";
                 var nativeUrl,
                     data;
 
-                /*Generic promise factory*/
-                //function getPromise(asyncTask) {
-                //    var q = $q.defer();
-                //    asyncTask(q);
-                //    return q.promise;
-                //}
                 function getBisonPDF() {
                     var q = $q.defer();
                     bisonPDFService.getPDF(q);
                     return q.promise;
                 }
 
-                /*Android*/
                 $cordovaFile.createDir("BisonIonic", false)
                     .then(function (result) {
                         nativeUrl = result["nativeURL"];
@@ -253,5 +211,4 @@ angular.module("bisonInc")
                         $cordovaToast("Failed to create PDF: " + error, "long", "bottom");
                     });
             }
-
         }]);

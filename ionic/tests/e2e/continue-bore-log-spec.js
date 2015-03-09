@@ -21,7 +21,11 @@ describe("Continuing a Bore Log", function () {
         homeState.createBoreLogButton.click();
     });
 
-    it("should display and entry added to the database and allow a user to resume interaction with it", function () {
+    xit("should let user add, resume interaction with, and delete a record from indexedDB", function () {
+        var currentCount = 0;
+        continueBoreLogState.records.count().then(function (num) {
+            currentCount = num;
+        });
         newBoreLogState.fillOutNewBoreLogForm();
         newBoreLogState.goToLocatesModalBoreLog();
         newBoreLogState.enterMockLocates();
@@ -29,20 +33,38 @@ describe("Continuing a Bore Log", function () {
         newBoreLogState.saveAndQuit();
         browserHelper.scroll(homeState.continueBoreLogButton);
         homeState.continueBoreLogButton.click();
-        continueBoreLogState.swipeLeftItem0();
+        expect(continueBoreLogState.records.count()).toEqual(currentCount + 1);
+        browserHelper.swipeLeft("#continue-item-0");
+        browserHelper.waitForElement(continueBoreLogState.selectButton0);
         continueBoreLogState.selectButton0.click();
         expect(homeState.ionNavBar.getText()).toEqual("Continue log\nGeneral info");
         newBoreLogState.verifyMockBoreLogGenInfo();
         newBoreLogState.goToLocatesModalBoreLog();
         newBoreLogState.showLocatesList();
         verifier.verify();
+        newBoreLogState.saveAndQuit();
+        browserHelper.swipeLeft("#continue-item-0");
+        browserHelper.waitForElement(continueBoreLogState.deleteButton0);
+        continueBoreLogState.deleteButton0.click();
+        browserHelper.waitForElement(continueBoreLogState.confirmOK);
+        continueBoreLogState.confirmOK.click();
+        if(currentCount === 0) {
+            expect(continueBoreLogState.records.count()).toEqual(0);
+        } else {
+            expect(continueBoreLogState.records.count()).toEqual(currentCount - 1);
+        }
     });
 
-    xit("should have a select element that reorders the database entries", function () {
+    xit("should be able to record each bore log as a separate database entry", function () {
+        var currentCount = 0;
+        continueBoreLogState.records.count().then(function (num) {
+            currentCount = num;
+        });
+        newBoreLogState.enterMultipleBoreLogs();
+        newBoreLogState.backButton.click();
+        homeState.continueBoreLogButton.click();
+        browserHelper.pause();
+        expect(continueBoreLogState.records.count()).toEqual(currentCount + 5);
+    }, 100000);
 
-    });
-
-    xit("should reveal saved database entries", function () {
-
-    });
 });

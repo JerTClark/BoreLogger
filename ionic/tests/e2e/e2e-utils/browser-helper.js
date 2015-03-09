@@ -13,21 +13,25 @@ module.exports = function () {
             }, webElement);
         },
         /**
-         * @param elementID The id of the element ("#continue-item-0")
+         * @arguments[0] {String} Use an element's id attribute
          */
-        swipeLeft: function (elementID) {
-            var parent = this;
-            parent.id = elementID;
-            browser.executeScript(function (id) {
-                angular.element(id).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
-                angular.element(".item-options").removeClass("invisible");
-            });
+        swipeLeft: function () {
+            var elemID = arguments[0];
+            if(elemID) {
+                browser.executeScript(function () {
+                    angular.element(arguments[0]).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
+                    angular.element(".item-options").removeClass("invisible");
+                }, elemID);
+            }
         },
-        setWindowSize: function () {
-            browser.manage().window().setSize(1600,1000);
-        },
-        pause: function () {
-            browser.pause();
+        /**
+         * @argument[0] {ElementFinder} Use a page object's element or an element(locator)
+         */
+        waitForElement: function () {
+            var element = arguments[0];
+            if(element) {
+                browser.driver.wait(protractor.until.elementIsVisible(element));
+            }
         }
     }
 };

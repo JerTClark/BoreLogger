@@ -90,8 +90,12 @@ module.exports = function () {
         enterMockLocates: function () {
             for (var locate in locates) {
                 if (locates.hasOwnProperty(locate)) {
-                    locatesModal.feetInput.sendKeys(locates[locate]["feet"]);
-                    locatesModal.inchesInput.sendKeys(locates[locate]["inches"]);
+                    if (locates[locate]["feet"]) {
+                        locatesModal.feetInput.sendKeys(locates[locate]["feet"]);
+                    }
+                    if (locates[locate]["inches"]) {
+                        locatesModal.inchesInput.sendKeys(locates[locate]["inches"]);
+                    }
                     if (locates[locate]["crossing"]) {
                         locatesModal.bottomButton.click();
                         locatesModal.popupInput.sendKeys(locates[locate]["crossing"]);
@@ -107,24 +111,38 @@ module.exports = function () {
             locatesModal.showLocatesButton.click();
         },
         verifyMockBoreLogGenInfo: function () {
+            browserHelper.scroll(this.customerInput);
             expect(this.customerInput.getAttribute("value")).toEqual(mock.customer);
+            browserHelper.scroll(this.conduitInput);
             expect(this.conduitInput.getAttribute("value")).toEqual(mock.conduit);
+            browserHelper.scroll(this.locationInput);
             expect(this.locationInput.getAttribute("value")).toEqual(mock.location);
+            browserHelper.scroll(this.locationCategory);
             expect(this.lengthOfBoreInput.getAttribute("value")).toEqual(mock.lengthOfBore);
+            browserHelper.scroll(this.dateInput);
             expect(this.dateInput.getAttribute("value")).toEqual("2004-04-27");
         },
         enterMultipleBoreLogs: function () {
             /*Be sure to go to New Bore Log state prior to executing*/
+            var HomeState = require("./home-state.js");
+            var homeState = new HomeState(),
+                self = this;
             mockBoreLogs.forEach(function (boreLogObject) {
-                browserHelper.scroll(this.customerInput);
-                this.customerInput.sendKeys(boreLogObject["customer"]);
-                this.conduitInput.sendKeys(boreLogObject["conduit"]);
-                this.locationInput.sendKeys(boreLogObject["location"]);
-                this.lengthOfBoreInput.sendKeys(boreLogObject["lengthOfBore"]);
-                this.dateInput.sendKeys(boreLogObject["date"]);
-                this.goToLocatesModalBoreLog();
-                this.enterMockLocates();
-                this.saveAndQuit();
+                browserHelper.scroll(self.customerInput);
+                self.customerInput.sendKeys(boreLogObject["customer"]);
+                browserHelper.scroll(self.conduitInput);
+                self.conduitInput.sendKeys(boreLogObject["conduit"]);
+                browserHelper.scroll(self.locationInput);
+                self.locationInput.sendKeys(boreLogObject["location"]);
+                browserHelper.scroll(self.lengthOfBoreInput);
+                self.lengthOfBoreInput.sendKeys(boreLogObject["length"]);
+                browserHelper.scroll(self.dateInput);
+                self.dateInput.sendKeys(boreLogObject["date"]);
+                self.goToLocatesModalBoreLog();
+                self.enterMockLocates();
+                self.saveAndQuit();
+                browserHelper.scroll(homeState.createBoreLogButton);
+                homeState.createBoreLogButton.click();
             })
         }
     }

@@ -11,7 +11,7 @@ module.exports = {
     },
     locate1: {
         feet: "4",
-        inches: "5",
+        inches: "",
         crossing: ""
     },
     locate2: {

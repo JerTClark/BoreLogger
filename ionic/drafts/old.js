@@ -432,3 +432,45 @@ xit("should let you enter locates", function () {
     expect(mockLocatesListItems.locateListItem4.getText()).toEqual(verifyLocates[4]);
     newBoreLogState.saveAndQuit();
 });
+
+//$scope.targetPath = "";
+//$scope.fileName = fileName;
+//var nativeUrl,
+//    data;
+
+//var obtainPDF = function () {
+//    /*Handle errors*/
+//    function pdfError(message) {
+//        $cordovaToast.show(message, "long", "bottom");
+//    }
+//
+//    /*Generic promise factory*/
+//    function getPromise(asyncTask) {
+//        var q = $q.defer();
+//        asyncTask(q);
+//        return q.promise;
+//    }
+//
+//    /*Android*/
+//    $cordovaFile.createDir("BisonIonic", false)
+//        .then(function (result) {
+//            nativeUrl = result["nativeURL"];
+//            $cordovaToast.show("Saving to " + nativeUrl, "long", "bottom");
+//            /*Obtain the data for creating a Blob*/
+//            getPromise(bisonPDFService.getPDF)
+//                .then(function (result) {
+//                data = result;
+//                /*Write the file from a Blob*/
+//                $cordovaFile.writeFile("BisonIonic/" + $scope.fileName, new Blob([data],
+//                    {type: "application/pdf"}), {"append": false});
+//                    $cordovaToast.show("A", "long", "bottom");
+//                }).then(function () {
+//                    $cordovaToast.show("B", "long", "bottom");
+//                });
+//        }).catch(function (error) {
+//            pdfError("Failed to create PDF: " + error);
+//        }).finally(function () {
+//            $cordovaToast.show("C", "long", "bottom");
+//            //$ionicLoading.hide();
+//        });
+//};

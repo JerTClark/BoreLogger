@@ -32,10 +32,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                  * If $stateParams has an actual parameter "id"
                  */
                 if($stateParams["id"]) {
-                    ////TODO delete debug console.Log()'s
-                    console.log("$stateParams: " + $stateParams);
-                    console.log("Active Log: " + bisonService.getActiveLog());
-
                     //Update the view
                     $scope.boreLogModel[0]["value"] = bisonService.getActiveLog()["customer"];
                     $scope.boreLogModel[1]["value"] = bisonService.getActiveLog()["conduit"];
@@ -50,6 +46,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                         angular.element("#1-input").val(bisonService.getActiveLog()["conduit"]);
                         angular.element("#2-input").val(bisonService.getActiveLog()["location"]);
                         angular.element("#3-input").val(bisonService.getActiveLog()["length"]);
+                        //TODO Resolve how to set the Date input
                         //angular.element("#4-input").val(new Date(bisonService.getActiveLog()["dateObj"]["originalDate"]));
                     }, 500);
                     hasBeenCreated = true;//Keep this after "Update the view" as each assignment sets to false
@@ -84,7 +81,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
              * drillPipeLengths: "10" and "15"
              */
             $scope.drillPipeBoolean = {value: false};
-            //Default to "10", the most commonly used drillPipeLength
+            /*Default to "10", the most commonly used drillPipeLength*/
             $scope.drillPipeLength = "10";
             $scope.$watchCollection("drillPipeBoolean", function (newValue, oldValue) {
                 //Set drillPipeLength to "15" when true (toggled)
@@ -92,7 +89,7 @@ angular.module("bisonInc").controller('NewBoreLogController',
                     $scope.drillPipeLength = "15";
                     angular.element("#drillPipeCategoryHeader").addClass("hide");
                 } else {
-                    //Set drillPipeLength to "10" when false (un-toggled)
+                    /*Set drillPipeLength to "10" when false (un-toggled)*/
                     $scope.drillPipeLength = "10";
                 }
                 //bisonService.getActiveLog()["drillPipe"] = $scope.drillPipeLength;
@@ -142,9 +139,8 @@ angular.module("bisonInc").controller('NewBoreLogController',
                                             bisonService.getActiveLog()["drillPipe"] = $scope.drillPipeLength;
                                         }
                                     }/*end if*/
-                                    //TODO delete debug console.Log()'s
-                                    console.log(bisonService.getActiveLog());
                                     bisonIndexedDB.add(bisonService.getActiveLog());
+                                    bisonService.setActiveLog(undefined);
                                     $timeout(function () {
                                         history.back();
                                     }, 1000);
@@ -243,9 +239,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                      * back in the nav stack
                      */
                     hasBeenCreated = true;
-
-                    //TODO delete debug console.Log()'s
-                    console.log(JSON.stringify(bisonService.getActiveLog()));
                 }
             };
 
@@ -262,6 +255,9 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 var feet = angular.element("#feet").val(),
                     inches = angular.element("#inches").val();
                 var crossing = crossingParam;
+                if(!feet) {feet = 0;}
+                if(!inches) {inches = 0;}
+
                 if(!bisonService.getActiveLog().hasOwnProperty("locates")) {
                     bisonService.getActiveLog()["locates"] = [];
                 }
@@ -272,8 +268,6 @@ angular.module("bisonInc").controller('NewBoreLogController',
                 bisonLocateFactory.add(locate, bisonService.getActiveLog()["locates"]);//Add the locate to the active log
                 $scope.numberOfLocates = bisonService.getActiveLog()["locates"].length;//Update the numberOfLocates
                 bisonIndexedDB.add(bisonService.getActiveLog());//-- Update the database object
-                //TODO delete debug console.Log()'s
-                console.log("Current status of locates:\n" + bisonService.getActiveLog()["locates"]);
             };
 
             /**
@@ -302,24 +296,11 @@ angular.module("bisonInc").controller('NewBoreLogController',
             $scope.updateLocate = function (value, fromIndex, toIndex) {
                 //The work is handled by bisonLocateFactory.update()
                 bisonLocateFactory.update(bisonService.getActiveLog()["locates"], value, fromIndex, toIndex);
-                //TODO delete debug console.Log()'s
-                console.log(bisonService.getActiveLog()["locates"].toString());
                 //Update IndexedDB via bisonIndexedDB service
                 bisonIndexedDB.add(bisonService.getActiveLog());
             };
 
             //-- UI effects
-            /**
-             * Show the descriptions of each category via slideToggle()
-             * @param $event {Object} Used to get the $event.target DOM elem
-             * to wrap in angular.element()
-             */
-            //TODO delete once sure
-            //$scope.showDescription = function ($event) {
-            //    angular.element($event.target).toggleClass('activated');
-            //    angular.element($event.target).siblings('p').slideToggle(200);
-            //};
-
             /**
              * Handles the CSS effects added to certain buttons
              * @param $event {Object} Used to get the $event.target DOM elem
