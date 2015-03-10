@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.borelogger323403" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Bison, Inc.</name>
+  <name>Bore Logger</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Bison, Inc.'s in-house app for recording drill job data
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="jercla317@gmail.com" href="https://github.com/JerTClark">
+      JerTClark
     </author>
   <content src="index.html"/>
   <access origin="*"/>

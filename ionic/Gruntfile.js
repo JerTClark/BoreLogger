@@ -7,8 +7,8 @@ module.exports = function (grunt) {
         /*Properties here are used for creating and deleting required folders*/
         makeFolders: {
             options: {
-                buildFolder: "/* path to the production build folder */",
-                tempFolder: "/* a temporary folder for holding pre-minified files-- will be deleted*/"
+                buildFolder: "www/build",
+                tempFolder: "www/temp"
             }
         }
     });
@@ -18,7 +18,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-uglify");
 
-    /* watch config */
+    /**
+     * NOTE: > ionic serve while developing reloads on changes
+     */
     grunt.config("watch", {
         watchJS: {
             files: [/* javascript file to watch */],
@@ -31,7 +33,7 @@ module.exports = function (grunt) {
             files: [/* html files to watch */],
             tasks: [/* tasks to do when they change */],
             options: {
-                livereload: true
+                livereload: false
             }
         }
     });
@@ -40,7 +42,7 @@ module.exports = function (grunt) {
     grunt.config("concat", {
         concatJS: {
             src: [/* javascript file to concatenate */],
-            dest: ""/* put them all in this file */,
+            dest: "www/build/bison.js",
             options: {
                 separator: ";"
             }

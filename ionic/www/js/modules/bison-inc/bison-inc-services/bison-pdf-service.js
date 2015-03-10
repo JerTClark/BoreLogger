@@ -1,8 +1,8 @@
 angular.module("bisonInc")
     .service("bisonPDFService", ["bisonService", "BisonPDFValues",
-        "BisonPDFLogoData", "$q", "$cordovaToast",
-        function (bisonService, BisonPDFValues, BisonPDFLogoData, $q,
-                  $cordovaToast) {
+        "BisonPDFLogoDataURLJPEG", "BisonPDFLogoDataURLPNG", "$q", "$cordovaToast",
+        function (bisonService, BisonPDFValues, BisonPDFLogoDataURLJPEG,
+                  BisonPDFLogoDataURLPNG, $q, $cordovaToast) {
             var self = this;
             var output;
             var bisonPDF = {};
@@ -68,44 +68,25 @@ angular.module("bisonInc")
                 return q.promise;
             }
 
-            /*Show a toast*/
-            function toast(message) {
-                if (!window.chrome) {
-                    $cordovaToast.show(message, "short", "bottom");
-                }
-            }
-
             /**
              * Handles order of code execution
              */
             var createPDF = function (promise) {
-                /*Show a toast*/
-                function toast(message) {
-                    if (!window.chrome) {
-                        $cordovaToast.show(message, "short", "bottom");
-                    }
-                }
-
                 getPromise(init)
                     .then(function (result) {
-                        toast(result);
                         getPromise(writePDFHeader, result);
                     }).then(function (result) {
-                        //toast(result);
                         getPromise(addImage);
                     }).then(function (result) {
-                        //toast(result);
                         drawSecondLine();
                         getPromise(writeLocates);
                     }).then(function (result) {
-                        //toast(result);
-                        toast("Saving your PDF");
                         savePDF(promise);
                     }).catch(function (error) {
                         console.log("Error: " + error);
-                        toast("An error occurred creating the PDF: " + error);
+                        $cordovaToast.show("An error occurred creating the PDF: "
+                            + error, "long", "bottom");
                     });
-
             };
 
             /*Setter*/
@@ -125,7 +106,6 @@ angular.module("bisonInc")
              * Writing the Header text
              */
             var writePDFHeader = function (q) {
-                console.log(bisonPDF);
                 /*Write the Header*/
                 bisonPDF.setTextColor(255, 0, 0);
                 bisonPDF.setFont(BisonPDFValues.FONT.TIMES);
@@ -204,36 +184,18 @@ angular.module("bisonInc")
                 nextLine();
                 /*Header ends by adding a new line buffer*/
                 q.resolve("Header done");
-                //return "Header done";
-            };
-
-            /**
-             * Writing the Locates involves the potential
-             * for outgrowing the current page, but nextLine()
-             * handles checking for that
-             */
-            var writeLocates = function (q) {
-                var counter = 1;
-                boreLogToConvert["locates"].forEach(function (locate) {
-                    bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
-                    + BisonPDFValues.PUNC.SPACE
-                    + counter + BisonPDFValues.PUNC.COLON
-                    + BisonPDFValues.PUNC.SPACE
-                    + BisonPDFValues.PUNC.SPACE + locate);
-                    counter++;
-                    nextLine();
-                });
-                q.resolve("Locates written");
-                //return "Locates written";
             };
 
             /**
              * Add the Bison Logo to the PDF
              */
             var addImage = function (q) {
-                bisonPDF.addImage(BisonPDFLogoData, "PNG", 160, 5, 40, 50);
+                if(window.chrome) {
+                    /*BisonPDFLogoData is a Data URL per the jsPDF instructions*/
+                    bisonPDF.addImage(BisonPDFLogoDataURLJPEG, "JPEG", 160, 5, 40, 50, "bison");
+                    bisonPDF.addImage("bison", 160, 5, 40, 50);
+                }
                 q.resolve("Image added");
-                //return "Image added";
             };
 
             /**
@@ -246,6 +208,46 @@ angular.module("bisonInc")
             };
 
             /**
+             * Writing the Locates involves the potential
+             * for outgrowing the current page, but nextLine()
+             * handles checking for that
+             */
+            var writeLocates = function (q) {
+                var counter = 1;
+                boreLogToConvert["locates"].forEach(function (locate) {
+                    if (counter < 10) {
+                        bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
+                        + BisonPDFValues.PUNC.SPACE
+                        + counter + BisonPDFValues.PUNC.COLON
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE + locate);
+                    } else {
+                        bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
+                        + BisonPDFValues.PUNC.SPACE
+                        + counter + BisonPDFValues.PUNC.COLON
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE + locate);
+                    }
+                    counter++;
+                    nextLine();
+                });
+                q.resolve("Locates written");
+            };
+
+
+            /**
+             * Everything here is just experimental
+             * @type {Promise}
+             */
+            /*Clean-up*/
+            var cleanup = function () {
+                resetXY();
+                bisonPDF = new Object(undefined);
+                boreLogToConvert = new Object(undefined);
+            };
+
+            /**
              * LAST The save() function is called LAST
              * The variable output is the item returned from getPDF()
              */
@@ -253,7 +255,6 @@ angular.module("bisonInc")
                 if (promise) {
                     /*Save using the PDF buffer*/
                     promise.resolve(bisonPDF.output());
-                    //promise.resolve(bisonPDF.save(output));
                     cleanup();
                 } else {
                     /*Saves the doc using data-uri*/
@@ -274,14 +275,4 @@ angular.module("bisonInc")
                 }
             };
 
-            /**
-             * Everything here is just experimental
-             * @type {Promise}
-             */
-            /*Clean-up*/
-            var cleanup = function () {
-                resetXY();
-                bisonPDF = {};
-                boreLogToConvert = {};
-            };
         }]);

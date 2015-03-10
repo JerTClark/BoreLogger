@@ -42,13 +42,13 @@ angular.module("bisonInc")
                     class: ''
                 },
                 {
-                    title: "Browse Files", description: "Choose from the file types below",
+                    title: "Browse", description: "Choose from the file types below",
                     buttons: [
                         {name: "Logs", func: "", code: 6},
                         {name: "Journals", func: "", code: 7},
                         {name: "PDFs", func: "", code: 8}
                     ],
-                    class: 'hide'
+                    class: ''
                 }
             ];
 
@@ -60,6 +60,7 @@ angular.module("bisonInc")
                         $state.go('new-bore-log');
                         break;
                     case 1:
+                    case 6:
                         bisonService.setType("log");
                         $state.go("continue");
                         break;
@@ -68,6 +69,7 @@ angular.module("bisonInc")
                         $state.go('new-bore-log');
                         break;
                     case 3:
+                    case 7:
                         bisonService.setType("journal");
                         $state.go("continue");
                         break;
@@ -78,6 +80,9 @@ angular.module("bisonInc")
                     case 5:
                         bisonService.setType("convertToPDF");
                         $state.go("continue");
+                        break;
+                    case 8:
+                        $state.go("bison-files");
                         break;
                     default :
                         $scope.myLogger(button.name);

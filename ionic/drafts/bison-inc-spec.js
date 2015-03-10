@@ -36,14 +36,16 @@ describe("BoreLoggerByState", function () {
                     arguments[0].scrollIntoView();
                 }, webElement);
             },
-            /**/
-            swipeLeft: function(angElemId) {
+            /**
+             * @param elemId The id of the element ("#continue-item-0")
+             */
+            swipeLeft: function(elemId) {
                 /*Requires jQuery loaded before Angular*/
                 /**
                  * May not need to use browser.executeScript()
                  */
                 browser.executeScript(function () {
-                    angular.element(angElemId).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
+                    angular.element(elemId).parent().css("-webkit-transform", "translate3d(-139px, 0px, 0px)");
                     angular.element(".item-options").removeClass("invisible");
                 });
             }
@@ -82,7 +84,8 @@ describe("BoreLoggerByState", function () {
             createBoreJournalButton: element(by.id("button2")),
             continueBoreJournalButton: element(by.id("button3")),
             convertBoreLogButton: element(by.id("button4")),
-            createPdfButton: element(by.id("button5"))
+            createPdfButton: element(by.id("button5")),
+            settingsButton: element(by.id("options-settings-button"))
         }
     };
 
@@ -115,8 +118,8 @@ describe("BoreLoggerByState", function () {
             dateCategoryDescription: element(by.cssContainingText(".bison-description", "start or end of the job")),
             drillPipeCategoryDescription: element(by.cssContainingText(".bison-description", "length of drill pipe used")),
             /*Buttons*/
-            topButton: element(by.buttonText("Double-check")),
-            bottomButton: element(by.buttonText("Continue")),
+            topButton: element(by.buttonText("Save & Add locates")),
+            bottomButton: element(by.buttonText("Save & Quit")),
             editLocatesButton: element(by.buttonText("Edit locates")),
             /*Inputs*/
             customerInput: element(by.id("0-input")),
@@ -125,7 +128,60 @@ describe("BoreLoggerByState", function () {
             lengthOfBoreInput: element(by.id("3-input")),
             dateInput: element(by.id("4-input")),
             /*Toggle*/
-            drillPipeToggle: element(by.id("drillPipeToggle"))
+            //drillPipeToggle: element(by.id("drillPipeToggle")),
+            drillPipeToggle: element(by.css(".toggle-assertive")),
+            /*Text changed by toggle*/
+            drillPipeToggleText: element(by.binding("drillPipeLength")),
+            fillOutNewBoreLogForm: function () {
+                /*Fill out the form*/
+                browserHelper.scroll(newBoreLogState.customerInput);
+                newBoreLogState.customerInput.sendKeys(newBoreLogState.boreLogMock.customer);
+                newBoreLogState.conduitInput.sendKeys(newBoreLogState.boreLogMock.conduit);
+                newBoreLogState.locationInput.sendKeys(newBoreLogState.boreLogMock.location);
+                newBoreLogState.lengthOfBoreInput.sendKeys(newBoreLogState.boreLogMock.lengthOfBore);
+                newBoreLogState.dateInput.sendKeys(newBoreLogState.boreLogMock.date);
+            },
+            /*Mock data*/
+            boreLogMock: {
+                customer: "My Customer",
+                conduit: "(1) Piece\" ofPipe",
+                location: "1234 DrillBit Street",
+                lengthOfBore: "500",
+                date: "04272004"
+            },
+            /*Mock data*/
+            boreJournalMock: {
+                customer: "My Customer",
+                location: "1234 DrillBit Street"
+            },
+            /*Mock data*/
+            locatesMock: {
+                locate0: {
+                    feet:"3",
+                    inches:"4",
+                    crossing:""
+                },
+                locate1: {
+                    feet:"4",
+                    inches:"5",
+                    crossing:""
+                },
+                locate2: {
+                    feet:"5",
+                    inches:"6",
+                    crossing:"AT&T @ 3\' Top"
+                },
+                locate3: {
+                    feet:"6",
+                    inches:"7",
+                    crossing:"Water @ 4\' Btm"
+                },
+                locate4: {
+                    feet:"7",
+                    inches:"6",
+                    crossing:"Creek"
+                }
+            }
         }
     };
 
@@ -149,7 +205,8 @@ describe("BoreLoggerByState", function () {
             locatesModalHideHeaderSpan: element(by.id("modal-hide-header")),
             locatesModalPopupInput: element(by.id("popupInput")),
             locatesModalPopupCancelButton: element(by.cssContainingText("button-positive","Cancel")),
-            locatesModalPopupEnterButton: element(by.cssContainingText("button-positive","Enter"))
+            locatesModalPopupEnterButton: element(by.cssContainingText("button-positive","Enter")),
+            locatesModalListItem0: element(by.id("locate-modal-value-0"))
             /**
              * The Locates list
              * Each locate is shown as text in a span with
@@ -195,6 +252,15 @@ describe("BoreLoggerByState", function () {
         }
     };
 
+    var StateSettings = function () {
+        return {
+            test: 1+2,
+            allElements: element.all(by.repeater("category in settingsCategories")),
+            settingsClearLocalCacheButton: element(by.buttonText("Clear local cache")),
+            settingsAboutThisAppButton: element(by.buttonText("About this app"))
+        }
+    };
+
     /*Same as New bore log state*/
     var StateResume = function () {
         return new StateNewBoreLog();
@@ -207,11 +273,12 @@ describe("BoreLoggerByState", function () {
     var editLocatesModal = new EditLocatesModal();
     var continueState = new StateContinue();
     var resumeState = new StateResume();
+    var settingsState = new StateSettings();
 
     /**
      * Be sure that each Page Object is obtained
      */
-    describe("Passing basic test", function () {
+    xdescribe("Passing basic test", function () {
         it("should pass the basic test", function () {
             expect(homeState.test).toEqual(3);
             expect(newBoreLogState.test).toEqual(3);
@@ -219,6 +286,7 @@ describe("BoreLoggerByState", function () {
             expect(editLocatesModal.test).toEqual(3);
             expect(continueState.test).toEqual(3);
             expect(resumeState.test).toEqual(3);
+            expect(settingsState.test).toEqual(3);
         });
     });
 
@@ -290,13 +358,73 @@ describe("BoreLoggerByState", function () {
             homeState.get();
             homeState.createBoreLogButton.click();
         });
-        it("should have 6 categories and 6 descriptions", function () {
+        xit("should have 6 categories and 6 descriptions", function () {
             /**
-             * Note: the +1 is representative of the drillPipeLength
-             * Category (which is not included in the ngRepeat
+             * Note: the value of 1 is representative of the drillPipeLength
+             * Category (which is not to be included in the ngRepeat
              */
             var theDrillPipeCategory = 1;
-            expect(newBoreLogState.allElements.count() + theDrillPipeCategory).toEqual(6);
+            expect(newBoreLogState.allElements.count()).toEqual(6 - theDrillPipeCategory);
+
+            newBoreLogState.customerCategory.click();
+            expect(newBoreLogState.customerCategoryDescription.getText()).toEqual("the company for whom the work is performed");
+            newBoreLogState.customerCategory.click();
+
+            newBoreLogState.conduitCategory.click();
+            expect(newBoreLogState.conduitCategoryDescription.getText()).toEqual("product (for ex., (1) 12\" Plastic)");
+            newBoreLogState.conduitCategory.click();
+
+            newBoreLogState.locationCategory.click();
+            expect(newBoreLogState.locationCategoryDescription.getText()).toEqual("place most readily associated with the job site");
+            newBoreLogState.locationCategory.click();
+
+            browserHelper.scroll(newBoreLogState.lengthOfBoreCategory);
+            newBoreLogState.lengthOfBoreCategory.click();
+            expect(newBoreLogState.lengthOfBoreCategoryDescription.getText()).toEqual("footage drilled (no comma, just the number)");
+            newBoreLogState.lengthOfBoreCategory.click();
+
+            browserHelper.scroll(newBoreLogState.dateCategory);
+            newBoreLogState.dateCategory.click();
+            expect(newBoreLogState.dateCategoryDescription.getText()).toEqual("start or end of the job");
+            newBoreLogState.dateCategory.click();
+
+            browserHelper.scroll(newBoreLogState.drillPipeCategory);
+            newBoreLogState.drillPipeCategory.click();
+            expect(newBoreLogState.drillPipeCategoryDescription.getText()).toEqual("length of drill pipe used");
+            newBoreLogState.drillPipeCategory.click();
+
+        });
+
+        xit("should display 5 input fields and 1 toggle to the user for input", function () {
+
+            newBoreLogState.fillOutNewBoreLogForm();
+            browserHelper.scroll(newBoreLogState.drillPipeToggle);
+            newBoreLogState.drillPipeToggle.click();
+
+            expect(newBoreLogState.customerInput.getAttribute("value")).toEqual(newBoreLogState.boreLogMock.customer);
+            expect(newBoreLogState.conduitInput.getAttribute("value")).toEqual(newBoreLogState.boreLogMock.conduit);
+            expect(newBoreLogState.locationInput.getAttribute("value")).toEqual(newBoreLogState.boreLogMock.location);
+            expect(newBoreLogState.lengthOfBoreInput.getAttribute("value")).toEqual(newBoreLogState.boreLogMock.lengthOfBore);
+            expect(newBoreLogState.dateInput.getAttribute("value")).toEqual("2004-04-27");/*Date value format*/
+            expect(newBoreLogState.drillPipeToggleText.getText()).toEqual("15\'");
+
+        });
+
+        xit("should have 1 button for adding locates that is disabled until all required fields are valid", function () {
+            /*This is the button that should be disabled*/
+            browserHelper.scroll(newBoreLogState.topButton);
+            expect(newBoreLogState.topButton.getAttribute("disabled")).toEqual("true");
+            /*Fill out the form*/
+            browserHelper.scroll(newBoreLogState.customerInput);
+            newBoreLogState.fillOutNewBoreLogForm();
+            browserHelper.scroll(newBoreLogState.topButton);
+            expect(newBoreLogState.topButton.getAttribute("disabled")).toBeNull();
+        });
+        xit("should allow you quit", function () {
+            newBoreLogState.bottomButton.click();
+            expect(homeState.ionNavBar.getText()).toEqual("Options");
+            homeState.createBoreLogButton.click();
+
         });
     });
 
@@ -382,4 +510,54 @@ describe("BoreLoggerByState", function () {
             homeState.continueBoreJournalButton.click();
         });
     });
+
+    /**
+     * Testing the Resume state when resuming a Bore Log
+     * NOTE: will fail if there are no entries in the database
+     */
+    xdescribe("Resume state (resuming a Bore Log)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.continueBoreLogButton.click();
+            browserHelper.swipeLeft("#continue-item-0")
+        });
+    });
+
+    /**
+     * Testing the Resume state when resuming a Bore Journal
+     * NOTE: will fail if there are no entries in the database
+     */
+    xdescribe("Resume state (resuming a Bore Journal)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.continueBoreJournalButton.click();
+            browserHelper.swipeLeft("#continue-item-0")
+        });
+    });
+
+    /**
+     * Testing the Resume state when converting a Bore Journal
+     * NOTE: will fail if there are no entries in the database
+     */
+    xdescribe("Resume state (converting a Bore Journal)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.convertBoreLogButton.click();
+            browserHelper.swipeLeft("#continue-item-0")
+        });
+    });
+
+    /**
+     * Testing the Resume state when creating a PDF
+     * NOTE: will fail if there are no entries in the database
+     */
+    xdescribe("Resume state (creating a PDF)", function () {
+        beforeEach(function () {
+            homeState.get();
+            homeState.createPdfButton.click();
+            browserHelper.swipeLeft("#continue-item-0")
+        });
+    });
+
+
 });

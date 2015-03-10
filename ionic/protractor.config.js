@@ -3,7 +3,7 @@
 
 exports.config = {
 
-    seleniumServerJar: 'C:/Users/jerem_000/AppData/Roaming/npm/node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar',
+    seleniumServerJar: 'C:/Users/jerem_000/AppData/Roaming/npm/node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
     chromeDriver:'C:/Users/jerem_000/AppData/Roaming/npm/node_modules/protractor/selenium/chromedriver.exe',
 
     // The address of a running selenium server.
@@ -23,7 +23,12 @@ exports.config = {
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true // Use colors in the command line report.
+    },
+
+    onPrepare: function () {
+        //browser.manage().window().setSize(1000, 1000);
     }
+
 };
 
 //Installing and Starting the Server

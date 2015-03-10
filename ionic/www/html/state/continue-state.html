@@ -31,9 +31,7 @@
                 <p style="font-family: 'Roboto-Light', sans-serif"
                    ng-show="mySelection.value.name"
                    ng-bind="record[showProperty]"></p>
-                <ion-option-button id="continue-delete-button-{{$index}}" class="button button-assertive" ng-click="deleteDatabaseRecord(record.id, $index)">
-                    Delete
-                </ion-option-button>
+                <ion-option-button id="continue-delete-button-{{$index}}" class="button button-assertive" ng-click="deleteDatabaseRecord(record.id, $index)">Delete</ion-option-button>
                 <ion-option-button id="continue-select-button-{{$index}}" class="button button-positive" ng-click="select(record)">Select</ion-option-button>
                 </div>
             </ion-item>
@@ -42,9 +40,6 @@
             <ion-item>
                 <a class="button button-block button-positive ion icon ion-android-download"
                    id="pdfDownload">{{fileName}}</a>
-            </ion-item>
-            <ion-item ng-show="progressUpdate" style="text-align: center; word-wrap: break-word">
-                <p class="" style="text-align: center; color: #0000FF">{{progressUpdate}}</p><br/>
             </ion-item>
         </ion-list>
     </ion-content>

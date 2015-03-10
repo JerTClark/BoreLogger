@@ -7,20 +7,18 @@
     <link rel="shortcut icon" href="img/tricone.png">
 
     <!-- css -->
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet">
     <link href="css/my-fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- libs -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-    <script src="lib/angular-native-picker/build/angular-datepicker.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
     <script src="lib/datejs/build/date.js"></script>
     <script src="lib/jsPDF/dist/jspdf.min.js"></script>
-    <!--<script src="lib/jsPDF/dist/jspdf.debug.js"></script>-->
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -31,11 +29,15 @@
     <!-- Values -->
     <script src="js/modules/bison-inc/bison-inc-values/bison-inc-values.js"></script>
 
+    <!-- Constants -->
+    <script src="js/modules/bison-inc/bison-inc-constants/bison-inc-constants.js"></script>
+
     <!-- Controllers -->
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-options-controller.js"></script>
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-settings-controller.js"></script>
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-new-bore-log-controller.js"></script>
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-continue-controller.js"></script>
+    <script src="js/modules/bison-inc/bison-inc-controllers/bison-files-controller.js"></script>
 
     <!-- Services -->
     <script src="js/modules/bison-inc/bison-inc-services/bison-service.js"></script>
@@ -77,12 +79,14 @@
                     <button id="button{{button.code}}"
                             class="button button-full button-assertive bison-rough-text"
                             ng-repeat="button in category.buttons"
-                            ng-click="activate($event, button)">{{button.name}}</button>
+                                ng-click="activate($event, button)">{{button.name}}</button>
                 </div>
             </ion-list>
         </ion-content>
         <ion-footer-bar class="bar bar-footer bar-outline">
-                <button class="button button-full ion icon ion-navicon button-clear" ng-click="settings()"></button>
+                <button id="options-settings-button"
+                        class="button button-full ion icon ion-navicon button-clear"
+                        ng-click="settings()"></button>
         </ion-footer-bar>
     </ion-view>
 </script>
