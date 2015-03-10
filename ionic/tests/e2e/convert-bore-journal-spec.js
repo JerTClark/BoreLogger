@@ -1,3 +1,3 @@
-describe("Converting a Bore Journal to a Bore Log", function () {
+xdescribe("Converting a Bore Journal to a Bore Log", function () {
 
 });

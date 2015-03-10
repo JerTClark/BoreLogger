@@ -1,4 +1,4 @@
-describe("Continuing a Bore Journal", function () {
+xdescribe("Continuing a Bore Journal", function () {
     var PRE = "./e2e-bison-page-objects/";
 
     /*Constructors*/
@@ -21,7 +21,7 @@ describe("Continuing a Bore Journal", function () {
         homeState.createBoreJournalButton.click();
     });
 
-    xit("should let user add, resume interaction with, and delete a record from indexedDB", function () {
+    it("should let user add, resume interaction with, and delete a record from indexedDB", function () {
         var currentCount = 0;
         continueBoreJournalState.records.count().then(function (num) {
             currentCount = num;

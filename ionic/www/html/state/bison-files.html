@@ -1,7 +1,7 @@
-<ion-view view-title="Bison files">
+<ion-view view-title="Bison files" ng-init="init()">
     <ion-content class="has-header">
         <label class="item item-select ion icon ion-filing">
-            <span class="">Sort by</span>
+            <span class="">Show attribute</span>
             <select id="continue-select" class="bison-handwriting-xlarge" ng-options="item as item.name for item in items"
                     ng-model="mySelection.value">
                 <option value="">Name</option>
@@ -9,7 +9,7 @@
         </label>
 
         <div ng-show="mySelection.value.name">
-            <h4 style="text-align: center">sorted by <span style="font-family:Lintsec; color: darkgrey">{{mySelection.value.name}}</span>
+            <h4 style="text-align: center">showing <span style="font-family:Lintsec; color: darkgrey">{{mySelection.value.name}}</span>
             </h4>
         </div>
         <div class="bison-border-gray bison-border-input">
@@ -24,11 +24,15 @@
         </div>
 
         <ion-list type="list inset">
-            <ion-item ng-repeat="file in pdfs | filter:search track by $index">
-                <div id="continue-item-{{$index}}">
+            <ion-item ng-repeat="file in bisonFiles | filter:search track by $index">
+                <div id="file-item-{{$index}}">
                     <pre>{{file.name}}</pre>
-                    <ion-option-button id="files-delete-button-{{$index}}" class="button button-assertive" ng-click="">Delete</ion-option-button>
-                    <ion-option-button id="files-select-button-{{$index}}" class="button button-positive" ng-click="">Select</ion-option-button>
+                    <p style="font-family: 'Roboto-Light', sans-serif"
+                       ng-show="mySelection.value.prop"
+                       ng-bind="file[mySelection.value.prop]"></p>
+                    <ion-option-button id="files-delete-button-{{$index}}" class="button button-assertive ion icon ion-minus" ng-click="deleteFile(file)"></ion-option-button>
+                    <ion-option-button id="files-send-button-{{$index}}" class="button button-positive ion icon ion-android-send" ng-click="sendFile(file)"></ion-option-button>
+                    <ion-option-button id="files-open-button-{{$index}}" class="button button-balanced ion icon ion-android-add" ng-click="openFile(file)"></ion-option-button>
                     </div>
             </ion-item>
             <ion-item>

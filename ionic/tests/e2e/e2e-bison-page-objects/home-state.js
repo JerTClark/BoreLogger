@@ -20,10 +20,12 @@ module.exports = function () {
         boreLogCategory: element(by.cssContainingText(".bison-category", "Bore Log")),
         boreJournalCategory: element(by.cssContainingText(".bison-category", "Bore Journal")),
         pdfCategory: element(by.cssContainingText(".bison-category", "Create PDF")),
+        browseCategory: element(by.cssContainingText(".bison-category", "Browse")),
         /*Category descriptions*/
         boreLogCategoryDescription: element(by.cssContainingText(".bison-description", "Record a completed bore")),
         boreJournalCategoryDescription: element(by.cssContainingText(".bison-description", "Record an ongoing bore")),
         pdfCategoryDescription: element(by.cssContainingText(".bison-description", "A billable report")),
+        browseCategoryDescription: element(by.cssContainingText(".bison-description", "Choose from the file types below")),
         /*Buttons*/
         createBoreLogButton: element(by.id("button0")),
         continueBoreLogButton: element(by.id("button1")),
@@ -31,6 +33,9 @@ module.exports = function () {
         continueBoreJournalButton: element(by.id("button3")),
         convertBoreLogButton: element(by.id("button4")),
         createPdfButton: element(by.id("button5")),
+        browseLogs: element(by.id("button6")),
+        browseJournals: element(by.id("button7")),
+        browsePDFs: element(by.id("button8")),
         settingsButton: element(by.id("options-settings-button"))
     }
 };

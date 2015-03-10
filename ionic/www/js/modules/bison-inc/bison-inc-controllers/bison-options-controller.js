@@ -65,11 +65,11 @@ angular.module("bisonInc")
                         $state.go("continue");
                         break;
                     case 2:
-                    case 7:
                         bisonService.setType("journal");
                         $state.go('new-bore-log');
                         break;
                     case 3:
+                    case 7:
                         bisonService.setType("journal");
                         $state.go("continue");
                         break;

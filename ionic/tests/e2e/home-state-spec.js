@@ -18,7 +18,7 @@ xdescribe("Home (Options) State", function () {
         expect(homeState.ionNavBar.getText()).toEqual("Options");
     });
 
-    it("should help me understand how \"by.repeater\" works", function () {
+    xit("should help me understand how \"by.repeater\" works", function () {
         expect(homeState.allOptions.getText()).toEqual(["Bore Log\nCreate\nContinue",
             "Bore Journal\nCreate\nContinue", "", ""]);//Some not in view
         browserHelper.scroll(homeState.createPdfButton);
@@ -60,15 +60,15 @@ xdescribe("Home (Options) State", function () {
 
     it("should have descriptions for each category", function () {
         homeState.boreLogCategory.click();
+        expect(homeState.boreLogCategoryDescription.getText()).toEqual("Record a completed bore");
         homeState.boreJournalCategory.click();
-        var desc1 = element(by.cssContainingText(".bison-description", "Record a completed bore"));
-        var desc2 = element(by.cssContainingText(".bison-description", "Record an ongoing bore"));
-        expect(desc1.getText()).toEqual("Record a completed bore");
-        expect(desc2.getText()).toEqual("Record an ongoing bore");
+        expect(homeState.boreJournalCategoryDescription.getText()).toEqual("Record an ongoing bore");
         browserHelper.scroll(homeState.pdfCategory);
-        var desc3 = element(by.cssContainingText(".bison-description", "A billable report"));
         homeState.pdfCategory.click();
-        expect(desc3.getText()).toEqual("A billable report");
+        expect(homeState.pdfCategoryDescription.getText()).toEqual("A billable report");
+        browserHelper.scroll(homeState.browseCategory);
+        homeState.browseCategory.click();
+        expect(homeState.browseCategoryDescription.getText()).toEqual("Choose from the file types below");
     });
 
 });
