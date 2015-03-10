@@ -215,11 +215,20 @@ angular.module("bisonInc")
             var writeLocates = function (q) {
                 var counter = 1;
                 boreLogToConvert["locates"].forEach(function (locate) {
-                    bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
-                    + BisonPDFValues.PUNC.SPACE
-                    + counter + BisonPDFValues.PUNC.COLON
-                    + BisonPDFValues.PUNC.SPACE
-                    + BisonPDFValues.PUNC.SPACE + locate);
+                    if (counter < 10) {
+                        bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
+                        + BisonPDFValues.PUNC.SPACE
+                        + counter + BisonPDFValues.PUNC.COLON
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE + locate);
+                    } else {
+                        bisonPDF.text(X, Y, BisonPDFValues.TEXT.LOCATE
+                        + BisonPDFValues.PUNC.SPACE
+                        + counter + BisonPDFValues.PUNC.COLON
+                        + BisonPDFValues.PUNC.SPACE
+                        + BisonPDFValues.PUNC.SPACE + locate);
+                    }
                     counter++;
                     nextLine();
                 });
@@ -234,8 +243,8 @@ angular.module("bisonInc")
             /*Clean-up*/
             var cleanup = function () {
                 resetXY();
-                bisonPDF = null;
-                boreLogToConvert = {};
+                bisonPDF = new Object(undefined);
+                boreLogToConvert = new Object(undefined);
             };
 
             /**

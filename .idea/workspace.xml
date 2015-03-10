@@ -2,45 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69de2d68-7893-4793-85f7-96f8ec4d3d85" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\BoreLogger" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\bison.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\dialog-overlay.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\reset.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\reset5.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\scratch-pad.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\backend\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\name-capitalizer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\my_modules\users.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\node_modules\jasmine\node_modules\jasmine-core\.bundle\config" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\files\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\journal\scratch-pad.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\angular-test.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\apply-digest.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\content.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\includes.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\index.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\profile.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\learning\standardUpDir.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\alert.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\dialog-overlay.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\options.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\logger\scratch-pad.jade" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\jerem_000\Desktop\BoreLogger\views\pdf\options.jade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BoreLogger.iml" afterPath="$PROJECT_DIR$/.idea/BoreLogger.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/Gruntfile.js" afterPath="$PROJECT_DIR$/ionic/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/modules/bison-inc/bison-inc-services/bison-pdf-service.js" afterPath="$PROJECT_DIR$/ionic/www/js/modules/bison-inc/bison-inc-services/bison-pdf-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/config.xml" afterPath="$PROJECT_DIR$/ionic/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/tests/e2e/continue-bore-journal-spec.js" afterPath="$PROJECT_DIR$/ionic/tests/e2e/continue-bore-journal-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/tests/e2e/continue-bore-log-spec.js" afterPath="$PROJECT_DIR$/ionic/tests/e2e/continue-bore-log-spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/tests/e2e/e2e-bison-page-objects/continue-state.js" afterPath="$PROJECT_DIR$/ionic/tests/e2e/e2e-bison-page-objects/continue-state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/tests/e2e/e2e-bison-page-objects/new-bore-log-state.js" afterPath="$PROJECT_DIR$/ionic/tests/e2e/e2e-bison-page-objects/new-bore-log-state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/css/style.css" afterPath="$PROJECT_DIR$/ionic/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/ionic/.idea/workspace.xml" />
     </list>
     <ignored path="express.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +37,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1325">
+            <state vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1007">
               <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding />
             </state>
@@ -77,7 +47,7 @@
       <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29863483" vertical-offset="225" max-vertical-offset="1550">
+            <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1178">
               <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
               <folding />
             </state>
@@ -141,8 +111,8 @@
         <option value="$PROJECT_DIR$/backend/css/index-values.styl" />
         <option value="$PROJECT_DIR$/backend/css/index-xsmall.styl" />
         <option value="$PROJECT_DIR$/backend/css/index-xxsmall.styl" />
-        <option value="$PROJECT_DIR$/backend/views/index.jade" />
         <option value="$PROJECT_DIR$/backend/css/bison.css" />
+        <option value="$PROJECT_DIR$/backend/views/index.jade" />
       </list>
     </option>
   </component>
@@ -182,6 +152,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,7 +205,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,10 +242,14 @@
     </key>
   </component>
   <component name="RunManager" selected="PhoneGap/Cordova.(b)ionic">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -285,8 +259,7 @@
       <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
@@ -297,9 +270,6 @@
       <option name="myExtraArgs" />
       <option name="hasTarget" value="false" />
       <option name="target" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
@@ -383,7 +353,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="736" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="736" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -391,20 +361,20 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19395867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25496688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25496688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -423,9 +393,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19793323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25619835" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -466,6 +436,22 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1007">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1178">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1325">
@@ -684,74 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/fonts.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1049" max-vertical-offset="2000">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-large.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7275">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/scripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46714032" vertical-offset="312" max-vertical-offset="975">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-large.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2750">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-small.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1475">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-med.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="1450">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-media.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-values.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-xsmall.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1600">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/css/index-xxsmall.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -779,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29863483" vertical-offset="225" max-vertical-offset="1550">
+        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1178">
           <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
           <folding />
         </state>

@@ -1,4 +1,4 @@
-describe("Continuing a Bore Log", function () {
+xdescribe("Continuing a Bore Log", function () {
     var PRE = "./e2e-bison-page-objects/";
 
     /*Constructors*/
@@ -21,7 +21,7 @@ describe("Continuing a Bore Log", function () {
         homeState.createBoreLogButton.click();
     });
 
-    xit("should let user add, resume interaction with, and delete a record from indexedDB", function () {
+    it("should let user add, resume interaction with, and delete a record from indexedDB", function () {
         var currentCount = 0;
         continueBoreLogState.records.count().then(function (num) {
             currentCount = num;
@@ -55,7 +55,7 @@ describe("Continuing a Bore Log", function () {
         }
     });
 
-    xit("should be able to record each bore log as a separate database entry", function () {
+    it("should persist each bore log as a separate database entry", function () {
         var currentCount = 0;
         continueBoreLogState.records.count().then(function (num) {
             currentCount = num;
@@ -63,7 +63,6 @@ describe("Continuing a Bore Log", function () {
         newBoreLogState.enterMultipleBoreLogs();
         newBoreLogState.backButton.click();
         homeState.continueBoreLogButton.click();
-        browserHelper.pause();
         expect(continueBoreLogState.records.count()).toEqual(currentCount + 5);
     }, 100000);
 

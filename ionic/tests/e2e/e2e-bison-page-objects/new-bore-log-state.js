@@ -122,6 +122,12 @@ module.exports = function () {
             browserHelper.scroll(this.dateInput);
             expect(this.dateInput.getAttribute("value")).toEqual("2004-04-27");
         },
+        verifyMockBoreJournalGenInfo: function () {
+            browserHelper.scroll(this.customerInput);
+            expect(this.customerInput.getAttribute("value")).toEqual(mock.customer);
+            browserHelper.scroll(this.locationInput);
+            expect(this.locationInput.getAttribute("value")).toEqual(mock.location);
+        },
         enterMultipleBoreLogs: function () {
             /*Be sure to go to New Bore Log state prior to executing*/
             var HomeState = require("./home-state.js");
@@ -143,6 +149,23 @@ module.exports = function () {
                 self.saveAndQuit();
                 browserHelper.scroll(homeState.createBoreLogButton);
                 homeState.createBoreLogButton.click();
+            })
+        },
+        enterMultipleBoreJournals: function () {
+            /*Be sure to go to New Bore Journal state prior to executing*/
+            var HomeState = require("./home-state.js");
+            var homeState = new HomeState(),
+                self = this;
+            mockBoreLogs.forEach(function (boreLogObject) {
+                browserHelper.scroll(self.customerInput);
+                self.customerInput.sendKeys(boreLogObject["customer"]);
+                browserHelper.scroll(self.locationInput);
+                self.locationInput.sendKeys(boreLogObject["location"]);
+                self.goToLocatesModalBoreLog();
+                self.enterMockLocates();
+                self.saveAndQuit();
+                browserHelper.scroll(homeState.createBoreJournalButton);
+                homeState.createBoreJournalButton.click();
             })
         }
     }

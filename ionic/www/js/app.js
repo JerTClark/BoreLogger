@@ -31,7 +31,6 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 templateUrl: "html/state/continue-state.html",
                 controller: "ContinueController"
             })
-            ///:type/:customer/:conduit/:location/:length/:drillPipe/:date/:monthDate/:year/:dateObj/:locates"
             .state("resume", {
                 url: "/resume/:id",
                 templateUrl: "html/state/new-bore-log-state.html",
@@ -41,6 +40,11 @@ angular.module('bisonInc', ["ionic", "ui.router", "ngCordova"])
                 url:"/settings",
                 templateUrl:"html/state/settings-state.html",
                 controller: "SettingsController"
+            })
+            .state("bison-files", {
+                url:"/files",
+                templateUrl:"html/state/bison-files.html",
+                controller: "FilesController"
             });
         $urlRouterProvider.otherwise("/");
 

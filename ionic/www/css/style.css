@@ -250,6 +250,7 @@ span.input-label.bison-floating-label.has-input {
         padding: 4px;
         margin-bottom: 0;
         -webkit-transition-duration: 1s;
+        display: none !important;
     }
     .bison-category.bison-small-list:hover, .bison-category.bison-small-list.activated {
         box-shadow: none;

@@ -20,10 +20,11 @@ module.exports = function () {
         },
         pdfDownloadButton: element(by.id("pdfDownload")),
         getCurrentCount: function () {
-            var count = this.records.count().then(function (num) {
+            return this.records.count().then(function (num) {
                 return num;
+            }).then(function (number) {
+                return number;
             });
-            return count;
         }
     }
 };

@@ -14,7 +14,6 @@
     <!-- libs -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-    <script src="lib/angular-native-picker/build/angular-datepicker.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
@@ -38,6 +37,7 @@
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-settings-controller.js"></script>
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-new-bore-log-controller.js"></script>
     <script src="js/modules/bison-inc/bison-inc-controllers/bison-continue-controller.js"></script>
+    <script src="js/modules/bison-inc/bison-inc-controllers/bison-files-controller.js"></script>
 
     <!-- Services -->
     <script src="js/modules/bison-inc/bison-inc-services/bison-service.js"></script>
@@ -79,7 +79,7 @@
                     <button id="button{{button.code}}"
                             class="button button-full button-assertive bison-rough-text"
                             ng-repeat="button in category.buttons"
-                            ng-click="activate($event, button)">{{button.name}}</button>
+                                ng-click="activate($event, button)">{{button.name}}</button>
                 </div>
             </ion-list>
         </ion-content>

@@ -1,0 +1,42 @@
+<ion-view view-title="Bison files">
+    <ion-content class="has-header">
+        <label class="item item-select ion icon ion-filing">
+            <span class="">Sort by</span>
+            <select id="continue-select" class="bison-handwriting-xlarge" ng-options="item as item.name for item in items"
+                    ng-model="mySelection.value">
+                <option value="">Name</option>
+            </select>
+        </label>
+
+        <div ng-show="mySelection.value.name">
+            <h4 style="text-align: center">sorted by <span style="font-family:Lintsec; color: darkgrey">{{mySelection.value.name}}</span>
+            </h4>
+        </div>
+        <div class="bison-border-gray bison-border-input">
+            <label class="item item-input">
+                <i class="ion icon ion-search"></i>
+                <input id="files-search-input"
+                       type="text"
+                       class="bison-input-field"
+                       ng-model="search.$"
+                       placeholder="Search">
+            </label>
+        </div>
+
+        <ion-list type="list inset">
+            <ion-item ng-repeat="file in pdfs | filter:search track by $index">
+                <div id="continue-item-{{$index}}">
+                    <pre>{{file.name}}</pre>
+                    <ion-option-button id="files-delete-button-{{$index}}" class="button button-assertive" ng-click="">Delete</ion-option-button>
+                    <ion-option-button id="files-select-button-{{$index}}" class="button button-positive" ng-click="">Select</ion-option-button>
+                    </div>
+            </ion-item>
+            <ion-item>
+                <button class="button button-assertive button-block bison-rough-text" ng-click="consoleLog()">Log to Console</button>
+            </ion-item>
+            <ion-item>
+                <pre>{{log|json}}</pre>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
