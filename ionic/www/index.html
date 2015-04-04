@@ -65,7 +65,8 @@
 <script id="options.html" type="text/ng-template">
     <ion-view view-title="Options" ng-init="initDB()">
         <!--style='background-image: url("img/rock-background-001.png")'-->
-        <ion-content class="content has-header has-footer" padding="true">
+        <ion-content class="content has-header has-footer"
+                     padding="true">
             <ion-list type="card"
                       class="assertive-border"
                       ng-repeat="category in optionCategories"
@@ -79,7 +80,7 @@
                     <button id="button{{button.code}}"
                             class="button button-full button-assertive bison-rough-text"
                             ng-repeat="button in category.buttons"
-                                ng-click="activate($event, button)">{{button.name}}</button>
+                            ng-click="activate($event, button)">{{button.name}}</button>
                 </div>
             </ion-list>
         </ion-content>

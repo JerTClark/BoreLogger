@@ -1,0 +1,30 @@
+    <ion-view view-title="Pullback">
+        <ion-content class="content has-header">
+
+            <baroid-header-card title="HDD Pullback"
+                                description="Recommendations"></baroid-header-card>
+
+            <baroid-numeric-result result-mock="20.55 mock" result-model=""></baroid-numeric-result>
+
+            <form name="baroidPullbackForm" novalidate>
+                <div ng-repeat="item in numericInputs track by $index">
+                    <ion-list type="card">
+                        <baroid-numeric-input input-type="{{item.type}}"
+                                              input-title="{{item.title}}"
+                                              input-name="{{item.inputName}}"
+                                              input-class="{{item.inputClass}}"
+                                              label-class="{{item.labelClass}}"
+                                              min-range="{{item.min}}"
+                                              max-range="{{item.max}}"
+                                              model="{{testModels[$index]}}"
+                                              is-required="{{item.isRequired}}"
+                                              hint="{{item.hint}}"
+                                              error-message="{{item.errorMessage}}"
+                                              baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+
+                    </ion-list>
+                </div>
+            </form>
+
+        </ion-content>
+    </ion-view>

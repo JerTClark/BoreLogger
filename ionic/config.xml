@@ -7,7 +7,7 @@
   <author email="jercla317@gmail.com" href="https://github.com/JerTClark">
       JerTClark
     </author>
-  <content src="index.html"/>
+  <content src="baroid.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
