@@ -1,0 +1,10 @@
+div#dialog_overlay.gone
+   div#my_alert(onmouseover="noFade(this)", onmouseout="fade(this)")
+      div
+         div
+            div.dialog_box_head
+               h2.category {{alert.title}}
+            div.dialog_box_body {{alert.message}}
+         div#dialog_box_foot
+            button(ng-click="newBoreLog()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Ok
+            button(ng-click="newBoreLog()", onmouseover="moveBackward(this)", onmouseout="moveForward(this)") Cancel

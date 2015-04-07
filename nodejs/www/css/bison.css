@@ -1,0 +1,134 @@
+@import "reset5.css";
+@import "my-fonts.css";
+@import "dialog-overlay.css";
+
+body {
+    -webkit-perspective: 50px;
+}
+
+section {
+    margin: 2%;
+    -webkit-transition-duration: 1.5s;
+}
+
+p {
+    margin: 2%;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: medium;
+    font-weight: normal;
+}
+
+article {
+    text-align: center;
+    margin: 1% auto;
+    -webkit-perspective: 50px;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1.5s;
+}
+
+button {
+    font-family: Rough, sans-serif;
+    font-size: larger;
+    width: 64%;
+    margin: 1% 18% 1% 18%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1.5s;
+}
+
+/*ID*/
+.title_bar{
+    color: saddlebrown;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-shadow: 0 0 2px black;
+    letter-spacing: 5px;
+    font-family: "Lintsec", sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    -webkit-transition-duration: 1.5s;
+    -webkit-transform: translateZ(0px);
+}
+
+.title_bar:hover {
+    color: #ffffff;
+    -webkit-transition-duration: 2.5s;
+    /*-webkit-transform: translateZ(2px);*/
+    text-shadow: 0 0 20px red;
+}
+
+.title_bar.intro {
+    color: #ffffff;
+    -webkit-transition-duration: 1.5s;
+    -webkit-transform: translateY(40px);
+    text-shadow: 0 0 20px blue;
+}
+
+html {
+    background: -webkit-linear-gradient(left top, tan, saddlebrown); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left top, tan, saddlebrown); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left top, tan, saddlebrown); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left top, tan, saddlebrown); /* Standard syntax */
+    -webkit-background-size: cover;
+    -moz-background-size: cover ;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*Class selected*/
+button.hovered{
+    color: #ffffff;
+    border-color: red;
+    background-color: red;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+.category {
+    text-align: center;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: x-large;
+    color: white;
+    border: red solid 2px;
+    border-radius: 8px;
+    background-color: firebrick;
+    padding: 10px;
+    -webkit-transition-duration: 1s;
+}
+
+.category:hover {
+    box-shadow: 0 0 15px red;
+    text-shadow: 0 0 10px white;
+    -webkit-transition-duration: 1s;
+}
+
+.hiddenDescription {
+    display: none;
+    font-family: Roboto-Light, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px;
+    color: #ffffff;
+    background: red;
+    border: 2px solid firebrick;
+    border-radius: 8px;
+}
+
+/*Positive Y value for downward movement means my perspective is off*/
+.outro {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+    -webkit-transition-duration: 1.5s;
+}
+
+.moveBack {
+    -webkit-transform: translateZ(-3px);
+    -webkit-transition-duration: 1.5s;
+    -webkit-transition-delay: 250ms;
+}

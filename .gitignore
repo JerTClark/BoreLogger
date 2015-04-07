@@ -1,0 +1,15 @@
+#Android
+android/.idea
+android/build
+
+#Ionic
+ionic/.idea
+ionic/node_modules/
+ionic/platforms/
+ionic/plugins/
+ionic/www/lib/
+
+#Nodejs
+nodejs/node_modules
+nodejs/www/lib
+nodejs/.idea

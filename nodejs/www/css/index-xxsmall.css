@@ -1,0 +1,200 @@
+@import url("my-fonts.css");
+@-moz-keyframes drilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes drilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes drilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes drilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes stopDrilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes stopDrilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes stopDrilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stopDrilling {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 590px) {
+  body {
+    margin: 0;
+    color: #fff;
+    background-color: #fff;
+    -moz-perspective: 100px;
+    -ms-perspective: 100px;
+    -webkit-perspective: 100px;
+    perspective: 100px;
+  }
+  #title_bar {
+    display: block;
+    line-height: 2em;
+  }
+  #title_bar #title {
+    padding: 1%;
+    background-color: #000;
+  }
+  #title_bar h1 {
+    color: #f00;
+    text-align: center;
+    font-size: xx-large;
+    font-family: "Lintsec", sans-serif;
+    text-shadow: 0 0 2px #b22222;
+    letter-spacing: 5px;
+  }
+  #title_bar h2 {
+    display: none;
+  }
+  #title_bar aside {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #000;
+    flex: 2;
+    padding: 1%;
+    text-align: center;
+    font-size: medium;
+    margin-right: ;
+    margin: 1%;
+  }
+  #title_bar h4 {
+    line-height: 1em;
+    margin: 0;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: medium;
+    background: -webkit-linear-gradient(left, #ff0900, #000, #000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ff0900, #000, #000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ff0900, #000, #000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ff0900, #000, #000); /* Standard syntax */
+    border-left: 1px solid #ff0900;
+    border-radius: 8px;
+  }
+  #title_bar h4 a#email {
+    color: #fff;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    text-decoration: none;
+  }
+  #subtitle {
+    display: none;
+  }
+  #content {
+    display: block;
+  }
+  #content nav {
+    background-color: #000;
+    text-align: center;
+    list-style-type: none;
+    margin: 1%;
+    padding: 1%;
+  }
+  #content nav img {
+    display: none;
+  }
+  #content nav div {
+    background-color: #d3d3d3;
+    border-radius: 4px;
+    padding: 1%;
+    margin-top: 1%;
+    width: 100%;
+  }
+  #content article {
+    padding: 2% 4% 2% 4%;
+    text-align: justify;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    font-size: medium;
+    background-color: #000;
+  }
+  #content aside {
+    padding: 1%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #content aside div > h3 {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 1%;
+    background-color: aside-background-color;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    text-shadow: 0 0 2px #000;
+  }
+  form {
+    text-align: center;
+  }
+  label {
+    color: #808080;
+    padding: 1%;
+    text-shadow: 0 0 2px #000;
+    font-family: "RockSalt", sans-serif;
+    font-size: medium;
+  }
+  input {
+    padding: 2%;
+    margin-top: 4%;
+  }
+  input[type=submit] {
+    border-radius: 4px;
+    text-align: center;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    width: 50%;
+  }
+  a:link {
+    text-decoration: none;
+    color: #b22222;
+    text-shadow: 0 0 2px #f00;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    font-size: medium;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #b22222;
+    text-shadow: 0 0 2px #f00;
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    font-size: medium;
+  }
+}

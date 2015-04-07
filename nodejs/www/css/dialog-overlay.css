@@ -1,0 +1,80 @@
+/*An overlay used to position and contain the dialog box*/
+#dialog_overlay {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    opacity: 1;
+    -webkit-transition-duration: .5s;
+    /*Previously -1*/
+    -webkit-transform: translateZ(-8px);
+}
+
+/*The box*/
+#dialog_box {
+    position: fixed;
+    left: 15%; right: 15%; top: 5%;
+    width: 70%;
+    z-index: 10;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background: #000;*/
+    border-radius: 5px;
+    -webkit-transition-duration: 1.5s;
+}
+
+/*Contains the title*/
+#dialog_box_head {
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: large;
+    padding: 2px;
+    color: #ffffff;
+}
+
+.dialog_section {
+    border: 3px solid transparent;
+}
+
+/*Contains the prompt*/
+#dialog_box_body {
+    background: #333;
+    border-radius: 4px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/*Contains the OK and Cancel buttons*/
+#dialog_box_footer {
+    border: 2px solid red;
+    background: firebrick;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+
+.prompt_value1 {
+    padding: 10px;
+    margin: 3px;
+    width: 80%;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: medium;
+}
+
+/*Ok and Cancel buttons*/
+button.dialog_button {
+    width: 50%;
+}
+
+#dialog_overlay.gone {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition-duration: 1.5s;
+    /*Previously -5*/
+    -webkit-transform: translateZ(-15px);
+}
+
+.fade {
+    opacity: .1;
+    -webkit-transition-duration: 1.5s;
+}

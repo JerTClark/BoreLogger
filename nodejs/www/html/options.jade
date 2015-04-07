@@ -1,0 +1,34 @@
+//
+   Created by Clark on 12/8/2014.
+doctype
+html(ng-app="BoreLogModule")
+   head
+      meta(charset="utf-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
+      meta(name="author", content="Jeremy Clark")
+      meta(name="description", content="A rendering of a native Android app in HTML5")
+      title Options
+      link(rel="shortcut icon", href="img/bison_logo-web.png")
+      link(rel="stylesheet", href="css/bison.css")
+      link(rel="stylesheet", href="css/scratch-pad.css")
+      script(src="lib/jquery/dist/jquery.min.js")
+      script(src="js/jeremyQuery.js")
+      script(src="lib/angular/angular.min.js")
+      script(src="js/angular-modules/bore-log.js")
+
+   body#myPage(ng-controller="BoreLogController")
+      include ./includes/scratch-pad
+      include ./includes/dialog-overlay
+      include ./includes/alert
+      div#main
+         header.title_bar
+            h1(ng-bind="scratchpadTitle")
+         div.content(ng-repeat="item in optionCatgories")
+            header(onclick="over(this)", onmouseout="unZoom(this)")
+               h1.category {{item.title}}
+            article
+               p.hiddenDescription {{item.description}}
+               div(ng-repeat="button in item.buttons")
+                  button(ng-click="$parent.options(button.code)",onmouseover="moveBackward(this)", onmouseout="moveForward(this)") {{button.name}}
+   script.
+      var jQ = jQuery.noConflict();
