@@ -2,6 +2,11 @@
 android/.idea
 android/build
 android/.gradle
+android/gradle/
+android/*.iml
+android/gradlew
+android/gradlew.bat
+andriod/local.properties
 
 #Ionic
 ionic/.idea
