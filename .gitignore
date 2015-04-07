@@ -1,6 +1,7 @@
 #Android
 android/.idea
 android/build
+android/.gradle
 
 #Ionic
 ionic/.idea
