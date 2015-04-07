@@ -1,0 +1,14 @@
+<ion-view view-title="Settings" style="background-image: url('../../img/dirt-blur.png')">
+    <ion-content class="has-header padding">
+            <ion-list type="card" ng-repeat="category in settingsCategories track by $index">
+                <ion-item style="background-color: darkgray">
+                    <bison-category-with-description category-name="{{category.name}}"
+                                                     category-description="{{category.description}}"></bison-category-with-description>
+                    <button ng-repeat="button in category.buttons"
+                            ng-click="button.onClick()"
+                            class="button button-dark button-block bison-rough-text">{{button.text}}
+                    </button>
+                </ion-item>
+            </ion-list>
+    </ion-content>
+</ion-view>

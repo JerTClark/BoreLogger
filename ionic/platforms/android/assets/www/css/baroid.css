@@ -1,0 +1,109 @@
+@import "my-fonts.css";
+
+.baroid-body {
+    -webkit-perspective: 50px;
+}
+
+.title-text {
+    text-align: right;
+    font-family: "Rough", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.title-text-subtitle {
+    color: red;
+    text-align: right;
+    font-family: "Courier New", Courier, monospace;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.baroid-logo {
+    background-image: url("../img/baroid-opacity40.png");
+    background-repeat: no-repeat;
+    background-position: right 100% top 50%;
+}
+
+.baroid-rough-text {
+    font-family: Rough, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    -webkit-transition-duration: 1s;
+}
+
+.baroid-rough-text:hover {
+    color: #ffffff;
+    background-color: darkgray;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+.baroid-rough-text.activated {
+    color: #ffffff;
+    background-color: darkgray;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 50ms;
+    -webkit-transition-duration: .5s;
+}
+
+.baroid-error {
+    background-color: transparent;
+    color: firebrick;
+    font-family: RockSalt, sans-serif;
+    text-shadow: 0 0 15px red;
+}
+
+.baroid-input-field {
+    font-family: Rough, sans-serif;
+    font-size: larger;
+    background-color: white;
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 0.75s;
+}
+
+.baroid-input-field:hover {
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+.baroid-input-field:focus, .baroid-input-field.ng-dirty {
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    letter-spacing: 5px;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+.baroid-input-field:not(:focus).ng-dirty {
+    font-family: "Bookman", Georgia, "Times New Roman", serif;
+    letter-spacing: 0;
+    -webkit-transform: translateZ(2px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+
+/*This is the Samsung Galaxy Note 3 landscape*/
+@media screen and (max-width: 767px){
+
+    .baroid-logo {
+        background-image: url("../img/baroid-opacity40.png");
+        background-repeat: no-repeat;
+        background-position: right 110% top 50%;
+    }
+
+}
+/*This is the Samsung Galaxy Note 3 portrait*/
+@media only screen and (max-width: 360px) {
+
+    .baroid-logo {
+        background-image: url("../img/baroid-opacity40.png");
+        background-repeat: no-repeat;
+        background-position: right 170% top 50%;
+    }
+
+}

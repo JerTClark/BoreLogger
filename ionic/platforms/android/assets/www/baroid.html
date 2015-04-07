@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="baroidApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Baroid Calculator</title>
+    <link rel="shortcut icon" href="img/baroid.png">
+
+    <!-- css -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/my-fonts.css" rel="stylesheet">
+    <link href="css/baroid.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- libs -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/datejs/build/date.js"></script>
+    <script src="lib/jsPDF/dist/jspdf.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- my app.js -->
+    <script src="js/modules/baroid/baroid-app.js"></script>
+
+    <!--Controllers-->
+    <script src="js/modules/baroid/baroid-controllers/baroid-options-controller.js"></script>
+    <script src="js/modules/baroid/baroid-controllers/baroid-pullback-controller.js"></script>
+
+    <!--Constants-->
+    <script src="js/modules/baroid/baroid-constants/baroid-constants.js"></script>
+
+    <!--Directives-->
+    <script src="js/modules/baroid/baroid-directives/baroid-header-card-directive.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-numeric-input-directive.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-numeric-result-directive.js"></script>
+
+    <!--Values-->
+    <script src="js/modules/baroid/baroid-values/baroid-option-values.js"></script>
+    <script src="js/modules/baroid/baroid-values/baroid-pullback-values.js"></script>
+
+    <!--Learning Typescript-->
+    <script src="js/family-members.js"></script>
+
+</head>
+
+<body>
+<ion-nav-bar class="bar-assertive" id="baroid-nav-bar">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-view></ion-nav-view>
+
+<script id="baroid-home.html" type="text/ng-template">
+    <ion-view view-title="Calculators">
+        <ion-content class="content has-header">
+            <ion-list type="card" class="text-center"
+                      ng-repeat="category in optionCategories">
+                <ion-item class="baroid-logo">
+                    <h1 class="title-text">{{category.title}}</h1>
+
+                    <h3 class="title-text-subtitle">{{category.description}}</h3>
+                </ion-item>
+            </ion-list>
+
+            <div style="padding-left: 20px;padding-right: 20px" ng-repeat="category in optionCategories">
+                <div ng-repeat="button in category.buttons">
+                    <button id="button{{button.code}}"
+                            class="button button-block baroid-rough-text"
+                            ng-click="buttonClicked(button, $event)">{{button.name}}
+                    </button>
+                </div>
+            </div>
+
+        </ion-content>
+    </ion-view>
+</script>
+
+</body>
+</html>

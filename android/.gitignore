@@ -1,2 +1,9 @@
+#Android
 .idea
 build
+.gradle
+gradle/
+*.iml
+gradlew
+gradlew.bat
+local.properties
