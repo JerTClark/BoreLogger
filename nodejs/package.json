@@ -1,0 +1,20 @@
+{
+  "name": "BoreLogger",
+  "version": "0.0.1",
+  "description": "Back-end for Bison, Inc.",
+  "main": "www/app.js",
+  "author": "JerTClark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JerTClark/BoreLogger"
+  },
+  "bugs": {
+    "url": "https://github.com/JerTClark/BoreLogger/issues"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "errorhandler": "^1.3.5"
+  }
+}

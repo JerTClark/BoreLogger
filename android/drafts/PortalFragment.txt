@@ -1,0 +1,10 @@
+
+        this.cordovaWebView.getSettings().setJavaScriptEnabled(true);
+        this.cordovaWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        this.cordovaWebView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                return super.shouldOverrideUrlLoading(view, url);
+                return false;
+            }
+        });

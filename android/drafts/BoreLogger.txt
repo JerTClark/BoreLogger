@@ -1,0 +1,36 @@
+
+        folder = new File(MyGlobals.BISON_BORE_LOGGER_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.BORE_JOURNAL_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.BORE_LOG_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.BORE_LOG_PDF);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.DATA_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.JOURNAL_DATA_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+
+        folder = new File(MyGlobals.LOG_DATA_FOLDER);
+        if(folder.exists()) foldersExist.add(folder.getName());
+        else if(folder.mkdir()) foldersMade.add(folder.getName());
+        else cannotMake.add(folder.getName());
+

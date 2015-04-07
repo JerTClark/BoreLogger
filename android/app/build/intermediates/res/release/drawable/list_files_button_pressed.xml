@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:radius="8dp"/>
+    <stroke
+        android:color="@android:color/transparent"
+        android:width="2dp"/>
+    <solid
+        android:color="@color/dark_gray"/>
+    <gradient
+        android:startColor="@color/dark_gray"
+        android:endColor="@color/gray"/>
+</shape><!-- From: file:/C:/Users/jerem_000/Desktop/Android/BoreLogger/app/src/main/res/drawable/list_files_button_pressed.xml -->

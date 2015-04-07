@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoreLogDepths" >
+<LinearLayout
+    android:id="@+id/locates_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/bore_log_textView1"
+        android:text="@string/depths_and_utilities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/header_text_size"
+        android:background="@drawable/red_background"
+        android:paddingStart="5dp"/>
+
+    <EditText
+        android:id="@+id/depth_editText"
+        android:inputType="textCapWords"
+        android:hint="@string/hint_depth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_redline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/utility_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/utility_crossing"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/utility_editText"
+        android:inputType="textCapWords"
+        android:hint="@string/hint_utility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_redline"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/note_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/note_title"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/note_editText"
+        android:inputType="textCapSentences"
+        android:hint="@string/note_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_redline"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/enter_button"
+        android:text="@string/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/list_files_button"/>
+</LinearLayout>
+    <Button
+        android:id="@+id/finish_button"
+        android:text="@string/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/list_files_button"/>
+</RelativeLayout>

@@ -1,6 +1,6 @@
 angular.module("baroidApp").controller("BaroidPullbackController",
-    ["$scope", "BaroidPullbackNumericInputs",
-        function ($scope, BaroidPullbackNumericInputs) {
+    ["$scope", "BaroidPullbackNumericInputs", "BaroidSoilTypes",
+        function ($scope, BaroidPullbackNumericInputs, BaroidSoilTypes) {
 
             $scope.numericInputs = BaroidPullbackNumericInputs;
 
@@ -8,6 +8,10 @@ angular.module("baroidApp").controller("BaroidPullbackController",
 
             $scope.$watchCollection("testModels", function (newValue, oldValue) {
                 console.log(JSON.stringify($scope.testModels) + " " + newValue);
-            })
+            });
+
+            $scope.soilTypes = BaroidSoilTypes;
+
+            $scope.soil = "";
 
         }]);

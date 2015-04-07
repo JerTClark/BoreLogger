@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_gray_line"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/my_toast_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:layout_toEndOf="@+id/my_toast_imageView"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/my_toast_header_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tbd"/>
+        <TextView
+            android:id="@+id/my_toast_message_textView"
+            android:layout_below="@+id/my_toast_header_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tbd"/>
+    </RelativeLayout>
+</RelativeLayout><!-- From: file:/C:/Users/jerem_000/Desktop/Android/BoreLogger/app/src/main/res/layout/my_toast.xml -->

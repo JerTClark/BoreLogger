@@ -10,35 +10,44 @@ angular.module("baroidApp").controller("BaroidOptionsController",
 
             var myFamily = getFamily();
             myFamily.initFamily();
+            function myFamilyLogOutput() {
+                myFamily.logFamily();
+                myFamily.logOldest();
+                myFamily.logSortedFamily();
+                myFamily.optionalParam(myFamily.myFamily[0], myFamily.myFamily[1]);
+                myFamily.optionalParam(myFamily.myFamily[0], myFamily.myFamily[1], myFamily.myFamily[2]);
+                myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1]);
+                myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1],myFamily.myFamily[2]);
+            }
+
+            var jacob = new Family.LovedOne("Jacob", "son");
+            function lovedOneLogOutput() {
+                jacob.logToConsole();
+            }
 
             /**
              * Handle the button clicks
              * @param button The button clicked
              */
             $scope.buttonClicked = function (button, $event) {
+                var wasClicked = " has been clicked";
                 switch(button.code) {
                     case 0:
-                        console.info(button.name);
-                        myFamily.logFamily();
+                        myFamilyLogOutput();
+                        console.info(button.name + wasClicked);
                         break;
                     case 1:
-                        console.info(button.name);
-                        myFamily.logOldest();
+                        lovedOneLogOutput();
+                        console.info(button.name + wasClicked);
                         break;
                     case 2:
-                        //console.info(button.name);
-                        //myFamily.logSortedFamily();
                         $state.go("pullback");
                         break;
                     case 3:
-                        console.info(button.name);
-                        myFamily.optionalParam(myFamily.myFamily[0],myFamily.myFamily[1]);
-                        myFamily.optionalParam(myFamily.myFamily[0],myFamily.myFamily[1],myFamily.myFamily[2]);
+                        console.info(button.name + wasClicked);
                         break;
                     case 4:
-                        console.info(button.name);
-                        myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1]);
-                        myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1],myFamily.myFamily[2]);
+                        console.info(button.name + wasClicked);
                         break;
                 }/*end switch*/
             };

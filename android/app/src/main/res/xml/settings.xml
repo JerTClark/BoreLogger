@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/notation" android:summary="If you see this... set summaries">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/format_depths_key"
+            android:summaryOff="@string/format_depths_summaryOff"
+            android:summaryOn="@string/format_depths_summaryOn"
+            android:title="@string/format_depths_name" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/locate_offset">
+        <EditTextPreference
+            android:key="@string/init_locate_key"
+            android:summary="@string/init_locate_summary"
+            android:title="@string/init_locate_name"
+            android:hint="@string/init_locate_hint"
+            android:inputType="number"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/use_init_depth_key"
+            android:title="@string/use_init_depth_name"
+            android:summaryOn="@string/use_init_depth_summaryOn"
+            android:summaryOff="@string/use_init_depth_summaryOff"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debugging">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/debug_toasts_key"
+            android:summaryOff="@string/debug_toasts_summaryOff"
+            android:summaryOn="@string/debug_toasts_summaryOn"
+            android:title="@string/debug_toasts_name" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,23 @@
+{
+  "name": "BoreLogger",
+  "version": "0.0.1",
+  "homepage": "https://github.com/JerTClark/BoreLogger",
+  "authors": [
+    "JerTClark <jercla317@gmail.com>"
+  ],
+  "description": "Bison, Inc.",
+  "main": "www/app.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -7,6 +7,7 @@ angular.module("baroidApp")
             inputName:"@",
             inputTitle:"@",
             inputClass:"@",
+            itemIndex:"@",
             labelClass:"@",
             minRange:"@",
             maxRange:"@",

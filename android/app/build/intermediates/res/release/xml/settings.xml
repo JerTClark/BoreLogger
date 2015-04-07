@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/notation">
+    <SwitchPreference
+        android:title="@string/format_depths_name"
+        android:key="@string/format_depths_key"
+        android:summaryOn="@string/format_depths_summaryOn"
+        android:summaryOff="@string/format_depths_summaryOff"
+        android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debugging">
+    <SwitchPreference
+        android:title="@string/debug_toasts_name"
+        android:key="@string/debug_toasts_key"
+        android:summaryOn="@string/debug_toasts_summaryOn"
+        android:summaryOff="@string/debug_toasts_summaryOff"
+        android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen><!-- From: file:/C:/Users/jerem_000/Desktop/Android/BoreLogger/app/src/main/res/xml/settings.xml -->

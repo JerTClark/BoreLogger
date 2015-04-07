@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="package_name">inc.bison.borelogger</string>
+    <string name="app_name">Bore Logger</string>
+    <string name="title_section1">Bore Log</string>
+    <string name="title_section2">Bore Journal</string>
+    <string name="title_section3">Nothing here yet…</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_description">content</string>
+    <string name="share">Share</string>
+    <string name="calculator">Calculator</string>
+    <string name="lab_label">Laboratory</string>
+
+    <!-- General Information -->
+    <string name="general_information">General information</string>
+    <string name="general_information_continued">Details about this drill shot&#8320;</string>
+    <!-- Company -->
+    <string name="customer">Customer</string>
+    <string name="customer_description">Bore completed/conduit installed for:</string>
+    <string name="customer_hint">customer company\'s name</string>
+    <!-- Product -->
+    <string name="product">Product</string>
+    <string name="product_description">Number, size, and type of conduit installed:</string>
+    <string name="product_hint">(No. of conduit) size/type</string>
+    <!-- Location -->
+    <string name="location">Location</string>
+    <string name="location_description">Location of the bore:</string>
+    <string name="location_hint">general location of bore</string>
+    <!-- Length of Bore -->
+    <string name="lengthOfBore">Length of Bore</string>
+    <string name="lengthOfBore_description">Linear footage of the bore and the length of the rods used to drill it:</string>
+    <string name="lengthOfBore_hint">linear feet (drill pipe length)</string>
+    <!-- Date of Bore -->
+    <string name="date">Date</string>
+    <string name="date_description">The date on which the bore began or completed:</string>
+    <string name="min_date">01/01/2013</string>
+    <string name="max_date">12/31/2050</string>
+    <string name="tbd_date">AMonthADayOfTheYear</string>
+
+    <!-- Bore Log Options Fragment -->
+    <string name="new_bore_log">New Bore Log</string>
+    <string name="journal_to_log">Journal to Log</string>
+    <string name="browse_bore_logs">Browse Bore Logs</string>
+
+    <!-- Main Options Menu -->
+    <string name="main_menu">Main menu</string>
+    <string name="main_menu_description">Select an option below:</string>
+    <string name="new_borelog">New Bore Log</string>
+    <string name="bore_log">Bore Log</string>
+    <string name="new_borelog_description">Create a bore log for a completed bore.</string>
+    <string name="new_bore_journal">Bore Journal</string>
+    <string name="bore_journal_description">Create or continue a bore journal (ongoing bore) or convert an existing bore journal into a finalized bore log.</string>
+    <string name="create">Create</string>
+    <string name="continue_bore_journal">Continue</string>
+    <string name="open">Open</string>
+
+    <!-- Bore Journal -->
+    <string name="sample">Sample</string>
+    <!-- Bore Journal Job Info -->
+    <string name="bore_journal_job_info">General information</string>
+    <string name="bore_journal_job_info_description">Enter some general information before starting this bore journal</string>
+    <string name="bore_journal_company">Who is this job for?</string>
+    <string name="bore_journal_location">Enter the location of the bore</string>
+    <string name="bore_journal_date_text">The date on which this job started</string>
+    <!-- Summary -->
+    <string name="summary">Summary</string>
+    <string name="next_button">Confirm</string>
+    <string name="tbd">TBD</string>
+    <!-- Summary Menu -->
+    <string name="summary_help">If any information displayed here is incorrect, you may have to use the back button to go to the appropriate screen and reenter the information. This may cause you to have to reenter all other information. Hey, this program ain\'t perfect!</string>
+
+    <!-- Depths and Utilities -->
+    <string name="depths_and_utilities">Depths and Utilities</string>
+    <string name="enter_depths">Enter locates here.\n\nCheck the \"Crossing\\Station\" radio button to simultaneously record a crossing (utility, road, creek, etc.) or station number associated with that depth.</string>
+    <string name="enter">Record Locate</string>
+    <string name="done">Done</string>
+    <string name="depth">Depth:</string>
+    <string name="hint_depth">feet [space] inches</string>
+    <string name="utility_crossing">Crossing or Station?</string>
+    <string name="utility">Crossing\\Station:</string>
+    <string name="hint_utility">enter crossing\\station</string>
+    <string name="note_title">Comment</string>
+    <string name="note_hint">Add a note</string>
+    <string name="warning">Note: You must click \"Record Locate\" prior to clicking \"Next\" to record final depth.</string>
+    <!-- Depths and Utilities Menu -->
+    <string name="depths_and_utilities_help">Be sure to select the \"Crosses utility\" button if you are entering a utility. Also, make sure to hit \"Record Depth\" before hitting \"Finish\" to record the final depth of the bore.</string>
+    <string name="last_recorded_depth">Last three depths?</string>
+    <string name="list">List</string>
+    <!-- EndScreen -->
+    <string name="end_screen">Bore Log Saved</string>
+    <string name="bore_log_saved">The log was saved to your phone and is named (including the full path to the file):</string>
+    <string name="instructions">Access this bore log by navigating to the folder \"BoreLogs\" on your phone\'s External SD card.</string>
+    <!-- EndScreen Menu -->
+    <string name="end_screen_help">You may need to install a program such as AndExplorer to navigate your phone\'s file system and find this text file.</string>
+
+    <!-- BoreLogPDF -->
+    <string name="select_borelog">Select a bore log</string>
+    <string name="select_borelog_description">Select a bore log file and create a PDF from that file.</string>
+    <string name="borelog_loaded">Bore log loaded:</string>
+    <string name="create_pdf_description">Touch \"Create\" to create a finalized PDF document from this text file.</string>
+    <string name="pdf_file">PDF files are saved in \/BoreLogs\/PDF folder.</string>
+    <string name="create_pdf">Create PDF</string>
+    <string name="select_a_bore_log">(select a bore log)</string>
+
+    <!-- BoreLogSendTo -->
+    <string name="send_a_bore_log">Share a Bore Log</string>
+    <string name="choose_borelog">Choose a bore log to share.</string>
+    <string name="choose">Choose</string>
+    <string name="send_borelog">Share this bore log.</string>
+    <string name="send">Share</string>
+    <string name="file_to_send">File to share:</string>
+
+    <!-- BoreJournalToLog -->
+    <string name="boreJournalToLog_title">Bore Journal to Bore Log</string>
+    <string name="boreJournalToLog_description">Create a bore log from an existing, completed bore journal.</string>
+    <string name="boreJournalToLog_selectABoreJournal">Select a Bore Journal</string>
+    <string name="boreJournalToLog_selectedFile">Selected Bore Journal:</string>
+    <string name="boreJournalToLog_createBoreLog">Create bore log from the selected bore journal.</string>
+    <string name="boreJournalToLog_additionalInfo">Please supply the following information (it will be appended to the newly created bore log):</string>
+    <string name="enterInfo">Enter</string>
+    <string name="hint_date">Month Day, Year</string>
+    <string name="create_log">Journal to Log</string>
+    <string name="none_selected">(select a bore journal)</string>
+
+    <!-- BoreListView -->
+    <string name="returnButton">Return</string>
+    <string name="no_depths">No depths</string>
+    <string name="list_view">List view:</string>
+    <string name="summary_listView">List View</string>
+
+    <!-- Custom Dialog -->
+    <string name="custom_dialog_hint">New locate&#8230;</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- GeneralInfo -->
+    <string name="enter_some_general_info">Details about the drill shot&#8230;</string>
+
+    <string name="home">Home</string>
+    <string name="back">Back</string>
+    <string-array name="funny_phrases">
+        <item>All you gotta do&#8230;</item>
+        <item>Put a little gas in it!</item>
+        <item>Anyone can do it the easy way&#8230;</item>
+        <item>Causes bane damage&#8230;</item>
+        <item>60% of the time it works EVERY time</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="notation">Auto-notation</string>
+    <string name="debugging">Debugging</string>
+    <string name="locate_offset">Offset locates</string>
+    <string name="format_depths_name">Format depths</string>
+    <string name="format_depths_key">format</string>
+    <string name="format_depths_summaryOn">\"feet[space-bar]inches\" will be formatted to feet\'inches\"</string>
+    <string name="format_depths_summaryOff">You must include notations for feet and inches</string>
+    <string name="debug_toasts_name">Debugging toasts</string>
+    <string name="debug_toasts_key">debug_toasts</string>
+    <string name="debug_toasts_summaryOn">Debugging toasts will be shown</string>
+    <string name="debug_toasts_summaryOff">No debugging toasts will be shown</string>
+    <string name="init_locate_name">First locate</string>
+    <string name="init_locate_summary">Begin numbering locates at a specified depth number</string>
+    <string name="init_locate_key">init_locate</string>
+    <string name="init_locate_hint">Start locates at depth&#8230;</string>
+    <string name="use_init_depth_name">Override numbering</string>
+    <string name="use_init_depth_key">override_numbering</string>
+    <string name="use_init_depth_summaryOn">The app will use your customized setting when numbering locates</string>
+    <string name="use_init_depth_summaryOff">Locates will be numbered beginning at 1</string>
+    <string name="title_activity_cordova">CordovaActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+</resources>

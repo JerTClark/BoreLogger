@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- Color Drawables -->
+     
+     <!-- Grayscale -->
+    <color name="white">#fff</color>
+    <color name="light_gray">#ffe7e7e7</color>
+    <color name="gray">#999</color>
+    <color name="dark_gray">#666</color>
+    <color name="darker_gray">#181818</color>
+    <color name="black">#000</color>
+    <color name="gray_shade">#5d5d5d</color>
+
+    <!-- Cool colors -->
+
+    <!--Blues -->
+    <color name="light_blue">#ff00b2ff</color>
+    <color name="blue">#00f</color>
+    <color name="dark_blue">#ff0d0096</color>
+    <color name="darkest_blue">#ff0d0063</color>
+    <color name="royal_blue">#0e1a40</color>
+    <color name="twilight_blue">#222f5b</color>
+
+    <!-- Purple -->
+    <color name="light_purple">#ff9c57ff</color>
+    <color name="dark_purple">#60f</color>
+
+    <!-- Brown -->
+    <color name="light_brown">#ffb08b14</color>
+    <color name="brown">#ff795c13</color>
+    <color name="dark_brown">#ff5c3914</color>
+    <color name="brown_bear">#946b2d</color>
+
+    <!-- Greens -->
+    <color name="bright_green">#0f0</color>
+    <color name="normal_green">#30cb00</color>
+    <color name="dark_green">#0f9200</color>
+    <color name="darkest_green">#006203</color>
+    <color name="olive_green">#326300</color>
+    <color name="leaf_green">#2a940a</color>
+    <color name="grass_green">#37b810</color>
+    <color name="sea_foam_green">#9df892</color>
+
+    <!-- Warm colors -->
+
+    <!-- Yellow -->
+    <color name="yellow">#ff0</color>
+    <color name="golden_yellow">#ffffdb00</color>
+
+    <!-- Orange -->
+    <color name="orange">#f90</color>
+    <color name="darker_orange">#ffff7300</color>
+    <color name="darkest_orange">#c30</color>
+
+    <!-- Red -->
+    <color name="red">#f00</color>
+    <color name="dark_red">#ffc30000</color>
+    <color name="darker_red">#900</color>
+
+    <!-- Fleshtone -->
+    <color name="flesh">#fc9</color>
+    <color name="flesh_two">#D3AF8E</color>
+    <color name="flesh_three">#FFDCB2</color>
+    <color name="dark_flesh">#DB9065</color>
+    <color name="darker_flesh">#BA6C49</color>
+
+
+
+</resources>

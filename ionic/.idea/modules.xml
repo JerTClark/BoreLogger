@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/borelogger.iml" filepath="$PROJECT_DIR$/.idea/borelogger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/borelogger-ionic.iml" filepath="$PROJECT_DIR$/.idea/borelogger-ionic.iml" />
     </modules>
   </component>
 </project>

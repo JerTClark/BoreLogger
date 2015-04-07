@@ -8,7 +8,7 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/www/js/typescript-functions.js" />
-      <root url="file://$PROJECT_DIR$/www/js/family-members.js" />
+      <root url="file://$PROJECT_DIR$/www/js/typescript/family-members.js" />
     </CLASSES>
     <SOURCES />
   </library>

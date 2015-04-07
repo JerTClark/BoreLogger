@@ -48,11 +48,32 @@ angular.module("baroidApp")
      * These multipliers' values must be calculated by their index + 1
      */
     .value("BaroidSoilTypes", [
-        "Gravel/Cobble",
-        "Sand/Gravel",
-        "CoarseSand",
-        "Fine/MediumSand",
-        "Sandy/Clay",
-        "Clay",
-        "Rock"
+        {
+            "type":"Gravel/Cobble",
+            "value":1
+        },
+        {
+            "type":"Sand/Gravel",
+            "value":2
+        },
+        {
+            "type":"CoarseSand",
+            "value":3
+        },
+        {
+            "type":"Fine/MediumSand",
+            "value":4
+        },
+        {
+            "type":"Sandy/Clay",
+            "value":5
+        },
+        {
+            "type":"Clay",
+            "value":6
+        },
+        {
+            "type":"Rock",
+            "value":7
+        }
     ]);
