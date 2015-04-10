@@ -1,39 +1,84 @@
-<ion-view view-title="Pullback">
+<ion-view view-title="Pullback recommendations" class="dark-bg">
     <ion-content class="content has-header">
 
-        <baroid-header-card title="HDD Pullback"
-                            description="Recommendations"></baroid-header-card>
+        <!--<baroid-header-card title="HDD Pullback"-->
+                            <!--description="Recommendations"></baroid-header-card>-->
 
-        <baroid-numeric-result result-mock="20.55 mock" result-model=""></baroid-numeric-result>
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon icon ion-ios7-keypad">Input</button>
+            <!--<h3 class="title title-left item-icon-left"> Input</h3>-->
+        </div>
 
         <form name="baroidPullbackForm" novalidate>
-            <div ng-repeat="item in numericInputs track by $index">
-                <ion-list type="card">
-                    <baroid-numeric-input input-type="{{item.type}}"
-                                          input-title="{{item.title}}"
-                                          input-name="{{item.inputName}}"
-                                          input-class="{{item.inputClass}}"
-                                          item-index="{{$index}}"
-                                          label-class="{{item.labelClass}}"
-                                          min-range="{{item.min}}"
-                                          max-range="{{item.max}}"
-                                          model="{{testModels[$index]}}"
-                                          is-required="{{item.isRequired}}"
-                                          hint="{{item.hint}}"
-                                          error-message="{{item.errorMessage}}"
-                                          baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
-                </ion-list>
+
+            <ion-item class="item-divider">Select a soil type</ion-item>
+            <ion-item>
+                <label class="item item-select ion icon ion-ios7-information-outline" style="color:red" for="soilType">
+                    <span style="color:black">Soil type</span>
+                    <select id="soilType" ng-options="item as item.type for item in soilTypes" ng-model="input.soil">
+                        <option value="{'value':'','type':''}">none</option>
+                    </select>
+                </label>
+            </ion-item>
+
+            <div class="row">
+                <div class="col" ng-repeat="item in rowOne track by $index">
+                        <baroid-numeric-input input-type="{{item.type}}"
+                                              input-title="{{item.title}}"
+                                              input-name="{{item.inputName}}"
+                                              input-class="{{item.inputClass}}"
+                                              item-index="{{$index}}"
+                                              label-class="{{item.labelClass}}"
+                                              min-range="{{item.min}}"
+                                              max-range="{{item.max}}"
+                                              model="input[item.inputName]"
+                                              is-required="{{item.isRequired}}"
+                                              hint="{{item.hint}}"
+                                              error-message="{{item.errorMessage}}"
+                                              baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+                </div>
             </div>
-            <ion-list type="card">
-                <ion-item>
-                    <label class="item" for="soilType">Select a soil type
-                        <select id="soilType" ng-options="item as item.type for item in soilTypes" ng-model="soil">
-                            <option value="">Soil type</option>
-                        </select>
-                    </label>
-                </ion-item>
-            </ion-list>
+
+            <div class="row">
+                <div class="col" ng-repeat="item in rowTwo track by $index">
+                        <baroid-numeric-input input-type="{{item.type}}"
+                                              input-title="{{item.title}}"
+                                              input-name="{{item.inputName}}"
+                                              input-class="{{item.inputClass}}"
+                                              item-index="{{$index}}"
+                                              label-class="{{item.labelClass}}"
+                                              min-range="{{item.min}}"
+                                              max-range="{{item.max}}"
+                                              model="input[item.inputName]"
+                                              is-required="{{item.isRequired}}"
+                                              hint="{{item.hint}}"
+                                              error-message="{{item.errorMessage}}"
+                                              baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+                </div>
+            </div>
         </form>
+
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon icon ion-ios7-calculator">Calculations</button>
+            <!--<h3 class="title title-left item-icon-left">Calculations</h3>-->
+        </div>
+
+        <!--<h3 class="item bar bar-assertive ion icon ion-ios7-calculator"> Calculations</h3>-->
+
+            <baroid-numeric-result result-title="Estimated Funnel Viscosity (sec/qt)"
+                                   ng-show="estimatedFunnelViscosity !== 0"
+                                   result-model="estimatedFunnelViscosity"></baroid-numeric-result>
+            <baroid-numeric-result result-title="Estimated Fluid Volume (gal)"
+                                   ng-show="estimatedFluidVolume !== 0"
+                                   result-model="estimatedFluidVolume"></baroid-numeric-result>
+            <baroid-numeric-result result-title="Actual Pump Output (gpm)"
+                                   ng-show="actualPumpOutput !== 0"
+                                   result-model="actualPumpOutput"></baroid-numeric-result>
+            <baroid-numeric-result result-title="Recommended Pullback Speed (min/rod)"
+                                   ng-show="recommendedPullbackSpeed !== 0"
+                                   result-model="recommendedPullbackSpeed"></baroid-numeric-result>
+
+        <button class="button button-block button-energized" ng-click="logToConsole()">Log to Console</button>
 
     </ion-content>
 </ion-view>

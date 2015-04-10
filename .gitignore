@@ -13,6 +13,7 @@ ionic/.idea
 ionic/node_modules/
 ionic/platforms/android/ant-build/
 ionic/platforms/android/ant-gen/
+ionic/platforms/android/assets/_where-is-www.txt
 ionic/platforms/android/cordova/
 ionic/platforms/android/CordovaLib/
 ionic/platforms/android/platform_www/

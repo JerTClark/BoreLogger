@@ -3,6 +3,7 @@
 node_modules/
 platforms/android/ant-build/
 platforms/android/ant-gen/
+ionic/platforms/android/assets/_where-is-www.txt
 platforms/android/cordova/
 platforms/android/CordovaLib/
 platforms/android/platform_www/

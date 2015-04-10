@@ -1,5 +1,7 @@
 /**
  * Defines a FamilyMember object
+ * Interfaces are not compiled into JavaScript
+ * They are used during design
  */
 interface FamilyMember {
     name:string;

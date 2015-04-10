@@ -2,7 +2,7 @@ angular.module("baroidApp").directive("baroidNumericResult", function () {
     return {
         restrict:"E",
         scope:{
-            resultMock:"@",
+            resultTitle:"@",
             resultModel:"="
         },
         templateUrl:"html/baroid/template/baroid-numeric-result.html",

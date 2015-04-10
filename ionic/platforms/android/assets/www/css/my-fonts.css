@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: "CafeBrewery";
+    src: url("../fonts/cafeandbrewery.ttf");
+}
+
+@font-face {
     font-family: "Darkgard";
     src: url("../fonts/darkgard.TTF");
 }

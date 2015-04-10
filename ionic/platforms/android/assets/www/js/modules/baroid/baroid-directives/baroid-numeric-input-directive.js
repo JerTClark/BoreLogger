@@ -14,7 +14,7 @@ angular.module("baroidApp")
             isRequired:"@",
             hint:"@",
             errorMessage:"@",
-            model:"@",
+            model:"=",
             baroidFormController:"="
         },
         templateUrl:"html/baroid/template/baroid-numeric-input.html"

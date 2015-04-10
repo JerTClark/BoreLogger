@@ -1,9 +1,16 @@
-<ion-item class="item-divider">{{inputTitle}}</ion-item>
-<label class="item item-input item-floating-label" ng-class="labelClass">
-    <span class="input-label">{{hint}}</span>
-    <span>{{model}}</span>
-    <input id="{{inputName}}{{itemIndex}}" name="{{inputName}}" type="{{inputType}}" ng-class="inputClass"
-           placeholder="{{hint}}" ng-required="{{isRequired}}"
-           minlength="1" ng-model="model" min="{{minRange}}" max="{{maxRange}}">
-    <span class="baroid-error" ng-show="baroidFormController.{{inputName}}.$dirty && baroidFormController.{{inputName}}.$invalid">^{{errorMessage}}</span>
+<ion-item class="item-divider baroid-item-divider">{{inputTitle}}</ion-item>
+<label class="item item-input item-floating-label stable-bg" ng-class="labelClass">
+    <span class="baroid-error" ng-show="baroidFormController.{{inputName}}.$dirty && baroidFormController.{{inputName}}.$invalid">{{errorMessage}}</span>
+    <span class="input-label baroid-floating-label">{{hint}}</span>
+    <input class="baroid-input-field"
+           id="{{inputName}}{{itemIndex}}"
+           name="{{inputName}}"
+           type="{{inputType}}"
+           ng-class="inputClass"
+           placeholder="{{hint}}"
+           ng-required="{{isRequired}}"
+           minlength="1"
+           ng-model="model"
+           min="{{minRange}}"
+           max="{{maxRange}}">
 </label>
