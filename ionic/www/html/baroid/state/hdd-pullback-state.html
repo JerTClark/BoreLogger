@@ -63,20 +63,27 @@
             <!--<h3 class="title title-left item-icon-left">Calculations</h3>-->
         </div>
 
-        <!--<h3 class="item bar bar-assertive ion icon ion-ios7-calculator"> Calculations</h3>-->
+        <baroid-numeric-result result-title="Estimated Funnel Viscosity (sec/qt)"
+                               ng-show="values.estimatedFunnelViscosity !== 0"
+                               result-model="values.estimatedFunnelViscosity"></baroid-numeric-result>
+        <baroid-numeric-result result-title="Estimated Fluid Volume (gal)"
+                               ng-show="values.estimatedFluidVolume !== 0"
+                               result-model="values.estimatedFluidVolume"></baroid-numeric-result>
+        <baroid-numeric-result result-title="Actual Pump Output (gpm)"
+                               ng-show="values.actualPumpOutput !== 0"
+                               result-model="values.actualPumpOutput"></baroid-numeric-result>
+        <baroid-numeric-result result-title="Recommended Pullback Speed (min/rod)"
+                               ng-show="values.recommendedPullbackSpeed !== 0"
+                               result-model="values.recommendedPullbackSpeed"></baroid-numeric-result>
 
-            <baroid-numeric-result result-title="Estimated Funnel Viscosity (sec/qt)"
-                                   ng-show="estimatedFunnelViscosity !== 0"
-                                   result-model="estimatedFunnelViscosity"></baroid-numeric-result>
-            <baroid-numeric-result result-title="Estimated Fluid Volume (gal)"
-                                   ng-show="estimatedFluidVolume !== 0"
-                                   result-model="estimatedFluidVolume"></baroid-numeric-result>
-            <baroid-numeric-result result-title="Actual Pump Output (gpm)"
-                                   ng-show="actualPumpOutput !== 0"
-                                   result-model="actualPumpOutput"></baroid-numeric-result>
-            <baroid-numeric-result result-title="Recommended Pullback Speed (min/rod)"
-                                   ng-show="recommendedPullbackSpeed !== 0"
-                                   result-model="recommendedPullbackSpeed"></baroid-numeric-result>
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon icon ion-beaker">Fluid formation (per 100 gallons)</button>
+            <!--<h3 class="title title-left item-icon-left">Calculations</h3>-->
+        </div>
+
+        <baroid-recommendation-note note-title="Base"
+                                    note-model="values.baseRecommendation"
+                                    ng-show="values.baseRecommendation !== ''"></baroid-recommendation-note>
 
         <button class="button button-block button-energized" ng-click="logToConsole()">Log to Console</button>
 

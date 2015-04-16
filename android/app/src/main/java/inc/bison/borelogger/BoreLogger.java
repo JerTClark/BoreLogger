@@ -6,14 +6,11 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.BroadcastReceiver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +23,6 @@ import org.apache.cordova.CordovaPlugin;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import inc.bison.cordova.BaroidCordovaFragment;
 import inc.bison.cordova.CordovaFragment;
@@ -56,7 +52,7 @@ public class BoreLogger extends Activity
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
     //CordovaFragment
-    private final ExecutorService threadPool = Executors.newCachedThreadPool();
+//    private final ExecutorService threadPool = Executors.newCachedThreadPool();
     private CordovaFragment cordovaFragment = new CordovaFragment();
     private CordovaPlugin activityResultCallback;
 
@@ -80,7 +76,9 @@ public class BoreLogger extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
         MyGlobals.showDebugToasts = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.debug_toasts_key), false);
+
         checkForFolders();
 
     }//end onCreate()
@@ -193,7 +191,6 @@ public class BoreLogger extends Activity
             return true;
         }//end if
         if(id == R.id.calculators) {
-            //TODO Implement calculators
             getFragmentManager().beginTransaction().replace(R.id.container, new BaroidCordovaFragment()).commit();
             return true;
         }//end if
@@ -458,6 +455,7 @@ public class BoreLogger extends Activity
             //-- Pass the LocatesFragment a path to the working text file of this Bore Log
             Bundle bundle = new Bundle();
             boreLog.init();//-- This init() with create a new bore log text file
+            //FIXME Is there a need to call printTextFile here?
             bundle.putString(MyGlobals.TYPE, MyGlobals.BORE_LOG);
             //-- Break the BoreLog down for reconstruction
             bundle.putString(MyGlobals.CUSTOMER, boreLog.getCustomer());

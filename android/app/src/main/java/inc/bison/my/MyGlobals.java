@@ -32,6 +32,7 @@ public class MyGlobals {
     public final static String DATA_FOLDER = BISON_BORE_LOGGER_FOLDER + ".data/";
     public final static String JOURNAL_DATA_FOLDER = DATA_FOLDER + "journals/";
     public final static String LOG_DATA_FOLDER = DATA_FOLDER + "logs/";
+    public final static String TESTING_DATA_FILE = DATA_FOLDER + "tests.txt";
     public final static String BORE_LOG_FOLDER = BISON_BORE_LOGGER_FOLDER + "BoreLogs/";
     public final static String BORE_JOURNAL_FOLDER = BISON_BORE_LOGGER_FOLDER + "BoreJournals/";
     public final static String BORE_LOG_PDF = BISON_BORE_LOGGER_FOLDER + "BoreLogsPDF/";

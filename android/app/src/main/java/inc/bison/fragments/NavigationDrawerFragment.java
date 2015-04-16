@@ -20,8 +20,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import inc.bison.my.NavigationDrawerAdapter;
 import inc.bison.borelogger.R;
+import inc.bison.my.NavigationDrawerAdapter;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.

@@ -4,13 +4,14 @@
 describe("BaroidPullbackController, BaroidPullbackInputs, BaroidSoilTypes, " +
     "BaroidEstimatedFunnelViscosity, BaroidEstimatedFluidVolumeCalculator, " +
     "BaroidActualPumpOutputCalculator, BaroidRecommendedPullbackCalculator " +
-    "and BaroidPullbackValuesFactory",
+    "BaroidPullbackValuesFactory, and BaroidRecommendedFluidFormationService",
     function () {
 
         var $rootScope, $scope, $timeout, $state, BaroidPullbackController,
             BaroidPullbackInputs, BaroidSoilTypes, BaroidEstimatedFunnelViscosity,
             BaroidEstimatedFluidVolumeCalculator, BaroidActualPumpOutputCalculator,
-            BaroidRecommendedPullbackCalculator, BaroidPullbackValuesFactory;
+            BaroidRecommendedPullbackCalculator, BaroidPullbackValuesFactory,
+            BaroidRecommendedFluidFormationService;
 
         beforeEach(module('baroidApp'));
 
@@ -27,6 +28,7 @@ describe("BaroidPullbackController, BaroidPullbackInputs, BaroidSoilTypes, " +
                 BaroidActualPumpOutputCalculator = $injector.get("BaroidActualPumpOutputCalculator");
                 BaroidRecommendedPullbackCalculator = $injector.get("BaroidRecommendedPullbackCalculator");
                 BaroidPullbackValuesFactory = $injector.get("BaroidPullbackValuesFactory");
+                BaroidRecommendedFluidFormationService = $injector.get("BaroidRecommendedFluidFormationService");
 
                 BaroidPullbackController =
                     $injector.get("$controller")("BaroidPullbackController", {
@@ -39,7 +41,8 @@ describe("BaroidPullbackController, BaroidPullbackInputs, BaroidSoilTypes, " +
                         BaroidEstimatedFluidVolumeCalculator: BaroidEstimatedFluidVolumeCalculator,
                         BaroidActualPumpOutputCalculator: BaroidActualPumpOutputCalculator,
                         BaroidRecommendedPullbackCalculator: BaroidRecommendedPullbackCalculator,
-                        BaroidPullbackValuesFactory: BaroidPullbackValuesFactory
+                        BaroidPullbackValuesFactory: BaroidPullbackValuesFactory,
+                        BaroidRecommendedFluidFormationService: BaroidRecommendedFluidFormationService
                     });
 
             });
@@ -150,6 +153,15 @@ describe("BaroidPullbackController, BaroidPullbackInputs, BaroidSoilTypes, " +
         });
         /*end BaroidPullbackValuesFactory*/
 
+        describe("BaroidRecommendedFluidFormationService", function () {
+
+            it("should be defined", function () {
+                expect(BaroidRecommendedFluidFormationService).toBeDefined();
+            });
+
+        });
+        /*end BaroidRecommendedFluidFormationService*/
+
 
         /**
          * BaroidPullbackController $scope tests begin here
@@ -165,10 +177,7 @@ describe("BaroidPullbackController, BaroidPullbackInputs, BaroidSoilTypes, " +
                 expect($scope.rowTwo).toBeDefined();
                 expect($scope.soilTypes).toBeDefined();
                 expect($scope.input).toBeDefined();
-                expect($scope.estimatedFunnelViscosity).toBeDefined();
-                expect($scope.estimatedFluidVolume).toBeDefined();
-                expect($scope.actualPumpOutput).toBeDefined();
-                expect($scope.recommendedPullbackSpeed).toBeDefined();
+                expect($scope.values).toBeDefined();
             });
 
             describe("$scope.rowOne", function () {

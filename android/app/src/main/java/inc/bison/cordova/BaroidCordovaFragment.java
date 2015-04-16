@@ -17,9 +17,6 @@ import java.util.concurrent.Executors;
 
 import inc.bison.borelogger.R;
 
-/**
- * Created by jerem_000 on 4/2/2015.
- */
 public class BaroidCordovaFragment extends Fragment implements CordovaInterface {
 
     private CordovaWebView cordovaWebView;
@@ -38,7 +35,7 @@ public class BaroidCordovaFragment extends Fragment implements CordovaInterface 
         View rootView = inflater.inflate(R.layout.fragment_cordova, container, false);
         cordovaWebView = (CordovaWebView) rootView.findViewById(R.id.orgApacheCordovaWebView);
         Config.init(getActivity());
-        cordovaWebView.getSettings().setJavaScriptEnabled(true);
+//        cordovaWebView.getSettings().setJavaScriptEnabled(true);
         cordovaWebView.loadUrl("file:///android_asset/www/baroid.html");
         return rootView;
     }//end onCreateView()

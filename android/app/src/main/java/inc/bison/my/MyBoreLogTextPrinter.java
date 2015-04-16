@@ -34,7 +34,8 @@ public class MyBoreLogTextPrinter {
         File boreLogTextFile = new File(this.boreLog.getTextFilePath());
         PrintWriter printWriter = null;
         try {
-            printWriter = new PrintWriter(new FileOutputStream(boreLogTextFile, true));
+            //FIXME What's causing the bore logs to be written wrong?
+            printWriter = new PrintWriter(new FileOutputStream(boreLogTextFile, false));
         } catch (FileNotFoundException e) {
             Log.d(this.getClass().getSimpleName(), e.getMessage());
         }//end try-catch

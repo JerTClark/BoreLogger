@@ -1357,22 +1357,20 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020035;
         public static final int abc_textfield_search_material=0x7f020036;
         public static final int bison_document=0x7f020037;
-        public static final int bison_inc_logo=0x7f020038;
-        public static final int bison_logo=0x7f020039;
-        public static final int border_gray_line=0x7f02003a;
-        public static final int border_redline=0x7f02003b;
-        public static final int company_name=0x7f02003c;
-        public static final int drawer_shadow=0x7f02003d;
-        public static final int ic_drawer=0x7f02003e;
-        public static final int ic_launcher=0x7f02003f;
-        public static final int list=0x7f020040;
-        public static final int list_files_button=0x7f020041;
-        public static final int list_files_button_pressed=0x7f020042;
-        public static final int list_files_button_unpressed=0x7f020043;
-        public static final int red_background=0x7f020044;
-        public static final int share=0x7f020045;
-        public static final int tricone_holo_dark_icon=0x7f020046;
-        public static final int tricone_holo_light_icon=0x7f020047;
+        public static final int bison_logo=0x7f020038;
+        public static final int border_gray_line=0x7f020039;
+        public static final int border_redline=0x7f02003a;
+        public static final int drawer_shadow=0x7f02003b;
+        public static final int ic_drawer=0x7f02003c;
+        public static final int ic_launcher=0x7f02003d;
+        public static final int list=0x7f02003e;
+        public static final int list_files_button=0x7f02003f;
+        public static final int list_files_button_pressed=0x7f020040;
+        public static final int list_files_button_unpressed=0x7f020041;
+        public static final int red_background=0x7f020042;
+        public static final int share=0x7f020043;
+        public static final int tricone_holo_dark_icon=0x7f020044;
+        public static final int tricone_holo_light_icon=0x7f020045;
     }
     public static final class id {
         public static final int action_bar=0x7f0a0031;
@@ -1966,33 +1964,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background inc.bison.borelogger:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit inc.bison.borelogger:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked inc.bison.borelogger:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd inc.bison.borelogger:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft inc.bison.borelogger:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight inc.bison.borelogger:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart inc.bison.borelogger:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout inc.bison.borelogger:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions inc.bison.borelogger:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider inc.bison.borelogger:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation inc.bison.borelogger:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height inc.bison.borelogger:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll inc.bison.borelogger:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator inc.bison.borelogger:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout inc.bison.borelogger:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon inc.bison.borelogger:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle inc.bison.borelogger:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding inc.bison.borelogger:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo inc.bison.borelogger:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode inc.bison.borelogger:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme inc.bison.borelogger:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding inc.bison.borelogger:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle inc.bison.borelogger:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle inc.bison.borelogger:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle inc.bison.borelogger:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title inc.bison.borelogger:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle inc.bison.borelogger:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background inc.bison.borelogger.debug:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit inc.bison.borelogger.debug:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked inc.bison.borelogger.debug:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd inc.bison.borelogger.debug:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft inc.bison.borelogger.debug:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight inc.bison.borelogger.debug:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart inc.bison.borelogger.debug:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout inc.bison.borelogger.debug:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions inc.bison.borelogger.debug:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider inc.bison.borelogger.debug:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation inc.bison.borelogger.debug:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height inc.bison.borelogger.debug:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll inc.bison.borelogger.debug:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator inc.bison.borelogger.debug:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout inc.bison.borelogger.debug:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon inc.bison.borelogger.debug:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle inc.bison.borelogger.debug:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding inc.bison.borelogger.debug:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo inc.bison.borelogger.debug:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode inc.bison.borelogger.debug:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme inc.bison.borelogger.debug:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding inc.bison.borelogger.debug:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle inc.bison.borelogger.debug:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle inc.bison.borelogger.debug:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle inc.bison.borelogger.debug:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title inc.bison.borelogger.debug:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle inc.bison.borelogger.debug:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2032,17 +2030,17 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f010071
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#background}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:background
+          @attr name inc.bison.borelogger.debug:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2050,11 +2048,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:backgroundSplit
+          @attr name inc.bison.borelogger.debug:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2062,11 +2060,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:backgroundStacked
+          @attr name inc.bison.borelogger.debug:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2078,11 +2076,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetEnd
+          @attr name inc.bison.borelogger.debug:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2094,11 +2092,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetLeft
+          @attr name inc.bison.borelogger.debug:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2110,11 +2108,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetRight
+          @attr name inc.bison.borelogger.debug:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2126,21 +2124,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetStart
+          @attr name inc.bison.borelogger.debug:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:customNavigationLayout
+          @attr name inc.bison.borelogger.debug:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2158,21 +2156,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:displayOptions
+          @attr name inc.bison.borelogger.debug:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#divider}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:divider
+          @attr name inc.bison.borelogger.debug:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#elevation}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2184,11 +2182,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:elevation
+          @attr name inc.bison.borelogger.debug:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#height}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2200,11 +2198,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:height
+          @attr name inc.bison.borelogger.debug:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2214,51 +2212,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:hideOnContentScroll
+          @attr name inc.bison.borelogger.debug:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:homeAsUpIndicator
+          @attr name inc.bison.borelogger.debug:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:homeLayout
+          @attr name inc.bison.borelogger.debug:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#icon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:icon
+          @attr name inc.bison.borelogger.debug:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:indeterminateProgressStyle
+          @attr name inc.bison.borelogger.debug:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2270,21 +2268,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:itemPadding
+          @attr name inc.bison.borelogger.debug:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#logo}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:logo
+          @attr name inc.bison.borelogger.debug:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2298,21 +2296,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:navigationMode
+          @attr name inc.bison.borelogger.debug:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:popupTheme
+          @attr name inc.bison.borelogger.debug:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2324,21 +2322,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:progressBarPadding
+          @attr name inc.bison.borelogger.debug:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:progressBarStyle
+          @attr name inc.bison.borelogger.debug:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2348,21 +2346,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:subtitle
+          @attr name inc.bison.borelogger.debug:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:subtitleTextStyle
+          @attr name inc.bison.borelogger.debug:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#title}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2372,17 +2370,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:title
+          @attr name inc.bison.borelogger.debug:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:titleTextStyle
+          @attr name inc.bison.borelogger.debug:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -2434,12 +2432,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background inc.bison.borelogger:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit inc.bison.borelogger:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout inc.bison.borelogger:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height inc.bison.borelogger:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle inc.bison.borelogger:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle inc.bison.borelogger:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background inc.bison.borelogger.debug:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit inc.bison.borelogger.debug:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout inc.bison.borelogger.debug:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height inc.bison.borelogger.debug:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle inc.bison.borelogger.debug:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle inc.bison.borelogger.debug:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2453,17 +2451,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#background}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:background
+          @attr name inc.bison.borelogger.debug:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2471,21 +2469,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:backgroundSplit
+          @attr name inc.bison.borelogger.debug:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:closeItemLayout
+          @attr name inc.bison.borelogger.debug:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#height}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2497,27 +2495,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:height
+          @attr name inc.bison.borelogger.debug:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:subtitleTextStyle
+          @attr name inc.bison.borelogger.debug:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:titleTextStyle
+          @attr name inc.bison.borelogger.debug:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2526,8 +2524,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable inc.bison.borelogger:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount inc.bison.borelogger:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable inc.bison.borelogger.debug:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount inc.bison.borelogger.debug:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2536,17 +2534,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:expandActivityOverflowButtonDrawable
+          @attr name inc.bison.borelogger.debug:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2556,7 +2554,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:initialActivityCount
+          @attr name inc.bison.borelogger.debug:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a CompatTextView.
@@ -2565,7 +2563,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CompatTextView_textAllCaps inc.bison.borelogger:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompatTextView_textAllCaps inc.bison.borelogger.debug:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #CompatTextView_textAllCaps
          */
@@ -2573,14 +2571,14 @@ containing a value of this type.
             0x7f01001f
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAllCaps}
           attribute's value can be found in the {@link #CompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name inc.bison.borelogger:textAllCaps
+          @attr name inc.bison.borelogger.debug:textAllCaps
         */
         public static final int CompatTextView_textAllCaps = 0;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -2589,14 +2587,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barSize inc.bison.borelogger:barSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color inc.bison.borelogger:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize inc.bison.borelogger:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars inc.bison.borelogger:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize inc.bison.borelogger:middleBarArrowSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars inc.bison.borelogger:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness inc.bison.borelogger:thickness}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize inc.bison.borelogger:topBottomBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barSize inc.bison.borelogger.debug:barSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color inc.bison.borelogger.debug:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize inc.bison.borelogger.debug:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars inc.bison.borelogger.debug:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize inc.bison.borelogger.debug:middleBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars inc.bison.borelogger.debug:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness inc.bison.borelogger.debug:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize inc.bison.borelogger.debug:topBottomBarArrowSize}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_barSize
            @see #DrawerArrowToggle_color
@@ -2612,7 +2610,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010024, 0x7f010025, 0x7f010026, 0x7f010027
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#barSize}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#barSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2624,11 +2622,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:barSize
+          @attr name inc.bison.borelogger.debug:barSize
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#color}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2639,11 +2637,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:color
+          @attr name inc.bison.borelogger.debug:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2655,11 +2653,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:drawableSize
+          @attr name inc.bison.borelogger.debug:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2671,11 +2669,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:gapBetweenBars
+          @attr name inc.bison.borelogger.debug:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#middleBarArrowSize}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#middleBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2687,11 +2685,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:middleBarArrowSize
+          @attr name inc.bison.borelogger.debug:middleBarArrowSize
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2701,11 +2699,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:spinBars
+          @attr name inc.bison.borelogger.debug:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#thickness}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2717,11 +2715,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:thickness
+          @attr name inc.bison.borelogger.debug:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#topBottomBarArrowSize}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#topBottomBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2733,7 +2731,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:topBottomBarArrowSize
+          @attr name inc.bison.borelogger.debug:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -2747,10 +2745,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider inc.bison.borelogger:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding inc.bison.borelogger:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild inc.bison.borelogger:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers inc.bison.borelogger:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider inc.bison.borelogger.debug:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding inc.bison.borelogger.debug:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild inc.bison.borelogger.debug:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers inc.bison.borelogger.debug:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -2798,17 +2796,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#divider}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:divider
+          @attr name inc.bison.borelogger.debug:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -2820,11 +2818,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:dividerPadding
+          @attr name inc.bison.borelogger.debug:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -2834,11 +2832,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:measureWithLargestChild
+          @attr name inc.bison.borelogger.debug:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -2853,7 +2851,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:showDividers
+          @attr name inc.bison.borelogger.debug:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -2992,9 +2990,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout inc.bison.borelogger:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass inc.bison.borelogger:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass inc.bison.borelogger:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout inc.bison.borelogger.debug:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass inc.bison.borelogger.debug:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass inc.bison.borelogger.debug:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -3008,7 +3006,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction inc.bison.borelogger:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction inc.bison.borelogger.debug:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -3036,17 +3034,17 @@ containing a value of this type.
             0x7f01002e
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionLayout
+          @attr name inc.bison.borelogger.debug:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3056,11 +3054,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:actionProviderClass
+          @attr name inc.bison.borelogger.debug:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3070,7 +3068,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:actionViewClass
+          @attr name inc.bison.borelogger.debug:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -3152,7 +3150,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3168,7 +3166,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:showAsAction
+          @attr name inc.bison.borelogger.debug:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -3184,7 +3182,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing inc.bison.borelogger:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing inc.bison.borelogger.debug:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -3242,7 +3240,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -3252,7 +3250,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:preserveIconSpacing
+          @attr name inc.bison.borelogger.debug:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -3262,7 +3260,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor inc.bison.borelogger:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor inc.bison.borelogger.debug:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -3277,7 +3275,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -3287,7 +3285,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:overlapAnchor
+          @attr name inc.bison.borelogger.debug:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -3296,7 +3294,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor inc.bison.borelogger:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor inc.bison.borelogger.debug:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -3304,7 +3302,7 @@ containing a value of this type.
             0x7f010031
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -3314,7 +3312,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:state_above_anchor
+          @attr name inc.bison.borelogger.debug:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a SearchView.
@@ -3327,17 +3325,17 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon inc.bison.borelogger:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon inc.bison.borelogger:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon inc.bison.borelogger:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault inc.bison.borelogger:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout inc.bison.borelogger:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground inc.bison.borelogger:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint inc.bison.borelogger:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon inc.bison.borelogger:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground inc.bison.borelogger:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout inc.bison.borelogger:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon inc.bison.borelogger:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon inc.bison.borelogger.debug:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon inc.bison.borelogger.debug:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon inc.bison.borelogger.debug:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault inc.bison.borelogger.debug:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout inc.bison.borelogger.debug:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground inc.bison.borelogger.debug:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint inc.bison.borelogger.debug:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon inc.bison.borelogger.debug:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground inc.bison.borelogger.debug:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout inc.bison.borelogger.debug:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon inc.bison.borelogger.debug:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -3386,37 +3384,37 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:closeIcon
+          @attr name inc.bison.borelogger.debug:closeIcon
         */
         public static final int SearchView_closeIcon = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:commitIcon
+          @attr name inc.bison.borelogger.debug:commitIcon
         */
         public static final int SearchView_commitIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:goIcon
+          @attr name inc.bison.borelogger.debug:goIcon
         */
         public static final int SearchView_goIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3426,31 +3424,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:iconifiedByDefault
+          @attr name inc.bison.borelogger.debug:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#layout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:layout
+          @attr name inc.bison.borelogger.debug:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:queryBackground
+          @attr name inc.bison.borelogger.debug:queryBackground
         */
         public static final int SearchView_queryBackground = 13;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3460,47 +3458,47 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:queryHint
+          @attr name inc.bison.borelogger.debug:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:searchIcon
+          @attr name inc.bison.borelogger.debug:searchIcon
         */
         public static final int SearchView_searchIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:submitBackground
+          @attr name inc.bison.borelogger.debug:submitBackground
         */
         public static final int SearchView_submitBackground = 14;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:suggestionRowLayout
+          @attr name inc.bison.borelogger.debug:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 12;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:voiceIcon
+          @attr name inc.bison.borelogger.debug:voiceIcon
         */
         public static final int SearchView_voiceIcon = 10;
         /** Attributes that can be used with a Spinner.
@@ -3516,10 +3514,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled inc.bison.borelogger:disableChildrenWhenDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView inc.bison.borelogger:popupPromptView}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_prompt inc.bison.borelogger:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode inc.bison.borelogger:spinnerMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled inc.bison.borelogger.debug:disableChildrenWhenDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupPromptView inc.bison.borelogger.debug:popupPromptView}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_prompt inc.bison.borelogger.debug:prompt}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode inc.bison.borelogger.debug:spinnerMode}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_background
            @see #Spinner_android_dropDownHorizontalOffset
@@ -3581,7 +3579,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_popupBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3591,31 +3589,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:disableChildrenWhenDisabled
+          @attr name inc.bison.borelogger.debug:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:popupPromptView
+          @attr name inc.bison.borelogger.debug:popupPromptView
         */
         public static final int Spinner_popupPromptView = 9;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#prompt}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:prompt
+          @attr name inc.bison.borelogger.debug:prompt
         */
         public static final int Spinner_prompt = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3628,7 +3626,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>dialog</code></td><td>0</td><td></td></tr>
 <tr><td><code>dropdown</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:spinnerMode
+          @attr name inc.bison.borelogger.debug:spinnerMode
         */
         public static final int Spinner_spinnerMode = 8;
         /** Attributes that can be used with a SwitchCompat.
@@ -3640,13 +3638,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText inc.bison.borelogger:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack inc.bison.borelogger:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth inc.bison.borelogger:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding inc.bison.borelogger:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance inc.bison.borelogger:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding inc.bison.borelogger:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track inc.bison.borelogger:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText inc.bison.borelogger.debug:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack inc.bison.borelogger.debug:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth inc.bison.borelogger.debug:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding inc.bison.borelogger.debug:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance inc.bison.borelogger.debug:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding inc.bison.borelogger.debug:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track inc.bison.borelogger.debug:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -3683,7 +3681,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#showText}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -3693,11 +3691,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:showText
+          @attr name inc.bison.borelogger.debug:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -3707,11 +3705,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:splitTrack
+          @attr name inc.bison.borelogger.debug:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -3723,11 +3721,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:switchMinWidth
+          @attr name inc.bison.borelogger.debug:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -3739,21 +3737,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:switchPadding
+          @attr name inc.bison.borelogger.debug:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:switchTextAppearance
+          @attr name inc.bison.borelogger.debug:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -3765,17 +3763,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:thumbTextPadding
+          @attr name inc.bison.borelogger.debug:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#track}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:track
+          @attr name inc.bison.borelogger.debug:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a SwitchCompatTextAppearance.
@@ -3786,7 +3784,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #SwitchCompatTextAppearance_android_textColor android:textColor}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompatTextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompatTextAppearance_textAllCaps inc.bison.borelogger:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompatTextAppearance_textAllCaps inc.bison.borelogger.debug:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #SwitchCompatTextAppearance_android_textColor
            @see #SwitchCompatTextAppearance_android_textSize
@@ -3808,14 +3806,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompatTextAppearance_android_textSize = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAllCaps}
           attribute's value can be found in the {@link #SwitchCompatTextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name inc.bison.borelogger:textAllCaps
+          @attr name inc.bison.borelogger.debug:textAllCaps
         */
         public static final int SwitchCompatTextAppearance_textAllCaps = 2;
         /** Attributes that can be used with a Theme.
@@ -3824,90 +3822,90 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider inc.bison.borelogger:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground inc.bison.borelogger:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme inc.bison.borelogger:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize inc.bison.borelogger:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle inc.bison.borelogger:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle inc.bison.borelogger:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle inc.bison.borelogger:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle inc.bison.borelogger:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle inc.bison.borelogger:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme inc.bison.borelogger:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme inc.bison.borelogger:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle inc.bison.borelogger:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle inc.bison.borelogger:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance inc.bison.borelogger:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor inc.bison.borelogger:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground inc.bison.borelogger:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle inc.bison.borelogger:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable inc.bison.borelogger:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable inc.bison.borelogger:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable inc.bison.borelogger:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable inc.bison.borelogger:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable inc.bison.borelogger:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle inc.bison.borelogger:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable inc.bison.borelogger:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable inc.bison.borelogger:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground inc.bison.borelogger:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle inc.bison.borelogger:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable inc.bison.borelogger:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle inc.bison.borelogger:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle inc.bison.borelogger:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle inc.bison.borelogger:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider inc.bison.borelogger.debug:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground inc.bison.borelogger.debug:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme inc.bison.borelogger.debug:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize inc.bison.borelogger.debug:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle inc.bison.borelogger.debug:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle inc.bison.borelogger.debug:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle inc.bison.borelogger.debug:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle inc.bison.borelogger.debug:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle inc.bison.borelogger.debug:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme inc.bison.borelogger.debug:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme inc.bison.borelogger.debug:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle inc.bison.borelogger.debug:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle inc.bison.borelogger.debug:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance inc.bison.borelogger.debug:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor inc.bison.borelogger.debug:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground inc.bison.borelogger.debug:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle inc.bison.borelogger.debug:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable inc.bison.borelogger.debug:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable inc.bison.borelogger.debug:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable inc.bison.borelogger.debug:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable inc.bison.borelogger.debug:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable inc.bison.borelogger.debug:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle inc.bison.borelogger.debug:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable inc.bison.borelogger.debug:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable inc.bison.borelogger.debug:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground inc.bison.borelogger.debug:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle inc.bison.borelogger.debug:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable inc.bison.borelogger.debug:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle inc.bison.borelogger.debug:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle inc.bison.borelogger.debug:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle inc.bison.borelogger.debug:activityChooserViewStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle inc.bison.borelogger:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle inc.bison.borelogger:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent inc.bison.borelogger:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal inc.bison.borelogger:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated inc.bison.borelogger:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight inc.bison.borelogger:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal inc.bison.borelogger:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary inc.bison.borelogger:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark inc.bison.borelogger:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal inc.bison.borelogger:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal inc.bison.borelogger:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical inc.bison.borelogger:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle inc.bison.borelogger:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight inc.bison.borelogger:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground inc.bison.borelogger:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor inc.bison.borelogger:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator inc.bison.borelogger:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator inc.bison.borelogger:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle inc.bison.borelogger:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight inc.bison.borelogger:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge inc.bison.borelogger:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall inc.bison.borelogger:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft inc.bison.borelogger:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight inc.bison.borelogger:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground inc.bison.borelogger:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme inc.bison.borelogger:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth inc.bison.borelogger:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle inc.bison.borelogger:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle inc.bison.borelogger:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle inc.bison.borelogger:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground inc.bison.borelogger:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless inc.bison.borelogger:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle inc.bison.borelogger:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle inc.bison.borelogger:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle inc.bison.borelogger:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu inc.bison.borelogger:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem inc.bison.borelogger:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall inc.bison.borelogger:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle inc.bison.borelogger:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle inc.bison.borelogger:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu inc.bison.borelogger:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl inc.bison.borelogger:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle inc.bison.borelogger:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle inc.bison.borelogger:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar inc.bison.borelogger:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay inc.bison.borelogger:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay inc.bison.borelogger:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor inc.bison.borelogger:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor inc.bison.borelogger:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor inc.bison.borelogger:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor inc.bison.borelogger:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle inc.bison.borelogger.debug:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle inc.bison.borelogger.debug:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent inc.bison.borelogger.debug:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal inc.bison.borelogger.debug:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated inc.bison.borelogger.debug:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight inc.bison.borelogger.debug:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal inc.bison.borelogger.debug:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary inc.bison.borelogger.debug:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark inc.bison.borelogger.debug:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal inc.bison.borelogger.debug:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal inc.bison.borelogger.debug:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical inc.bison.borelogger.debug:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle inc.bison.borelogger.debug:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight inc.bison.borelogger.debug:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground inc.bison.borelogger.debug:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor inc.bison.borelogger.debug:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator inc.bison.borelogger.debug:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator inc.bison.borelogger.debug:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle inc.bison.borelogger.debug:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight inc.bison.borelogger.debug:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge inc.bison.borelogger.debug:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall inc.bison.borelogger.debug:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft inc.bison.borelogger.debug:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight inc.bison.borelogger.debug:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground inc.bison.borelogger.debug:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme inc.bison.borelogger.debug:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth inc.bison.borelogger.debug:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle inc.bison.borelogger.debug:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle inc.bison.borelogger.debug:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle inc.bison.borelogger.debug:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground inc.bison.borelogger.debug:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless inc.bison.borelogger.debug:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle inc.bison.borelogger.debug:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle inc.bison.borelogger.debug:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle inc.bison.borelogger.debug:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu inc.bison.borelogger.debug:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem inc.bison.borelogger.debug:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall inc.bison.borelogger.debug:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle inc.bison.borelogger.debug:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle inc.bison.borelogger.debug:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu inc.bison.borelogger.debug:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl inc.bison.borelogger.debug:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle inc.bison.borelogger.debug:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle inc.bison.borelogger.debug:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar inc.bison.borelogger.debug:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay inc.bison.borelogger.debug:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay inc.bison.borelogger.debug:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor inc.bison.borelogger.debug:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor inc.bison.borelogger.debug:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor inc.bison.borelogger.debug:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor inc.bison.borelogger.debug:windowFixedWidthMinor}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -4018,37 +4016,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010096, 0x7f010097, 0x7f010098, 0x7f010099
         };
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarDivider
+          @attr name inc.bison.borelogger.debug:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 20;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarItemBackground
+          @attr name inc.bison.borelogger.debug:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 21;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarPopupTheme
+          @attr name inc.bison.borelogger.debug:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 14;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4068,111 +4066,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name inc.bison.borelogger:actionBarSize
+          @attr name inc.bison.borelogger.debug:actionBarSize
         */
         public static final int Theme_actionBarSize = 19;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarSplitStyle
+          @attr name inc.bison.borelogger.debug:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarStyle
+          @attr name inc.bison.borelogger.debug:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarTabBarStyle
+          @attr name inc.bison.borelogger.debug:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 10;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarTabStyle
+          @attr name inc.bison.borelogger.debug:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 9;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarTabTextStyle
+          @attr name inc.bison.borelogger.debug:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 11;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarTheme
+          @attr name inc.bison.borelogger.debug:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionBarWidgetTheme
+          @attr name inc.bison.borelogger.debug:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 18;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionButtonStyle
+          @attr name inc.bison.borelogger.debug:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 44;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionDropDownStyle
+          @attr name inc.bison.borelogger.debug:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionMenuTextAppearance
+          @attr name inc.bison.borelogger.debug:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 22;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4180,167 +4178,167 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:actionMenuTextColor
+          @attr name inc.bison.borelogger.debug:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 23;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeBackground
+          @attr name inc.bison.borelogger.debug:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 26;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeCloseButtonStyle
+          @attr name inc.bison.borelogger.debug:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 25;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeCloseDrawable
+          @attr name inc.bison.borelogger.debug:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 28;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeCopyDrawable
+          @attr name inc.bison.borelogger.debug:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 30;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeCutDrawable
+          @attr name inc.bison.borelogger.debug:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 29;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeFindDrawable
+          @attr name inc.bison.borelogger.debug:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModePasteDrawable
+          @attr name inc.bison.borelogger.debug:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModePopupWindowStyle
+          @attr name inc.bison.borelogger.debug:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 36;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeSelectAllDrawable
+          @attr name inc.bison.borelogger.debug:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeShareDrawable
+          @attr name inc.bison.borelogger.debug:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeSplitBackground
+          @attr name inc.bison.borelogger.debug:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 27;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeStyle
+          @attr name inc.bison.borelogger.debug:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 24;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionModeWebSearchDrawable
+          @attr name inc.bison.borelogger.debug:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionOverflowButtonStyle
+          @attr name inc.bison.borelogger.debug:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:actionOverflowMenuStyle
+          @attr name inc.bison.borelogger.debug:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:activityChooserViewStyle
+          @attr name inc.bison.borelogger.debug:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 51;
         /**
@@ -4356,27 +4354,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:buttonBarButtonStyle
+          @attr name inc.bison.borelogger.debug:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 46;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:buttonBarStyle
+          @attr name inc.bison.borelogger.debug:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4387,11 +4385,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorAccent
+          @attr name inc.bison.borelogger.debug:colorAccent
         */
         public static final int Theme_colorAccent = 78;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4402,11 +4400,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorButtonNormal
+          @attr name inc.bison.borelogger.debug:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 82;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4417,11 +4415,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorControlActivated
+          @attr name inc.bison.borelogger.debug:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 80;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4432,11 +4430,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorControlHighlight
+          @attr name inc.bison.borelogger.debug:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 81;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4447,11 +4445,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorControlNormal
+          @attr name inc.bison.borelogger.debug:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 79;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4462,11 +4460,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorPrimary
+          @attr name inc.bison.borelogger.debug:colorPrimary
         */
         public static final int Theme_colorPrimary = 76;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4477,11 +4475,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorPrimaryDark
+          @attr name inc.bison.borelogger.debug:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 77;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4492,41 +4490,41 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:colorSwitchThumbNormal
+          @attr name inc.bison.borelogger.debug:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 83;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:dividerHorizontal
+          @attr name inc.bison.borelogger.debug:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 50;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:dividerVertical
+          @attr name inc.bison.borelogger.debug:dividerVertical
         */
         public static final int Theme_dividerVertical = 49;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:dropDownListViewStyle
+          @attr name inc.bison.borelogger.debug:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 68;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4538,21 +4536,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:dropdownListPreferredItemHeight
+          @attr name inc.bison.borelogger.debug:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 40;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:editTextBackground
+          @attr name inc.bison.borelogger.debug:editTextBackground
         */
         public static final int Theme_editTextBackground = 57;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4560,41 +4558,41 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:editTextColor
+          @attr name inc.bison.borelogger.debug:editTextColor
         */
         public static final int Theme_editTextColor = 56;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:homeAsUpIndicator
+          @attr name inc.bison.borelogger.debug:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 43;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:listChoiceBackgroundIndicator
+          @attr name inc.bison.borelogger.debug:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 75;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:listPopupWindowStyle
+          @attr name inc.bison.borelogger.debug:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 69;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4606,11 +4604,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:listPreferredItemHeight
+          @attr name inc.bison.borelogger.debug:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 63;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4622,11 +4620,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:listPreferredItemHeightLarge
+          @attr name inc.bison.borelogger.debug:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 65;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4638,11 +4636,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:listPreferredItemHeightSmall
+          @attr name inc.bison.borelogger.debug:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 64;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4654,11 +4652,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:listPreferredItemPaddingLeft
+          @attr name inc.bison.borelogger.debug:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 66;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4670,31 +4668,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:listPreferredItemPaddingRight
+          @attr name inc.bison.borelogger.debug:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 67;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:panelBackground
+          @attr name inc.bison.borelogger.debug:panelBackground
         */
         public static final int Theme_panelBackground = 72;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:panelMenuListTheme
+          @attr name inc.bison.borelogger.debug:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 74;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4706,151 +4704,151 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:panelMenuListWidth
+          @attr name inc.bison.borelogger.debug:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 73;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:popupMenuStyle
+          @attr name inc.bison.borelogger.debug:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:popupWindowStyle
+          @attr name inc.bison.borelogger.debug:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 55;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:searchViewStyle
+          @attr name inc.bison.borelogger.debug:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 62;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:selectableItemBackground
+          @attr name inc.bison.borelogger.debug:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 47;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:selectableItemBackgroundBorderless
+          @attr name inc.bison.borelogger.debug:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 48;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:spinnerDropDownItemStyle
+          @attr name inc.bison.borelogger.debug:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 42;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:spinnerStyle
+          @attr name inc.bison.borelogger.debug:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 41;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:switchStyle
+          @attr name inc.bison.borelogger.debug:switchStyle
         */
         public static final int Theme_switchStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceLargePopupMenu
+          @attr name inc.bison.borelogger.debug:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 37;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceListItem
+          @attr name inc.bison.borelogger.debug:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 70;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceListItemSmall
+          @attr name inc.bison.borelogger.debug:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 71;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceSearchResultSubtitle
+          @attr name inc.bison.borelogger.debug:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 60;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceSearchResultTitle
+          @attr name inc.bison.borelogger.debug:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 59;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:textAppearanceSmallPopupMenu
+          @attr name inc.bison.borelogger.debug:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 38;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4858,31 +4856,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name inc.bison.borelogger:textColorSearchUrl
+          @attr name inc.bison.borelogger.debug:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 61;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:toolbarNavigationButtonStyle
+          @attr name inc.bison.borelogger.debug:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 53;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:toolbarStyle
+          @attr name inc.bison.borelogger.debug:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 52;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4892,11 +4890,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowActionBar
+          @attr name inc.bison.borelogger.debug:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4906,11 +4904,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowActionBarOverlay
+          @attr name inc.bison.borelogger.debug:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4920,11 +4918,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowActionModeOverlay
+          @attr name inc.bison.borelogger.debug:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4939,11 +4937,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowFixedHeightMajor
+          @attr name inc.bison.borelogger.debug:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4958,11 +4956,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowFixedHeightMinor
+          @attr name inc.bison.borelogger.debug:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4977,11 +4975,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowFixedWidthMajor
+          @attr name inc.bison.borelogger.debug:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4996,7 +4994,7 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:windowFixedWidthMinor
+          @attr name inc.bison.borelogger.debug:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 7;
         /** Attributes that can be used with a Toolbar.
@@ -5007,26 +5005,26 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription inc.bison.borelogger:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon inc.bison.borelogger:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd inc.bison.borelogger:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft inc.bison.borelogger:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight inc.bison.borelogger:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart inc.bison.borelogger:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight inc.bison.borelogger:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription inc.bison.borelogger:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon inc.bison.borelogger:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme inc.bison.borelogger:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle inc.bison.borelogger:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance inc.bison.borelogger:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_theme inc.bison.borelogger:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title inc.bison.borelogger:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom inc.bison.borelogger:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd inc.bison.borelogger:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart inc.bison.borelogger:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop inc.bison.borelogger:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins inc.bison.borelogger:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance inc.bison.borelogger:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription inc.bison.borelogger.debug:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon inc.bison.borelogger.debug:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd inc.bison.borelogger.debug:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft inc.bison.borelogger.debug:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight inc.bison.borelogger.debug:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart inc.bison.borelogger.debug:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight inc.bison.borelogger.debug:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription inc.bison.borelogger.debug:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon inc.bison.borelogger.debug:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme inc.bison.borelogger.debug:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle inc.bison.borelogger.debug:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance inc.bison.borelogger.debug:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_theme inc.bison.borelogger.debug:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title inc.bison.borelogger.debug:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom inc.bison.borelogger.debug:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd inc.bison.borelogger.debug:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart inc.bison.borelogger.debug:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop inc.bison.borelogger.debug:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins inc.bison.borelogger.debug:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance inc.bison.borelogger.debug:titleTextAppearance}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -5072,7 +5070,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5082,21 +5080,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:collapseContentDescription
+          @attr name inc.bison.borelogger.debug:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:collapseIcon
+          @attr name inc.bison.borelogger.debug:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 18;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5108,11 +5106,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetEnd
+          @attr name inc.bison.borelogger.debug:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5124,11 +5122,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetLeft
+          @attr name inc.bison.borelogger.debug:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5140,11 +5138,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetRight
+          @attr name inc.bison.borelogger.debug:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5156,11 +5154,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:contentInsetStart
+          @attr name inc.bison.borelogger.debug:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5172,11 +5170,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:maxButtonHeight
+          @attr name inc.bison.borelogger.debug:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5186,31 +5184,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:navigationContentDescription
+          @attr name inc.bison.borelogger.debug:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 21;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:navigationIcon
+          @attr name inc.bison.borelogger.debug:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 20;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:popupTheme
+          @attr name inc.bison.borelogger.debug:popupTheme
         */
         public static final int Toolbar_popupTheme = 8;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5220,31 +5218,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:subtitle
+          @attr name inc.bison.borelogger.debug:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:subtitleTextAppearance
+          @attr name inc.bison.borelogger.debug:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#theme}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#theme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:theme
+          @attr name inc.bison.borelogger.debug:theme
         */
         public static final int Toolbar_theme = 17;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#title}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5254,11 +5252,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:title
+          @attr name inc.bison.borelogger.debug:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5270,11 +5268,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:titleMarginBottom
+          @attr name inc.bison.borelogger.debug:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5286,11 +5284,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:titleMarginEnd
+          @attr name inc.bison.borelogger.debug:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5302,11 +5300,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:titleMarginStart
+          @attr name inc.bison.borelogger.debug:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5318,11 +5316,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:titleMarginTop
+          @attr name inc.bison.borelogger.debug:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5334,17 +5332,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:titleMargins
+          @attr name inc.bison.borelogger.debug:titleMargins
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name inc.bison.borelogger:titleTextAppearance
+          @attr name inc.bison.borelogger.debug:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 9;
         /** Attributes that can be used with a View.
@@ -5354,8 +5352,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd inc.bison.borelogger:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart inc.bison.borelogger:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd inc.bison.borelogger.debug:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart inc.bison.borelogger.debug:paddingStart}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_paddingEnd
@@ -5371,7 +5369,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int View_android_focusable = 0;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -5383,11 +5381,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:paddingEnd
+          @attr name inc.bison.borelogger.debug:paddingEnd
         */
         public static final int View_paddingEnd = 2;
         /**
-          <p>This symbol is the offset where the {@link inc.bison.borelogger.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link inc.bison.borelogger.debug.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -5399,7 +5397,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name inc.bison.borelogger:paddingStart
+          @attr name inc.bison.borelogger.debug:paddingStart
         */
         public static final int View_paddingStart = 1;
         /** Attributes that can be used with a ViewStubCompat.

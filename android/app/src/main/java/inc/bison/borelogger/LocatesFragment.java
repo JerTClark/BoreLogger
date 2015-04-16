@@ -48,11 +48,23 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        MyGlobals.showDebugToasts = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(getActivity().getString(R.string.debug_toasts_key), false);
+
+        //TODO Experimental feature here
+        this.formatDepthsOn = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(getActivity().getString(R.string.format_depths_key), false);
+
         Bundle bundle = this.getArguments();
-        //-- This LocatesFragment is dealing with a Bore Log
-        if(bundle.getString(MyGlobals.TYPE).equals(MyGlobals.BORE_LOG)) {
+
+        /**
+         =======================================================================================
+         If its a Bore Log
+         =======================================================================================
+         */
+        if (bundle.getString(MyGlobals.TYPE).equals(MyGlobals.BORE_LOG)) {
+
             isABoreLog = true;
             this.boreLog = new BoreLog();
+
             //-- Reconstruct the BoreLog
             this.boreLog.setCustomer(bundle.getString(MyGlobals.CUSTOMER));
             this.boreLog.setConduit(bundle.getString(MyGlobals.CONDUIT));
@@ -61,47 +73,65 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
             this.boreLog.setLengthOfBore(bundle.getString(MyGlobals.LENGTH));
             this.boreLog.setLocates(bundle.getStringArrayList(MyGlobals.LOCATES));
             this.boreLog.init();
-            if(MyGlobals.showDebugToasts) {
-                //-- See if this Bore Log has an existing file that's usable
-                if (new File(this.boreLog.getTextFilePath()).exists())
-                    new MyToast(this.getActivity(), "File exists", this.boreLog.getTextFilePath() + " will have locates entered here appended to it", 0);
-                    //-- If not, try to create one based on this Bore Log object's values
-                else {
-                    this.boreLog.getMyBoreLogTextPrinter().printTextFile();
-                    this.boreLog.writeLocatesList();
-                }//end if-else
-                //-- If all this fails, show a warning
-                if(new File(this.boreLog.getTextFilePath()).exists()) {
-                    new MyToast(this.getActivity(), "New file made", this.boreLog.getTextFilePath() + " was created from a bore log made by an older version of this app", 0);
-                } else new MyToast(this.getActivity(), "ERROR: file not found", this.boreLog.getTextFilePath() + " wasn't created for some reason", 0);
-            }//end if
+
+            //-- See if this Bore Log has an existing file that's usable
+            if (new File(this.boreLog.getTextFilePath()).exists()) {
+                if (MyGlobals.showDebugToasts) {
+                    new MyToast(this.getActivity(), "File exists", this.boreLog.getTextFilePath(), 0);
+                }//end if
+            }
+            //Attempt to create the file if it doesn't exist
+            else {
+                if (MyGlobals.showDebugToasts) {
+                    new MyToast(this.getActivity(), "Attempting to create text file", this.boreLog.getTextFilePath(), 0);
+                }//end if
+
+                this.boreLog.getMyBoreLogTextPrinter().printTextFile();
+                this.boreLog.writeLocatesList();
+
+                //Check again for the file
+                if (new File(this.boreLog.getTextFilePath()).exists()) {
+                    new MyToast(this.getActivity(), "New text file created successfully", this.boreLog.getTextFilePath(), 0);
+                } else
+                    new MyToast(this.getActivity(), "ERROR: file not found or could not be created", this.boreLog.getTextFilePath(), 0);
+            }
         }//end if
-        else if(bundle.getString(MyGlobals.TYPE).equals(MyGlobals.BORE_JOURNAL)) {
+        /**
+         =======================================================================================
+         If it's a Bore Journal
+         =======================================================================================
+         */
+        else if (bundle.getString(MyGlobals.TYPE).equals(MyGlobals.BORE_JOURNAL)) {
             isABoreLog = false;
             this.boreJournal = new BoreJournal();
-            //-- Reconstruct the BoreLog
+
+            //-- Reconstruct the BoreJournal
             this.boreJournal.setCustomer(bundle.getString(MyGlobals.CUSTOMER));
             this.boreJournal.setLocation(bundle.getString(MyGlobals.LOCATION));
             this.boreJournal.setDate(bundle.getString(MyGlobals.DATE));
             this.boreJournal.setLocates(bundle.getStringArrayList(MyGlobals.LOCATES));
             this.boreJournal.init();
-            if(MyGlobals.showDebugToasts) {
-                //-- See if this Bore Log has an existing file that's usable
-                if (new File(this.boreJournal.getPathToFile()).exists())
-                    new MyToast(this.getActivity(), "File exists", this.boreJournal.getPathToFile() + " will have locates entered here appended to it", 0);
-                    //-- If not, try to create one based on this Bore Log object's values
-                else {
-                    this.boreJournal.getMyBoreJournaler().printTextFile();
-                    this.boreJournal.writeLocatesList();
-                }//end if-else
+
+            //-- See if this Bore Log has an existing file that's usable
+            if (new File(this.boreJournal.getPathToFile()).exists()) {
+                if (MyGlobals.showDebugToasts) {
+                    new MyToast(this.getActivity(), "File exists", this.boreJournal.getPathToFile(), 0);
+                }
+            }
+            //-- If not, try to create one based on this Bore Log object's values
+            else {
+                this.boreJournal.getMyBoreJournaler().printTextFile();
+                this.boreJournal.writeLocatesList();
                 //-- If all this fails, show a warning
-                if(new File(this.boreJournal.getPathToFile()).exists()) {
-                    new MyToast(this.getActivity(), "New file made", this.boreJournal.getPathToFile() + " was created from a bore log made by an older version of this app", 0);
-                } else new MyToast(this.getActivity(), "ERROR: file not found", this.boreJournal.getPathToFile() + " wasn't created for some reason", 0);
-            }//end if
-        }//end else if
-        this.formatDepthsOn = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(getActivity().getString(R.string.format_depths_key), false);
-        MyGlobals.showDebugToasts = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(getActivity().getString(R.string.debug_toasts_key), false);
+                if (new File(this.boreJournal.getPathToFile()).exists()) {
+                    new MyToast(this.getActivity(), "New file made", this.boreJournal.getPathToFile(), 0);
+                } else
+                    new MyToast(this.getActivity(), "ERROR: file not found", this.boreJournal.getPathToFile() + " wasn't created for some reason", 0);
+
+            }//end else
+
+        }//end if Bore Journal
+
     }//end onCreate()
 
     @Override
@@ -141,8 +171,8 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
         this.checkBox.setChecked(false);
         this.noteBox.setChecked(false);
 
-        if(!formatDepthsOn) this.depthEditText.setHint("feet\"inches\"");
-        if(isABoreLog) this.noteBox.setVisibility(View.GONE);
+        if (!formatDepthsOn) this.depthEditText.setHint("feet\"inches\"");
+        if (isABoreLog) this.noteBox.setVisibility(View.GONE);
 
         //-- Crossing/Station CheckBox
         this.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -171,33 +201,38 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
             public void onClick(View v) {
                 //-- Depth AND Crossing, or Depth ONLY
                 String locate = null;
-                if(checkBox.isChecked()) {
-                    if(formatDepthsOn) locate = depthEditText.getText().toString().replace(" ", "\'") + "\"" + " " + crossingEditText.getText().toString();
-                    else locate = depthEditText.getText().toString() + " " + crossingEditText.getText().toString();
+                if (checkBox.isChecked()) {
+                    if (formatDepthsOn)
+                        locate = depthEditText.getText().toString().replace(" ", "\'") + "\"" + " " + crossingEditText.getText().toString();
+                    else
+                        locate = depthEditText.getText().toString() + " " + crossingEditText.getText().toString();
                     checkBox.setChecked(false);
                 } else {
-                    if(formatDepthsOn) locate = depthEditText.getText().toString().replace(" ", "\'") + "\"";
+                    if (formatDepthsOn)
+                        locate = depthEditText.getText().toString().replace(" ", "\'") + "\"";
                     else locate = depthEditText.getText().toString();
                 }//end if-else
                 //-- EditTexts
-                if(!formatDepthsOn) depthEditText.setHint("feet\"inches\"");
+                if (!formatDepthsOn) depthEditText.setHint("feet\"inches\"");
                 depthEditText.setText("");
                 crossingEditText.setText("");
                 depthEditText.requestFocus();
 
                 //TODO Use onLocateListener interface
-                if(isABoreLog) {
+                if (isABoreLog) {
                     boreLog.addLocate(locate);
-                    if(MyGlobals.showDebugToasts) new MyToast(getActivity(), "Locates so far", boreLog.getLocates().toString().replace("[", "").replace("]", ""), 0);
+                    if (MyGlobals.showDebugToasts)
+                        new MyToast(getActivity(), "Locates so far", boreLog.getLocates().toString().replace("[", "").replace("]", ""), 0);
                 }//end if
                 else {
-                    if(noteBox.isChecked() && !noteEditText.getText().toString().equals("")) {
+                    if (noteBox.isChecked() && !noteEditText.getText().toString().equals("")) {
                         locate = locate + MyGlobals.NOTE + noteEditText.getText().toString();
                         noteBox.setChecked(false);
                     }//end if
                     boreJournal.addLocate(locate);
                     noteEditText.setText("");
-                    if(MyGlobals.showDebugToasts) new MyToast(getActivity(), "Locates so far", boreJournal.getLocates().toString().replace("[", "").replace("]", ""), 0);
+                    if (MyGlobals.showDebugToasts)
+                        new MyToast(getActivity(), "Locates so far", boreJournal.getLocates().toString().replace("[", "").replace("]", ""), 0);
                 }//end else
 
             }//end onClick()
@@ -207,12 +242,14 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
         this.finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isABoreLog) {
-                    if (MyGlobals.showDebugToasts) new MyToast(getActivity(), "Path to bore log text file", boreLog.getTextFilePath(), 0);
+                if (isABoreLog) {
+                    if (MyGlobals.showDebugToasts)
+                        new MyToast(getActivity(), "Path to bore log text file", boreLog.getTextFilePath(), 0);
                     boreLog.getMyBoreLogTextPrinter().checkForEndBore();
                     locateListener.onLocatesFinished(MyGlobals.BORE_LOG_CODE);
                 } else {
-                    if(MyGlobals.showDebugToasts) new MyToast(getActivity(), "Path to bore journal text file", boreJournal.getPathToFile(), 0);
+                    if (MyGlobals.showDebugToasts)
+                        new MyToast(getActivity(), "Path to bore journal text file", boreJournal.getPathToFile(), 0);
                     locateListener.onLocatesFinished(MyGlobals.BORE_JOURNAL_CODE);
                 }//end if-else
             }//end onClick()
@@ -255,8 +292,10 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.list_locates:
-                if(this.isABoreLog) new ListLocatesDialog(getActivity(), this.boreLog.getLocates(), MyGlobals.BORE_LOG_CODE, this).show();
-                else new ListLocatesDialog(getActivity(), this.boreJournal.getLocates(), MyGlobals.BORE_JOURNAL_CODE, this).show();
+                if (this.isABoreLog)
+                    new ListLocatesDialog(getActivity(), this.boreLog.getLocates(), MyGlobals.BORE_LOG_CODE, this).show();
+                else
+                    new ListLocatesDialog(getActivity(), this.boreJournal.getLocates(), MyGlobals.BORE_JOURNAL_CODE, this).show();
                 break;
         }//end switch
         return super.onOptionsItemSelected(item);
@@ -264,7 +303,7 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
 
     @Override
     public void onUpdateLocates(ArrayList<String> newLocates, int CODE) {
-        if(CODE == MyGlobals.BORE_LOG_CODE) {
+        if (CODE == MyGlobals.BORE_LOG_CODE) {
             this.boreLog.setLocates(newLocates);
             this.boreLog.getMyBoreLogTextPrinter().overwriteTextFile();
             refreshLocatesList(this.boreLog.getLocates(), MyGlobals.BORE_LOG_CODE);

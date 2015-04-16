@@ -53,3 +53,30 @@
 //console.group("Keeping tabs on $scope.input");
 //console.info("Input Object: %O should reflect input values", $scope.input);
 //console.groupEnd();
+
+
+
+/**
+ * @desc Depends on $scope.input["diameter"], $scope.input["drillpipe"], and $scope.input["soil"]["value"]
+ * @type {number} Estimated Funnel Viscosity (of the mix)
+ */
+//$scope.estimatedFunnelViscosity = 0;
+
+/**
+ * @desc Depends on $scope.input["soil"]["value"], $scope.input["diameter"], and $scope.input["length"]
+ * @type {number} Estimated Fluid Volume (of the hole)
+ */
+//$scope.estimatedFluidVolume = 0;
+
+/**
+ * @desc Depends on $scope.estimatedFunnelViscosity, $scope.input["soil"]["value"], and $scope.input["pump"]
+ * @type {number} Actual Pump Output (of the rig)
+ */
+//$scope.actualPumpOutput = 0;
+
+/**
+ * @desc $scope.input["soil"]["value"], $scope.estimatedFluidVolume, $scope.input["length"], $scope.input["drillpipe"],
+ *     and $scope.actualPumpOutput
+ * @type {number} Recommended Pullback Speed (minutes per drill pipe)
+ */
+//$scope.recommendedPullbackSpeed = 0;

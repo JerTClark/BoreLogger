@@ -270,4 +270,9 @@ public class BoreLogGeneralInfo extends Fragment implements View.OnClickListener
         return false;
     }//end onEditorAction()
 
+    //For testing
+    public BoreLog getBoreLog() {
+        return this.boreLog;
+    }
+
 }//end BoreLogGeneralInfo

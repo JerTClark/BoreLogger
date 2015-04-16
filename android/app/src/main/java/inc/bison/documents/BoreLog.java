@@ -1,16 +1,11 @@
 package inc.bison.documents;
 
-import android.preference.PreferenceManager;
-
 import java.io.File;
 import java.util.ArrayList;
 
 import inc.bison.my.MyBoreLogTextPrinter;
 import inc.bison.my.MyGlobals;
 
-/**
- * Created by Clark on 10/23/2014.
- */
 public class BoreLog {
 
     private String customer, conduit, location, lengthOfBore, date = null;
@@ -131,7 +126,6 @@ public class BoreLog {
 
     public void addLocate(String locate) {
         String pre = "";
-
         if(MyGlobals.startWithCustomLocateNumber) {
             if (this.locates.isEmpty() || this.customDepthNumber == 0) {
                 //This is the first locate using the custom number

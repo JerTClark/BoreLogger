@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,24 +16,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.Map;
 
 import inc.bison.borelogger.R;
-import inc.bison.documents.BoreLogPDF;
-import inc.bison.documents.TextFileToBoreLog;
-import inc.bison.interfaces.ContinueBoreLogInterface;
 import inc.bison.my.MyGlobals;
 import inc.bison.my.MyHashMapMaker;
 import inc.bison.my.MySimpleAdapter;
 import inc.bison.my.MyToast;
-import inc.bison.my.OpenWith;
 
 /**
  * Created by Clark on 10/27/2014.
