@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="inc.bison.borelogger"
+    android:installLocation="preferExternal"
     xmlns:tools="http://schemas.android.com/tools">
 
     <supports-screens android:anyDensity="true" android:largeScreens="true"
@@ -19,6 +20,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+        <!--<uses-library-->
+            <!--android:name="android.support.test.runner"-->
+            <!--android:required="true"/>-->
+
         <activity
             android:name=".BoreLogger"
             android:configChanges="keyboard"
@@ -34,5 +40,9 @@
             android:name=".Settings"
             android:label="@string/action_settings" />
     </application>
+
+    <!--<instrumentation-->
+        <!--android:name="android.support.test.runner.AndroidJUnitRunner"-->
+        <!--android:targetPackage="inc.bison.borelogger.debug.test"/>-->
 
 </manifest>

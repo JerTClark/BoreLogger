@@ -386,28 +386,6 @@ public class BoreLogger extends Activity
                 .commit();
     }//end continueBoreJournal()
 
-    @Override
-    public void doneButtonClicked(BoreJournal boreJournal) {
-        if(MyGlobals.showDebugToasts)
-            new MyToast(this, "Bore Journal object created", boreJournal.toString(), 0);
-        boreJournal.init();
-        boreJournal.getMyBoreJournaler().printTextFile();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        //-- Pass the LocatesFragment a path to the working text file of this Bore Journal
-        Bundle bundle = new Bundle();
-        bundle.putString(MyGlobals.TYPE, MyGlobals.BORE_JOURNAL);
-        //-- Break the BoreLog down for reconstruction
-        bundle.putString(MyGlobals.CUSTOMER, boreJournal.getCustomer());
-        bundle.putString(MyGlobals.LOCATION, boreJournal.getLocation());
-        bundle.putString(MyGlobals.DATE, boreJournal.getDate());
-        bundle.putStringArrayList(MyGlobals.LOCATES, boreJournal.getLocates());//-- Will be empty
-        LocatesFragment locatesFragment = new LocatesFragment();
-        locatesFragment.setArguments(bundle);
-        ft.replace(R.id.container, locatesFragment)
-                .commit();
-    }//end doneButtonClicked()
-
     /**
      * Handles HomeScree button clicks
      * @param whichButton the id of the button clicked
@@ -455,6 +433,7 @@ public class BoreLogger extends Activity
             //-- Pass the LocatesFragment a path to the working text file of this Bore Log
             Bundle bundle = new Bundle();
             boreLog.init();//-- This init() with create a new bore log text file
+
             //FIXME Is there a need to call printTextFile here?
             bundle.putString(MyGlobals.TYPE, MyGlobals.BORE_LOG);
             //-- Break the BoreLog down for reconstruction
@@ -471,6 +450,32 @@ public class BoreLogger extends Activity
             ft.replace(R.id.container, locatesFragment)
                     .commit();
         }//end if
+    }//end doneButtonClicked()
+
+    //-- Called from BoreLogGeneralInfo
+    @Override
+    public void doneButtonClicked(BoreJournal boreJournal) {
+        if(MyGlobals.showDebugToasts)
+            new MyToast(this, "Bore Journal object created", boreJournal.toString(), 0);
+        boreJournal.init();
+        boreJournal.getMyBoreJournaler().printTextFile();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+
+        //-- Pass the LocatesFragment a path to the working text file of this Bore Journal
+        Bundle bundle = new Bundle();
+        bundle.putString(MyGlobals.TYPE, MyGlobals.BORE_JOURNAL);
+
+        //-- Break the BoreLog down for reconstruction
+        bundle.putString(MyGlobals.CUSTOMER, boreJournal.getCustomer());
+        bundle.putString(MyGlobals.LOCATION, boreJournal.getLocation());
+        bundle.putString(MyGlobals.DATE, boreJournal.getDate());
+        bundle.putStringArrayList(MyGlobals.LOCATES, boreJournal.getLocates());//-- Will be empty
+
+        LocatesFragment locatesFragment = new LocatesFragment();
+        locatesFragment.setArguments(bundle);
+        ft.replace(R.id.container, locatesFragment)
+                .commit();
     }//end doneButtonClicked()
 
     @Override

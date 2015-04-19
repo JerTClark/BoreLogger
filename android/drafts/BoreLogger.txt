@@ -34,3 +34,51 @@
         else if(folder.mkdir()) foldersMade.add(folder.getName());
         else cannotMake.add(folder.getName());
 
+
+    /**
+     * Perform the functional requirement
+     */
+    public void completeBoreLogGeneralInfoForm() {
+        //Customer EditText
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_customerEditText))
+                .perform(ViewActions.typeText(mockBoreLog.getCustomer()));
+        assertEquals(CUSTOMER, customerEditText.getText().toString());
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_customerEditText))
+                .perform(ViewActions.pressImeActionButton());
+
+        //Conduit EditText
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_conduitEditText))
+                .perform(ViewActions.typeText(mockBoreLog.getConduit()));
+        assertEquals(CONDUIT, conduitEditText.getText().toString());
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_conduitEditText))
+                .perform(ViewActions.pressImeActionButton());
+
+        //Location EditText
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_locationEditText))
+                .perform(ViewActions.typeText(mockBoreLog.getLocation()));
+        assertEquals(LOCATION, locationEditText.getText().toString());
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_locationEditText))
+                .perform(ViewActions.pressImeActionButton());
+
+        //Length Of Bore EditText
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_lengthOfBoreEditText))
+                .perform(ViewActions.typeText(mockBoreLog.getLengthOfBore()));
+        assertEquals(LENGTH_OF_BORE, lengthOfBoreEditText.getText().toString());
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_lengthOfBoreEditText))
+                .perform(ViewActions.pressImeActionButton(), ViewActions.closeSoftKeyboard());
+
+        View decorView = boreLogger.getWindow().getDecorView();
+        ViewGroup.LayoutParams layoutParams = doneButton.getLayoutParams();
+        assertNotNull("Button's layout params are not null", layoutParams);
+        assertEquals(View.VISIBLE, doneButton.getVisibility());
+
+        int x = (int) doneButton.getX();
+        int y = (int) doneButton.getY();
+        boreLogger.findViewById(R.id.container).scrollTo(x, y);
+
+        ViewAsserts.assertOnScreen(decorView, doneButton);
+
+        Espresso.onView(ViewMatchers.withId(R.id.generalInfo_doneButton))
+                .perform(ViewActions.closeSoftKeyboard(), ViewActions.click());
+
+    }

@@ -318,4 +318,19 @@ public class LocatesFragment extends Fragment implements ListLocatesDialog.OnUpd
         new ListLocatesDialog(getActivity(), locates, CODE, this).show();
     }//end refreshLocatesList()
 
+
+    /**
+     =======================================================================================
+      FIXME Getters for testing REMOVE from production
+     =======================================================================================
+    */
+    public BoreLog getBoreLog() {
+        return boreLog;
+    }
+    public BoreJournal getBoreJournal() {
+        return boreJournal;
+    }
+    public boolean isABoreLog() {
+        return isABoreLog;
+    }
 }//end LocatesFragment

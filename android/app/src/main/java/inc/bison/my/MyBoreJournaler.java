@@ -29,7 +29,8 @@ public class MyBoreJournaler {
             File boreLogTextFile = new File(this.boreJournal.getPathToFile());
             PrintWriter printWriter = null;
             try {
-                printWriter = new PrintWriter(new FileOutputStream(boreLogTextFile, true));
+                //FIXME Is overwriting appropriate here?
+                printWriter = new PrintWriter(new FileOutputStream(boreLogTextFile, false));
             } catch (FileNotFoundException e) {
                 Log.d(this.getClass().getSimpleName(), e.getMessage());
             }//end try-catch

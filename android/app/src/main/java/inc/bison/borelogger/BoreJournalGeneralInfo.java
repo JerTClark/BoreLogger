@@ -162,4 +162,9 @@ public class BoreJournalGeneralInfo extends Fragment implements View.OnClickList
         return true;
     }//end onEditorAction()
 
+    //TODO For testing
+    public BoreJournal getBoreJournal() {
+        return boreJournal;
+    }
+
 }//end BoreJournalGeneralInfo

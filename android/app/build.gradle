@@ -26,7 +26,7 @@ android {
 
     productFlavors {
         bisonBurger {
-            minSdkVersion 18
+            minSdkVersion 17
         }
     }
 
@@ -42,8 +42,12 @@ android {
 dependencies {
     //Lib folder jars
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     // You must install or update the Support Repository through the SDK manager to use this dependency.
     compile 'com.android.support:appcompat-v7:22.0.0'
+
+    //To keep gradle happy as [1] causes "Warning:Conflict with dependency "com.android.support..."
+    //androidTestCompile 'com.android.support:appcompat-v7:22.0.0'
 
     //Android Testing Support Library
     androidTestCompile "com.android.support.test:testing-support-lib:0.1"
@@ -51,8 +55,12 @@ dependencies {
     //Espresso
     androidTestCompile "com.android.support.test.espresso:espresso-core:2.0"
 
+    //Espresso-Contrib [1] Breaks the tests... Don't use.
+    //androidTestCompile "com.android.support.test.espresso:espresso-contrib:2.0"
+
+
     //UI Automator
-    androidTestCompile "com.android.support.test.uiautomator:uiautomator-v18:2.0.0"
+    //androidTestCompile "com.android.support.test.uiautomator:uiautomator-v18:2.0.0"
 
     //JUnit
     //androidTestCompile 'junit:junit:4.12'

@@ -19,6 +19,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Run tests from this class using:
+ * adb shell am instrument -w -e class inc.bison.borelogger.BoreLoggerHomeScreenFragmentTest#methodName inc.bison.borelogger.debug.test/android.support.test.runner.AndroidJUnitRunner
+ */
 @LargeTest
 public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTestCase2<BoreLogger>
         implements HomeScreen.OnFragmentInteractionListener{
@@ -98,20 +102,26 @@ public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTes
       Sanity check
      =======================================================================================
     */
-    public void testPreconditions() {
+    public void testBoreLoggerHomeScreenFragmentTest_allPreconditions() {
+        //Activity
         assertNotNull("BoreLogger is not null", boreLogger);
+        //Fragment stuff
         assertNotNull("FragmentManager is not null", boreLoggerFragmentManager);
         assertNotNull("HomeScreen Fragment is not null", homeScreenFragment);
+        //Buttons
         assertNotNull("Create Bore Log Button is not null", newBoreLogButton);
         assertNotNull("Continue Bore Log Button is not null", continueBoreLogButton);
         assertNotNull("Create Bore Journal Button is not null", newBoreJournalButton);
         assertNotNull("Continue Bore Journal Button is not null", continueBoreJournalButton);
         assertNotNull("Convert Journal to Log Button is not null", convertJournalButton);
         assertNotNull("Create PDF Button is not null", createPDFButton);
+        //ActionBar
         assertNotNull("BoreLogger ActionBar is not null", boreLoggerActionBar);
+        //TextViews
         assertNotNull("Bore Log TextView is not null", boreLogTextView);
         assertNotNull("Bore Journal TextView is not null", boreJournalTextView);
         assertNotNull("PDF TextView is not null", pdfTextView);
+
     }
 
     /**
@@ -119,13 +129,16 @@ public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTes
       Action Bar
      =======================================================================================
     */
-    public void testBoreLogger_ActionBar() {
+    public void testBoreLoggerHomeScreenFragmentTest_ActionBar() {
         //Title
         String expected = boreLogger.getTitle().toString();
         assertEquals(expected, boreLoggerActionBar.getTitle());
         //Subtitle
         ArrayList<String> subtitles = new ArrayList<>(Arrays.asList(boreLogger.getResources().getStringArray(R.array.funny_phrases)));
         assertTrue("Action Bar subtitle comes from pre-set array resource", subtitles.contains(boreLoggerActionBar.getSubtitle()));
+
+        //Home
+//        DrawerActions.openDrawer(R.id.drawer_layout);
     }
 
     /**
@@ -134,7 +147,7 @@ public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTes
      =======================================================================================
     */
     @UiThreadTest
-    public void testButtons_LayoutAndClick() {
+    public void testBoreLoggerHomeScreenFragmentTest_ButtonsLayoutAndClick() {
         View decorView = boreLogger.getWindow().getDecorView();
         for(Button eachButton : allButtons) {
             ViewGroup.LayoutParams layoutParams = eachButton.getLayoutParams();
@@ -159,18 +172,19 @@ public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTes
      =======================================================================================
     */
 
-    public void testNewBoreLogButton_ActionBarTitle() {
+    public void testBoreLoggerHomeScreenFragmentTest_NewBoreLogButtonActionBarTitle() {
         TouchUtils.clickView(this, newBoreLogButton);
         assertEquals("Bore Log", boreLoggerActionBar.getTitle().toString());
     }
 
-    public void testNewBoreJournalButton_ActionBarTitle() {
+    public void testBoreLoggerHomeScreenFragmentTest_NewBoreJournalButtonActionBarTitle() {
         TouchUtils.clickView(this, newBoreJournalButton);
         assertEquals("Bore Journal", boreLoggerActionBar.getTitle().toString());
     }
 
     //FIXME
-    public void createPDFButton_Dialog() {
+    public void xtestBoreLoggerHomeScreenFragmentTest_createPDFButtonDialog() {
+
         int x = (int)createPDFButton.getX();
         int y = (int)createPDFButton.getY();
         boreLogger.findViewById(R.id.container).scrollTo(x, y);
@@ -192,7 +206,7 @@ public class BoreLoggerHomeScreenFragmentTest extends ActivityInstrumentationTes
       TextViews
      =======================================================================================
     */
-    public void testTextViews_Layout() {
+    public void testBoreLoggerHomeScreenFragmentTest_TextViewsLayout() {
         View decorView = boreLogger.getWindow().getDecorView();
         for(TextView eachTextView : allTextViews) {
             ViewGroup.LayoutParams layoutParams = eachTextView.getLayoutParams();

@@ -2,6 +2,7 @@ package inc.bison.borelogger;
 
 import android.app.ActionBar;
 import android.app.FragmentManager;
+import android.app.Instrumentation;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.action.ViewActions;
@@ -10,7 +11,6 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.FlakyTest;
 import android.test.TouchUtils;
 import android.test.ViewAsserts;
-import android.test.suitebuilder.annotation.LargeTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,16 +22,10 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.util.Calendar;
-import java.util.regex.Pattern;
-
-import javax.annotation.RegEx;
 
 import inc.bison.documents.BoreLog;
-import inc.bison.documents.TextFileToBoreLog;
-import inc.bison.my.MyGlobals;
 import inc.bison.my.MyMonthGetter;
 
-@LargeTest
 public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<BoreLogger> {
 
     //BoreLogger Activity and HomeScreen Fragment
@@ -56,17 +50,21 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
     private final String CUSTOMER = "Washington Gas", CONDUIT = "(1) 12\" Plastic",
             LOCATION = "1234 Street", LENGTH_OF_BORE = "200 LF (10\' Rods)";
     private String DATE;
+    private String[] mockLocates = new String[]{"3 6", "4 5", "5 6"};
+    private String[] mockLocatesFormatted = new String[]{"Depth 1: 3\'6\"",
+            "Depth 2: 4\'5\"", "Depth 3: 5\'6\""};
 
-    //Must implement constructor
+
+    //Must use this constructor
     public BoreLogGeneralInfoTest() {
         super(BoreLogger.class);
     }
 
     /**
      =======================================================================================
-      Set up
+     Set up
      =======================================================================================
-    */
+     */
     @Override
     public void setUp() throws Exception {
         super.setUp();
@@ -143,11 +141,11 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
 
     /**
      =======================================================================================
-      Sanity check
+     Sanity check
      =======================================================================================
-    */
+     */
     @SmallTest
-    public void testAllConditions_Preconditions() {
+    public void testBoreLogGeneralInfo_allPreconditions() {
         //Activity & Fragment
         assertNotNull("Bore Logger is not null", boreLogger);
         assertNotNull("Bore Logger Action Bar is not null", boreLoggerActionBar);
@@ -202,17 +200,20 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
 
     /**
      =======================================================================================
-      General Info EditText
+     General Info EditText
      =======================================================================================
-    */
-    @FlakyTest(tolerance = 2)
-    public void testCreatingANewBoreLog_BoreLogGeneralInfoFragment() {
+     */
+    @FlakyTest(tolerance = 4)
+    public void testBoreLogGeneralInfo_CreatingANewBoreLog() {
+
+        pause(1000);
+
         //Customer EditText
         Espresso.onView(ViewMatchers.withId(R.id.generalInfo_customerEditText))
                 .perform(ViewActions.typeText(mockBoreLog.getCustomer()));
         assertEquals(CUSTOMER, customerEditText.getText().toString());
         Espresso.onView(ViewMatchers.withId(R.id.generalInfo_customerEditText))
-            .perform(ViewActions.pressImeActionButton());
+                .perform(ViewActions.pressImeActionButton());
 
         //Conduit EditText
         Espresso.onView(ViewMatchers.withId(R.id.generalInfo_conduitEditText))
@@ -252,21 +253,18 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
         //Testing the window scroll to top
         boreLogger.findViewById(R.id.container).scrollTo(0, 0);
 
-        //Synchronize date property
-        mockBoreLog.setDate(boreLogGeneralInfo.getBoreLog().getDate());
-
         //Assertions on the generated Bore Log
         assertEquals(mockBoreLog.getCustomer(), boreLogGeneralInfo.getBoreLog().getCustomer());
         assertEquals(mockBoreLog.getConduit(), boreLogGeneralInfo.getBoreLog().getConduit());
         assertEquals(mockBoreLog.getLocation(), boreLogGeneralInfo.getBoreLog().getLocation());
         assertEquals(mockBoreLog.getLengthOfBore(), boreLogGeneralInfo.getBoreLog().getLengthOfBore());
         assertEquals(mockBoreLog.getDate(), boreLogGeneralInfo.getBoreLog().getDate());
+
     }
 
-    //
+    //Confirm that a File exists
     @FlakyTest(tolerance = 2)
-    public void testFileExists_PostCreatingANewBoreLog() {
-
+    public void testBoreLogGeneralInfo_FileExists() {
         mockBoreLog.init();
         assertNotNull("mockBoreLog.getTextFilePath()", mockBoreLog.getTextFilePath());
         String path = mockBoreLog.getTextFilePath();
@@ -285,23 +283,4 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
             e.printStackTrace();
         }
     }
-
-
-    /**
-     =======================================================================================
-      Garbage
-     =======================================================================================
-    */
-    //Persist created Bore Log
-//    boreLogResult = new BoreLog(boreLogGeneralInfo.getBoreLog().getCustomer(),
-//    boreLogGeneralInfo.getBoreLog().getConduit(), boreLogGeneralInfo.getBoreLog().getLocation(),
-//    boreLogGeneralInfo.getBoreLog().getLengthOfBore(), boreLogGeneralInfo.getBoreLog().getDate());
-//
-//    //Assert the equality of properties between the persisted boreLogResult and the Bore Log created
-//    assertEquals(boreLogResult.getCustomer(), boreLogGeneralInfo.getBoreLog().getCustomer());
-//    assertEquals(boreLogResult.getConduit(), boreLogGeneralInfo.getBoreLog().getConduit());
-//    assertEquals(boreLogResult.getLocation(), boreLogGeneralInfo.getBoreLog().getLocation());
-//    assertEquals(boreLogResult.getLengthOfBore(), boreLogGeneralInfo.getBoreLog().getLengthOfBore());
-//    assertEquals(boreLogResult.getDate(), boreLogGeneralInfo.getBoreLog().getDate());
-
 }
