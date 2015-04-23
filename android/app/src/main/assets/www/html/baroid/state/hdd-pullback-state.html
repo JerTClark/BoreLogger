@@ -1,12 +1,10 @@
 <ion-view view-title="Pullback recommendations" class="dark-bg">
     <ion-content class="content has-header">
 
-        <!--<baroid-header-card title="HDD Pullback"-->
-                            <!--description="Recommendations"></baroid-header-card>-->
-
-        <div class="item item-icon-left buttons bar bar-assertive">
-            <button class="button button-icon icon icon ion-ios7-keypad">Input</button>
-            <!--<h3 class="title title-left item-icon-left"> Input</h3>-->
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon icon ion-ios7-keypad"
+                    ng-click="">Input
+            </button>
         </div>
 
         <form name="baroidPullbackForm" novalidate>
@@ -23,62 +21,112 @@
 
             <div class="row">
                 <div class="col" ng-repeat="item in rowOne track by $index">
-                        <baroid-numeric-input input-type="{{item.type}}"
-                                              input-title="{{item.title}}"
-                                              input-name="{{item.inputName}}"
-                                              input-class="{{item.inputClass}}"
-                                              item-index="{{$index}}"
-                                              label-class="{{item.labelClass}}"
-                                              min-range="{{item.min}}"
-                                              max-range="{{item.max}}"
-                                              model="input[item.inputName]"
-                                              is-required="{{item.isRequired}}"
-                                              hint="{{item.hint}}"
-                                              error-message="{{item.errorMessage}}"
-                                              baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+                    <baroid-numeric-input input-type="{{item.type}}"
+                                          input-title="{{item.title}}"
+                                          input-name="{{item.inputName}}"
+                                          input-class="{{item.inputClass}}"
+                                          item-index="{{$index}}"
+                                          label-class="{{item.labelClass}}"
+                                          min-range="{{item.min}}"
+                                          max-range="{{item.max}}"
+                                          model="input[item.inputName]"
+                                          is-required="{{item.isRequired}}"
+                                          hint="{{item.hint}}"
+                                          error-message="{{item.errorMessage}}"
+                                          baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col" ng-repeat="item in rowTwo track by $index">
-                        <baroid-numeric-input input-type="{{item.type}}"
-                                              input-title="{{item.title}}"
-                                              input-name="{{item.inputName}}"
-                                              input-class="{{item.inputClass}}"
-                                              item-index="{{$index}}"
-                                              label-class="{{item.labelClass}}"
-                                              min-range="{{item.min}}"
-                                              max-range="{{item.max}}"
-                                              model="input[item.inputName]"
-                                              is-required="{{item.isRequired}}"
-                                              hint="{{item.hint}}"
-                                              error-message="{{item.errorMessage}}"
-                                              baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+                    <baroid-numeric-input input-type="{{item.type}}"
+                                          input-title="{{item.title}}"
+                                          input-name="{{item.inputName}}"
+                                          input-class="{{item.inputClass}}"
+                                          item-index="{{$index}}"
+                                          label-class="{{item.labelClass}}"
+                                          min-range="{{item.min}}"
+                                          max-range="{{item.max}}"
+                                          model="input[item.inputName]"
+                                          is-required="{{item.isRequired}}"
+                                          hint="{{item.hint}}"
+                                          error-message="{{item.errorMessage}}"
+                                          baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
                 </div>
             </div>
         </form>
 
-        <div class="item item-icon-left buttons bar bar-assertive">
-            <button class="button button-icon icon icon ion-ios7-calculator">Calculations</button>
-            <!--<h3 class="title title-left item-icon-left">Calculations</h3>-->
-        </div>
-
-        <!--<h3 class="item bar bar-assertive ion icon ion-ios7-calculator"> Calculations</h3>-->
+        <!--HDD pullback Calculations-->
+        <div id="hdd-pullback-calculations">
+            <div class="item item-icon-left buttons bar bar-stable">
+                <button class="button button-icon icon icon ion-ios7-calculator"
+                        ng-click="">Calculations
+                </button>
+            </div>
 
             <baroid-numeric-result result-title="Estimated Funnel Viscosity (sec/qt)"
-                                   ng-show="estimatedFunnelViscosity !== 0"
-                                   result-model="estimatedFunnelViscosity"></baroid-numeric-result>
+                                   id-pre="estFunnelViscosity"
+                                   ng-show="values.estimatedFunnelViscosity !== 0"
+                                   result-model="values.estimatedFunnelViscosity"></baroid-numeric-result>
             <baroid-numeric-result result-title="Estimated Fluid Volume (gal)"
-                                   ng-show="estimatedFluidVolume !== 0"
-                                   result-model="estimatedFluidVolume"></baroid-numeric-result>
+                                   id-pre="estFluidVolume"
+                                   ng-show="values.estimatedFluidVolume !== 0"
+                                   result-model="values.estimatedFluidVolume"></baroid-numeric-result>
             <baroid-numeric-result result-title="Actual Pump Output (gpm)"
-                                   ng-show="actualPumpOutput !== 0"
-                                   result-model="actualPumpOutput"></baroid-numeric-result>
+                                   id-pre="actualPumpOutput"
+                                   ng-show="values.actualPumpOutput !== 0"
+                                   result-model="values.actualPumpOutput"></baroid-numeric-result>
             <baroid-numeric-result result-title="Recommended Pullback Speed (min/rod)"
-                                   ng-show="recommendedPullbackSpeed !== 0"
-                                   result-model="recommendedPullbackSpeed"></baroid-numeric-result>
+                                   id-pre="recommendedPullbackSpeed"
+                                   ng-show="values.recommendedPullbackSpeed !== 0"
+                                   result-model="values.recommendedPullbackSpeed"></baroid-numeric-result>
+        </div>
+        <!--Fluid Formation Recommendations per 100 gallons of drilling mud-->
+        <div id="fluid-formation-recommendations">
 
-        <!--<button class="button button-block" ng-click="logToConsole()">Log to Console</button>-->
+            <div class="item item-icon-left buttons bar bar-stable">
+                <button class="button button-icon icon icon ion-beaker"
+                        ng-click="">Fluid formation (per 100 gallons)
+                </button>
+            </div>
 
+            <!--Placeholder recommendation-->
+            <!--<baroid-recommendation-note note-title="Fluid"-->
+                                        <!--id-pre="exampleRecommendation"-->
+                                        <!--note-model="exampleNoteText"-->
+                                        <!--ng-show="values.baseRecommendation == '' && values.additiveRecommendation == '' && values.specialRecommendation == ''">-->
+            <!--</baroid-recommendation-note>-->
+
+            <baroid-recommendation-note note-title="Base"
+                                        id-pre="baseRecommendation"
+                                        note-model="values.baseRecommendation"
+                                        ng-show="values.baseRecommendation !== ''"></baroid-recommendation-note>
+
+            <baroid-recommendation-note note-title="Additive"
+                                        id-pre="additiveRecommendation"
+                                        note-model="values.additiveRecommendation"
+                                        ng-show="values.additiveRecommendation !== ''"></baroid-recommendation-note>
+
+            <baroid-recommendation-note note-title="Special"
+                                        id-pre="specialRecommendation"
+                                        note-model="values.specialRecommendation"
+                                        ng-show="values.specialRecommendation !== ''"></baroid-recommendation-note>
+
+            <baroid-extra-recommendation-note note-title="Notes about these recommendations"
+                                        id-pre="notesRecommend"
+                                        note-model="values.note"
+                                        ng-show="values.note !== ''"></baroid-extra-recommendation-note>
+
+            <baroid-extra-recommendation-note note-title="Contingency Notes"
+                                        id-pre="contingencyNote"
+                                        note-model="values.contingency"
+                                        ng-show="values.contingency !== ''"></baroid-extra-recommendation-note>
+
+
+
+            <button ng-show="false" class="button button-block button-energized" ng-click="logToConsole()">Log to
+                Console
+            </button>
+        </div>
     </ion-content>
 </ion-view>

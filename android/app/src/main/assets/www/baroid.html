@@ -9,8 +9,9 @@
     <!-- css -->
     <link href="css/ionic.app.css" rel="stylesheet">
     <link href="css/my-fonts.css" rel="stylesheet">
-    <link href="css/baroid.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/baroid/baroid.css" rel="stylesheet">
+    <!--Dependency on another app's css NO GOOD!-->
+    <link href="css/bison/style.css" rel="stylesheet">
 
     <!-- libs -->
     <script src="lib/jquery/dist/jquery.min.js"></script>
@@ -24,7 +25,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- my app.js -->
+    <!-- my bison.js -->
     <script src="js/modules/baroid/baroid-app.js"></script>
 
     <!--Controllers-->
@@ -36,21 +37,25 @@
 
     <!--Directives-->
     <script src="js/modules/baroid/baroid-directives/baroid-header-card-directive.js"></script>
-    <script src="js/modules/baroid/baroid-directives/baroid-numeric-input-directive.js"></script>
-    <script src="js/modules/baroid/baroid-directives/baroid-numeric-result-directive.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-hdd-pullback-directives/baroid-numeric-input-directive.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-hdd-pullback-directives/baroid-numeric-result-directive.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-hdd-pullback-directives/baroid-recommendation-note.js"></script>
+    <script src="js/modules/baroid/baroid-directives/baroid-hdd-pullback-directives/baroid-extra-recommendation-note.js"></script>
 
     <!--Services-->
-    <script src="js/modules/baroid/baroid-services/baroid-estimated-fluid-volume-calculator.js"></script>
-    <script src="js/modules/baroid/baroid-services/baroid-actual-pump-output-calculator.js"></script>
-    <script src="js/modules/baroid/baroid-services/baroid-recommended-pullback-speed-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-estimated-fluid-volume-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-actual-pump-output-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-recommended-pullback-speed-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-pullback-values-factory.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-recommended-fluid-formation-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-additive-recommendation-fluid-formation-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-special-recommendation-fluid-formation-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-note-about-recommendations.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-hdd-pullback-services/baroid-contingency-notes-service.js"></script>
 
     <!--Values-->
     <script src="js/modules/baroid/baroid-values/baroid-option-values.js"></script>
     <script src="js/modules/baroid/baroid-values/baroid-pullback-values.js"></script>
-
-    <!--Learning Typescript-->
-    <script src="js/typescript/family-members.js"></script>
-    <script src="js/typescript/class-practice.js"></script>
 
 </head>
 
@@ -63,10 +68,10 @@
 
 <script id="baroid-home.html" type="text/ng-template">
     <ion-view view-title="Calculators" class="stable-bg">
-        <ion-content class="content has-header">
+        <ion-content class="content has-header dark-bg">
             <ion-list type="card" class="text-center"
                       ng-repeat="category in optionCategories">
-                <ion-item class="baroid-logo">
+                <ion-item class="">
                     <h1 class="title-text">{{category.title}}</h1>
 
                     <h3 class="title-text-subtitle">{{category.description}}</h3>

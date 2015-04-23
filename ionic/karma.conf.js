@@ -18,7 +18,6 @@ module.exports = function (config) {
             'www/lib/angular-resource/angular-resource.js',
             'www/js/**/*.js',
             'www/js/modules/**/*.js',
-            'www/js/app.js',
             'tests/unit/**/*.js',
             'tests/unit/*.js'
         ],

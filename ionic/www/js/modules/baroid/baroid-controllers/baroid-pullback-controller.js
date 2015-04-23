@@ -2,11 +2,15 @@ angular.module("baroidApp").controller("BaroidPullbackController",
     ["$scope", "BaroidPullbackInputs", "BaroidSoilTypes", "BaroidEstimatedFunnelViscosity",
         "BaroidEstimatedFluidVolumeCalculator", "BaroidActualPumpOutputCalculator",
         "BaroidRecommendedPullbackCalculator", "BaroidPullbackValuesFactory",
-        "BaroidRecommendedFluidFormationService", "$cordovaToast",
+        "BaroidRecommendedFluidFormationService", "BaroidAdditiveRFFService",
+        "BaroidSpecialRFFService", "BaroidHDDPullbackNoteService", "BaroidContingencyNoteService",
+        "$cordovaToast",
         function ($scope, BaroidPullbackInputs, BaroidSoilTypes, BaroidEstimatedFunnelViscosity,
                   BaroidEstimatedFluidVolumeCalculator, BaroidActualPumpOutputCalculator,
                   BaroidRecommendedPullbackCalculator, BaroidPullbackValuesFactory,
-                  BaroidRecommendedFluidFormationService, $cordovaToast) {
+                  BaroidRecommendedFluidFormationService, BaroidAdditiveRFFService,
+                  BaroidSpecialRFFService, BaroidHDDPullbackNoteService, BaroidContingencyNoteService,
+                  $cordovaToast) {
 
             /**
              * Each $scope.row* object represents a two-column row of inputs in the view
@@ -42,6 +46,11 @@ angular.module("baroidApp").controller("BaroidPullbackController",
              * @type {BaroidPullbackValuesFactory|*}
              */
             $scope.values = BaroidPullbackValuesFactory;
+            /**
+             * Displayed when there are not recommendations yet calculated
+             * @type {string}
+             */
+            $scope.exampleNoteText = "Recommendations will appear here";
 
             /**
              * NOTE: Will trigger with each input modification
@@ -80,10 +89,34 @@ angular.module("baroidApp").controller("BaroidPullbackController",
                     console.info("%cShould now calculate $scope.estimatedFluidVolume", "color: green;font-weight:bold");
                     $scope.values.estimatedFluidVolume = BaroidEstimatedFluidVolumeCalculator.calculate($scope.input["soil"]["value"]
                         ,$scope.input["diameter"],$scope.input["length"]);
-                    //TODO 
+
                     console.info("%cShould now be able to calculate baseRecommendation", "color: green;font-weight:bold")
                     $scope.values.baseRecommendation =
                         BaroidRecommendedFluidFormationService.calculateBaseRecommendation(
+                            $scope.input["soil"]["value"],
+                            $scope.input["length"],
+                            $scope.input["diameter"]);
+                    console.info("%cShould now be able to calculate additiveRecommendation", "color: green;font-weight:bold")
+                    $scope.values.additiveRecommendation =
+                        BaroidAdditiveRFFService.calculateAdditiveRecommendation(
+                            $scope.input["soil"]["value"],
+                            $scope.input["length"],
+                            $scope.input["diameter"]);
+                    console.info("%cShould now be able to calculate specialRecommendation", "color: green;font-weight:bold")
+                    $scope.values.specialRecommendation =
+                        BaroidSpecialRFFService.calculateSpecialRecommendation(
+                            $scope.input["soil"]["value"],
+                            $scope.input["length"],
+                            $scope.input["diameter"]);
+                    console.info("%cShould now be able to calculate note", "color: green;font-weight:bold")
+                    $scope.values.note =
+                        BaroidHDDPullbackNoteService.getNote(
+                            $scope.input["soil"]["value"],
+                            $scope.input["length"],
+                            $scope.input["diameter"]);
+                    console.info("%cShould now be able to calculate contingency", "color: green;font-weight:bold")
+                    $scope.values.contingency =
+                        BaroidContingencyNoteService.getContingencyNote(
                             $scope.input["soil"]["value"],
                             $scope.input["length"],
                             $scope.input["diameter"]);
@@ -94,6 +127,14 @@ angular.module("baroidApp").controller("BaroidPullbackController",
                     $scope.values.estimatedFluidVolume = 0;
                     console.warn("%cSetting baseRecommendation to zero", "color:orange;font-weight:bold");
                     $scope.values.baseRecommendation = "";
+                    console.warn("%cSetting additiveRecommendation to zero", "color:orange;font-weight:bold");
+                    $scope.values.additiveRecommendation = "";
+                    console.warn("%cSetting specialRecommendation to zero", "color:orange;font-weight:bold");
+                    $scope.values.specialRecommendation = "";
+                    console.warn("%cSetting note to zero", "color:orange;font-weight:bold");
+                    $scope.values.note = "";
+                    console.warn("%cSetting contingency to zero", "color:orange;font-weight:bold");
+                    $scope.values.contingency = "";
                 }/*End calculation of $scope.estimatedFluidVolume*/
 
                 /*Calculate Actual Pump Output*/

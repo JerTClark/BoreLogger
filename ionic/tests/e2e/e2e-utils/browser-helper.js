@@ -32,6 +32,12 @@ module.exports = function () {
             if(element) {
                 browser.driver.wait(protractor.until.elementIsVisible(element));
             }
+        },
+        selectOptionByIndex: function(element, index) {
+            element.getWebElement().findElements(by.tagName("option"))
+                .then(function (options) {
+                    options[index].click();
+                });
         }
     }
 };

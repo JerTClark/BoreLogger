@@ -1,11 +1,12 @@
-angular.module("baroidApp").directive("baroidHeaderCard", function () {
+angular.module("baroidApp").directive("baroidHeaderCard", ["baroidHTMLFiles",
+    function (baroidHTMLFiles) {
     return {
         restrict:"E",
         scope:{
             title:"@",
             description:"@"
         },
-        templateUrl:"html/baroid/template/baroid-header-card.html",
+        templateUrl:baroidHTMLFiles.headerCard,
         link: function (scope, element, attributes) {}
     }
-});
+}]);

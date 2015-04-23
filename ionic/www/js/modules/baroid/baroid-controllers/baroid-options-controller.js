@@ -8,23 +8,6 @@ angular.module("baroidApp").controller("BaroidOptionsController",
              */
             $scope.optionCategories = BaroidOptionCategories;
 
-            var myFamily = getFamily();
-            myFamily.initFamily();
-            function myFamilyLogOutput() {
-                myFamily.logFamily();
-                myFamily.logOldest();
-                myFamily.logSortedFamily();
-                myFamily.optionalParam(myFamily.myFamily[0], myFamily.myFamily[1]);
-                myFamily.optionalParam(myFamily.myFamily[0], myFamily.myFamily[1], myFamily.myFamily[2]);
-                myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1]);
-                myFamily.defaultParam(myFamily.myFamily[0],myFamily.myFamily[1],myFamily.myFamily[2]);
-            }
-
-            var jacob = new Family.LovedOne("Jacob", "son");
-            function lovedOneLogOutput() {
-                jacob.logToConsole();
-            }
-
             /**
              * Handle the button clicks
              * @param button The button clicked
@@ -33,11 +16,9 @@ angular.module("baroidApp").controller("BaroidOptionsController",
                 var wasClicked = " has been clicked";
                 switch(button.code) {
                     case 0:
-                        myFamilyLogOutput();
                         console.info(button.name + wasClicked);
                         break;
                     case 1:
-                        lovedOneLogOutput();
                         console.info(button.name + wasClicked);
                         break;
                     case 2:

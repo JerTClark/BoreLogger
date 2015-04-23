@@ -1,6 +1,6 @@
-<ion-list type="card">
-    <ion-item class="bar bar-stable baroid-numeric-input">{{noteTitle}} recommendation</ion-item>
-    <ion-item class="stable-bg baroid-numeric-input">
-        <h3 style="font-family: 'Lucida Console', monospace; text-align: center">{{noteModel}}</h3>
+<ion-list type="card" id="{{idPre}}">
+    <ion-item id="{{idPre}}-title" class="bar bar-stable baroid-numeric-input">{{noteTitle}} recommendation</ion-item>
+    <ion-item class="stable-bg baroid-numeric-input item-text-wrap">
+        <h3 id="{{idPre}}-result" style="font-family: 'Lucida Console', monospace; text-align: center">{{noteModel}}</h3>
     </ion-item>
 </ion-list>

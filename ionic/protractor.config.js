@@ -16,7 +16,6 @@ exports.config = {
 
     // Spec patterns are relative to this configuration file
     specs: [
-        'tests/e2e/*.js',
         'tests/e2e/**/*.js'
     ],
 

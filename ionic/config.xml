@@ -8,6 +8,7 @@
       JerTClark&#xD;
     </author>
   <content src="baroid.html"/>
+  <!--<content src="bison.html"/>-->
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>

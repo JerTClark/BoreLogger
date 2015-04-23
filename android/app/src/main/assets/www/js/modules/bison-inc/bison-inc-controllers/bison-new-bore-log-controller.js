@@ -1,8 +1,13 @@
 angular.module("bisonInc").controller('NewBoreLogController',
     ["$scope", "$timeout", "bisonService", "bisonIndexedDB", "bisonDateService",
         "bisonLocateFactory", "boreLogModelService", "$stateParams", "$ionicPopup",
+        "bisonHTMLFiles",
         function ($scope, $timeout, bisonService, bisonIndexedDB, bisonDateService,
-                  bisonLocateFactory, boreLogModelService, $stateParams, $ionicPopup) {
+                  bisonLocateFactory, boreLogModelService, $stateParams, $ionicPopup,
+                  bisonHTMLFiles) {
+
+            /*For easier refactoring of templates*/
+            $scope.locatesModalTemplate = bisonHTMLFiles.locatesModal;
 
             /**
              * Track if the log has been added to IndexedDB once

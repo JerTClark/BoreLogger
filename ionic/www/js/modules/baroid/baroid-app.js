@@ -14,20 +14,21 @@ angular.module("baroidApp", ["ionic", "ui.router", "ngCordova"])
         $state.go("baroid");
     })
 
-    .config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
+    .config(["$stateProvider", "$urlRouterProvider", "$compileProvider", "baroidHTMLFiles",
+        function ($stateProvider, $urlRouterProvider, $compileProvider, baroidHTMLFiles) {
         $stateProvider
             .state("baroid", {
                 url:"/",
-                templateUrl:"baroid-home.html",
+                templateUrl:baroidHTMLFiles.home,
                 controller:"BaroidOptionsController"
             })
             .state("pullback", {
                 url:"pullback",
-                templateUrl:"html/baroid/state/hdd-pullback-state.html",
+                templateUrl:baroidHTMLFiles.hddPullback,
                 controller:"BaroidPullbackController"
             });
 
         $urlRouterProvider.otherwise("/");
 
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|blob|chrome-extension|filesystem:chrome-extension):/);
-    });
+    }]);
