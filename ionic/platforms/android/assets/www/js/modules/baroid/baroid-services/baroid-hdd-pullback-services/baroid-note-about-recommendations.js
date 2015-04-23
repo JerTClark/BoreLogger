@@ -19,10 +19,10 @@ angular.module("baroidApp").service("BaroidHDDPullbackNoteService",
                     note = "Sealing and suspension are of extreme importance. Higher concentrations of bentonite are necessary to achieve a \"grouting\" effect to hold the gravel and cobbles in place. NO-SAG is added to enhance suspension properties. QUIK-TROL LV is added to enhance filter cake building ability.";
                     break;
                 case 3:
-                    note = "NO-SAG can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the filter cake building ability of the fluid.";
+                    note = "NO-SAG can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the filter cake building ability of the fluid.";
                     break;
                 case 4:
-                    note = "NO-SAG can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the filter cake building ability of the fluid.";
+                    note = "NO-SAG can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the filter cake building ability of the fluid.";
                     break;
                 case 5:
                     note = "BORE-GEL provides suspension and filter cake. QUIK-TROL GOLD LV enhances the filter cake building ability of the fluid and aids in clay inhibition. EZ-MUD can be used to inhibit the swelling of clay. The use of EZ-MUD in this situation depends on the concentration of sand. EZ-MUD does not contribute to suspension or filter cake building in any appreciable amount. If the sand content is low, 1 pint to 1 quart of EZ-MUD per 100 gallons can be used with or to replace the QUIK-TROL GOLD.";
@@ -50,7 +50,7 @@ angular.module("baroidApp").service("BaroidHDDPullbackNoteService",
                     }
                     break;
                 case 7:
-                    note = "NO-SAG can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of ¼ to ½ lb per 100 gallons to enhance the filter cake building ability of the fluid.";
+                    note = "NO-SAG can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the suspension capability of the fluid. QUIK-TROL LV can be added at a concentration of 0.25 to 0.5 lb per 100 gallons to enhance the filter cake building ability of the fluid.";
                     break;
             }
             return note;

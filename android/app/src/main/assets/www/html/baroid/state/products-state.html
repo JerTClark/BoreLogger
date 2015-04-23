@@ -1,0 +1,14 @@
+<ion-view view-title="Products" class="dark-bg">
+    <ion-content class="content has-header">
+
+        <ion-list>
+            <div ng-repeat="product in products">
+                <baroid-product product-name="{{product.name}}"
+                                product-overview="{{product.overview}}"
+                                product-template="{{product.templateUrl}}"
+                                product-data-sheet="{{product.dataSheet}}"></baroid-product>
+            </div>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

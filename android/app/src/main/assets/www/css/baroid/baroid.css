@@ -1,5 +1,16 @@
 @import "../my-fonts.css";
 
+a:link {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+    opacity: .8;
+}
+
 /*Essential for ngHide element to remain visible through animation*/
 .ng-hide, .ng-hide.add, .ng-hide-remove {
     display: block !important;

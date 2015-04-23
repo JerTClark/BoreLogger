@@ -1,4 +1,3 @@
-//var family = require("../../../family-members.js");
 angular.module("baroidApp").controller("BaroidOptionsController",
     ["$scope", "$state", "BaroidOptionCategories",
         function ($scope, $state, BaroidOptionCategories) {
@@ -16,19 +15,19 @@ angular.module("baroidApp").controller("BaroidOptionsController",
                 var wasClicked = " has been clicked";
                 switch(button.code) {
                     case 0:
-                        console.info(button.name + wasClicked);
+                        console.info(button.name + " -goes to-> " + button.state);
                         break;
                     case 1:
-                        console.info(button.name + wasClicked);
+                        console.info(button.name + " -goes to-> " + button.state);
                         break;
                     case 2:
-                        $state.go("pullback");
+                        $state.go(button.state);
                         break;
                     case 3:
-                        console.info(button.name + wasClicked);
+                        console.info(button.name + " -goes to-> " + button.state);
                         break;
                     case 4:
-                        console.info(button.name + wasClicked);
+                        $state.go(button.state);
                         break;
                 }/*end switch*/
             };

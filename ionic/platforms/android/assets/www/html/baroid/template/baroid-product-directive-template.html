@@ -1,0 +1,10 @@
+<ion-list type="card" class="text-center">
+    <ion-item class="item-text-wrap bar bar-assertive">
+        <h2 class="title">{{productName}}</h2>
+        <!--<h3>{{productOverview}}</h3>-->
+    </ion-item>
+    <ion-item class="item-text-wrap" ng-include="productTemplate"></ion-item>
+    <ion-item>
+        <p><a ng-href="productDataSheet">Data sheet</a></p>
+    </ion-item>
+</ion-list>

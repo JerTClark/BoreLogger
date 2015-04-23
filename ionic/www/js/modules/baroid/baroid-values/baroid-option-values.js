@@ -6,19 +6,28 @@ angular.module("baroidApp")
             "buttons": [
                 {
                     "name":"Cubic FPM",
-                    "code":0
+                    "code":0,
+                    "state":"baroid"
                 },
                 {
                     "name":"Annular Velocity",
-                    "code":1
+                    "code":1,
+                    "state":"baroid"
                 },
                 {
                     "name":"HDD Pullback",
-                    "code":2
+                    "code":2,
+                    "state":"pullback"
                 },
                 {
                     "name":"Charts",
-                    "code":3
+                    "code":3,
+                    "state":"baroid"
+                },
+                {
+                    "name":"Product Data",
+                    "code":4,
+                    "state":"products"
                 }
             ]
         }

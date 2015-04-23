@@ -26,6 +26,11 @@ angular.module("baroidApp", ["ionic", "ui.router", "ngCordova"])
                 url:"pullback",
                 templateUrl:baroidHTMLFiles.hddPullback,
                 controller:"BaroidPullbackController"
+            })
+            .state("products", {
+                url:"products",
+                templateUrl:baroidHTMLFiles.productsState,
+                controller:"BaroidProductsController"
             });
 
         $urlRouterProvider.otherwise("/");

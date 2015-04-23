@@ -13,8 +13,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="content_description">content</string>
     <string name="share">Share</string>
-    <string name="calculator">Calculator</string>
-    <string name="lab_label">Laboratory</string>
+    <string name="calculator">Baroid</string>
+    <string name="lab_label">HybridApp</string>
 
     <!-- General Information -->
     <string name="general_information">General information</string>
