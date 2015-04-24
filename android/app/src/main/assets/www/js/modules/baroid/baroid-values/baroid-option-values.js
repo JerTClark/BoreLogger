@@ -25,7 +25,7 @@ angular.module("baroidApp")
                     "state":"baroid"
                 },
                 {
-                    "name":"Product Data",
+                    "name":"Product Guide",
                     "code":4,
                     "state":"products"
                 }

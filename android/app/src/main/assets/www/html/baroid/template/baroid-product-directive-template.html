@@ -1,10 +1,13 @@
-<ion-list type="card" class="text-center">
-    <ion-item class="item-text-wrap bar bar-assertive">
-        <h2 class="title">{{productName}}</h2>
-        <!--<h3>{{productOverview}}</h3>-->
-    </ion-item>
-    <ion-item class="item-text-wrap" ng-include="productTemplate"></ion-item>
-    <ion-item>
-        <p><a class="data-url" href="#">Data sheet</a></p>
-    </ion-item>
-</ion-list>
+<!--Each product will be a list item-->
+<div class="dark-bg dark-border text-center baroid-show-content" id="{{productName}}" style="padding: 2%">
+    <div class="baroid-hidden-content">
+        <ion-item class="item-text-wrap bar bar-assertive" ng-click="showDescription($event)">
+            {{productName}}
+        </ion-item>
+        <ion-item class="item-text-wrap baroid-product-description" ng-include="productTemplate"></ion-item>
+        <ion-item>
+            <p><a class="data-url icon ion-android-download" href="#" ng-click="dataSheet(productDataSheet)"> Data sheet</a></p>
+        </ion-item>
+    </div>
+</div>
+<!--open(productName)-->

@@ -16,8 +16,8 @@ a:visited {
     display: block !important;
 }
 
-.baroid-body {
-    -webkit-perspective: 50px;
+body.baroid-body {
+    -webkit-perspective: 50px !important;
 }
 
 /*Title Text class for Header Card directive*/
@@ -133,6 +133,62 @@ baroid-numeric-result.ng-hide {
     -webkit-transform: translateZ(2px);
     -webkit-transition-delay: 250ms;
     -webkit-transition-duration: .5s;
+}
+
+/************************************************************
+ *  Baroid Products styles
+ ************************************************************/
+
+/*Hide product description--shown by user interaction*/
+.baroid-product-description {
+    display: none;
+    width: 100%;
+    z-index: auto;
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+/*Zoom effect when hovered*/
+.baroid-product-description:hover {
+    display: inline-block;
+    width: 90%;
+    z-index: 50;
+    -webkit-transform: scale(1.2);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 1s;
+}
+/*Styles the product description templates*/
+.baroid-product-template {
+    text-align: justify;
+}
+/*Use a bullet-style list (override CSS reset) in product templates*/
+.baroid-product-template>ul.baroid-bullet-list {
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 3%;
+    list-style-type: disc;
+}
+
+.baroid-bullet-nested-list {
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 3%;
+    list-style-type: circle;
+}
+
+.baroid-product-template {
+
+}
+
+ion-item.baroid-show-content {
+    /*font-family: Roboto, "Times New Roman", serif;*/
+    /*font-size: x-small;*/
+    -webkit-transform: translateZ(0px);
+    -webkit-transition-delay: 250ms;
+    -webkit-transition-duration: 0.5s;
+}
+
+ion-item.baroid-show-content:hover {
+    text-shadow: white 0 0 10px;
 }
 
 /*Baroid Floating Label class*/

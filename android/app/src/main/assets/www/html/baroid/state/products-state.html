@@ -1,8 +1,38 @@
-<ion-view view-title="Products" class="dark-bg">
+<ion-view view-title="Products" class="dark-bg" ng-init="showGlossary = false">
     <ion-content class="content has-header">
 
-        <ion-list>
-            <div ng-repeat="product in products">
+        <!--Filter/search products-->
+        <div class="item dark-bg dark-border" style="display: flex">
+            <label class="item item-input" style="flex: 1">
+                <i class="ion icon ion-search"></i>
+                <input id="product-search-input"
+                       type="text"
+                       ng-model="search.name"
+                       placeholder="Search">
+            </label>
+            <button class="button button-assertive ion icon ion-ios7-help-outline"
+                    ng-click="showGlossary = !showGlossary" style="flex: 0"></button>
+        </div>
+
+        <ion-list type="list" class="">
+
+            <div class="item item-icon-left buttons bar bar-positive"
+                 ng-show="showGlossary">
+                <a class="button button-icon icon icon ion-android-book"
+                   href="#"
+                   onclick="window.open('http://www.baroididp.com/idp/resources/technical-assistance/publications/tech-papers/fluid-properties-for-horizontal-applications/horizontal-apps.page?node-id=hm8zxxls', '_system', 'location=yes')">&nbsp;&nbsp;Glossary of terms
+                </a>
+            </div>
+
+            <div class="item item-icon-left buttons bar bar-positive"
+                 ng-show="showGlossary">
+                <a class="button button-icon icon icon ion-android-download"
+                   href="#"
+                   onclick="window.open('http://www.baroididp.com/public_idp/pubsdata/Tech_Docs/Field%20Reference%20Guide2014UPDATEWEBSITE.pdf', '_system', 'location=yes')">&nbsp;&nbsp;Field Guide
+                </a>
+            </div>
+
+            <div ng-repeat="product in products | filter:search track by $index">
                 <baroid-product product-name="{{product.name}}"
                                 product-overview="{{product.overview}}"
                                 product-template="{{product.templateUrl}}"

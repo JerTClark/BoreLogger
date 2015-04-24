@@ -1,5 +1,5 @@
-angular.module("baroidApp").directive("baroidProduct", ["baroidHTMLFiles", "$timeout",
-    function (baroidHTMLFiles, $timeout) {
+angular.module("baroidApp").directive("baroidProduct", ["baroidHTMLFiles",
+    function (baroidHTMLFiles) {
         return {
             restrict: "E",
             scope: {
@@ -9,22 +9,22 @@ angular.module("baroidApp").directive("baroidProduct", ["baroidHTMLFiles", "$tim
                 "productDataSheet":"@"
             },
             templateUrl:baroidHTMLFiles.baroidProducts,
-            //controller: function (scope, element) {
-            //
-            //    $timeout(function () {
-            //        $('.ex-link').click(function () {
-            //            var url = $(this).attr('href');
-            //            window.open(encodeURI(url), '_system', 'location=yes');
-            //            return false;
-            //        })
-            //    })
-            //},
-            link: function (scope, element, attribute) {
-                var angElem = angular.element(".data-url");
-                angElem.click(function () {
-                    window.open(encodeURI(angElem.attr("productDataSheet")), '_system', 'location=yes');
-                    return false;
-                });
+            controller: function ($scope) {
+                /**
+                 * Opens/downloads the product data sheet pdf from Baroid
+                 * @param productDataSheet the URL of the data sheet for this product
+                 */
+                $scope.dataSheet = function (productDataSheet) {
+                    console.info("Opening " + productDataSheet);
+                    window.open(productDataSheet, '_system', 'location=yes');
+                };
+                /**
+                 * Expands the product description
+                 * @param $event
+                 */
+                $scope.showDescription = function ($event) {
+                    angular.element($event.target).siblings(".baroid-product-description").slideToggle();
+                }
             }
         }
     }]);
