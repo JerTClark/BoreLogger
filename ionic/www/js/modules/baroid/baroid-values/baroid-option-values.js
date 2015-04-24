@@ -1,8 +1,8 @@
 angular.module("baroidApp")
     .value("BaroidOptionCategories", [
         {
-            "title":"Calculators",
-            "description":"& Interactive tools for Drilling",
+            "title":"Baroid",
+            "description":"Interactive tools for Drilling",
             "buttons": [
                 {
                     "name":"Cubic FPM",

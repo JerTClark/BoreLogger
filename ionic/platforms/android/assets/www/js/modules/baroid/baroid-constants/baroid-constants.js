@@ -18,5 +18,14 @@ angular.module("baroidApp")
         "boreGel":"html/baroid/include/baroid-product-includes/bore-gel.html",
         "conDet":"html/baroid/include/baroid-product-includes/con-det.html",
         "diamondSeal":"html/baroid/include/baroid-product-includes/diamond-seal.html",
-        "ezMud":"html/baroid/include/baroid-product-includes/ez-mud.html"
+        "ezMud":"html/baroid/include/baroid-product-includes/ez-mud.html",
+        "ezMudGold":"html/baroid/include/baroid-product-includes/ez-mud-gold.html",
+        "nSeal":"html/baroid/include/baroid-product-includes/n-seal.html",
+        "noSag":"html/baroid/include/baroid-product-includes/no-sag.html",
+        "penetrol":"html/baroid/include/baroid-product-includes/penetrol.html",
+        "polyBore":"html/baroid/include/baroid-product-includes/poly-bore.html",
+        "quickGel":"html/baroid/include/baroid-product-includes/quik-gel.html",
+        "quickTrol":"html/baroid/include/baroid-product-includes/quik-trol.html",
+        "quickTrolLV":"html/baroid/include/baroid-product-includes/quik-trol-lv.html",
+        "sodaAsh":"html/baroid/include/baroid-product-includes/soda-ash.html"
     });

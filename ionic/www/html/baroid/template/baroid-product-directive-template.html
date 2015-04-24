@@ -1,13 +1,13 @@
 <!--Each product will be a list item-->
-<div class="dark-bg dark-border text-center baroid-show-content" id="{{productName}}" style="padding: 2%">
+<div class="item dark-bg dark-border text-center baroid-show-content" id="{{productName}}" style="padding: 2%">
     <div class="baroid-hidden-content">
         <ion-item class="item-text-wrap bar bar-assertive" ng-click="showDescription($event)">
             {{productName}}
         </ion-item>
         <ion-item class="item-text-wrap baroid-product-description" ng-include="productTemplate"></ion-item>
-        <ion-item>
-            <p><a class="data-url icon ion-android-download" href="#" ng-click="dataSheet(productDataSheet)"> Data sheet</a></p>
-        </ion-item>
+        <!--<ion-item class="item-divider">-->
+            <a class="item button button-block button-outline data-url icon ion-android-download" href="#" ng-click="dataSheet(productDataSheet)"> Data sheet</a>
+        <!--</ion-item>-->
     </div>
 </div>
 <!--open(productName)-->

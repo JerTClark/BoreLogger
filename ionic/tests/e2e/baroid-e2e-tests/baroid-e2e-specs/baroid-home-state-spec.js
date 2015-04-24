@@ -46,7 +46,7 @@ xdescribe("BaroidState", function () {
 
     it("should navigate to the correct state based on button clicks", function () {
         baroidHomeState.hddPullbackButton.click();
-        expect(baroidHomeState.ionNavBar.getText()).toEqual("Calculators\nPullback recommendations");
+        expect(baroidHomeState.ionNavBar.getText()).toEqual("Options\nPullback recommendations");
     });
 
 });
