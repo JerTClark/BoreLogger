@@ -5,13 +5,19 @@ angular.module("baroidApp")
         "home":"baroid-home.html",
         "hddPullback":"html/baroid/state/hdd-pullback-state.html",
         "productsState":"html/baroid/state/products-state.html",
-        /*Directives*/
+        "annularVelocity":"html/baroid/state/annular-velocity-state.html",
+        /*Popups*/
+        "hddPullbackInputPopup":"html/baroid/popup/hdd-pullback-input-popup.html",
+        "hddPullbackCalculationsPopup":"html/baroid/popup/hdd-pullback-calculations-popup.html",
+        "hddPullbackFormationPopup":"html/baroid/popup/hdd-pullback-formation-popup.html",
+        /*Templates*/
         "baroidHeaderCard":"html/baroid/template/baroid-header-card.html",
         "baroidNote":"html/baroid/template/baroid-note.html",
         "baroidNumericInput":"html/baroid/template/baroid-numeric-input.html",
         "baroidNumericResult":"html/baroid/template/baroid-numeric-result.html",
         "baroidRecommendationNote":"html/baroid/template/baroid-recommendation-note.html",
         "baroidProducts":"html/baroid/template/baroid-product-directive-template.html",
+        "baroidHelp":"html/baroid/template/baroid-help-toggle-directive.js",
         /*Includes*/
         "aquaClearPFD":"html/baroid/include/baroid-product-includes/aqua-clear-pfd.html",
         "bioBore":"html/baroid/include/baroid-product-includes/biobore.html",

@@ -6,6 +6,7 @@ angular.module("baroidApp")
         scope:{
             inputType:"@",
             inputName:"@",
+            inputStep:"@",
             inputTitle:"@",
             inputClass:"@",
             itemIndex:"@",

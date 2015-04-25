@@ -18,7 +18,7 @@ angular.module("baroidApp").controller("BaroidOptionsController",
                         console.info(button.name + " -goes to-> " + button.state);
                         break;
                     case 1:
-                        console.info(button.name + " -goes to-> " + button.state);
+                        $state.go(button.state);
                         break;
                     case 2:
                         $state.go(button.state);

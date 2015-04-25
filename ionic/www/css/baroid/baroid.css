@@ -168,6 +168,13 @@ baroid-numeric-result.ng-hide {
     list-style-type: disc;
 }
 
+ul.baroid-bullet-list {
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 3%;
+    list-style-type: disc;
+}
+
 .baroid-bullet-nested-list {
     text-align: left;
     margin-left: 7%;
@@ -249,4 +256,10 @@ span.input-label.baroid-floating-label.has-input {
         background-repeat: no-repeat;
         background-position: right 170% top 50%;
     }
+}
+
+/*Overriding the ionic popup*/
+.popup {
+    height: 70% !important;
+    width: 80% !important;
 }

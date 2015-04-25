@@ -1,0 +1,89 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="soilTypeHelp = false,
+                boreLengthHelp = false,
+                diameterHelp = false,
+                drillPipeHelp = false,
+                pumpRatingHelp = false">
+    <p class="title title-left icon ion-ios7-keypad"> About your input</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+        <!-- Soil Type -->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="soilTypeHelp = !soilTypeHelp">Soil type</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="soilTypeHelp">
+            <h2>About soil type</h2>
+            <p>The type of soil as best as the provided descriptions can match it.</p>
+            <p>Each soil type corresponds to a numeric value that factors heavily into
+            each calculation as well as the fluid formation notes below.</p>
+            <br>
+            <h3 style="color: red">Try it out!</h3>
+            <p>Change the soil type value from <strong>Rock</strong> to <strong>Clay</strong>
+                and observe how it changes the output.</p>
+        </ion-item>
+
+        <!-- Bore Length -->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="boreLengthHelp = !boreLengthHelp">Bore length
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="boreLengthHelp">
+            <h2>About bore length</h2>
+            <p>The length of the bore and the hole's diameter drastically effect your estimated fluid volume. Here, the calculator is asking you to provide the length of the bore in linear feet</p>
+            <p>Give a best-guess estimate if the total is unknown. The estimated fluid volume is a good thing to know
+               even before a job officially starts: How much <strong>total fluid volume</strong> are you going
+               to have to contend with over the drill shot's life, for example?</p>
+            <br>
+            <h3 style="color: red">Try it out!</h3>
+            <p>Change the bore length and observe its effect on the <strong>estimated fluid volume</strong>.</p>
+        </ion-item>
+
+        <!--Diameter-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="diameterHelp = !diameterHelp">Diameter</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="diameterHelp">
+            <h2>About diameter</h2>
+            <p>Providing the diameter of the hole in inches (an approximation) helps calculate two things:</p>
+            <ul class="baroid-bullet-list">
+                <li><p>Estimated funnel viscosity</p></li>
+                <li><p>and Estimated fluid volume.</p></li>
+            </ul>
+            <br>
+            <h3 style="color: red;">Try it out!</h3>
+            <p>Keep an eye on these two values and how they change with different hole diameters you give.</p>
+        </ion-item>
+
+        <!--Drill pipe-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="drillPipeHelp = !drillPipeHelp">Drill pipe
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="drillPipeHelp">
+            <h2>About drill pipe</h2>
+            <p>The length of the drill pipe (given in feet) factors into the <strong>recommended pullback speed</strong> you will receive.</p>
+            <br>
+            <h3 style="color: red;">Try it out!</h3>
+            <p>What's the recommendation for a drill pipe of <strong>10'</strong> length? How about one of <strong>15'</strong> for the same job?</p>
+        </ion-item>
+
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="pumpRatingHelp = !pumpRatingHelp">Pump rating
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="pumpRatingHelp">
+            <h2>About pump rating</h2>
+            <p>No pump will supply it's rated output, especially a pump supplying drilling mud!
+                Yet, here it is asking for the pump's output rating in gallons per minute as rated
+                <strong>by the manufacturer</strong>. The <strong>actual pump output</strong> will be calculated for
+                you.</p>
+            <br>
+            <h3 style="color: red;">Try it out!</h3>
+            <p>Increase and decrease the pump rating. What calculation(s) change?</p>
+        </ion-item>
+
+        <button class="button button-block" ng-click="close()">OK</button>
+    </ion-list>
+
+</ion-content>

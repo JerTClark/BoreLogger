@@ -1,0 +1,71 @@
+<ion-view view-title="Annular velocity" class="dark-bg">
+    <ion-content class="content has-header">
+
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon icon ion-ios7-keypad"
+                    ng-click="">Input
+            </button>
+        </div>
+
+        <form name="baroidAVForm" novalidate>
+            <div class="padding" ng-repeat="item in inputElements track by $index">
+                <baroid-numeric-input input-type="{{item.type}}"
+                                      input-title="{{item.title}}"
+                                      input-name="{{item.inputName}}"
+                                      input-class="{{item.inputClass}}"
+                                      item-index="{{$index}}"
+                                      label-class="{{item.labelClass}}"
+                                      min-range="{{item.min}}"
+                                      input-step="{{item.step}}"
+                                      max-range="{{item.max}}"
+                                      model="input[item.inputName]"
+                                      is-required="{{item.isRequired}}"
+                                      hint="{{item.hint}}"
+                                      error-message="{{item.errorMessage}}"
+                                      baroid-form-controller="baroidAVForm"></baroid-numeric-input>
+            </div>
+        </form>
+
+        <!--Annular Velocity Calculation-->
+        <div id="annular-velocity-calculation">
+            <div class="item item-icon-left buttons bar bar-stable">
+                <button class="button button-icon icon icon ion-ios7-calculator"
+                        ng-click="">Calculations
+                </button>
+            </div>
+
+            <baroid-numeric-result result-title="Annular Velocity (feet/minute)"
+                                   id-pre="annularVelocity"
+                                   ng-show="values.annularVelocity !== 0"
+                                   result-model="values.annularVelocity"></baroid-numeric-result>
+        </div>
+
+        <!--Baroid advice, warning and "rule of thumb"-->
+        <div id="annular-velocity-advice">
+            <div class="item item-icon-left buttons bar bar-stable">
+                <button class="button button-icon icon icon ion-waterdrop"
+                        ng-click="">Notes
+                </button>
+            </div>
+
+            <baroid-recommendation-note note-title="General"
+                                              id-pre="advice"
+                                              note-model="values.advice"
+                                              ng-show="values.advice !== ''"></baroid-recommendation-note>
+
+            <baroid-extra-recommendation-note note-title="Recommendation"
+                                              id-pre="warning"
+                                              note-model="values.warning"
+                                              ng-show="values.warning !== ''"></baroid-extra-recommendation-note>
+
+            <baroid-recommendation-note note-title="Rule of thumb"
+                                              id-pre="ruleOfThumb"
+                                              note-model="values.ruleOfThumb"
+                                              ng-show="values.ruleOfThumb !== ''"></baroid-recommendation-note>
+
+            <button ng-show="true" class="button button-block button-energized" ng-click="logToConsole()">Log to
+                Console
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

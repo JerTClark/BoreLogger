@@ -13,7 +13,8 @@ module.exports = function () {
         "mockData": {
             "folder":"baroid-e2e-mock-data",
             "hddPullbackMockData":"baroid-e2e-mock-data/baroid-hdd-pullback-mock-data.js",
-            "validNumericPullbackResults":"baroid-e2e-mock-data/baroid-hdd-pullback-exp-results.js"
+            "validNumericPullbackResults":"baroid-e2e-mock-data/baroid-hdd-pullback-exp-results.js",
+            "avMockData":"baroid-e2e-mock-data/baroid-av-mock-data.js"
         },
         "utils":{
             "folder":"e2e-utils",

@@ -1,0 +1,57 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="baseHelp = false,
+                recommendationHelp = false,
+                additionalHelp = false,
+                noteAndContingencyHelp = false">
+    <p class="title title-left icon ion-ios7-keypad"> Formation recommendations</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+        <!--Base-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="baseHelp = !baseHelp">Base formation</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="baseHelp">
+            <h2>Establishing the base</h2>
+            <p>Keep in mind that the recommendations are all given in parts per 100 gallons.
+                Generally, the recommendation here will be some amount of Bore-Gel. Your
+                <strong>soil type</strong> factors heavily into the amount.</p>
+            <br>
+            <h3 style="color: blue">See the Product Guide for more info</h3>
+        </ion-item>
+        <!--Recommendation-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="recommendationHelp = !recommendationHelp">Recommendation</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="recommendationHelp">
+            <h2>About the recommendation</h2>
+            <p>Like the base formation, this is heavily influenced by the <strong>soil type</strong> you provide.
+            Common products you may see here include <strong>Quik-Trol</strong>, <strong>No-Sag</strong>, <strong>Penetrol</strong>, and <strong>EZ-Mud</strong></p>
+            <br>
+            <h3 style="color: blue">See the Product Guide for more info</h3>
+        </ion-item>
+        <!--Additional-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="additionalHelp = !additionalHelp">Additional...</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="additionalHelp">
+            <h2>Additional recommendations</h2>
+            <p>Heavily influenced by the <strong>soil type</strong> you provide.
+                Common products you may see here include <strong>No-Sag</strong>, <strong>Penetrol</strong>, and <strong>Aqua-Clear PFD</strong></p>
+            <br>
+            <h3 style="color: blue">See the Product Guide for more info</h3>
+        </ion-item>
+        <!--Notes-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="noteAndContingencyHelp = !noteAndContingencyHelp">Notes, etc</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="noteAndContingencyHelp">
+            <h2>Notes & Contingency Notes</h2>
+            <p>These provide you with some of Baroid's additional insight into drilling in different conditions.
+                Some may include modifications to other recommendations given or explain why you received them.</p>
+            <br>
+            <h3 style="color: blue">See the Product Guide for more info</h3>
+        </ion-item>
+        <button class="button button-block" ng-click="close()">OK</button>
+    </ion-list>
+</ion-content>

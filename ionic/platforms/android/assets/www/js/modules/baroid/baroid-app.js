@@ -31,6 +31,11 @@ angular.module("baroidApp", ["ionic", "ui.router", "ngCordova"])
                 url:"products",
                 templateUrl:baroidHTMLFiles.productsState,
                 controller:"BaroidProductsController"
+            })
+            .state("annular", {
+                url:"annular",
+                templateUrl:baroidHTMLFiles.annularVelocity,
+                controller:"BaroidAnnularVelocityController"
             });
 
         $urlRouterProvider.otherwise("/");

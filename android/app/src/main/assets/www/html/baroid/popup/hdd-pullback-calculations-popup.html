@@ -1,0 +1,72 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="estFunnelViscosityHelp = false,
+                estFluidVolumeHelp = false,
+                actualPumpOutputHelp = false,
+                recommendedPullbackHelp = false">
+    <p class="title title-left icon ion-ios7-keypad"> Calculations</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+        <!--Funnel Viscosity-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="estFunnelViscosityHelp = !estFunnelViscosityHelp">Funnel Viscosity</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="estFunnelViscosityHelp">
+            <h2>Estimated funnel viscosity</h2>
+            <p>The consistency and gel formation directly effects just about everything to do with drilling.</p>
+            <ul class="baroid-bullet-list">
+                <li><p>Hole cleaning</p></li>
+                <li><p>Drill speed</p></li>
+                <li><p>Hole stability</p></li>
+                <li><p>etc.</p></li>
+            </ul>
+            <p>Follow the link below to read Baroid's article on the subject.</p>
+            <br>
+            <h3>References</h3>
+            <ul class="baroid-bullet-list">
+                <li><p><a href="#" onclick="window.open('http://www.baroididp.com/idp/resources/technical-assistance/fluid-testing/viscosity.page?node-id=hm8zxvp8', '_system', 'location=yes')">Baroid on "viscosity"</a></p></li>
+            </ul>
+        </ion-item>
+        <!--Fluid Volume-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="estFluidVolumeHelp = !estFluidVolumeHelp">Fluid Volume</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="estFluidVolumeHelp">
+            <h2>Estimated fluid volume</h2>
+            <p>This is the product of soil type, bore length, and hole diameter. It should go without saying that
+            this calculation reflects cost in many different ways and its result would increase drastically should
+            fluid lost occur down-hole.</p>
+        </ion-item>
+        <!--Actual pump output-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="actualPumpOutputHelp = !actualPumpOutputHelp">Pump output</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="actualPumpOutputHelp">
+            <h2>Actual pump ouput</h2>
+            <p>This calculation reflects the estimated actual pump output you'll be experiencing on the job.</p>
+            <p>If interested in reading more on the contrast between a pump's rating and its actual output, follow the link below.</p>
+            <br>
+            <h3>References</h3>
+            <ul class="baroid-bullet-list">
+                <li><p><a href="#" onclick="window.open('http://www.glossary.oilfield.slb.com/en/Terms.aspx?LookIn=term%20name&filter=volumetric%20efficiency', '_system', 'location=yes')">Pump volumetric efficiency</a></p></li>
+            </ul>
+        </ion-item>
+        <!--Recommended Pullback-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="recommendedPullbackHelp = !recommendedPullbackHelp">Pullback speed</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="recommendedPullbackHelp">
+            <h2>Recommended pullback speed</h2>
+            <p>This is the culmination of the other calculations conducted by this tool. It simply suggests the
+                best speed for pullback in a ratio of <strong>minutes per rod</strong> given the data you provide.</p>
+            <h3>An interesting read:</h3>
+            <ul class="baroid-bullet-list">
+                <li><p><a href="#" onclick="window.open('http://www.baroididp.com/idp/resources/technical-assistance/publications/tech-papers/downhole-pressure-friend-or-frac-out/downhole-pressure.page?node-id=hm8zxw0k', '_system', 'location=yes')">Downhole Pressure: Friend or Frac-out?</a></p></li>
+            </ul>
+        </ion-item>
+
+
+        <button class="button button-block" ng-click="close()">OK</button>
+    </ion-list>
+
+</ion-content>

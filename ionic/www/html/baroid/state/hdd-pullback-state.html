@@ -2,8 +2,8 @@
     <ion-content class="content has-header">
 
         <div class="item item-icon-left buttons bar bar-stable">
-            <button class="button button-icon icon icon ion-ios7-keypad"
-                    ng-click="">Input
+            <button class="button button-icon icon ion-ios7-keypad"
+                    ng-click="inputPopup()">Input
             </button>
         </div>
 
@@ -60,7 +60,7 @@
         <div id="hdd-pullback-calculations">
             <div class="item item-icon-left buttons bar bar-stable">
                 <button class="button button-icon icon icon ion-ios7-calculator"
-                        ng-click="">Calculations
+                        ng-click="calculationPopup()">Calculations
                 </button>
             </div>
 
@@ -86,7 +86,7 @@
 
             <div class="item item-icon-left buttons bar bar-stable">
                 <button class="button button-icon icon icon ion-beaker"
-                        ng-click="">Fluid formation (per 100 gallons)
+                        ng-click="formationPopup()">Fluid formation (per 100 gallons)
                 </button>
             </div>
 
@@ -97,17 +97,17 @@
                                         <!--ng-show="values.baseRecommendation == '' && values.additiveRecommendation == '' && values.specialRecommendation == ''">-->
             <!--</baroid-recommendation-note>-->
 
-            <baroid-recommendation-note note-title="Base"
+            <baroid-recommendation-note note-title="Base formation"
                                         id-pre="baseRecommendation"
                                         note-model="values.baseRecommendation"
                                         ng-show="values.baseRecommendation !== ''"></baroid-recommendation-note>
 
-            <baroid-recommendation-note note-title="Additive"
+            <baroid-recommendation-note note-title="Recommendation"
                                         id-pre="additiveRecommendation"
                                         note-model="values.additiveRecommendation"
                                         ng-show="values.additiveRecommendation !== ''"></baroid-recommendation-note>
 
-            <baroid-recommendation-note note-title="Special"
+            <baroid-recommendation-note note-title="Additional recommendation"
                                         id-pre="specialRecommendation"
                                         note-model="values.specialRecommendation"
                                         ng-show="values.specialRecommendation !== ''"></baroid-recommendation-note>

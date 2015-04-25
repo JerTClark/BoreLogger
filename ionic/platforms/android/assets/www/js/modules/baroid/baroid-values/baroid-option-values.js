@@ -12,7 +12,7 @@ angular.module("baroidApp")
                 {
                     "name":"Annular Velocity",
                     "code":1,
-                    "state":"baroid"
+                    "state":"annular"
                 },
                 {
                     "name":"HDD Pullback",

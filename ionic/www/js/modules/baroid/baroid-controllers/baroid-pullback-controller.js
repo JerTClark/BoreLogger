@@ -4,13 +4,13 @@ angular.module("baroidApp").controller("BaroidPullbackController",
         "BaroidRecommendedPullbackCalculator", "BaroidPullbackValuesFactory",
         "BaroidRecommendedFluidFormationService", "BaroidAdditiveRFFService",
         "BaroidSpecialRFFService", "BaroidHDDPullbackNoteService", "BaroidContingencyNoteService",
-        "$cordovaToast",
+        "BaroidPopupService", "baroidHTMLFiles", "$cordovaToast",
         function ($scope, BaroidPullbackInputs, BaroidSoilTypes, BaroidEstimatedFunnelViscosity,
                   BaroidEstimatedFluidVolumeCalculator, BaroidActualPumpOutputCalculator,
                   BaroidRecommendedPullbackCalculator, BaroidPullbackValuesFactory,
                   BaroidRecommendedFluidFormationService, BaroidAdditiveRFFService,
                   BaroidSpecialRFFService, BaroidHDDPullbackNoteService, BaroidContingencyNoteService,
-                  $cordovaToast) {
+                  BaroidPopupService, baroidHTMLFiles, $cordovaToast) {
 
             /**
              * Each $scope.row* object represents a two-column row of inputs in the view
@@ -50,7 +50,7 @@ angular.module("baroidApp").controller("BaroidPullbackController",
              * Displayed when there are not recommendations yet calculated
              * @type {string}
              */
-            $scope.exampleNoteText = "Recommendations will appear here";
+            //$scope.exampleNoteText = "Recommendations will appear here";
 
             /**
              * NOTE: Will trigger with each input modification
@@ -166,12 +166,33 @@ angular.module("baroidApp").controller("BaroidPullbackController",
 
             });
 
-            //TODO delete debug console.Log()'s
-            $scope.logToConsole = function () {
-                console.group("HDD Pullback logToConsole()");
-                    console.info("$scope.input: %O", $scope.input);
-                    console.info("$scope.values: %O", $scope.values);
-                console.groupEnd();
+            /**
+             * Popups (help)
+             * Each should include "scope":$scope so as to call close() on the popup
+             */
+            $scope.inputPopup = function() {
+                BaroidPopupService.show({
+                    "templateUrl":baroidHTMLFiles.hddPullbackInputPopup,
+                    "scope": $scope
+                });
+            };
+
+            $scope.calculationPopup = function () {
+                BaroidPopupService.show({
+                    "templateUrl":baroidHTMLFiles.hddPullbackCalculationsPopup,
+                    "scope":$scope
+                });
+            };
+
+            $scope.formationPopup = function () {
+                BaroidPopupService.show({
+                    "templateUrl":baroidHTMLFiles.hddPullbackFormationPopup,
+                    "scope":$scope
+                });
+            };
+
+            $scope.close = function () {
+                BaroidPopupService.closeCurrent();
             };
 
         }]);
