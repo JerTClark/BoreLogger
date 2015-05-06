@@ -1,5 +1,9 @@
 @import "../my-fonts.css";
 
+ion-content {
+    /*background-color: black !important;*/
+}
+
 a:link {
     color: red;
     font-weight: bold;
@@ -22,17 +26,20 @@ body.baroid-body {
 
 /*Title Text class for Header Card directive*/
 .title-text {
+    color: white;
     text-align: right;
-    font-family: Rough, "Times New Roman", sans-serif;
-    font-weight: bolder;
+    font-family: Roboto-Bold, Roboto, 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-shadow: red 0 0 5px;
 }
 
 .title-text-subtitle {
     color: red;
     text-align: right;
-    font-family: Roboto-Light,  "Times New Roman", sans-serif;
-    font-size: smaller;
+    font-family: Roboto,  "Times New Roman", sans-serif;
+    font-size: large;
     font-weight: bold;
+    text-shadow: red 0 0 2px;
 }
 
 /*Baroid logo*/
@@ -259,7 +266,31 @@ span.input-label.baroid-floating-label.has-input {
 }
 
 /*Overriding the ionic popup*/
-.popup {
+.popup-xxlarge {
     height: 70% !important;
+    width: 80% !important;
+}
+.popup-xlarge {
+    height: 65% !important;
+    width: 80% !important;
+}
+.popup-large {
+    height: 60% !important;
+    width: 80% !important;
+}
+.popup-medium {
+    height: 50% !important;
+    width: 80% !important;
+}
+.popup-small {
+    height: 45% !important;
+    width: 80% !important;
+}
+.popup-xsmall {
+    height: 40% !important;
+    width: 80% !important;
+}
+.popup-xxsmall {
+    height: 30% !important;
     width: 80% !important;
 }

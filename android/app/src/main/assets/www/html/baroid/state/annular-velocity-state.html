@@ -3,7 +3,7 @@
 
         <div class="item item-icon-left buttons bar bar-stable">
             <button class="button button-icon icon icon ion-ios7-keypad"
-                    ng-click="">Input
+                    ng-click="showPopup('input')">Input
             </button>
         </div>
 
@@ -30,7 +30,7 @@
         <div id="annular-velocity-calculation">
             <div class="item item-icon-left buttons bar bar-stable">
                 <button class="button button-icon icon icon ion-ios7-calculator"
-                        ng-click="">Calculations
+                        ng-click="showPopup('calculations')">Calculations
                 </button>
             </div>
 
@@ -44,7 +44,7 @@
         <div id="annular-velocity-advice">
             <div class="item item-icon-left buttons bar bar-stable">
                 <button class="button button-icon icon icon ion-waterdrop"
-                        ng-click="">Notes
+                        ng-click="showPopup('notes')">Notes
                 </button>
             </div>
 
@@ -63,7 +63,7 @@
                                               note-model="values.ruleOfThumb"
                                               ng-show="values.ruleOfThumb !== ''"></baroid-recommendation-note>
 
-            <button ng-show="true" class="button button-block button-energized" ng-click="logToConsole()">Log to
+            <button ng-show="false" class="button button-block button-energized" ng-click="logToConsole()">Log to
                 Console
             </button>
         </div>

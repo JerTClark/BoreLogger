@@ -6,6 +6,6 @@ module.exports = function () {
     return {
         "drillBitDiameter":6,
         "drillPipeDiameter":5,
-        "pumpOutput":20
+        "pumpOutput":40
     }
 };

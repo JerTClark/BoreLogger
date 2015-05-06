@@ -1,4 +1,4 @@
-describe("Baroid HDD Pullback calculator", function () {
+xdescribe("Baroid HDD Pullback calculator", function () {
 
     /*Easier resource management in event of refactoring*/
     var ReferenceJS = require("./../ref.js"),

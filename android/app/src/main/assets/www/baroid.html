@@ -33,6 +33,7 @@
     <script src="js/modules/baroid/baroid-controllers/baroid-pullback-controller.js"></script>
     <script src="js/modules/baroid/baroid-controllers/baroid-products-controller.js"></script>
     <script src="js/modules/baroid/baroid-controllers/baroid-annular-velocity-controller.js"></script>
+    <script src="js/modules/baroid/baroid-controllers/baroid-conversion-controller.js"></script>
 
     <!--Constants-->
     <script src="js/modules/baroid/baroid-constants/baroid-constants.js"></script>
@@ -60,11 +61,14 @@
     <script src="js/modules/baroid/baroid-services/baroid-products-services/baroid-products-service.js"></script>
     <script src="js/modules/baroid/baroid-services/baroid-annular-velocity-services/baroid-annular-velocity-factory.js"></script>
     <script src="js/modules/baroid/baroid-services/baroid-annular-velocity-services/baroid-annular-velocity-calculator.js"></script>
+    <script src="js/modules/baroid/baroid-services/baroid-conversion-services/baroid-convert.js"></script>
 
     <!--Values-->
     <script src="js/modules/baroid/baroid-values/baroid-option-values.js"></script>
     <script src="js/modules/baroid/baroid-values/baroid-pullback-values.js"></script>
     <script src="js/modules/baroid/baroid-values/baroid-annular-velocity-inputs.js"></script>
+    <script src="js/modules/baroid/baroid-values/baroid-conversion-selections.js"></script>
+    <script src="js/modules/baroid/baroid-values/baroid-conversion-values.js"></script>
 
 </head>
 
@@ -78,14 +82,10 @@
 <script id="baroid-home.html" type="text/ng-template">
     <ion-view view-title="Options" class="stable-bg">
         <ion-content class="content has-header dark-bg">
-            <ion-list type="card" class="text-center"
-                      ng-repeat="category in optionCategories">
-                <ion-item class="">
+                <div class="padding" ng-repeat="category in optionCategories">
                     <h1 class="title-text">{{category.title}}</h1>
-
                     <h3 class="title-text-subtitle">{{category.description}}</h3>
-                </ion-item>
-            </ion-list>
+                </div>
 
             <div style="padding-left: 20px;padding-right: 20px" ng-repeat="category in optionCategories">
                 <div ng-repeat="button in category.buttons">

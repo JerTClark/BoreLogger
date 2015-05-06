@@ -4,13 +4,13 @@ angular.module("baroidApp").controller("BaroidPullbackController",
         "BaroidRecommendedPullbackCalculator", "BaroidPullbackValuesFactory",
         "BaroidRecommendedFluidFormationService", "BaroidAdditiveRFFService",
         "BaroidSpecialRFFService", "BaroidHDDPullbackNoteService", "BaroidContingencyNoteService",
-        "BaroidPopupService", "baroidHTMLFiles", "$cordovaToast",
+        "BaroidPopupService", "baroidHTMLFiles", "$cordovaToast", "$timeout",
         function ($scope, BaroidPullbackInputs, BaroidSoilTypes, BaroidEstimatedFunnelViscosity,
                   BaroidEstimatedFluidVolumeCalculator, BaroidActualPumpOutputCalculator,
                   BaroidRecommendedPullbackCalculator, BaroidPullbackValuesFactory,
                   BaroidRecommendedFluidFormationService, BaroidAdditiveRFFService,
                   BaroidSpecialRFFService, BaroidHDDPullbackNoteService, BaroidContingencyNoteService,
-                  BaroidPopupService, baroidHTMLFiles, $cordovaToast) {
+                  BaroidPopupService, baroidHTMLFiles, $cordovaToast, $timeout) {
 
             /**
              * Each $scope.row* object represents a two-column row of inputs in the view
@@ -170,27 +170,38 @@ angular.module("baroidApp").controller("BaroidPullbackController",
              * Popups (help)
              * Each should include "scope":$scope so as to call close() on the popup
              */
-            $scope.inputPopup = function() {
-                BaroidPopupService.show({
-                    "templateUrl":baroidHTMLFiles.hddPullbackInputPopup,
-                    "scope": $scope
-                });
-            };
-
-            $scope.calculationPopup = function () {
-                BaroidPopupService.show({
-                    "templateUrl":baroidHTMLFiles.hddPullbackCalculationsPopup,
+            $scope.showPopup = function (stringName) {
+                var config = {
+                    "templateUrl":"",
+                    "title":"",
                     "scope":$scope
-                });
+                };
+                var cssClass = "popup-medium";
+                switch(stringName) {
+                    case "input":
+                        config["title"] = "Input";
+                        config["templateUrl"] = baroidHTMLFiles.hddPullbackInputPopup;
+                        cssClass = "popup-xlarge";
+                        break;
+                    case "calculations":
+                        config["title"] = "Calculations";
+                        config["templateUrl"] = baroidHTMLFiles.hddPullbackCalculationsPopup;
+                        cssClass = "popup-large";
+                        break;
+                    case "notes":
+                        config["title"] = "Notes";
+                        config["templateUrl"] = baroidHTMLFiles.hddPullbackFormationPopup;
+                        cssClass = "popup-large";
+                        break;
+                }
+                BaroidPopupService.show(config);
+                $timeout(function () {
+                    angular.element("div.popup").addClass(cssClass);
+                },50);
             };
-
-            $scope.formationPopup = function () {
-                BaroidPopupService.show({
-                    "templateUrl":baroidHTMLFiles.hddPullbackFormationPopup,
-                    "scope":$scope
-                });
-            };
-
+            /**
+             * Close the opened popup
+             */
             $scope.close = function () {
                 BaroidPopupService.closeCurrent();
             };

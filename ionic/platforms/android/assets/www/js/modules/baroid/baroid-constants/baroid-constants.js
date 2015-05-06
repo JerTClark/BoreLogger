@@ -6,10 +6,15 @@ angular.module("baroidApp")
         "hddPullback":"html/baroid/state/hdd-pullback-state.html",
         "productsState":"html/baroid/state/products-state.html",
         "annularVelocity":"html/baroid/state/annular-velocity-state.html",
+        "conversion":"html/baroid/state/conversion-state.html",
         /*Popups*/
         "hddPullbackInputPopup":"html/baroid/popup/hdd-pullback-input-popup.html",
         "hddPullbackCalculationsPopup":"html/baroid/popup/hdd-pullback-calculations-popup.html",
         "hddPullbackFormationPopup":"html/baroid/popup/hdd-pullback-formation-popup.html",
+        "avInputPopup":"html/baroid/popup/av-input-popup.html",
+        "avCalculationsPopup":"html/baroid/popup/av-calculations-popup.html",
+        "avNotesPopup":"html/baroid/popup/av-notes-popup.html",
+        "conversionModePopup":"html/baroid/popup/conversion-mode-popup.html",
         /*Templates*/
         "baroidHeaderCard":"html/baroid/template/baroid-header-card.html",
         "baroidNote":"html/baroid/template/baroid-note.html",

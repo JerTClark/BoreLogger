@@ -1,6 +1,6 @@
 /**
  * Pretty much testing a landing screen that has (at time of writing)
- * four different buttons.
+ * five different buttons.
  */
 xdescribe("BaroidState", function () {
 
@@ -25,20 +25,16 @@ xdescribe("BaroidState", function () {
         baroidHomeState.get();
     });
 
-    xit("should pass the test", function () {
+    it("should pass the test", function () {
         expect(baroidHomeState.test).toEqual(4);
     });
 
     it("should have the right title: Calculators", function () {
-        expect(baroidHomeState.ionNavBar.getText()).toEqual("Calculators");
-    });
-
-    xit("should have a title card with the correct strings", function () {
-
+        expect(baroidHomeState.ionNavBar.getText()).toEqual("Options");
     });
 
     it("should have the appropriate buttons", function () {
-        expect(baroidHomeState.cubicFPMButton).toBeDefined();
+        //expect(baroidHomeState.cubicFPMButton).toBeDefined();
         expect(baroidHomeState.annularVelocityButton).toBeDefined();
         expect(baroidHomeState.hddPullbackButton).toBeDefined();
         expect(baroidHomeState.chartsButton).toBeDefined();

@@ -1,0 +1,41 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="drillBitHelp = false,
+                drillPipeDiamterHelp = false,
+                pumpOutputHelp = false">
+    <p class="title title-left icon ion-ios7-keypad"> About your input</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="drillBitHelp = !drillBitHelp">Drill bit
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="drillBitHelp">
+            <h2>Drill bit diameter</h2>
+            <p>Here is where you set the diameter of your drill bit in <strong>inches</strong>.</p>
+        </ion-item>
+
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="drillPipeHelp = !drillPipeHelp">Drill pipe
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="drillPipeHelp">
+            <h2>Drill pipe diameter</h2>
+            <p>This input is asking for the diameter of the drill pipe in <strong>inches</strong>.</p>
+        </ion-item>
+
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="pumpOutputHelp = !pumpOutputHelp">Pump output
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="pumpOutputHelp">
+            <h2>Pump output</h2>
+            <p>This is asking for the output in gallons per minute with respect to how you will set your drill's pump.</p>
+        </ion-item>
+
+        <button class="button button-block" ng-click="close()">OK</button>
+
+    </ion-list>
+
+</ion-content>

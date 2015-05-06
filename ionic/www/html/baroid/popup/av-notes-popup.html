@@ -1,0 +1,48 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="generalHelp = false,
+                recommendationHelp = false,
+                ruleOfThumbHelp = false">
+    <p class="title title-left icon ion-ios7-keypad"> About AV notes</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+        <!-- General -->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="generalHelp = !generalHelp">General notes</ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="generalHelp">
+            <h2>General notes:</h2>
+            <p>This note focuses on the <a href="#" onclick="window.open('http://en.wikipedia.org/wiki/Annular_velocity', '_system', 'location=yes')">annular velocity</a>
+            your input values generate. It may warn you about hole erosion or potential issues with suspension that affect
+            hole cleaning. It might advise you to contact a Baroid representative in dire cases or otherwise report 
+            that your current settings seem to be sufficient for your scenario.</p>
+        </ion-item>
+
+        <!-- Recommendation -->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="recommendationHelp = !recommendationHelp">Recommendations
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="recommendationHelp">
+            <h2>Recommendation notes:</h2>
+            <p>This note will advise you of your pump setting, giving a range of values between which you should set it
+            in this particular scenario in order to achieve optimal
+            <a href="#" onclick="window.open('http://en.wikipedia.org/wiki/Annular_velocity', '_system', 'location=yes')">annular velocity</a></p>
+        </ion-item>
+
+        <!--Rule of thumb-->
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="ruleOfThumbHelp = !ruleOfThumbHelp">Rule of thumb
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="ruleOfThumbHelp">
+            <h2>Rule of thumb:</h2>
+            <p>This note is simply a reminder of the target
+                <a href="#" onclick="window.open('http://en.wikipedia.org/wiki/Annular_velocity', '_system', 'location=yes')">annular velocity</a>
+                being between 60 and 120 ft/min.</p>
+        </ion-item>
+
+        <button class="button button-block" ng-click="close()">OK</button>
+    </ion-list>
+
+</ion-content>

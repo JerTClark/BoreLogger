@@ -8,13 +8,16 @@ module.exports = function () {
         "pageObjects": {
             "folder":"baroid-e2e-page-objects",
             "homeState":"baroid-e2e-page-objects/baroid-home-state.js",
-            "hddPullbackState":"baroid-e2e-page-objects/baroid-hdd-pullback-state.js"
+            "hddPullbackState":"baroid-e2e-page-objects/baroid-hdd-pullback-state.js",
+            "avState":"baroid-e2e-page-objects/baroid-av-state.js",
+            "productsState":"baroid-e2e-page-objects/baroid-products-state.js"
         },
         "mockData": {
             "folder":"baroid-e2e-mock-data",
             "hddPullbackMockData":"baroid-e2e-mock-data/baroid-hdd-pullback-mock-data.js",
             "validNumericPullbackResults":"baroid-e2e-mock-data/baroid-hdd-pullback-exp-results.js",
-            "avMockData":"baroid-e2e-mock-data/baroid-av-mock-data.js"
+            "avMockData":"baroid-e2e-mock-data/baroid-av-mock-data.js",
+            "avExpectedResults":"baroid-e2e-mock-data/baroid-av-expected-results.js"
         },
         "utils":{
             "folder":"e2e-utils",

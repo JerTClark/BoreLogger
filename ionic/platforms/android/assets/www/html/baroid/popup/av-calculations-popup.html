@@ -1,0 +1,21 @@
+<ion-header-bar class="bar bar-header bar-assertive"
+                ng-init="annularVelocity = false">
+    <p class="title title-left icon ion-ios7-keypad"> About your result</p>
+</ion-header-bar>
+<ion-content class="has-header padding">
+    <ion-list>
+        <label>
+            <ion-toggle toggle-class="toggle-assertive" ng-click="annularVelocity = !annularVelocity">Title
+            </ion-toggle>
+        </label>
+        <ion-item class="item-text-wrap" style="text-align: justify" ng-show="annularVelocity">
+            <h2>Annular Velocity</h2>
+            <p><a href="#" onclick="window.open('http://en.wikipedia.org/wiki/Annular_velocity', '_system', 'location=yes')">Annular velocity</a>
+            refers to the speed of a fluid's movement though a space called an
+                <a href="#" onclick="window.open('http://en.wikipedia.org/wiki/Annulus_(oil_well)', '_system', 'location=yes')">annulus</a>.
+            Check out the two links here to learn more about this and how it relates to drilling.</p>
+        </ion-item>
+    </ion-list>
+
+    <button class="button button-block" style="vertical-align: baseline;" ng-click="close()">OK</button>
+</ion-content>

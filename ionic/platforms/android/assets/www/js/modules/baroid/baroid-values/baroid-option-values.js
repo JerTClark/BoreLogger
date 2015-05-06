@@ -5,11 +5,6 @@ angular.module("baroidApp")
             "description":"Interactive tools for Drilling",
             "buttons": [
                 {
-                    "name":"Cubic FPM",
-                    "code":0,
-                    "state":"baroid"
-                },
-                {
                     "name":"Annular Velocity",
                     "code":1,
                     "state":"annular"
@@ -20,9 +15,9 @@ angular.module("baroidApp")
                     "state":"pullback"
                 },
                 {
-                    "name":"Charts",
+                    "name":"Conversion",
                     "code":3,
-                    "state":"baroid"
+                    "state":"conversion"
                 },
                 {
                     "name":"Product Guide",

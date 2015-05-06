@@ -1,8 +1,9 @@
 angular.module("baroidApp").controller("BaroidAnnularVelocityController",
-    ["$scope", "BaroidAnnularVelocityValuesFactory", "BaroidAnnularVelocityInputs",
-        "BaroidAnnularVelocityCalculator", "BaroidPopupService",
-        function ($scope, BaroidAnnularVelocityValuesFactory, BaroidAnnularVelocityInputs,
-                  BaroidAnnularVelocityCalculator, BaroidPopupService) {
+    ["$scope", "$timeout",
+        "BaroidAnnularVelocityValuesFactory", "BaroidAnnularVelocityInputs",
+        "BaroidAnnularVelocityCalculator", "BaroidPopupService", "baroidHTMLFiles",
+        function ($scope, $timeout, BaroidAnnularVelocityValuesFactory, BaroidAnnularVelocityInputs,
+                  BaroidAnnularVelocityCalculator, BaroidPopupService, baroidHTMLFiles) {
             /**
              * <b>BaroidAnnularVelocityController $scope property</b>
              * <i>Maps out the input elements for the view</i>
@@ -77,6 +78,46 @@ angular.module("baroidApp").controller("BaroidAnnularVelocityController",
 
             $scope.logToConsole = function() {
                 BaroidPopupService.show();
+            };
+            /**
+             * Show the help popups
+             * @param stringName the kind of popup to show
+             */
+            $scope.showPopup = function (stringName) {
+                var config = {
+                    "templateUrl":"",
+                    "title":"",
+                    "scope":$scope
+                };
+                var cssClass = "popup-medium";
+                switch(stringName) {
+                    case "input":
+                        config["title"] = "Input";
+                        config["templateUrl"] = baroidHTMLFiles.avInputPopup;
+                        cssClass = "popup-medium";
+                        break;
+                    case "calculations":
+                        config["title"] = "Calculations";
+                        config["templateUrl"] = baroidHTMLFiles.avCalculationsPopup;
+                        cssClass = "popup-xxsmall";
+                        break;
+                    case "notes":
+                        config["title"] = "Notes";
+                        config["templateUrl"] = baroidHTMLFiles.avNotesPopup;
+                        cssClass = "popup-small";
+                        break;
+                }
+                BaroidPopupService.show(config);
+
+                $timeout(function () {
+                    angular.element("div.popup").addClass(cssClass);
+                },50);
+            };
+            /**
+             * Close the current popup
+             */
+            $scope.close = function () {
+                BaroidPopupService.closeCurrent();
             }
 
         }]);

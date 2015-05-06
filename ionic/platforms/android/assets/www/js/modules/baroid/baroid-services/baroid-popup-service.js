@@ -13,6 +13,7 @@ angular.module("baroidApp").factory("BaroidPopupService",
                         "title":config.title,
                         "subtitle":config.subtitle,
                         "scope":config.scope,
+                        "cssClass":config.class,
                         "buttons":config.buttonsArray
                     });
                 },

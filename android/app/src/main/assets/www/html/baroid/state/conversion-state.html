@@ -1,0 +1,95 @@
+<ion-view view-title="Conversions" class="dark-bg">
+    <ion-content class="content has-header">
+
+        <ion-toggle toggle-class="toggle-assertive" ng-model="metric" ng-click="category.value = ''">
+            <span ng-if="!metric">Standard</span>
+            <span ng-if="metric">Metric</span>
+        </ion-toggle>
+        <div class="item item-icon-left buttons bar bar-stable">
+            <button class="button button-icon icon ion-ios7-keypad"
+                    ng-click="">Input
+            </button>
+        </div>
+
+        <form name="baroidConversionForm" novalidate>
+
+            <ion-item class="item-divider">Select unit of measurement</ion-item>
+            <ion-item>
+                <label class="item item-select ion icon ion-ios7-information-outline" style="color:red"
+                       for="conversionCategory">
+                    <span style="color:black">Units</span>
+
+                    <select ng-if="!metric" id="conversionCategory"
+                            ng-options="item as item for item in selections"
+                            ng-model="category.value">
+                        <option value="">None</option>
+                    </select>
+
+                    <select ng-if="metric" id="conversionCategoryMetric"
+                            ng-options="item as item for item in selectionsMetric"
+                            ng-model="category.value">
+                        <option value="">None</option>
+                    </select>
+
+                </label>
+            </ion-item>
+
+            <!-- Standard -->
+            <div ng-repeat="item in inputElements track by $index">
+                <baroid-numeric-input input-type="{{item.type}}"
+                                      input-title="{{item.title}}"
+                                      input-name="{{item.inputName}}"
+                                      input-class="{{item.inputClass}}"
+                                      item-index="{{$index}}"
+                                      label-class="{{item.labelClass}}"
+                                      min-range="{{item.min}}"
+                                      max-range="{{item.max}}"
+                                      model="userInput['value']"
+                                      is-required="{{item.isRequired}}"
+                                      hint="{{item.hint}}"
+                                      ng-show="category.value === item.show"
+                                      error-message="{{item.errorMessage}}"
+                                      baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+            </div>
+
+            <!-- Metric -->
+            <div ng-repeat="item in inputElementsMetric track by $index">
+                <baroid-numeric-input input-type="{{item.type}}"
+                                      input-title="{{item.title}}"
+                                      input-name="{{item.inputName}}"
+                                      input-class="{{item.inputClass}}"
+                                      item-index="{{$index}}"
+                                      label-class="{{item.labelClass}}"
+                                      min-range="{{item.min}}"
+                                      max-range="{{item.max}}"
+                                      model="userInput['value']"
+                                      is-required="{{item.isRequired}}"
+                                      hint="{{item.hint}}"
+                                      ng-show="category.value === item.show"
+                                      error-message="{{item.errorMessage}}"
+                                      baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+            </div>
+        </form>
+
+        <!--Conversion Calculations-->
+        <div id="conversion-calculations" ng-show="category.value !== '' && category.value !== null">
+            <div class="item item-icon-left buttons bar bar-stable">
+                <button class="button button-icon icon icon ion-ios7-calculator"
+                        ng-click="calculationPopup()">Calculations
+                </button>
+            </div>
+
+            <baroid-numeric-result ng-repeat="conversion in conversions"
+                                   result-title="{{conversion.title}}"
+                                   id-pre="{{conversion.title}}"
+                                   ng-show="conversions && conversion.value !== 0"
+                                   result-model="conversion.value">
+            </baroid-numeric-result>
+            </div>
+
+            <button ng-show="false" class="button button-block button-energized" ng-click="logToConsole()">Log to
+                Console
+            </button>
+
+    </ion-content>
+</ion-view>
