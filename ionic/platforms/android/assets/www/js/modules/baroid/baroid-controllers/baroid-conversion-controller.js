@@ -67,4 +67,9 @@ angular.module("baroidApp")
             $scope.$watchCollection("userInput", function (newValue, oldValue) {
                 $scope.conversions = BaroidConverter.convert($scope.category["value"], $scope.userInput["value"]);
             });
+
+            //TODO delete debug console.Log()'s
+            $scope.logToConsole = function () {
+                console.warn(Object.keys($scope.conversions).length);
+            };
         }]);

@@ -1,0 +1,32 @@
+                "toInches": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toFeet": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toYards": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toMiles": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toMillimeters": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toCentimeters": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toMeters": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                },
+                "toKilometers": {
+                    "title": yards + " yards to ",
+                    "value": (yards)
+                }

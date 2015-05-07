@@ -18,6 +18,15 @@ angular.module("baroidApp")
             "show": "Feet",
             "errorMessage": "Number required"
         },
+        "Yards": {
+            "type": "number",
+            "inputName": "yards",
+            "title": "Yards",
+            "hint": "Enter yards here",
+            "isRequired": true,
+            "show": "Yards",
+            "errorMessage": "Number required"
+        },
         "Miles": {
             "type": "number",
             "inputName": "miles",
@@ -38,6 +47,15 @@ angular.module("baroidApp")
         }
     })
     .value("BaroidConversionValuesMetric", {
+        "Millimeters": {
+            "type": "number",
+            "inputName": "millimeters",
+            "title": "Millimeters",
+            "hint": "Enter millimeters here",
+            "isRequired": true,
+            "show": "Millimeters",
+            "errorMessage": "Number required"
+        },
         "Centimeters": {
             "type": "number",
             "inputName": "centimeters",
@@ -54,6 +72,15 @@ angular.module("baroidApp")
             "hint": "Enter meters here",
             "isRequired": true,
             "show": "Meters",
+            "errorMessage": "Number required"
+        },
+        "Kilometers": {
+            "type": "number",
+            "inputName": "kilometers",
+            "title": "Kilometers",
+            "hint": "Enter kilometers here",
+            "isRequired": true,
+            "show": "Kilometers",
             "errorMessage": "Number required"
         },
         "Liters": {

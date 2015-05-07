@@ -35,44 +35,49 @@
             </ion-item>
 
             <!-- Standard -->
-            <div ng-repeat="item in inputElements track by $index">
-                <baroid-numeric-input input-type="{{item.type}}"
-                                      input-title="{{item.title}}"
-                                      input-name="{{item.inputName}}"
-                                      input-class="{{item.inputClass}}"
-                                      item-index="{{$index}}"
-                                      label-class="{{item.labelClass}}"
-                                      min-range="{{item.min}}"
-                                      max-range="{{item.max}}"
-                                      model="userInput['value']"
-                                      is-required="{{item.isRequired}}"
-                                      hint="{{item.hint}}"
-                                      ng-show="category.value === item.show"
-                                      error-message="{{item.errorMessage}}"
-                                      baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+            <div class="padding col-80 col-offset-10">
+                <div ng-repeat="item in inputElements track by $index">
+                    <baroid-numeric-input input-type="{{item.type}}"
+                                          input-title="{{item.title}}"
+                                          input-name="{{item.inputName}}"
+                                          input-class="{{item.inputClass}}"
+                                          item-index="{{$index}}"
+                                          label-class="{{item.labelClass}}"
+                                          min-range="{{item.min}}"
+                                          max-range="{{item.max}}"
+                                          model="userInput['value']"
+                                          is-required="{{item.isRequired}}"
+                                          hint="{{item.hint}}"
+                                          ng-show="category.value === item.show"
+                                          error-message="{{item.errorMessage}}"
+                                          baroid-form-controller="baroidConversionForm"></baroid-numeric-input>
+                </div>
             </div>
 
             <!-- Metric -->
-            <div ng-repeat="item in inputElementsMetric track by $index">
-                <baroid-numeric-input input-type="{{item.type}}"
-                                      input-title="{{item.title}}"
-                                      input-name="{{item.inputName}}"
-                                      input-class="{{item.inputClass}}"
-                                      item-index="{{$index}}"
-                                      label-class="{{item.labelClass}}"
-                                      min-range="{{item.min}}"
-                                      max-range="{{item.max}}"
-                                      model="userInput['value']"
-                                      is-required="{{item.isRequired}}"
-                                      hint="{{item.hint}}"
-                                      ng-show="category.value === item.show"
-                                      error-message="{{item.errorMessage}}"
-                                      baroid-form-controller="baroidPullbackForm"></baroid-numeric-input>
+            <div class="padding col-80 col-offset-10">
+                <div ng-repeat="item in inputElementsMetric track by $index">
+                    <baroid-numeric-input input-type="{{item.type}}"
+                                          input-title="{{item.title}}"
+                                          input-name="{{item.inputName}}"
+                                          input-class="{{item.inputClass}}"
+                                          item-index="{{$index}}"
+                                          label-class="{{item.labelClass}}"
+                                          min-range="{{item.min}}"
+                                          max-range="{{item.max}}"
+                                          model="userInput['value']"
+                                          is-required="{{item.isRequired}}"
+                                          hint="{{item.hint}}"
+                                          ng-show="category.value === item.show"
+                                          error-message="{{item.errorMessage}}"
+                                          baroid-form-controller="baroidConversionForm"></baroid-numeric-input>
+                </div>
             </div>
         </form>
 
+        <!--category.value !== '' && category.value !== null-->
         <!--Conversion Calculations-->
-        <div id="conversion-calculations" ng-show="category.value !== '' && category.value !== null">
+        <div id="conversion-calculations" ng-show="userInput['value']">
             <div class="item item-icon-left buttons bar bar-stable">
                 <button class="button button-icon icon icon ion-ios7-calculator"
                         ng-click="calculationPopup()">Calculations
@@ -85,11 +90,11 @@
                                    ng-show="conversions && conversion.value !== 0"
                                    result-model="conversion.value">
             </baroid-numeric-result>
-            </div>
+        </div>
 
-            <button ng-show="false" class="button button-block button-energized" ng-click="logToConsole()">Log to
-                Console
-            </button>
+        <button ng-show="false" class="button button-block button-energized" ng-click="logToConsole()">Log to
+            Console
+        </button>
 
     </ion-content>
 </ion-view>

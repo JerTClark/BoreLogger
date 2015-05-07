@@ -7,8 +7,7 @@ module.exports = function (grunt) {
         /*Properties here are used for creating and deleting required folders*/
         makeFolders: {
             options: {
-                buildFolder: "www/build",
-                tempFolder: "www/temp"
+                miniJSFolder: "www/js/min"
             }
         }
     });
@@ -42,7 +41,7 @@ module.exports = function (grunt) {
     grunt.config("concat", {
         concatJS: {
             src: [/* javascript file to concatenate */],
-            dest: "www/build/bison.js",
+            dest: "www/js/min/bison.js",
             options: {
                 separator: ";"
             }
@@ -61,13 +60,10 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask("makeFolders", "Create the build and temp folders", function () {
-        this.requiresConfig(this.name + ".options.buildFolder");
-        this.requiresConfig(this.name + ".options.tempFolder");
+        this.requiresConfig(this.name + ".options.miniJSFolder");
         this.requires(/* any other tasks that must be complete prior to this task */);
-        var buildFolder = this.options().buildFolder,
-            tempFolder = this.options().tempFolder;
+        var buildFolder = this.options().miniJSFolder;
         grunt.file.mkdir(buildFolder);
-        grunt.file.mkdir(tempFolder);
     });
      /* TODO create a task to delete the temp folder once the watch task completes and 
 	 * another task to delete the build directory prior to a rebuild, possibly making
