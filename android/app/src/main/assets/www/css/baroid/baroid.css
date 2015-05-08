@@ -25,21 +25,34 @@ body.baroid-body {
 }
 
 /*Title Text class for Header Card directive*/
-.title-text {
+.baroid-title-text {
     color: white;
-    text-align: right;
+    text-align: left;
     font-family: Roboto-Bold, Roboto, 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    text-shadow: red 0 0 5px;
+    -webkit-transition-duration: 1s;
 }
 
-.title-text-subtitle {
-    color: red;
-    text-align: right;
+.baroid-title-text-subtitle {
+    color: lightgrey;
+    text-align: center;
     font-family: Roboto,  "Times New Roman", sans-serif;
     font-size: large;
     font-weight: bold;
-    text-shadow: red 0 0 2px;
+}
+
+.baroid-button-description {
+    color: lightgrey;
+    text-align: justify;
+}
+
+.baroid-button-description.baroid-button-purpose {
+    color: white;
+}
+
+.white-glow {
+    text-shadow: white 0 0 10px;
+    -webkit-transition-duration: 1s;
 }
 
 /*Baroid logo*/

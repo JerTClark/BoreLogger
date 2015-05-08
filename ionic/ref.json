@@ -1,0 +1,51 @@
+{
+  "nodeDependencies": [
+	"gulp",
+	"gulp-concat",
+	"gulp-minify-css",
+	"gulp-rename",
+	"gulp-sass"
+  ],
+  "nodeDevDependencies": [
+	"bower",
+    "grunt",
+    "grunt-contrib-concat",
+    "grunt-contrib-uglify",
+    "grunt-contrib-watch",
+    "gulp-util",
+    "jasmine",
+    "jasmine-core",
+    "karma",
+    "karma-chrome-launcher",
+    "karma-jasmine",
+    "karma-junit-reporter",
+    "karma-phantomjs-launcher",
+    "phantomjs",
+    "protractor",
+    "shelljs",
+	"typescript"
+  ],
+  "bowerDependencies": [
+    "ionic",
+    "ngCordova",
+    "jquery",
+    "angular-ui-router",
+    "angular",
+    "angular-resource"
+  ],
+  "bowerDevDependencies": [
+    "angular-mocks"
+  ],
+  "cordovaPlugins": [
+	"com.ionic.keyboard",
+	"org.apache.cordova.console",
+	"org.apache.cordova.device",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.file",
+    "org.apache.cordova.file-transfer",
+    "org.apache.cordova.device",
+    "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
+    "https://github.com/pwlin/cordova-plugin-file-opener2",
+    "https://github.com/katzer/cordova-plugin-email-composer.git"
+  ]
+}

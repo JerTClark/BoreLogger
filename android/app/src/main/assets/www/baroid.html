@@ -93,14 +93,14 @@
     <ion-view view-title="Options" class="stable-bg">
         <ion-content class="content has-header dark-bg">
                 <div class="padding" ng-repeat="category in optionCategories">
-                    <h1 class="title-text">{{category.title}}</h1>
-                    <h3 class="title-text-subtitle">{{category.description}}</h3>
+                    <h3 class="baroid-title-text">{{category.title}}<span class="baroid-title-text-subtitle"> {{category.description}}</span></h3>
                 </div>
 
             <div style="padding-left: 20px;padding-right: 20px" ng-repeat="category in optionCategories">
                 <div ng-repeat="button in category.buttons">
+                    <p class="baroid-button-description"><span class="baroid-button-description baroid-button-purpose"> {{button.purpose}}</span> {{button.description}}</p>
                     <button id="button{{button.code}}"
-                            class="button button-block baroid-rough-text"
+                            class="button button-block baroid-rough-text dark-border"
                             ng-click="buttonClicked(button, $event)">{{button.name}}
                     </button>
                 </div>
