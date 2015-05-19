@@ -1,9 +1,24 @@
-#Android
-.idea
-build
-.gradle
-gradle/
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
 *.iml
+.idea
+.gradle
+build
+dist
+drafts
+gradle
 gradlew
 gradlew.bat
+gradle.properties
+lib
+libs
 local.properties
+manifest.mf
+nbproject
+node_modules
+old
+platforms
+plugins
+staging
+wrapper
+www/lib

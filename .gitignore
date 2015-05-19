@@ -24,6 +24,7 @@ ionic/platforms/android/local.properties
 ionic/platforms/android/project.properties
 ionic/platforms/android/settings.gradle
 ionic/www/lib/
+
 #Nodejs
 nodejs/node_modules
 nodejs/www/lib

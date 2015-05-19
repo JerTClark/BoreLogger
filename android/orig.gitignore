@@ -1,0 +1,16 @@
+#Ionic
+.idea
+node_modules/
+platforms/android/ant-build/
+platforms/android/ant-gen/
+ionic/platforms/android/assets/_where-is-www.txt
+platforms/android/cordova/
+platforms/android/CordovaLib/
+platforms/android/platform_www/
+platforms/android/res/draw*
+platforms/android/.project
+platforms/android/build.gradle
+platforms/android/local.properties
+platforms/android/project.properties
+platforms/android/settings.gradle
+www/lib/
