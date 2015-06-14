@@ -12,22 +12,22 @@ This app was built for the purpose of logging various data pertaining to the tas
 
 The type of data collected includes typical information included on company invoices:
 
-	- the customer
-	- the location of the bore
-	- the conduit (product) installed
-	- the date (of start or completion)
-	- and a cut-sheet of locates representing each rod drilled in the ground (and thus, the depth of the product installed) and any relevant data such as stations and/or crossings
+- the customer
+- the location of the bore
+- the conduit (product) installed
+- the date (of start or completion)
+- and a cut-sheet of locates representing each rod drilled in the ground (and thus, the depth of the product installed) and any relevant data such as stations and/or crossings
 
 This data can be recorded in the app either during or after the completion of the work and is collected into a document referred to as a 
 "log." This app views these logs as belonging to one of two possible categories:
 	
-	- "bore logs"
-	- and "bore journals"
+- "bore logs"
+- and "bore journals"
 	
 These are two types of logs are defined in terms of the project status to which they are applicable:
 
-	- A bore journal is essentially the locator's field notes, recorded as the job completes and is presently ongoing.
-	- A bore log is a finalize record of such field notes, recorded on the completion of the job, and can be created from a bore journal or copied from other field notes.
+- A bore journal is essentially the locator's field notes, recorded as the job completes and is presently ongoing.
+- A bore log is a finalize record of such field notes, recorded on the completion of the job, and can be created from a bore journal or copied from other field notes.
 
 Bore logs and bore journals are recorded as text documents and xml files on the device (also as IndexedDB entries in the Hybrid app).
 This facilitates access to the data, as any plain text editor can be used to manipulate the files. The text files are used (again, IndexedDB 
