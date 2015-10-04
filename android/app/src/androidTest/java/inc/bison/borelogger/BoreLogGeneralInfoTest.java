@@ -263,7 +263,7 @@ public class BoreLogGeneralInfoTest extends ActivityInstrumentationTestCase2<Bor
     }
 
     //Confirm that a File exists
-    @FlakyTest(tolerance = 2)
+    @FlakyTest(tolerance = 4)
     public void testBoreLogGeneralInfo_FileExists() {
         mockBoreLog.init();
         assertNotNull("mockBoreLog.getTextFilePath()", mockBoreLog.getTextFilePath());

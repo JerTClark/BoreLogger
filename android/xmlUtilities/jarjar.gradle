@@ -1,0 +1,79 @@
+import repackaging.RepackageWithJarJar
+import troubleshoot.JarJarExperiments
+
+/**
+ * Add the necessary properties to your project's build.gradle file inside of
+ * an ext block like so:
+ *
+ *  ext {
+ *      debugMode = false
+ *      dependencyConfig = 'javax'
+ *      excludePattern = '**.css'
+ *      includePattern = '**.jar'
+ *      outputJarName = 'jervex.jar'
+ *      replacePatterns = ['javax.xml.**', "com.**", "org.**"]
+ *      resultPatterns = ['jer.javax.xml.@1', "jer.com.@1", "jer.org.@1"]
+ *      targetProject = 'strings'
+ *   }
+ *  compileJava.dependsOn ':${project.name}:repackageDependencies'
+ *  apply from: "jarjar.gradle"
+ *
+ * The values are just examples. Change the assignments to suit your needs.
+ * <b>Note:</b> be sure to set these properties before the line:
+ * <b>apply from: "jarjar.gradle"</b>
+ *
+ * The property jarJarOutputFile has been set via a gradle.properties file
+ */
+task verifyProjectExtProperties (group: "verification",
+        description: "Use this task to verify your project.ext properties that" +
+                "apply to this gradle file") {
+    doLast {
+        println "${jarJarOutputFile}"
+        println "${project.replacePattern}"
+        println "${project.resultPattern}"
+        println "${project.dependencyConfig}"
+        println "${project.includePattern}"
+        println "${project.excludePattern}"
+        println "${project.outputJarName}"
+        println "${project.replacePatterns}"
+        println "${project.resultPatterns}"
+        println "${project.targetProject}"
+        println "${project.path}:repackageDependencies"
+        println project.getTasksByName(":${project.name}:repackageDependencies", false).outputs
+    }
+}
+
+task repackageDependencies (type:RepackageWithJarJar) {
+    outputJar = project.file("${rootDir}/${project.name}/libs/${jarJarOutputFile}.jar")
+    debugMode = project.debugMode
+    dependencyConfig = "${project.dependencyConfig}"
+    jarJarConfig = "jarjar"
+    replacePatterns = project.replacePatterns
+    resultPatterns = project.resultPatterns
+    tempFolder = file("temp")
+    finalizedBy "copyRepackagedJar"
+}
+
+task repackageDependenciesProto (type:JarJarExperiments) {
+    outputJar = project.file("${rootDir}/${project.name}/libs/${jarJarOutputFile}Proto.jar")
+    jarJarConfig = "jarjar"
+    tempFolder = file("temp")
+    dependencyConfig = "${project.dependencyConfig}"
+    replacePatterns = project.replacePatterns
+    resultPatterns = project.resultPatterns
+    finalizedBy "copyRepackagedJar"
+}
+
+task copyRepackagedJar (
+        group: "build",
+        description: "Copies :repackageDependencies output file to specified location") {
+    inputs.file getTasksByName(":${project.name}:repackageDependencies", false).outputs
+    doLast {
+        copy {
+            from "${projectDir}/libs"
+            into "${rootDir}/${project.targetProject}/libs"
+            include "${project.includePattern}"
+            exclude "${project.excludePattern}"
+        }
+    }
+}

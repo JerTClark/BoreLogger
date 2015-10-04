@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!--
+        Above, the standalone attribute is set to "no" to indicate we
+        will use an external DTD
+        Below, specify the "private" external DTD by preceding the URL
+        with the word SYSTEM to indicate an external, private DTD
+    -->
+<!DOCTYPE note SYSTEM "dtd-example.dtd">
+<note>
+    <to>My beautiful wife</to>
+    <from>Your husband</from>
+    <heading>About that vacation...</heading>
+    <body>
+        I agree. Let's go!
+    </body>
+</note>

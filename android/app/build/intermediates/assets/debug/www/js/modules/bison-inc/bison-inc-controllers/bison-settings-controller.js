@@ -1,6 +1,6 @@
 angular.module("bisonInc")
-.controller("SettingsController",["$scope", "$ionicPopup", "bisonIndexedDB",
-        function ($scope, $ionicPopup, bisonIndexedDB) {
+.controller("SettingsController",["$scope", "$ionicPopup", "bisonIndexedDB", "bisonHTMLFiles",
+        function ($scope, $ionicPopup, bisonIndexedDB, bisonHTMLFiles) {
             $scope.settingsCategories = [
                 {
                     name: "Local records",
@@ -11,7 +11,7 @@ angular.module("bisonInc")
                             onClick: function () {
                                 confirm({
                                     title: "Clear local cache",
-                                    templateUrl: "html/templates/confirm-clear-local-cache.html",
+                                    templateUrl: bisonHTMLFiles.confirmClearLocalCache,
                                     fn: function () {
                                         bisonIndexedDB.deleteDatabase();                                    }
                                 });
@@ -28,7 +28,7 @@ angular.module("bisonInc")
                             onClick: function () {
                                 alertPopup({
                                     title: "BoreLogger",
-                                    templateUrl: "html/templates/about-this-app.html",
+                                    templateUrl: bisonHTMLFiles.aboutThisApp,
                                     fn: function () {
                                         //Nothing
                                     }

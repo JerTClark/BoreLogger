@@ -1,1 +1,3 @@
-include ':app', ':bison-lib'
+rootProject.name = "BisonBoreLogger"
+include ':app'
+include ':bison-lib'

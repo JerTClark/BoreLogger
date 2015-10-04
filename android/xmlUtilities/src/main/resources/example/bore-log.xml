@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<bore-log id="WashingtonGas_RidgeRd_May-5-2015">
+	<customer>Washington Gas</customer>
+	<description>(1) 12" Plastic</description>
+	<location>Ridge Rd</location>
+	<length-of-bore>1080 LF (15' rods)</length-of-bore>
+	<date>May-5-2015</date>
+		<locates-list>
+			<locate>Depth 1: 2'1"</locate>
+			<locate>Depth 2: 4'8"</locate>
+			<locate>Depth 3: 7'2"</locate>
+			<locate>Depth 4: 8'7"</locate>
+			<locate>Depth 5: 9'10"</locate>
+			<locate>Depth 6: 10'3"</locate>
+			<locate>Depth 7: 9'11"</locate>
+			<locate>Depth 8: 10'0"</locate>
+			<locate>Depth 9: 10'5"</locate>
+			<locate>Depth 10: 10'2"</locate>
+			<locate>Depth 11: 9'3"</locate>
+			<locate>Depth 12: 9'4"</locate>
+			<locate>Depth 13: 9'5"</locate>
+			<locate>Depth 14: 9'6"</locate>
+			<locate>Depth 15: 9'9"</locate>
+			<locate>Depth 16: 10'9"</locate>
+			<locate>Depth 17: 10'10"</locate>
+			<locate>Depth 18: 11'2"</locate>
+			<locate>Depth 19: 11'3"</locate>
+			<locate>Depth 20: 10'9"</locate>
+			<locate>Depth 21: 10'1"</locate>
+			<locate>Depth 22: 9'0"</locate>
+			<locate>Depth 23: 8'5"</locate>
+			<locate>Depth 24: 8'8"</locate>
+			<locate>Depth 25: 9'5"</locate>
+			<locate>Depth 26: 9'2"</locate>
+			<locate>Depth 27: 9'7"</locate>
+			<locate>Depth 28: 9'11"</locate>
+			<locate>Depth 29: 10'7"</locate>
+			<locate>Depth 30: 10'1"</locate>
+			<locate>Depth 31: 9'8"</locate>
+			<locate>Depth 32: 8'6"</locate>
+			<locate>Depth 33: 9'7"</locate>
+			<locate>Depth 34: 10'1"</locate>
+			<locate>Depth 35: 10'7"</locate>
+			<locate>Depth 36: 10'3"</locate>
+			<locate>Depth 37: 10'3"</locate>
+			<locate>Depth 38: 10'1"</locate>
+			<locate>Depth 39: 10'4"</locate>
+			<locate>Depth 40: 10'5"</locate>
+			<locate>Depth 41: 11'6"</locate>
+			<locate>Depth 42: 11'7"</locate>
+			<locate>Depth 43: 11'9"</locate>
+			<locate>Depth 44: 12'0"</locate>
+			<locate>Depth 45: 12'5"</locate>
+			<locate>Depth 46: 10'0" Creek</locate>
+			<locate>Depth 47: 11'8"</locate>
+			<locate>Depth 48: 11'2"</locate>
+			<locate>Depth 49: 10'1"</locate>
+			<locate>Depth 50: 8'10"</locate>
+			<locate>Depth 51: 9'0"</locate>
+			<locate>Depth 52: 8'4"</locate>
+			<locate>Depth 53: 8'11"</locate>
+			<locate>Depth 54: 9'1"</locate>
+			<locate>Depth 55: 9'4"</locate>
+			<locate>Depth 56: 9'4"</locate>
+			<locate>Depth 57: 9'4"</locate>
+			<locate>Depth 58: 10'3"</locate>
+			<locate>Depth 59: 9'7"</locate>
+			<locate>Depth 60: 9'9"</locate>
+			<locate>Depth 61: 8'11"</locate>
+			<locate>Depth 62: 7'8"</locate>
+			<locate>Depth 63: 6'11"</locate>
+			<locate>Depth 64: 6'8"</locate>
+			<locate>Depth 65: 6'6"</locate>
+			<locate>Depth 66: 7'4"</locate>
+			<locate>Depth 67: 9'1"</locate>
+			<locate>Depth 68: 9'5"</locate>
+			<locate>Depth 69: 8'6"</locate>
+			<locate>Depth 70: 7'11"</locate>
+			<locate>Depth 71: 7'1"</locate>
+			<locate>Depth 72: 6'4"</locate>
+			<locate>Depth 73: 5'7"</locate>
+			<locate>Depth 74: 4'0"</locate>
+	</locates-list>
+</bore-log>

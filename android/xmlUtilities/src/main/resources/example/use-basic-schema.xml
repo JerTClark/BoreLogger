@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<my-note>
+    <n:note xmlns:n="basic-schema.xml">
+        <n:to>My wife</n:to>
+        <n:from>Hubby</n:from>
+        <n:heading>Oops</n:heading>
+        <n:body>I forgot.</n:body>
+    </n:note>
+</my-note>

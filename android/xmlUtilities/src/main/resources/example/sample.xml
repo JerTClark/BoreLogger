@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <catalog xmlns="schema-sample.xml" title="this thing">
+        <journal>
+            <article>
+                <title>Some dude wrote a book</title>
+                <author>Some dude</author>
+            </article>
+        </journal>
+        <journal>
+            <article>
+                <title>What is that?</title>
+                <author>It's me</author>
+            </article>
+        </journal>
+    </catalog>
+</root>
