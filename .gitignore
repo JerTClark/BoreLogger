@@ -2,6 +2,9 @@
 # http://git-scm.com/docs/gitignore
 *.iml
 .idea
+**/*.iml
+**/*.db
+**/*.ini
 .gradle
 app/build
 app/libs
